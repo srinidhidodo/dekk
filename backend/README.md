@@ -7,6 +7,7 @@ contact us for credentials
 cp example-env local.env
 ```
 
+## Install python requirements and dependencies
 ```
 
 virtualenv -p python3.8 venv
@@ -18,7 +19,7 @@ pre-commit install
 
 ```
 
-## To run this app:
+## To run this app(linux): 
 
 ```
 gunicorn -b 0.0.0.0:8000 --reload 'app:run()'
