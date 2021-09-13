@@ -39,3 +39,21 @@ psql -h localhost -p 2517 -U postgres
 Execute all SQL commands in schema.sql and run the belong command
 python -m utils.add_cards
 ```
+
+##Quick reference for APIs:
+```
+http://127.0.0.1:8000/api/v1/categories -> GET
+http://127.0.0.1:8000/api/v1/cards -> GET
+http://127.0.0.1:8000/api/v1/register -> POST
+    {
+            "user_name" : "to_hot",
+            "name" : "dr_flash",
+            "email" : "dr_flash@mail.com",
+            "password" : "testuser"
+    }
+http://127.0.0.1:8000/api/v1/login -> POST
+    {
+            "email" : "admin@dekk.in",
+            "password" : "ilovedekk"
+    }
+```
