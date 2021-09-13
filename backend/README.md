@@ -23,8 +23,11 @@ pre-commit install
 ```
 gunicorn -b 0.0.0.0:8000 --reload 'app:run()'
 ```
-
-## To load data run these commands:
+## For windows try 
+```
+python3 run_on_windows
+```
+## To load data run these commands for linux
 
 ```
 install docker and docker-compose first
