@@ -34,7 +34,12 @@ python3 run_on_windows
 install docker and docker-compose first
 cd backend
 docker-compose up -d
+psql -h localhost -p 2517 -U postgres -f schema.sql
+
+To check data -
 psql -h localhost -p 2517 -U postgres
+select * from user_content.tags
+
 
 Execute all SQL commands in schema.sql and run the belong command
 python -m utils.add_cards
