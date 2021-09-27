@@ -33,6 +33,7 @@ CREATE TABLE user_content.cards (
 	"type" varchar NULL,
 	image_links jsonb NULL,
 	card_hash varchar null,
+	CONSTRAINT hsh_unique UNIQUE (card_hash),
 	CONSTRAINT fk_card_and_user FOREIGN KEY (account_id) REFERENCES users.accounts(account_id)
 );
 
@@ -44,26 +45,28 @@ CREATE TABLE user_content.tags (
 	field varchar NULL,
 	category_name varchar NULL,
 	is_master_topic boolean,
+	tag_hash varchar null,
+	CONSTRAINT hsh_unique_t UNIQUE (tag_hash),
 	CONSTRAINT pk_dekk_id PRIMARY KEY (tag_id),
 	CONSTRAINT fk_tag_and_user FOREIGN KEY (created_by_id) REFERENCES users.accounts(account_id)
 );
 
 
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','infectious-diseases',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','cardiovascular-system',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','respiratory-system',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','kidney-and-urinary-tract',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','rheumatology-and-immunology',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','neurology',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','endocrinology',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','biochemistry',true,1);
-insert into user_content.tags (field,category_name,is_master_topic,created_by_id) values
-('Medical','hemat-oncology',true,1);
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','infectious-diseases',true,1,md5('1medicalinfectious-diseases'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','cardiovascular-system',true,1,md5('1medicalcardiovascular-system'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','respiratory-system',true,1,md5('1medicalrespiratory-system'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','kidney-and-urinary-tract',true,1,md5('1medicalkidney-and-urinary-tract'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','rheumatology-and-immunology',true,1,md5('1medicalrheumatology-and-immunology'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','neurology',true,1,md5('1medicalneurology'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','endocrinology',true,1,md5('1medicalendocrinology'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','biochemistry',true,1,md5('1medicalbiochemistry'));
+insert into user_content.tags (field,category_name,is_master_topic,created_by_id,tag_hash) values
+('Medical','hemat-oncology',true,1,md5('1medicalhemat-oncology'));
