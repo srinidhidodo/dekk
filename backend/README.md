@@ -31,18 +31,19 @@ python3 run_on_windows
 ## To load data run these commands for linux
 
 ```
-install docker and docker-compose first
-cd backend
-docker-compose up -d
-psql -h localhost -p 2517 -U postgres -f schema.sql
+Steps:
+1. install docker and docker-compose first
+2. change directory to -> cd backend
+3. run this -> docker-compose up -d
+4. to create table and schema definitions-> psql -h localhost -p 2517 -U postgres -f schema.sql
 
 To check data -
-psql -h localhost -p 2517 -U postgres
-select * from user_content.tags
+1. psql -h localhost -p 2517 -U postgres
+2. select * from user_content.tags
 
-
-Execute all SQL commands in schema.sql and run the belong command
-python -m utils.add_cards
+To load flash cards run this -
+1. python -m utils.add_cards
+2. select * from user_content.cards
 ```
 
 ##Quick reference for APIs:
