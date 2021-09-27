@@ -1,0 +1,30 @@
+<div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+  <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet mdl-cell--4-col-phone dekk-view-actions-panel">
+    <single-dekk [dekkName]='dekkName' [numOfCardsInDekk]='numOfCardsInDekk'></single-dekk>
+  </div>
+  <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--9-col-tablet mdl-cell--4-col-phone">
+    <base-card>
+      <base-card-title>
+        <h1 class="mdl-card__title-text">Simple table</h1>
+      </base-card-title>
+      <base-card-body class="no-padding">
+        <table class="mdl-data-table mdl-js-data-table">
+          <thead>
+          <tr>
+            <th *ngFor="let header of headers" class="mdl-data-table__cell--non-numeric">{{ header }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let row of simpleTable">
+            <td *ngFor="let cell of row.slice(0, -1)" class="mdl-data-table__cell--non-numeric">{{ cell }}</td>
+            <td class="mdl-data-table__cell--non-numeric" [ngSwitch]="row[row.length - 1]">
+              <span *ngSwitchCase="'read'" class="label label--mini background-color--primary">Read</span>
+              <span *ngSwitchCase="'unread'" class="label label--mini background-color--secondary">Unread</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </base-card-body>
+    </base-card>
+  </div>
+</div>
