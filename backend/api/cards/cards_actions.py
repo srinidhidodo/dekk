@@ -20,6 +20,12 @@ def get_cards(db_conn):
     return query_result
 
 
+# def get_cards_based_on_query_params(db_conn,params):
+
+
+#     return {}
+
+
 class Cards:
     """
         Request data has to be a json
@@ -30,6 +36,7 @@ class Cards:
 
     def on_get(self, req, resp):
 
+        # print(req.params)
         query_result = get_cards(self.db_conn)
 
         if not query_result:

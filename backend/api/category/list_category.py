@@ -27,7 +27,7 @@ class ListCategoy:
     """
 
     def __init__(self) -> None:
-        self.db_conn = postgres.QueryManager("user_content", "card_category")
+        self.db_conn = postgres.QueryManager("user_content", "tags")
 
     def on_get(self, req, resp):
 

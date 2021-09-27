@@ -1,0 +1,457 @@
+﻿Title : Cell cycle regulation
+
+
+Tags : Cell cycle regulation
+
+
+Content on front :
+** regulates cell cycle by phosphorylation of proteins to coordinate cell cycle progression
+
+
+Content on back :
+*Cyclin-CDK complexes* regulates cell cycle by phosphorylation of proteins to coordinate cell cycle progression
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title : Rough endoplasmic reticulum
+
+
+Tags : Endoplasmic reticulum
+
+
+Content on front : Rough endoplasmic reticulum is seen in ** cells of small intestine and **
+
+
+
+
+Content on back :  Rough endoplasmic reticulum is seen in *mucus secreting goblet* cells of small intestine and *antibody secreting plasma cells*
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title : Smooth endoplasmic reticulum
+
+
+Tags : Endoplasmic reticulum
+
+
+Content on front : Smooth endoplasmic reticulum seen in hepatocytes, steroid hormone-producing cells of adrenal **
+
+
+
+
+Content on back : Smooth endoplasmic reticulum seen in hepatocytes, steroid hormone-producing cells of adrenal *cortex*
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+Title : p53 gene
+
+
+Tags : Tumour  suppressor genes, p53 gene
+
+
+Content on front : p53 gene inhibits cyclin dependant kinases by inducing **
+
+
+
+
+Content on back :  p53 gene inhibits cyclin dependant kinases by inducing *p21*
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+Title : p53 gene
+
+
+Tags : Tumour  suppressor genes, p53 gene
+
+
+Content on front : p53 gene causes inhibition of ** phase of cell cycle
+
+
+
+
+Content on back : p53 gene causes inhibition of *G1-S* phase of cell cycle
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+Title : Golgi apparatus
+
+
+Tags : Golgi apparatus
+
+
+Content on front : Golgi apparatus functions-
+* Modifies N-oligosaccharides on **
+* Adds O-oligosaccharides on ** and **
+* Adds mannose-6-phosphate to proteins for transport to **
+
+
+
+
+Content on back : Golgi apparatus functions-
+* Modifies N-oligosaccharides on *Aspargine*
+* Adds O-oligosaccharides on *serine* and *threonine*
+* Adds mannose-6-phosphate to proteins for transport to *lysosymes*
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title : I-cell disease
+
+
+Tags : Lysosomal storage disorder
+
+
+Content on front : I-cell disease is a defect in *N- acetylglucosaminyl-1-phosphatransferase* causes failure of ** to phosphorylate mannose residues on glycoproteins causing proteins to be secreted extracellularly instead of **.
+
+
+Content on back :  I-cell disease is a defect in *N- acetylglucosaminyl-1-phosphatransferase* causes failure of *Golgi* to phosphorylate mannose residues on glycoproteins causing proteins to be secreted extracellularly instead of *lysosomes*.
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title :
+
+
+Tags :
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+Title : Cellular cytoskeleton
+
+
+Tags : Microtubules
+
+
+Content on front : Microtubules are made up of helical polymerised heterodimer of ** and **which is a part of cilia, flagella, mitotic spindles.
+
+
+
+
+Content on back :   Microtubules are made up of helical polymerised heterodimer of *alpha-tubulin* and *beta-tubulin* which is a part of cilia, flagella, mitotic spindles.
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+Title : Cellular cytoskeleton
+
+
+Tags : Microtubules
+
+
+Content on front : Drugs acting on microtubules-
+Vice President of MCG
+
+
+V - **
+P - **
+M - **
+C - **
+G - **
+
+
+Content on back :  Drugs acting on microtubules-
+Vice President of MCG
+
+
+V - *Vincristiine*
+P - *Paclitaxel*
+M - *Mebendazole*
+C - *Colchicine*
+G - *Griseofulvin*
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+Title: Zellweger syndrome
+
+
+Tags: Zellweger syndrome, Autosomal recessive disorders, Peroxisomal disorders
+
+
+Content on front: Zellweger syndrome is caused due to mutated **genes which causes a decrease/absence of peroxisomes in an individual
+
+
+
+
+Content on back: Zellweger syndrome is caused due to mutated *PEX* genes which causes a decrease/absence of peroxisomes in an individual
+
+
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title: Refsum disease
+
+
+Tags: Refsum disease, Autosomal recessive disorders, Peroxisomal disorders
+
+
+Content on front: Refsums disease is caused due to disorder of alpha oxidation. There is an accumulation of ** which is not metabolized to pristanic acid.
+
+
+Content on back:  Refsums disease is caused due to disorder of alpha oxidation. There is an accumulation of *Phytanic acid* which is not metabolized to pristanic acid.
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title: Karatgener syndrome
+
+
+Tags: Kartageners syndrome, Ciliary dyskinesia, Autosomal recessive disorders
+
+
+Content on front: Kartageners syndrome (primary ciliary dyskinesia) due to a *Dynein* arm defect. Can lead to infertility in patients, Bronchiectasis, *conductive* hearing loss and *dextrocardia* can be observed on Chest X-ray
+
+
+Content on back: Kartageners syndrome (primary ciliary dyskinesia) due to a ** arm defect. Can lead to infertility in patients, Bronchiectasis, ** hearing loss and ** can be observed on Chest X-ray
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title: Collagen types
+
+
+Tags: Collagen
+
+
+Content on front:
+Type I Collagen - Most common in bone
+Defect - Decreased production can lead to **
+
+
+Type II Collagen - Cartilage, Nucleus pulposus, Vitreous body
+
+
+Type III Collagen - Skin, Blood vessels
+Defect - Deficiency causes **
+
+
+Type IV Collagen - Basement membranes
+Defect - Defective collagen in **, Targeted by autoantibodies in Goodpasture syndrome
+
+
+Content on back: Type I - Most common in bone
+Defect- Decreased production can lead to *Osteogenesis Imperfecta*
+
+
+Type II - Cartilage, Nucleus pulposus, Vitreous body
+
+
+Type III - Skin, Blood vessels
+Defect - Deficiency causes *Vascular type of Ehler-Danlos*
+
+
+Type IV - Basement membranes
+Defect - Defective collagen in *Alport syndrome*, Targeted by autoantibodies in Goodpasture syndrome
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title: Osteogenesis Imperfecta
+
+
+Tags: Osteogenesis imperfecta, Collagen disorders, Collagen
+
+
+Content on front: Decreased production of Type I Collagen due to defective ** genes.
+Clinical features-
+1. Multiple **
+2. Blue **
+3. Hearing loss
+
+
+Content on back: Decreased production of Type I Collagen due to defective *COL1A1 and COL1A2* genes.
+Clinical features-
+1. Multiple *fractures*
+2. Blue *sclera*
+3. Hearing loss
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Title: Ehler-Danlos syndrome
+
+
+Tags:  Ehler-Danlos syndrome, Collagen disorders, Collagen
+
+
+Content on front: Genetic disorder with faulty collagen synthesis.
+Clinical features-
+1. Hyperextensible **
+2. Hypermobile **
+3. Easily bruises/bleeding tendency
+
+
+Types-
+1. Hypermobility type - ** type
+2. Classical type - ** collagen mutation (COL5A1 and COL5A2)
+3. Vascular type - ** collagen defect- blood vessels and muscles
+
+
+Content on back:  Genetic disorder with faulty collagen synthesis.
+Clinical features-
+4. Hyperextensible *skin*
+5. Hypermobile *joints*
+6. Easily bruises/bleeding tendency
+
+
+Types-
+1. Hypermobility type - *most common* type
+2. Classical type - *Type V* collagen mutation (COL5A1 and COL5A2)
+3. Vascular type - *Type III* collagen defect- blood vessels and muscles
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title: Menkes disease
+
+
+Tags:  Menkes disease, X-linked disorder
+
+
+Content on front:  X-linked recessive disorder caused by mutations in genes coding for the copper-transport protein **
+v/s
+** defect seen in Wilson disease
+
+
+Content on back: X-linked recessive disorder caused by mutations in genes coding for the copper-transport protein *ATP7A*
+v/s
+*ATP7B* defect seen in Wilson disease
+
+
+
+
+++++++++++++END OF CARD+++++++++++++
+Title: Marfan syndrome
+
+
+Tags:  Marfan syndrome, Autosomal recessive disorders
+
+
+Content on front:  Chromosome 15 mutation of ** gene resulting in defective **.
+
+
+Clinical features-
+1. Tall and long extremities
+2. Pectus **
+3. Hypermobile **
+4. Dissecting aortic aneurysm
+5. Mitral **
+6. Subluxation of the lens **
+
+
+Content on back:  Chromosome 15 mutation of *FNB1* gene resulting in defective *fibrillin*.
+
+
+Clinical features-
+1. Tall and long extremities
+2. Pectus *excavatum / carinatum*
+3. Hypermobile *joints*
+4. Dissecting aortic aneurysm
+5. Mitral *valve prolapse*
+6. Subluxation of the lens *upward and out*
+
+
+++++++++++++END OF CARD+++++++++++++

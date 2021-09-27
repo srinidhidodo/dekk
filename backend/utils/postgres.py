@@ -85,7 +85,7 @@ class QueryManager:
 
         return rows
 
-    def pg_handle_insert(self, data_dict, unique_constraint=""):
+    def pg_handle_insert(self, data_dict, unique_constraint="hsh_unique"):
         """
         A function like this is being made with the goal
         to have one agreed upon function for all Postgres inserts.
