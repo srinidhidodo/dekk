@@ -1,0 +1,14 @@
+<base-card>
+    <base-card-title>
+        <h4 class="mdl-card__title-text card-front-title">{{ dekkCategory }}</h4>
+    </base-card-title>
+    <base-card-body class="card-back-body-container">
+        <div class="card-back-body">
+            <div>{{ cardContent }}</div>
+        </div>
+    </base-card-body>
+    <base-card-actions class="mdl-card--border card-back-actions-panel">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-light-blue card-back-action"> Highlight </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-light-blue card-back-action" (click)="flipToFront()"> Flip To Front </button>
+    </base-card-actions>
+</base-card>
