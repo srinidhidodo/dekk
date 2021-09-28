@@ -1,0 +1,58 @@
+@import '~theme/helpers';
+
+:host {
+
+    .top-card-on-dekk-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 25vh;
+        width: 100%;
+    }
+
+    .dekk-view-actions-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .dekk-view-action {
+      margin: 5px;
+      width: 100%;
+    }
+
+  .mdl-card__supporting-text {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .mdl-list__item {
+    &:hover {
+      background-color: $default-item-hover-bg-color;
+    }
+
+    .mdl-list__item-secondary-content {
+      margin: 0;
+    }
+  }
+
+  .material-icons {
+    line-height: 0.33333;
+    font-size: $trending-arrow-size;
+  }
+
+  .trending__arrow-up {
+    color: $trending-arrow-up-color;
+  }
+
+  .trending__arrow-down {
+    color: $trending-arrow-down-color;
+  }
+
+  .trending__percent {
+    text-align: right;
+    width: 40px;
+  }
+}

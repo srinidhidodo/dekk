@@ -1,0 +1,65 @@
+@import '~theme/helpers';
+
+:host {
+
+    .card-back-body-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-back-body {
+        display: inline-block;
+        overflow: auto;
+        height: 60vh;
+        width: 85%;
+        padding-top: 20px;
+    }
+
+    .card-back-title {
+        width: 100%;
+    }
+
+    .card-back-actions-panel {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .card-back-action {
+      margin: 5px;
+    }
+
+  .mdl-card__supporting-text {
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .mdl-list__item {
+    &:hover {
+      background-color: $default-item-hover-bg-color;
+    }
+
+    .mdl-list__item-secondary-content {
+      margin: 0;
+    }
+  }
+
+  .material-icons {
+    line-height: 0.33333;
+    font-size: $trending-arrow-size;
+  }
+
+  .trending__arrow-up {
+    color: $trending-arrow-up-color;
+  }
+
+  .trending__arrow-down {
+    color: $trending-arrow-down-color;
+  }
+
+  .trending__percent {
+    text-align: right;
+    width: 40px;
+  }
+}
