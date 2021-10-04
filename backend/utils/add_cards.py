@@ -11,10 +11,14 @@ HASH_KEYS = [
     "content_on_front",
 ]
 
-FILE_NAMES = [
-    "./data/biochemistry_cellular-biology.txt",
-    "./data/git_pharmacology.txt",
-]
+FILE_NAMES = {
+    "./data/Infectious diseases | Virology.txt": "https://docs.google.com/document/d/1JX8XS1_hPGdT0rW_lNk9Pbd5qg62StUSCLyCrentj04/edit",
+    "./data/Infectious diseases | STDs.txt": "https://docs.google.com/document/d/1C7pMFF_e6nAEcDVxe8W38_vXGpglmEWT0Znc_B7_S-s/edit",
+    "./data/Infectious diseases | Antimicrobials.txt": "https://docs.google.com/document/d/1fLIiFY3VWuW0XRYaAtJojo7x9PaA8Nik2cUvrpdjzJY/edit",
+    "./data/Infectious diseases | Bacteriology.txt": "https://docs.google.com/document/d/1UHmlxDhbRAhmqNfK3talZtnnotKoUHp5SM3DPwPwwAQ/edit",
+    "./data/Infectious diseases | Parasitology.txt": "https://docs.google.com/document/d/1MN2rDqev_cjwdWmrj_f1o6NyvBgcWRj2xoEvCJ82DZI/edit",
+    "./data/Infectious diseases | Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
+}
 
 
 load_dotenv("../../local.env")
@@ -54,29 +58,42 @@ def get_highlighted_text(text):
     for i in re.finditer(r"\*", text):
         all_matches.append(i)
 
-    for i in range(len(all_matches) - 1):
-        re_obj_i = all_matches[i]
-        re_obj_iplus = all_matches[i + 1]
-        start = re_obj_i.start()
-        end = re_obj_iplus.start()
+    for i in range(0, len(all_matches), 2):
+        start = all_matches[i].start()
+        end = all_matches[i + 1].end()
         high_text = text[start:end]
         high_text = re.sub(r"(\*|,)", " ", high_text).strip()
         if high_text:
             high_text = high_text.strip()
             highlighted_keywords.append(high_text)
 
+    # for i in range(len(all_matches) - 1):
+    #     re_obj_i = all_matches[i]
+    #     re_obj_iplus = all_matches[i + 1]
+    #     start = re_obj_i.start()
+    #     end = re_obj_iplus.start()
+    #     high_text = text[start:end]
+    #     # print(high_text)
+    #     if re.search(r'\* (.*) \*',high_text):
+    #         continue
+    #     high_text = re.sub(r"(\*|,)", " ", high_text).strip()
+    #     if high_text:
+    #         high_text = high_text.strip()
+    #         highlighted_keywords.append(high_text)
+
     return highlighted_keywords
 
 
 for file_name in FILE_NAMES:
     file_obj = open(file_name)
-
+    source_link = FILE_NAMES[file_name]
     text = file_obj.read()
 
     text = re.sub(r"\n", " ", text)
     text = re.sub(r"Tags( )?:( )?", "Tags:", text)
     text = re.sub(r"Title( )?:( )?", "Title:", text)
-    cards = text.split("++++++++++++END OF CARD+++++++++++++")
+    text = re.sub(r"\+{2,}END(_)?OF(_)?CARD\+{2,}", "+++END OF CARD+++", text)
+    cards = text.split("+++END OF CARD+++")
     for i, card in enumerate(cards):
         # if i >= 2:
         #     break
@@ -99,8 +116,10 @@ for file_name in FILE_NAMES:
             card_dict["tags"] = tags.strip().split(",")
             card_dict["tags"] = [i.lower().strip() for i in card_dict["tags"]]
             card_dict["tags"] = [i.replace(" ", "-") for i in card_dict["tags"]]
-            main_tags = file_name.replace("./data/", "").replace(".txt", "").split("_")
-            main_tags = [i.lower().replace(" ", "-") for i in main_tags]
+            main_tags = (
+                file_name.replace("./data/", "").replace(".txt", "").strip().split("|")
+            )
+            main_tags = [i.lower().strip().replace(" ", "-") for i in main_tags]
             card_dict["tags"] = main_tags + card_dict["tags"]
             tags_dict = {}
             for i, tag in enumerate(card_dict["tags"], 1):
@@ -113,11 +132,13 @@ for file_name in FILE_NAMES:
             tags = re.sub(r"\s{2,}", " ", tags)
             tags = re.sub(r"must be comma-separated based on hierarchy ->", " ", tags)
             card_dict["tags"] = tags.strip().split(",")
-            main_tags = file_name.replace("./data/", "").replace(".txt", "").split("_")
-            main_tags = [i.lower().replace(" ", "-") for i in main_tags]
+            main_tags = (
+                file_name.replace("./data/", "").replace(".txt", "").strip().split("|")
+            )
+            main_tags = [i.lower().strip().replace(" ", "-") for i in main_tags]
             card_dict["tags"] = main_tags + card_dict["tags"]
             card_dict["tags"] = [i.lower().strip() for i in card_dict["tags"]]
-            card_dict["tags"] = [i.replace(" ", "-") for i in card_dict["tags"]]
+            card_dict["tags"] = [i.strip().replace(" ", "-") for i in card_dict["tags"]]
             tags_dict = {}
             for i, tag in enumerate(card_dict["tags"], 1):
                 tags_dict[tag] = i
@@ -176,12 +197,12 @@ for file_name in FILE_NAMES:
             if not card_dict["title"]:
                 continue
             for key in card_dict:
-                card_dict[key] = re.sub(r"\+", " ", card_dict[key]).strip()
+                card_dict[key] = re.sub(r"\+{3,}", " ", card_dict[key]).strip()
                 card_dict[key] = re.sub(r"END OF CARD", " ", card_dict[key]).strip()
                 card_dict[key] = re.sub(r"\s{2,}", " ", card_dict[key]).strip()
 
             card_dict["account_id"] = 1  # has to be admin
-
+            card_dict["source_link"] = source_link
             card_dict["card_hash"] = get_hash(card_dict, HASH_KEYS)
             print(json.dumps(card_dict, indent=4))
             print("----------")

@@ -1,0 +1,860 @@
+﻿Title : Amoeba
+
+
+Tags: Free-living, Amoeba, Protozoa
+
+
+Content on front :
+Patient went swimming in a freshwater lake in summer. Within 3 days, he fell seriously ill and eventually succumbed to the infection in the same week. Most likely causative organism is : **.
+
+
+Content on back :
+Patient went swimming in a freshwater lake in summer. Within 3 days, he fell seriously ill and eventually succumbed to the infection in the same week. Most likely causative organism is : *Naegleria*.
+
+
+1. Naegleria → Primary Amoebic Meningo-encephalitis (PAM)
+2. *Acute & severe[a]* presentation.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Amoeba
+
+
+Tags:  Free-living, Amoeba, Protozoa
+
+
+
+
+Content on front :
+A regular contact lens user accidentally used soiled tap water to store his lenses overnight.
+He subsequently developed a ring abscess in the eye. Most likely causative organism is  **.
+
+
+
+
+Content on back :
+A regular contact lens user accidentally used soiled tap water to store his lenses overnight.
+He subsequently developed a ring abscess in the eye. Most likely causative organism is  *Acanthamoeba*.
+
+
+Acanthamoeba → Keratitis in chronic contact lens users.
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Amoeba
+
+
+Tags:  Free-living, Amoeba, Protozoa
+
+
+
+
+Content on front :
+Acanthamoeba most likely presents as ** after fresh warm water contact.
+
+
+Content on back :
+Acanthamoeba most likely presents as *Granulomatous Amoebic Encephalitis (GAE)* after fresh warm water contact.
+
+
+1. Chronic presentation.
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+Title : Leishmania
+
+
+Tags: Flagellate, Protozoa
+
+
+Content on front :
+Patient from Bihar was diagnosed with Kala Azar. On liver biopsy : ** were seen inside macrophages of reticuloendothelial cells.
+
+
+
+
+Content on back :
+Patient from Bihar was diagnosed with Kala Azar. On liver biopsy : *Amastigotes* were seen inside macrophages of reticuloendothelial cells.
+
+
+
+
+
+
+1. Amastigotes contain Kinetoplast
+2. Amastigote inside macrophage is called “LD body”.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Leishmania
+
+
+Tags: Flagellate, Protozoa
+
+
+Content on front :
+Vector responsible for Leishmania is **.
+
+
+
+
+Content on back :
+Vector responsible for Leishmania is *Phlebotomus Argentepis (sandfly)*.
+
+
+
+
+
+
+Permethrin (synthetic pyrethroids) is sprayed at a height of 2 metres on the walls as a preventive measure.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Trypanosoma Cruzi
+
+
+Tags: Flagellates, Protozoa
+
+
+Content on front :
+After a reduviid bug bit a girl, she developed Chagas disease. Characteristic sign associated with this condition is **.
+
+
+
+
+Content on back :
+After a reduviid bug bit a girl, she developed Chagas disease. Characteristic sign associated with this condition is *Romana’s sign*.
+
+
+
+
+
+
+1. *U/L conjunctival/ eyelid edema = Romana’s sign.*
+[b]
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Trypanosoma Cruzi
+
+
+Tags: Flagellates, Protozoa
+
+
+Content on front :
+Triad of Chagas disease is **.
+
+
+Content on back :
+Triad of Chagas disease is *Megacolon, Megaoesophagus,Cardiomegaly*.
+
+
+Diagnosis is confirmed by Trypomastigote on peripheral blood smear.
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+Title : Trypanosoma Bruci
+
+
+Tags: Flagellates, Protozoa
+
+
+
+
+Content on front :
+Excessive daytime sleepiness with lymphadenopathy in the posterior triangle of the neck.
+This condition is most likely transmitted by[c] **.
+
+
+
+
+
+
+Content on back :
+Excessive daytime sleepiness with lymphadenopathy in the posterior triangle of the neck.
+This condition is most likely transmitted by *Tse-Tse fly*.
+
+
+
+
+Tse-tse fly transmits Sleeping sickness.
+
+
+Characteristic sign : Winterbottom sign.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Babesia
+
+
+Tags: Sporozoa, Protozoa
+
+
+Content on front :
+Patient with fever, fatigue and myalgia was subjected to a blood examination. On Giemsa stain, ** were seen inside RBC.
+
+
+Content on back :
+Patient with fever, fatigue and myalgia was subjected to a blood examination. On Giemsa stain, *Maltese cross/intraerythrocytic rings* were seen inside RBC.
+
+
+
+
+
+
+D/D : Lyme’s disease (erythema migrans)
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Babesia
+
+
+Tags: Sporozoa, Protozoa
+
+
+Content on front :
+Babesia divergens/ Microti are transmitted by bite of **.
+
+
+Content on back :
+Babesia divergens/ Microti are transmitted by bite of *Ixodid tick*.
+
+
+
+
+Ixodid tick/ Deer tick causing Babesia and Lyme disease.
+
+
+++++++++++++END OF CARD+++++++++++++
+
+
+Title : Toxoplasma gondii
+
+
+Tags:  Sporozoa, Protozoa
+
+
+
+
+Content on front :
+Diagnostic finding seen in Toxoplasmosis on blood smear examination is  : **.
+
+
+
+
+Content on back :
+Diagnostic finding seen in Toxoplasmosis on blood smear examination is  : *Tachyzoite*.
+1. Patients may acquire Tachyzoites via Blood transfusion.
+2. Infective form : oocyst in cat feces.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Toxoplasma gondii
+
+
+
+
+Tags: Sporozoa, Protozoa
+
+
+
+
+Content on front :
+Immunologic diagnostic test to confirm Toxoplasmosis is **.
+
+
+
+
+Content on back :
+Immunologic diagnostic test to confirm Toxoplasmosis is *Sabin Feldman Dye test/ IgG Avidity test*.
+
+
+Napier’s Aldehyde test : Leishmania
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Entamoeba Histolytica [d]
+
+
+Tags: Intestinal amoeba, Protozoa
+
+
+Content on front :
+Pathogenic E. Histolytica express ** receptors that are required for attachment.
+
+
+Content on back :
+Pathogenic E. Histolytica express *Lectin* receptors that are required for attachment.
+
+
+The Isoenzyme / Zymodeme pattern is used to differentiate between pathogenic and non-pathogenic E. Histolytica.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Entamoeba Histolytica
+
+
+
+
+Tags:  Intestinal amoeba, Protozoa
+
+
+
+
+Content on front :
+Patient with fever, pain in the abdomen, bloody-mucous diarrhoea. A liver abscess is discovered with typical ** exudate.
+
+
+
+
+Content on back :
+Patient with fever, pain in the abdomen,  bloody-mucous diarrhoea. A liver abscess is discovered with typical *anchovy paste* exudate.
+
+
+1. On colonoscopy :  Flask- shaped ulcers are seen.
+
+
+
+
+
+Trophozoite and cyst of E. Histolytica.
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Giardia Lamblia
+
+
+Tags: Flagellates, Protozoa
+
+
+Content on front :
+Patient with fatty diarrhoea presents to the OPD. On stool examination, oval thin -walled cysts are seen.
+The trophozoite of this organism shows ** motility.
+
+
+
+
+Content on back :
+Patient with fatty diarrhoea presents to you. On stool examination, oval thin -walled cysts are seen.
+The trophozoite of this organism shows *Falling-leaf* motility.
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Malaria
+
+
+Tags: Sporozoa, Protozoa
+
+
+Content on front :
+Following anopheles mosquito bite, a patient presents with a fever every 72 hours (Quartan). Characteristic finding on blood smear : **.
+
+
+
+
+Content on back :
+Following anopheles mosquito bite, a patient presents with a fever every 72 hours (Quartan). Characteristic finding on peripheral smear : *Band forms*.
+
+
+Above presentation is seen with *Plasmodium malariae.*
+
+
+
+
+
+
+Trophozoite with band form
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Malaria
+[e]
+
+
+
+
+Tags: Sporozoa, Protozoa
+
+
+
+
+Content on front :
+Multiple rings inside trophozoite is characteristic of Plasmodium **.
+
+
+
+
+Content on back :
+Multiple rings inside trophozoite is characteristic of Plasmodium *Falciparum*.
+
+
+Other features:
+1. NO schizonts
+2. Leads to Acute Tubular Necrosis as a complication.
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Cryptosporidium
+
+
+Tags: Intestinal sporozoa, Protozoa
+
+
+Content on front :
+Patient with AIDS, presents to you with watery diarrhoea. On stool microscopy : oocysts are ** on Kinyoun staining.
+
+
+
+
+Content on back :
+Patient with AIDS, presents to you with watery diarrhoea. On stool microscopy : oocysts are *Acid -fast* on Kinyoun staining.
+
+
+Vacuolated, spherical acid - fast oocyst of Cryptospora.
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Tenia Solium[f]
+
+
+Tags: Cestodes, Helminth
+
+
+Content on front :
+Most common presentation of Intestinal Taeniasis with pork-worm is **.
+
+
+
+
+Content on back :
+Most common presentation of Intestinal Taeniasis with pork-worm is *Neurocysticercosis*.
+
+
+1. Brain parenchyma cystic lesions
+2. Seizures
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Toxoplasma gondii[g]
+
+
+
+
+Tags: Sporozoa, Protozoa
+
+
+
+
+Content on front :
+Toxoplasmosis finding in MRI brain is typically seen as **.
+
+
+
+
+Content on back :
+Toxoplasmosis finding in MRI brain is typically seen as *Multiple ring-enhancing lesions*.
+
+
+
+
+D/D : Tuberculosis
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Intestinal Taeniasis
+
+
+
+
+Tags:  Cestodes, Helminth
+
+
+
+
+Content on front :
+Taenia with rostellum and hooklets is **.
+
+
+
+
+Content on back :
+Taenia with rostellum and hooklets is *T.Solium*.
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Trichinella spiralis
+
+
+Tags: Nematode, Helminth
+
+
+Content on front :
+On eating undercooked pork, a patient presents with Fever, periorbital oedema and myalgia.
+Concerned organism is seen encysted in the ** muscles.
+
+
+
+
+Content on back :
+On eating undercooked pork, a patient presents with Fever, periorbital oedema and myalgia.
+Concerned organism is seen encysted in the *ocular >>cardiac* muscles.
+
+
+
+
+Trichinella spiralis larvae encysted in muscle, causing myositis.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Hydatid cyst
+
+
+Tags: cestode, helminth
+
+
+Content on front :
+A Hypoechoic mass is seen in the right hypochondrium with Casoni skin test positive. This  infection is most likely caused by **.
+
+
+Content on back :
+A Hypoechoic mass is seen in the right hypochondrium with Casoni skin test positive. This  infection is most likely caused by *Echinococcus Granulosus (dogworm)*.
+
+
+1. Hydatid cysts seen in Liver >>> Lung > Brain
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Schistosoma
+
+
+Tags: Trematodes, Helminth
+
+
+Content on front :
+Schistosoma Haematobium is most likely to present as  **.
+
+
+
+
+Content on back :
+Schistosoma Haematobium is most likely to present as *Urinary Schistosomiasis/ Bilharziasis*.
+1. This can further lead to  Urinary Bladder carcinoma.
+2. Painless terminal hematuria.
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Schistosoma
+
+
+
+
+Tags: Trematodes, Helminth
+
+
+Content on front :
+Katayama Fever with eggs in urine having a lateral spine is most likely cause of : Schistosoma*_____*
+
+
+Content on back :
+Katayama Fever with eggs in urine having a lateral spine is most likely cause of : *Schistosoma mansoni*
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Strongyloides stercoralis
+
+
+Tags: Nematodes, Helminth
+
+Content on front :
+Transmission of Strongyloides is through ** larvae being shed  in the feces.
+
+
+Content on back :
+Transmission of Strongyloides is through *Rhabditiform* larvae being shed  in the feces.
+
+
+Most likely causes associated with clinical features:
+1. Cutaneous pruritus → Cutaneous Larva migrans
+2. Dry cough with Hemoptysis → Loeffler’s Pulmonary Eosinophilia
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :Strongyloides stercoralis
+
+
+
+
+Tags:  Nematodes, Helminth
+
+
+
+Content on front :
+Hyperinfection syndrome in Strongyloides is due to ** when the larvae enter the bloodstream.
+
+
+Content on back :
+Hyperinfection syndrome in Strongyloides is due to *Autoinfection* when the larvae enter the bloodstream.
+
+
+1. Presents as : Hypereosinophilia and shock.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Hookworm
+
+
+Tags: Nematodes, Helminth
+
+Content on front :
+On walking barefoot on a contaminated beach, a patient developed a pruritic rash.
+Most likely causative organism is **.
+
+
+Content on back :
+On walking barefoot on a contaminated beach, a patient developed a pruritic rash.
+Most likely causative organism is *Ancylostoma duodenale *.
+
+
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+Title : Hookworm
+
+
+Tags:  Nematodes, Helminth
+
+
+
+Content on front :
+Ancylostoma and Necator americanus present with ** anemia.
+
+
+Content on back :
+Ancylostoma and Necator americanus present with *Iron Deficiency/ Microcytic Normochromic* anemia.
+
+
+D/D : Diphyllobothrium Latum = Megaloblastic anemia
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Trichuris Trichiura
+
+
+Tags: Nematode, Helminth
+
+Content on front :
+Most likely presentation in children is **.
+
+
+Content on back :
+Most likely presentation in children is *Rectal prolapse*.
+
+
+
+
+Eggs with mucous plugs.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+Title : Enterobius vermicularis
+
+
+Tags: Nematodes, Helminth
+
+Content on front :
+Pinworms causing perianal pruritus are identified by ** eggs on Tape test.
+
+
+Content on back :
+Pinworms causing perianal pruritus are identified by *Plano - convex* eggs on Tape test.
+
+
+
+
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Toxocara canis
+
+
+Tags: Nematodes, Helminth
+
+
+
+Content on front :
+Via the feco-oral route Toxocara larvae are most common cause of **.
+
+
+Content on back :
+Via the feco-oral route Toxocara larvae are most common cause of  *Visceral larva migrans*.
+
+
+1. Multisystem involvement : Eyes, Heart, CNS.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+[a]acute and severe what?
+[b]Info overload. Kindly divide it into two flashcards. If  a user spends more than 15 seconds on one card, He WILL get irritated and close it. We cannot let that happen.
+[c]Is sleeping sickness a clinical diagnosis? If not this should be phrased differently. has to be "disease is most likely transmitted by"
+[d]This is a good card. Ideal.
+[e]ideal flashcard
+[f]Amazing card
+[g]great job with the images. Hope they are all open domain images
