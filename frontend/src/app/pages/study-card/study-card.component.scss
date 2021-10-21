@@ -1,0 +1,29 @@
+.page-container {
+  padding-top: 3vh;
+}
+
+.card-container {
+  height: 30vh;
+  width: 90%;
+  margin-bottom: 5px;
+}
+
+.content-title {
+  margin: 0px;
+}
+
+.content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.card-action-button {
+  width: 90%;
+  margin: 5px;
+}
+
+.hide-card {
+  display: none;
+}

@@ -1,0 +1,41 @@
+.search-result-container {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    height: fit-content;
+    margin: 10px;
+    // background: transparent;
+    // border: 0.5px solid;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+}
+
+.dekk-icon {
+    font-size: 5vw;
+    height: unset;
+    width: unset;
+}
+
+.content-container {
+    width: 70vw;
+}
+
+.content-item {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none;
+    }    
+}

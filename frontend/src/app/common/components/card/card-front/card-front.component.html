@@ -1,0 +1,8 @@
+<mat-card class="card-container">
+  <mat-card-subtitle>{{ getCardDekk() }}</mat-card-subtitle>
+  <mat-card-content class="content-item card-content">{{card.content_on_front}} <mark> test highlight </mark></mat-card-content>
+  <mat-card-actions class="card-actions-container mobile-next-line">
+    <button mat-raised-button color="primary" class="card-action-button"> Highlight </button>
+    <button mat-raised-button color="primary" class="card-action-button" (click)="flipToBack()"> Flip To Back </button>
+  </mat-card-actions>
+</mat-card>

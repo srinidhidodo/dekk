@@ -1,0 +1,9 @@
+@import 'custom-theme.scss';
+@import "~animate.css/animate.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mark {
+    background-color: #f3f57f;
+}

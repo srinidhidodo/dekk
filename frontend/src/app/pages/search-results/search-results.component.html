@@ -1,4 +1,23 @@
-<div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top dekk-study-actions-panel">
-  <dekk-card-front [dekkCategory]='dekkCategory' [cardContent]='cardFrontContent' [ngClass]="{'hide-card': !isCardFrontVisible()}"></dekk-card-front>
-  <dekk-card-back [dekkCategory]='dekkCategory' [cardContent]='cardBackContent' [ngClass]="{'hide-card': isCardFrontVisible()}"></dekk-card-back>
-</div>
+<div class="row search-results-container">
+  <div>
+    <div>
+      <form class="search-box-container" (ngSubmit)="search()">
+        <mat-form-field class="mdc-checkbox__background search-box" >
+          <mat-label>Enter Search Keywords</mat-label>
+          <input matInput [(ngModel)]="searchKeyword"
+            name="searchKeyword"
+            type="text"
+            class="search-input" />
+          <input type="submit" hidden />
+        </mat-form-field>
+      </form>
+    </div>
+    <cdk-virtual-scroll-viewport itemSize="250" (scrolledIndexChange)="getNextBatch()">
+      <div class="search-result-list" id="searchSuggestionsList">
+        <div class="each-search-item" *cdkVirtualFor="let searchResult of searchResultList">
+          <app-search-result class="animated slideInRight" [card]="searchResult"></app-search-result>
+        </div>
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</div> 

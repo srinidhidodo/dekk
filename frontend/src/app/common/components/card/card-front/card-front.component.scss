@@ -1,0 +1,44 @@
+.card-container {
+  width: 100%;
+}
+
+.content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.card-action-button {
+  display: inline-block;
+  overflow: auto;
+  width: 30%;
+  margin: 5px;
+}
+
+.card-content {
+  display: inline-block;
+  overflow: auto;
+  height: 60vh;
+}
+
+.card-actions-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 400px) {
+  .mobile-next-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-action-button {
+    display: inline-block;
+    overflow: auto;
+    width: 90%;
+    margin: 5px !important;
+  }
+}
