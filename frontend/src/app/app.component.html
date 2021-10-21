@@ -1,0 +1,26 @@
+<!-- Toolbar -->
+<div [ngClass]="{'dark-theme-mode': isDarkThemeEnabled}" class="mat-app-background background">
+  <div color="primary" class="toolbar head-toolbar" role="banner">
+    <div class=left-toolbar>
+      <mat-icon class="menu-icon" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
+      <span class="padded-toolbar-component">Dekk</span>
+    </div>
+    <span class="dark-light-toggle padded-toolbar-component">
+      <mat-slide-toggle [(ngModel)]="isDarkThemeEnabled">
+        <mat-icon>bedtime</mat-icon>
+      </mat-slide-toggle>
+    </span>
+  </div>
+  <mat-sidenav-container class="app-background">
+    <mat-sidenav [(opened)]="sidebarOpened">
+      <mat-nav-list>
+        <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItems" (click)="sidebarOpened=!sidebarOpened">{{listItem.name}}</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  <!-- <router-outlet></router-outlet> -->
+</div>

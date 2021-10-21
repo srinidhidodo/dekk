@@ -1,0 +1,22 @@
+<mat-card class="row search-result-container" (click)="openCard()">
+    <div class="icon-container hidden-mobile">
+        <mat-icon class="dekk-icon">auto_awesome_motion</mat-icon>
+    </div>
+    <div class="content-container">
+        <mat-card-title class="content-item content-title">{{ card.title }}</mat-card-title>
+        <mat-card-subtitle class="content-item">
+            <span><b> Dekk: </b></span>
+            <span> {{card.dekk_name}} </span>
+        </mat-card-subtitle>
+        <mat-card-content class="content-item">
+            <div class="content-item"> {{card.content_on_front}} </div>
+            <div>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let tag of getTags()">
+                        {{tag}}
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+        </mat-card-content>
+    </div>
+</mat-card>

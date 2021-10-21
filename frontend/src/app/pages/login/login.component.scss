@@ -1,0 +1,21 @@
+.login-page {
+    height: 80vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    @extend .login-container;
+    width: 60vw;
+    height: 50vh;
+}
+
+.search-input {
+    border: 0px;
+    background: transparent;
+}

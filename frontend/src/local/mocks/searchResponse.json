@@ -1,0 +1,128 @@
+{
+    "results": {
+        "cards": [
+            {
+                "card_id": 109,
+                "account_id": 1, 
+                "title": "Fever",
+                "category": "General",
+                "sub_category": "Also General",
+                "dekk_name": "General Dekk",
+                "highlighted_keywords": [ "fever", "about fever" ],
+                "tags": {
+                    "amoeba": 4,
+                    "protozoa": 5,
+                    "free-living": 3,
+                    "parasitology": 2,
+                    "infectious-diseases": 1
+                },
+                "content_on_front": "something in the front fever something in the front about fever something in the front something in the front something in the front",
+                "content_on_back": "something in the back fever something in the back about fever something in the back something in the back something in the back"
+            },
+            {
+                "card_id": 110,
+                "account_id": 1,
+                "title": "Cold",
+                "category": "Things",
+                "sub_category": "Stuff",
+                "dekk_name": "Viruses",
+                "highlighted_keywords": [ "cold", "about cold" ],
+                "tags": {
+                    "amoeba": 4,
+                    "protozoa": 5,
+                    "free-living": 3,
+                    "parasitology": 2,
+                    "infectious-diseases": 1
+                },
+                "content_on_front": "something cold in the front something else in the front something also cold in the front something else in the front something else in the front",
+                "content_on_back": "something cold in the back something else in the back something also cold in the back something else in the back something else in the back"
+            },
+            {
+                "card_id": 111,
+                "account_id": 1,
+                "title": "I made this up",
+                "category": "Personal",
+                "sub_category": null,
+                "dekk_name": "Whatever",
+                "highlighted_keywords": [ ],
+                "tags": {
+                    "amoeba": 4,
+                    "protozoa": 5,
+                    "free-living": 3,
+                    "parasitology": 2,
+                    "infectious-diseases": 1
+                },
+                "content_on_front": "abracadabra",
+                "content_on_back": "back of card abracadabra"
+            },
+            {
+                "card_id": 109,
+                "account_id": 1, 
+                "title": "Fever",
+                "category": "General",
+                "sub_category": "Also General",
+                "dekk_name": "General Dekk",
+                "highlighted_keywords": [ "fever", "about fever" ],
+                "tags": {
+                    "amoeba": 4,
+                    "protozoa": 5,
+                    "free-living": 3,
+                    "parasitology": 2,
+                    "infectious-diseases": 1
+                },
+                "content_on_front": "something in the front fever something in the front about fever something in the front something in the front something in the front",
+                "content_on_back": "something in the back fever something in the back about fever something in the back something in the back something in the back"
+            },
+            {
+                "card_id": 110,
+                "account_id": 1,
+                "title": "Cold",
+                "category": "Things",
+                "sub_category": "Stuff",
+                "dekk_name": "Viruses",
+                "highlighted_keywords": [ "cold", "about cold" ],
+                "tags": {
+                    "amoeba": 4,
+                    "protozoa": 5,
+                    "free-living": 3,
+                    "parasitology": 2,
+                    "infectious-diseases": 1
+                },
+                "content_on_front": "something cold in the front something else in the front something also cold in the front something else in the front something else in the front",
+                "content_on_back": "something cold in the back something else in the back something also cold in the back something else in the back something else in the back"
+            }
+        ],
+        "dekks": [
+            {
+                "category": "ABCDEFGHI",
+                "subCategory": "JKLMNOPQRSTUV",
+                "dekkName": "DABLU-XYZ"
+            },
+            {
+                "category": "General",
+                "subCategory": "Also General",
+                "dekkName": "General Dekk"
+            },
+            {
+                "category": "Things",
+                "subCategory": "Stuff",
+                "dekkName": "Viruses"
+            },
+            {
+                "category": "Personal",
+                "subCategory": null,
+                "dekkName": "Whatever"
+            }
+        ]
+    },
+    "status": {
+        "success": true
+    },
+    "tags": [
+        "oncology",
+        "NEET",
+        "something",
+        "imaginary",
+        "hogwarts"
+    ]
+}

@@ -1,138 +1,96 @@
-@import '~theme/helpers';
+// @import '~theme/helpers';
+// @import 'styles.scss';
 
-// TODO: separate styles
-
-.dekk-study-actions-panel {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 20px;
+.box-height {
+  height: 5vh;
 }
 
-.hide-card {
+.search-results-container {
+  margin: 0px;
+}
+
+.hide-component {
   display: none;
 }
 
-:host ::ng-deep {
-  .chart1__container,
-  .chart2__container,
-  .pie-chart__container,
-  .discrete-bar-chart__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    min-height: $pie-chart-height;
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    svg {
-      min-height: 200px;
-      max-width: 180px;
+.search-box {
+  width: 95%;
+}
 
-      .nvd3.nv-pie {
-        path {
-          fill-opacity: 1;
-          stroke-width: 0;
-        }
+.search-input {
+  border: 0px;
+  background: transparent;
+}
 
-        .nv-pie-title {
-          @include typo-piechart-title;
+.search-result-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-          font-size: 22px !important;
-        }
-      }
-    }
+.each-search-item {
+  // cursor: pointer;
+  width: 90vw;
+  height: fit-content;
+}
 
-    .legend {
-      max-width: 140px;
-    }
+.tags-suggestion-dropdown-container {
+  position: relative;
+  display: block;
+}
+
+.selected-tags-container .selected-tags-item {
+  display: inline-flex;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.selected-tags-item-chip {
+  background-color: rgb(32, 32, 32);
+}
+
+.selected-tags-item-icon {
+  background-color: rgb(43, 46, 48);
+}
+
+hr {
+  padding: 0px;
+  margin: 0px;
+  background-color: rgba(253, 63, 63, 0.1);
+}
+
+ul, li {
+  padding: 0px;
+}
+
+.searched-cards-container {
+  height: 40vh;
+  width: 85vw;
+}
+
+.searched-cards-loading {
+  width: 100% !important;
+}
+
+cdk-virtual-scroll-viewport {
+  height: 85vh;
+
+  &::-webkit-scrollbar {
+    width: 2px;
   }
 
-  .nvd3 {
-    text {
-      font: normal 12px Arial, Helvetica, sans-serif;
-      fill: $color-white !important;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: gray;
   }
+}
 
-  .chart1__container .nv-label {
-    text {
-      fill: $color-white !important;
-    }
-  }
-
-  .discrete-bar-chart__container,
-  .line-plus-bar-chart__container,
-  .stacked-bar-chart__container {
-    .nv-controlsWrap .nv-legend-symbol {
-      fill: $color-teal !important;
-      stroke: $color-teal !important;
-    }
-
-    .nv-group {
-      fill-opacity: 0.9 !important;
-    }
-
-    .nv-axis {
-      text {
-        fill: $color-white;
-        opacity: 0.5 !important;
-      }
-
-      .domain,
-      .nv-zeroLine {
-        stroke: $color-white;
-        opacity: 0.5;
-      }
-
-      .tick {
-        line {
-          opacity: 0.1 !important;
-        }
-      }
-    }
-
-    .nv-legend-text {
-      opacity: 0.5;
-    }
-  }
-
-  .discrete-bar-chart__container {
-    height: 100%;
-
-    svg {
-      height: 240px;
-      max-width: calc(100% - 140px);
-
-      .nv-bar {
-        text {
-          fill: $color-white !important;
-          opacity: 0.9;
-        }
-      }
-
-      .nv-axis {
-        &.nv-x {
-          text {
-            display: none;
-          }
-        }
-
-        &.nv-y {
-          .tick:nth-child(2n) {
-            text {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .line-plus-bar-chart__container,
-  .stacked-bar-chart__container {
-    svg,
-    svg .nv-linePlusBar {
-      height: 250px;
-    }
-  }
+div {
+  animation-delay: 250ms;
 }
