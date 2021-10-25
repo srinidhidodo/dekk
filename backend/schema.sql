@@ -1,3 +1,13 @@
+drop schema IF EXISTS users;
+drop schema IF EXISTS user_content ;
+
+drop table IF EXISTS user_content.cards;
+drop table IF EXISTS user_content.tags ;
+
+drop table IF EXISTS user_content.cards;
+drop table IF EXISTS user_content.tags ;
+drop table IF EXISTS users.accounts;
+
 create schema users;
 create schema user_content;
 
@@ -34,6 +44,8 @@ CREATE TABLE user_content.cards (
 	image_links jsonb NULL,
 	card_hash varchar null,
 	source_link varchar null,
+	for_search varchar null,
+	master_topic varchar null,
 	CONSTRAINT hsh_unique UNIQUE (card_hash),
 	CONSTRAINT fk_card_and_user FOREIGN KEY (account_id) REFERENCES users.accounts(account_id)
 );

@@ -8,6 +8,7 @@ cp example-env local.env
 ```
 
 ## Install python requirements and dependencies
+
 ```
 
 virtualenv -p python3.8 venv
@@ -17,17 +18,22 @@ pip install -r requirements.txt
 
 pre-commit install
 
+python -m spacy download en_core_web_sm
+
 ```
 
-## To run this app(linux): 
+## To run this app(linux):
 
 ```
 gunicorn -b 0.0.0.0:8000 --reload 'app:run()'
 ```
-## For windows try 
+
+## For windows try
+
 ```
 python3 run_on_windows
 ```
+
 ## To load data run these commands for linux
 
 ```
@@ -47,6 +53,7 @@ To load flash cards run this -
 ```
 
 ##Quick reference for APIs:
+
 ```
 http://127.0.0.1:8000/api/v1/categories -> GET
 http://127.0.0.1:8000/api/v1/cards -> GET

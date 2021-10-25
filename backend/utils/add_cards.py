@@ -18,6 +18,8 @@ FILE_NAMES = {
     "./data/Infectious diseases | Bacteriology.txt": "https://docs.google.com/document/d/1UHmlxDhbRAhmqNfK3talZtnnotKoUHp5SM3DPwPwwAQ/edit",
     "./data/Infectious diseases | Parasitology.txt": "https://docs.google.com/document/d/1MN2rDqev_cjwdWmrj_f1o6NyvBgcWRj2xoEvCJ82DZI/edit",
     "./data/Infectious diseases | Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
+    "./data/Infectious diseases | Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
+    "./data/Endocrinology | Endocrine Physiology.txt": "https://docs.google.com/document/d/1-DkispbAHJOzIM6Cxa_-OJSen7RjEbGmZOp7pVlk13M/edit",
 }
 
 
@@ -99,7 +101,7 @@ for file_name in FILE_NAMES:
         #     break
         card_dict = {}
         card = re.sub(r"\s{2,}", " ", card)
-        print(card)
+        # print(card)
         if re.search(r"(?<=Title)(.*)(?=Tags:)", card):
             title = re.search(r"(?<=Title)(.*)(?=Tags)", card).group()
             title = re.sub(r":", " ", title)
@@ -193,7 +195,7 @@ for file_name in FILE_NAMES:
             ).strip()
 
         if card_dict:
-            print(card_dict)
+            # print(card_dict)
             if not card_dict["title"]:
                 continue
             for key in card_dict:
@@ -204,6 +206,25 @@ for file_name in FILE_NAMES:
             card_dict["account_id"] = 1  # has to be admin
             card_dict["source_link"] = source_link
             card_dict["card_hash"] = get_hash(card_dict, HASH_KEYS)
+
+            for_search = (
+                card_dict["title"]
+                + " "
+                + card_dict["content_on_front"]
+                + " "
+                + card_dict["content_on_back"]
+            )
+            for_search = re.sub(r"\s{2,}", " ", for_search).strip()
+            for_search = re.sub(r"_", " ", for_search).strip()
+            for_search = re.sub(r"\W", " ", for_search).strip()
+            for_search = re.sub(r"\s{2,}", " ", for_search).strip().lower()
+
+            card_dict["for_search"] = for_search
+            # print(json.loads(card_dict['tags']))
+            tags = json.loads(card_dict["tags"])
+            for tag in tags:
+                if tags[tag] == 1:
+                    card_dict["master_topic"] = tag
             print(json.dumps(card_dict, indent=4))
             print("----------")
             DB_OBJ.pg_handle_insert(card_dict)
