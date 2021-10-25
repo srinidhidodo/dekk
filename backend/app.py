@@ -42,7 +42,7 @@ def initialize_routes() -> falcon.API:
 
     api.add_route(f"{api_version}/register", Register())
     api.add_route(f"{api_version}/login", Login())
-    api.add_route(f"{api_version}/user/home", Home())
+    api.add_route(f"{api_version}/users/home", Home())
     api.add_route(f"{api_version}/cards", Cards())
     api.add_route(f"{api_version}/cards/search", SearchCards())
 

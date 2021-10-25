@@ -103,7 +103,6 @@ def get_cards_by_tags_and_tokens(db_conn, query_string, offset):
 
     query = query + f" OFFSET {offset} LIMIT 10"
 
-    print(query)
     query_result = db_conn.fetch_query_direct_query(query)
     cards_found = len(query_result)
 
@@ -125,7 +124,6 @@ class SearchCards:
         self.db_conn = postgres.QueryManager("user_content", "cards")
 
     def on_get(self, req, resp):
-        print(req.params)
         if "q" in req.params and "offset" in req.params:
             query_string = req.params["q"]
             offset = req.params["offset"]

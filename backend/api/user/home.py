@@ -1,6 +1,6 @@
 """
 Sample API calls:
-    GET - http://127.0.0.1:8000/api/v1/user/home
+    GET - http://127.0.0.1:8000/api/v1/users/home
 
 """
 import hashlib
