@@ -1,0 +1,12 @@
+<div class="row home-banner-container">
+    <div> Welcome to Dekk </div>
+    <div> Your One-Stop Study Shop </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let dekk of dekks">
+        <mat-card class="each-dekk">
+            <mat-card-title class="each-dekk-title"> <h2> {{dekk.tag_name}} </h2></mat-card-title>
+            <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
+        </mat-card>
+    </div>
+</div>

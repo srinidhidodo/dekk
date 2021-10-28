@@ -33,7 +33,7 @@ input {
 }
 
 .app-background {
-  //blue-white
+  //blue-white-pink
   background-color: #effcf5;
   background-image: linear-gradient(315deg, #f2e8f3 0%, #d4e0fa 74%);
 }
@@ -51,7 +51,7 @@ cdk-virtual-scroll-viewport {
   align-items: center;
   background: rgba(212, 224, 250, 0.3);
   // background-color: #1870c9;
-  color: black;
+  color: rgba(0, 0, 0, 0.87);
   font-weight: 600;
   // opacity: 0.5;
 }

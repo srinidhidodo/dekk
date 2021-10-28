@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+.head-toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
 .dark-light-toggle {
   display: flex !important;
   justify-content: space-evenly;
@@ -109,6 +114,28 @@
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
+  }
+
+  .search-box-container {
+    margin-right: 10px;
+  }
+
+  .search-icon {
+    // float: right;
+    // margin-right: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .search-box {
+    display: flex;
+  }
+
+  .search-input {
+    margin-left: 5px;
+    border: 0px !important;
+    background: transparent !important;
   }
 
   .card-container .card:not(:last-child) {
@@ -320,4 +347,9 @@ mat-sidenav {
 
 .menu-icon {
   cursor: pointer;
+}
+
+.search-input {
+  border: 0px;
+  background: transparent;
 }

@@ -1,8 +1,9 @@
 import { CdkVirtualScrollViewport } from "@angular/cdk/scrolling";
 import { Component, OnDestroy, OnInit, ViewChild } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Subscription } from "rxjs";
 import { SearchService } from "src/app/common/services/search.service";
-import { UrlConstants } from './../../common/constants/url.constants';
+import rxmq from 'rxmq';
+import { MessageConstants } from "src/app/common/constants/message.constants";
 
 @Component({
   selector: 'app-search-results',
@@ -17,20 +18,49 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   searchResultList: any[] = [];
   searchKeyword: string = '';
   searchActive: boolean = false;
+  searchInitialLoading: boolean = false;
   offset = new BehaviorSubject(null);
 
-  constructor(public searchService: SearchService) { }
+  searchSubscription: Subscription;
 
-  ngOnInit() { }
+  constructor(public searchService: SearchService) {
+  }
 
-  ngOnDestroy() { }
+  ngOnInit() {
+    this.searchSubscription = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
+    .observe(MessageConstants.SEARCH_TRIGGERED_ACTION)
+    .subscribe((data: any) => {
+      this.searchKeyword = data?.searchString;
+      if (this.searchKeyword) {
+        this.search();
+      }
+    });
+    if (this.searchService.currentSearch) {
+      this.search();
+    }
+  }
+
+  ngOnDestroy() {
+    this.searchSubscription.unsubscribe();
+    this.searchService.unsetCurrentSearch();
+  }
+
+  submitSearch(): void {
+    this.searchService.currentSearch = this.searchKeyword;
+    this.search();
+  }
 
   search(): void {
     this.searchActive = false;
-    this.searchService.loadSearchResults([]).subscribe((data: any) => {
-      this.searchResultList = data.results.cards;
-      this.searchActive = true;
-    });
+    this.searchInitialLoading = true;
+    if (this.searchService.currentSearch) {
+      this.searchKeyword = this.searchService.currentSearch;
+      this.searchService.loadSearchResults(this.searchService.currentSearch, []).subscribe((data: any) => {
+        this.searchResultList = data;
+        this.searchActive = true;
+        this.searchInitialLoading = false;
+      });
+    }
   }
 
   getNextBatch(): void {
@@ -38,7 +68,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
       const endData = this.viewport.getRenderedRange().end;
 
       if (endData === this.searchResultList.length) {
-        this.searchService.loadSearchResults([]).subscribe((data: any) => {
+        this.searchService.loadSearchResults(this.searchKeyword, []).subscribe((data: any) => {
           this.searchResultList = [...this.searchResultList, ...data.results.cards];
         });
       }

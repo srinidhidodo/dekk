@@ -6,16 +6,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .login-card {
     @extend .login-container;
     width: 60vw;
-    height: 50vh;
+    padding: 30px;
 }
 
 .search-input {
     border: 0px;
     background: transparent;
+}
+
+.login-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
