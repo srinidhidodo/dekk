@@ -1,0 +1,289 @@
+﻿Done
+Title : Clostridium difficile
+
+
+Tags: Antimicrobials
+
+
+
+
+Content on front :
+Long term use of ** is most commonly incriminated for cause of Pseudomembranous colitis (PMC)
+
+
+Content on back :
+Long term use of *Clindamycin* is most commonly incriminated for the cause of Pseudomembranous colitis (PMC).
+
+
+Caused by : Clindamycin >> Ampicillin > PPI’s
+Treated by : Vancomycin >> Metronidazole.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Penicillin
+
+
+Tags: Antimicrobials
+
+
+
+
+Content on front :
+Penicillin binding Proteins (PBP) bind to ** structural analog.
+
+
+Content on back :
+Penicillin binding Proteins (PBP) bind to *D -Ala -D -Ala* structural analog.
+
+
+Mutation of this results in D -Ala -D -Lac → Glycopeptides (Vancomycin) bind to it.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Penicillin
+
+
+
+
+Tags:  Antimicrobials
+
+
+
+
+Content on front :
+Antipseudomonal penicillins are ** and **.
+
+
+Content on back :
+Antipseudomonal penicillins are *Piperacillin* and *Ticarcillin*.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Penicillin
+
+
+
+
+Tags:  Antimicrobials
+
+
+
+
+Content on front :
+Beta- lactamase inhibitor added to Amoxicillin to prevent its destruction by Beta- lactamases is **.
+
+
+Content on back :
+Beta- lactamase inhibitor added to Amoxicillin to prevent its destruction by Beta- lactamases is *Clavulanic acid*.
+
+
+Ampicillin → Sulbactam
+Piperacillin → Tazobactam
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Cephalosporins
+
+
+Tags:  Antimicrobials
+
+
+Content on front :
+Fifth generation Cephalosporins that are used in the treatment of MRSA are ** and **.
+
+
+Content on back :
+Fifth generation Cephalosporins that are used in the treatment of MRSA are *Ceftaroline* and *Ceftobiprole*.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Cephalosporins
+
+
+Tags:   Antimicrobials
+
+
+Content on front :
+Cephalosporins that cause Disulfiram - like reaction are : **
+
+
+Content on back :
+Cephalosporins that cause Disulfiram - like reaction are : *Cefotetan, Cefamandole and Cefoperazone*
+
+
+Other drugs causing Disulfiram -like reaction are :
+1. Griseofulvin
+2. Metronidazole
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Pseudomembranous Colitis
+
+
+
+
+Tags:   Antimicrobials
+
+
+
+
+Content on front :
+Red man syndrome is seen due to diffuse flushing upon treatment with **.
+
+
+Content on back :
+Red man syndrome is seen due to diffuse flushing upon treatment with *Vancomycin*.
+
+
+Other S/E : Nephrotoxic, Ototoxic.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :
+
+
+Tags:
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :
+
+
+Tags:
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :
+
+
+Tags:
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :
+
+
+Tags:
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :
+
+
+Tags:
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :
+
+
+Tags:
+
+
+Content on front :
+
+
+
+
+Content on back :
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++

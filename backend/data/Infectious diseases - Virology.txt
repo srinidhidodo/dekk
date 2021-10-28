@@ -1,0 +1,757 @@
+﻿Title : Hepatitis B
+
+
+Tags: Hepadna, Partial dsDNA virus, Enveloped virus
+
+
+Content on front :
+Infectivity of Hepatitis B virus is determined by presence of  **.
+
+
+
+
+Content on back :
+Infectivity of Hepatitis B virus is determined by presence of  *HBeAg*.
+
+
+1. Presence of Hepatitis B “e” antigen → patient is infectious (actively multiplying virus).
+2. Anti-HBe antibodies = Patient is NOT infectious anymore.
+3. If *HBeAg is ABSENT* = *Pre-core mutant.*
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Hepatitis D
+
+
+Tags: Delta, ssRNA, Enveloped virus
+
+
+Content on front :
+Hepatitis D virus requires the help of ** virus, in order to cause infection.
+
+
+Content on back :
+Hepatitis D virus requires the help of *Hepatitis B* virus, in order to cause infection.
+
+
+HBV provides *envelope protein HBsAg*, which coats the HDsAg → thereby enabling it to penetrate and cause infection.
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Hepatitis C
+
+
+Tags: Flavi, ssRNA, Enveloped virus
+
+
+Content on front:
+Detection of anti- HCV IgG antibodies in the serum indicates ** in the patient.
+
+
+Content on back :
+Detection of anti- HCV IgG antibodies in the serum indicates *Chronic Hepatitis C* in the patient.
+
+
+1. Acute Hepatitis C → Asymptomatic patient = rapidly progresses to chronicity.
+2. Chronic Hepatitis C → Anti - HCV IgG antibodies
+3. *Recovered* Hepatitis C → *HCV- RNA undetectable* in serum.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Varicella
+
+
+Tags: HHV-3, dsDNA, Enveloped virus
+
+
+Content on front :
+Remains latent in the Trigeminal ganglion. On reactivation, it causes **.
+
+
+
+
+Content on back :
+Remains latent in the Trigeminal ganglion. On reactivation, it causes *Shingles*.
+
+
+1. Primary HHV-3 infection = Chickenpox
+2. Secondary HHV-3 infection = Herpes zoster infection/ Shingles
+3. Congenital HHV-3 infection = Fetal Varicella syndrome.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : HSV-1
+
+
+Tags: Herpes, dsDNA, Enveloped virus
+
+
+Content on front :
+Most common virus causing sporadic encephalitis, affecting ** lobe of the brain.
+
+
+Content on back :
+Most common virus causing sporadic encephalitis, affecting *Temporal* lobe of the brain.
+
+
+HSV-1 causes :
+1. Orofacial vesicles
+2. Sporadic encephalitis
+3. Virus causing Myocarditis
+
+
+D/D = Coxsackie B
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+Title : Epstein Barr virus
+
+
+Tags: HHV-4, Herpes, ds-DNA, Enveloped virus
+
+
+Content on front :
+Atypical lymphocytosis, cervical lymphadenopathy with monospot positive → The organism causing this presentation recognizes  ** and ** on the surface of B cells, and binds to the same to cause infection.
+
+
+
+
+Content on back :
+Atypical lymphocytosis, cervical lymphadenopathy with monospot positive → The organism causing this presentation recognizes  *CD-21* and *CR-2* on the surface of B cells, and binds to the same to cause infection.
+
+
+1. B cells express CD-21 and CR-2 → Infectious Mononucleosis
+2. B Cells express EBNA-2 and LMP-1 → Carcinoma (Gastric / Nasopharynx)
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Molluscum Contagiosum
+
+
+Tags : Poxvirus, dsDNA, Enveloped virus
+
+
+Content on front :
+Pink umbilicated lesions on the face, with central depression → On microscopy demonstrate ** inclusion bodies.
+
+
+
+
+Content on back :
+
+
+Pink umbilicated lesions on the face, with central depression → On microscopy demonstrate *Henderson- Patterson* inclusion bodies.
+
+
+
+
+HP inclusion bodies of Molluscum are:
+1. Largest
+2. Deeply eosinophilic
+3. Intracytoplasmic
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : HHV-5
+
+
+Tags: Herpes, dsDNA, Enveloped virus
+
+
+Content on front :
+Triad of Microcephaly, Chorioretinitis and intracerebral periventricular calcifications is classical of **.
+
+
+
+
+Content on back :
+Triad of Microcephaly, Chorioretinitis and intracerebral periventricular calcifications is classical of *Cytomegalovirus*.
+
+
+
+
+
+
+Pizza - pie appearance of CMV - retinitis.
+
+
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Adenovirus
+
+
+Tags: dsDNA, Non-enveloped virus
+
+
+Content on front :
+Type ** and **   Adenovirus family is responsible for Hemorrhagic cystitis.
+
+
+Content on back :
+Type *11* and *21*   Adenovirus family is responsible for Hemorrhagic cystitis.
+
+
+1. Adeno 11,21 = Hemorrhagic cystitis
+2. Adeno 3,7 = Acute follicular conjunctivitis/ Keratoconjunctivitis fever
+3. Adeno 40,41 = Diarrhoea
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Parvovirus- B19
+
+
+Tags: ssDNA, Non-enveloped virus
+
+
+Content on front :
+Most presentation in children is **.
+
+
+Content on back :
+
+
+Most presentation in children is *Slapped-cheek appearance/ 5th disease/ Erythema infectiosum*.
+
+
+
+
+
+
+Parvovirus in adult = Arthralgia/ Arthritis
+Parvovirus in immunocompromised = Sickle cell anemia, Aplastic crisis
+Parvovirus in pregnancy = Abortion, Non- immune fetal hyrops
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : HIV
+
+
+Tags: Retro, ssRNA, Enveloped virus
+
+
+Content on front :
+Persons with ** mutations are resistant to HIV infection.
+
+
+Content on back :
+Persons with *CXCR-4 and CCR-5* co-receptor mutations are resistant to HIV infection.
+
+
+Receptors of HIV which attach to CD4 cells to cause infection:
+1. Main receptors : gp-120, gp-41
+2. Co-receptors : CXCR-4, CCR-5
+
+
+ If any of the receptors are mutated, infection with HIV is NOT possible.
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Japanese Encephalitis
+
+
+Tags: Flavi, ssRNA, Enveloped virus
+
+
+Content on front :
+JE vaccine is usually given as Live-attenuated form by ** route.
+
+
+Content on back :
+JE vaccine is usually given as Live-attenuated form by *subcutaneous* route. According to the National Immunization Schedule, it is given in the 9th and 18th month.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Japanese Encephalitis
+
+
+Tags: Flavi, ssRNA, Enveloped virus
+
+
+
+
+Content on front :
+In the ecosystem, JE virus is transmitted from Ardeid birds (reservoir) → Pigs (amplifiers) by ** vector.
+
+
+Content on back :
+In the ecosystem, JE virus is transmitted from Ardeid birds (reservoir) → Pigs (amplifiers) by *Culex mosquito* vector.
+
+
+Culex transmits :
+1. JE virus
+2. Filariasis
+3. West Nile virus
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Dengue
+
+
+Tags:  Flavi, ssRNA, Enveloped virus
+
+
+Content on front :
+A patient with NS1 positive presents with spontaneous bleeding symptoms. On examination, BP 90/60 with low pulse pressure. DHF/DSS is usually due to reinfection with ** serotype.
+
+
+Content on back :
+A patient with NS1 positive presents with spontaneous bleeding symptoms. On examination, BP 90/60 with low pulse pressure. DHF/DSS is usually due to reinfection with *different* serotype.
+
+
+Infection with one serotype → life-long immunity
+Therefore, subsequent infection with different serotypes → exaggerated immune response due to “Antigenic sin”.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Zika virus
+
+
+Tags:  Flavi, ssRNA, Enveloped virus
+
+
+Content on front :
+Zika virus transmitted by aedes aegypti bite/ sexual intercourse in adults predominantly presents as ** syndrome.
+
+
+Content on back :
+Zika virus transmitted by aedes aegypti bite/ sexual intercourse in adults predominantly presents as *Guillain Barre* syndrome.
+
+
+Neurotropic virus → GBS = Zika virus
+Bacteria → GBS = Campylobacter jejuni
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Chikungunya
+
+
+Tags: Togavirus, ssRNA, Enveloped virus
+
+
+Content on front :
+Patent with Fever, rash, chicken-like stooped gait underwent CBC. Blood picture shows **.
+
+
+Content on back :
+Patent with Fever, rash, chicken-like stooped gait underwent CBC. Blood picture shows *lymphopenia*.
+
+
+Classical picture of Chikungunya (aedes bite).
+
+
+Blood picture:
+1. LYMPHOPENIA
+2. Thrombocytopenia
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Rubella
+
+
+Tags: Togavirus, ssRNA, Enveloped virus
+
+
+
+
+Content on front :
+Enanthem seen in adults is ** spots.
+
+
+Content on back :
+Enanthem seen in adults is *Forscheimer* spots. Pink, punctate petechiae on soft palate.
+
+
+
+
+
+
+
+
+D/D : Nagayama spots = Soft palate petechiae → Roseola Infantum / 6th disease
+         Koplik spots = Buccal mucosa → Measles
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Picornavirus
+
+
+Tags: ssRNA, Non-enveloped virus
+
+
+Content on front :
+A child with VESICLES in oral mucosa, palms and feet is typical of ** virus.
+
+
+Content on back :
+A child with VESICLES in oral mucosa, palms and feet is typical of *Enterovirus70 and Coxsackie A* virus. Classical presentation of Hand Foot and Mouth disease.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Rotavirus
+
+
+Tags: dsRNA, Non-enveloped virus
+
+
+Content on front :
+Virus causing diarrhoea in children, with ** segmented nucleic acid.
+
+
+Content on back :
+Virus causing diarrhoea in children, with *11* segmented nucleic acid.
+
+
+
+
+1. Arranged in “Cartwheel” pattern
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Influenza A
+
+
+Tags: ssRNA, Enveloped virus
+
+
+Content on front :
+Influenza A is divided further into H1N1, H3N2 and H5N1 on the basis of ** and ** receptors on its surface.
+
+
+Content on back :
+Influenza A is divided further into H1N1, H3N2 and H5N1 on the basis of *Hemagglutinin* and *Neuraminidase* receptors on its surface.
+
+
+Vaccine for Influenza A targets → Hemagglutinin.
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Influenza
+
+
+Tags:  ssRNA, Enveloped virus
+
+
+
+
+Content on front :
+Influenza pandemic occurs every 10-15 years due to ** reassortment  in genetic constitution.
+
+
+
+
+Content on back :
+Influenza pandemic occurs every 10-15 years due to *Sudden, severe* reassortment in genetic constitution.
+
+
+Slow, gradual genetic shift → Point mutation : EPIDEMIC.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Mumps
+
+
+Tags: Paramyxo, ssRNA, Enveloped virus
+
+
+Content on front :
+To prevent parotitis/ orchitis/aseptic -meningitis, children are vaccinated with ** strain in MMR.
+
+
+Content on back :
+To prevent parotitis/ orchitis/aseptic -meningitis, children are vaccinated with *Jeryl-Lynn* strain in MMR.
+
+
+Rubella : RA 27/3 strain.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Measles
+
+
+Tags:  Paramyxovirus, ssRNA, Enveloped virus
+
+
+Content on front :
+Koplik’s spots are typically seen opposite the ** molar on the buccal mucosa.
+
+
+Content on back :
+Koplik’s spots are typically seen opposite the *second* molar on the buccal mucosa.
+
+
+Prodrome : Coryza, conjunctivitis ++
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Measles
+
+
+Tags: Paramyxovirus, ssRNA, Enveloped virus
+
+
+Content on front :
+Rash in measles begins in the ** area and is spread out in a ** fashion.
+
+
+Content on back :
+Rash in measles begins in the *Retroauricular* area and is spread out in a *centrifugal* fashion.
+
+
+1. Begins behind the ear → down the neck → upper extremities → trunk → lower extremities.
+2. Morbilliform/ Maculopapular
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Rabies
+
+
+Tags: Rhabdoviridae, ssRNA, Enveloped virus
+
+
+Content on front :
+Encephalitis caused by Rhabdoviridae affects ** part of the brain.
+
+
+Content on back :
+Encephalitis caused by Rhabdoviridae affects *Brainstem* part of the brain.
+
+
+1. *Brainstem* Encephalitis : *Hippocampus, Cerebellum*
+2. Negri bodies + Microglial (Babes) nodules
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title :  Rabies
+
+
+
+
+Tags: Rhabdoviridae, ssRNA, Enveloped virus
+
+
+
+
+Content on front :
+After a rabid bat bite Thailand, you are worried that the concerned virus, is spreading through the **.
+
+
+Content on back :
+After a rabid bat bite Thailand, you are worried that the concerned virus, is spreading through the *Nerves*.
+
+
+1. NO viremia in Rabies. Rabies resides in NERVE.
+2. Antemortem sample → Nape of neck >> saliva
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Roseola Infantum
+
+
+Tags: HHV-6, dsDNA, Enveloped virus
+
+
+Content on front :
+ A 2 year old child, with high fever. As soon as the fever subsides,  ** appears.
+
+
+Content on back :
+ A 2 year old child, with high fever. As soon as the fever subsides,  *RASH* appears.
+ Typical presentation of 6th disease/ Exanthem subitum.
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Progressive Multifocal Leukoencephalopathy
+
+
+Tags: JC virus, Papova, dsDNA, Non-enveloped virus
+
+
+Content on front :
+Virus predominantly affects ** cells in the Brain.
+
+
+Content on back :
+Virus predominantly affects *Oligodendrocyte* cells in the Brain.
+
+
+1. Therefore, progressive demyelination of brain matter
+2. MRI Brain : Asymmetric white matter lesions.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Yellow Fever
+
+
+Tags: Flavi, ssRNA, Enveloped virus
+
+
+Content on front :
+Patient with yellow discoloration of skin, black vomitus was subjected to liver biopsy.
+On H/P examination, eosinophilic apoptotic bodies called ** were seen.
+
+
+
+
+Content on back :
+Patient with yellow discoloration of skin, black vomitus was subjected to liver biopsy.
+On H/P examination, *eosinophilic apoptotic globules* called *Councilman bodies* were seen.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++

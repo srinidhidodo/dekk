@@ -1,0 +1,464 @@
+﻿Title : Aspergillus
+
+
+Tags: Fungus, Opportunistic
+
+
+Content on front :
+Aspergillus niger shows ** hyphae with ** angled branching.
+
+
+Content on back :
+1. Aspergillus niger shows *septate* hyphae with *acute* angled branching.
+2. Dichotomous branching
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Aspergillus
+
+
+Tags: Fungus, Opportunistic
+
+
+Content on front :
+Aspergillus ** causes infections in the respiratory tract like:
+1. Aspergilloma
+2. ABPA (Allergic Bronchopulmonary Aspergillosis)
+
+
+Content on back :
+Aspergillus *fumigatus* causes opportunistic fungal infections like:
+1. Aspergilloma
+2. ABPA (Allergic Bronchopulmonary Aspergillosis)
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+Title : Candida
+
+
+Tags: Fungus, Opportunistic
+
+
+Content on front :
+Germ Tube test ( Reynold Braude phenomenon ) is a feature of **.
+
+
+Content on back :
+Germ tube (Reynold Braude phenomenon) is characteristic of :
+*Candida albicans and Candida dubliniensis*.
+C. Albicans grow at 42°C.
+C. Dubliniensis appears dark green on Chrom agar with NO growth at 42°C.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Cryptococcus
+
+
+Tags: Fungus, Opportunistic
+
+
+Content on front :
+Only encapsulated fungus is **.
+
+
+Content on back :
+Only encapsulated fungus is *Cryptococcus*.
+1. Capsule is demonstrated by India Ink and Nigrosin negative staining methods.
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+Title : Rhizopus
+
+
+Tags: Fungus, Opportunistic
+
+
+Content on front :
+Rhizopus is typically identified by ** rhizoids.
+
+
+
+
+
+
+Content on back :
+Rhizopus is identified by *Nodal* rhizoids.
+1. Aseptate - obtuse angled branching.
+2. “Salt and pepper” colonies.
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Mucormycosis
+
+
+Tags: Fungus, Opportunistic
+
+
+
+
+Content on front :
+Typical presentation of Mucor **.
+
+
+
+
+Content on back :
+Typical presentation of Mucor *Rhinocerebral*.
+
+
+1. Diabetic acidotic / Neutropenic patient
+2. Headache + Facial pain + Nasal blockade
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Pneumocystis jirovecii
+
+
+Tags:  Fungus, Opportunistic
+
+
+
+
+Content on front :
+Pneumocystis has a characteristic ** appearance on Gomori Methenamine silver (GMS) staining.
+
+
+
+
+
+
+Content on back :
+
+
+Pneumocystis has a characteristic *Ping - pong ball* appearance on Gomori Methenamine silver (GMS) staining.
+
+
+BAL sputum sample showing “Ping-pong ball” appearance.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Histoplasmosis
+
+
+Tags: Fungus, Systemic mycosis
+
+
+Content on front :
+Darling’s disease caused by Histoplasma predominantly effects ** system.
+
+
+
+
+Content on back :
+
+
+Darling’s disease caused by Histoplasma predominantly effects *Reticuloendothelial* system.
+1. Histo → Hides in Macrophages.
+2. Of spleen, lymph nodes.
+
+
+
+
+Histoplasmosis with tuberculate conidia.
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title :Blastomycosis
+
+
+Tags:  Fungus, Systemic mycosis
+
+
+
+
+Content on front :
+
+
+Broad- based budding / Figure of 8 appearance is characteristic of **.
+
+
+Content on back :
+Broad- based budding / Figure of 8 appearance is characteristic of *Blastomycosis*.
+
+
+
+
+“Figure - of - 8” appearance of Blastomyces.
+
+
+
+
+D/D : Narrow based budding  = Histoplasmosis.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+
+
+Title : Paracoccidioides
+
+
+Tags:  Fungus, Systemic mycosis
+
+
+
+
+Content on front :
+Tuberculate conidia of Histoplasmosis could be confused with ** yeast form of Paracoccidioides.
+
+
+
+
+Content on back :
+Tuberculate conidia of Histoplasmosis could be confused with *Pilot-wheel*  yeast form of Paracoccidioides.
+1. Conidia = pear shaped.
+
+
+
+
+Pilot - wheel / Mickey- mouse pattern in Paracoccidioides Brasiliensis.
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+
+
+Title : Sporothrix Schenckii
+
+
+Tags:  Fungus, Subcutaneous
+
+
+
+
+Content on front :
+Asteroid bodies found in subcutaneous lesions along lymphatics are seen after a ** incident in the garden.
+
+
+
+
+
+
+Content on back :
+Asteroid bodies found in nodular subcutaneous lesions along lymphatics are seen after a *Rose thorn prick* incident in the garden.
+
+
+D/D : Nocardia (Sporotrichoid pattern)
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+
+
+Title : Madura Foot
+
+
+Tags:   Fungus, Subcutaneous
+
+
+
+
+
+
+Content on front :
+Subcutaneous swelling with sinus → discharging BLACK granules : **
+
+
+
+
+
+
+Content on back :
+Subcutaneous swelling with sinus → discharging BLACK granules : *Madurella Mycetomatis*
+1. Microscopy: hyphae + asexual spores
+
+
+D/D : Yellow granules = Nocardia, Actinomyces
+          Pink granules = Actinomadura Pelletieri
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Malassezia Globosa
+
+
+Tags:  Fungus, Superficial mycosis
+
+
+
+
+Content on front :
+Pityriasis Versicolor → On Wood’s lamp examination yield a Golden yellow colour due to ** pigment.
+
+
+
+
+Content on back :
+Pityriasis Versicolor → On Wood’s lamp examination yield a Golden yellow colour due to *PTERIDINE* pigment.
+
+
+Appears as??
+
+1. “Fried- egg colonies”
+2. “Spaghetti and meatballs”
+
+
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Tinea Capitis
+
+
+
+
+Tags:  Fungus, Superficial mycosis
+
+
+
+
+
+
+Content on front :
+A 5 year old child with a boggy, inflammatory, painless lesion on his scalp presents to you. The causative organism is **.
+
+
+
+
+Content on back :
+A 5 year old child with a boggy, inflammatory, painless lesion on his scalp presents to you. The causative organism is *T.Verrucosum*.
+
+
+1. The presentation described above : KERION
+2. Caused by : T.Verrucosum >> T.Mentagrophytes
+
+
+D/D = Favus → T.schoenleinii
+
+
+
+
+
+
+++++++++++++END OF CARD++++++++++++++
+
+
+Title : Tinea Corporis
+
+
+Tags:  Fungus, Superficial mycosis
+
+
+
+
+
+
+Content on front :
+A scaly, circular, pruritic, ring- like rash on the trunk on microscopy shows “cigar-shaped conidia”. This is typical of ** organism.
+
+
+
+
+
+
+Content on back :
+A scaly, circular, pruritic, ring- like rash on the trunk on microscopy shows “cigar-shaped conidia”. This is typical of *Trichophyton rubrum* organism.
+
+
+
+
+
+
+Presentation : TINEA CORPORIS
+Organisms causing Dermatophytosis on skin :
+1. Trichophyton → *Cigar* shaped conidia
+2.  Microsporum → *Spindle* shaped conidia
+3.  Epidermophyton → *Club* shaped conidia
+
+
+Most common cause of Tinea Corporis : *T. Rubrum*
+
+
+
+
+++++++++++++END OF CARD++++++++++++++

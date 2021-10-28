@@ -14,7 +14,9 @@ from falcon.http_status import HTTPStatus
 from api.user.register import Register
 from api.user.login import Login
 from api.cards.cards_actions import Cards
-from api.category.list_category import ListCategoy
+from api.user.home import Home
+from api.cards.search import SearchCards
+from api.tags.list_master_topics import ListMasterTags, AutoSuggestTags
 
 
 class HandleCORS(object):
@@ -40,8 +42,12 @@ def initialize_routes() -> falcon.API:
 
     api.add_route(f"{api_version}/register", Register())
     api.add_route(f"{api_version}/login", Login())
+    api.add_route(f"{api_version}/users/home", Home())
     api.add_route(f"{api_version}/cards", Cards())
-    api.add_route(f"{api_version}/categories", ListCategoy())
+    api.add_route(f"{api_version}/cards/search", SearchCards())
+
+    # api.add_route(f"{api_version}/tags/master_tags", ListMasterTags())
+    # api.add_route(f"{api_version}/tags/auto_suggest", AutoSuggestTags())
 
     return api
 
