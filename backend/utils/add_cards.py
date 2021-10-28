@@ -12,14 +12,14 @@ HASH_KEYS = [
 ]
 
 FILE_NAMES = {
-    "./data/Infectious diseases | Virology.txt": "https://docs.google.com/document/d/1JX8XS1_hPGdT0rW_lNk9Pbd5qg62StUSCLyCrentj04/edit",
-    "./data/Infectious diseases | STDs.txt": "https://docs.google.com/document/d/1C7pMFF_e6nAEcDVxe8W38_vXGpglmEWT0Znc_B7_S-s/edit",
-    "./data/Infectious diseases | Antimicrobials.txt": "https://docs.google.com/document/d/1fLIiFY3VWuW0XRYaAtJojo7x9PaA8Nik2cUvrpdjzJY/edit",
-    "./data/Infectious diseases | Bacteriology.txt": "https://docs.google.com/document/d/1UHmlxDhbRAhmqNfK3talZtnnotKoUHp5SM3DPwPwwAQ/edit",
-    "./data/Infectious diseases | Parasitology.txt": "https://docs.google.com/document/d/1MN2rDqev_cjwdWmrj_f1o6NyvBgcWRj2xoEvCJ82DZI/edit",
-    "./data/Infectious diseases | Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
-    "./data/Infectious diseases | Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
-    "./data/Endocrinology | Endocrine Physiology.txt": "https://docs.google.com/document/d/1-DkispbAHJOzIM6Cxa_-OJSen7RjEbGmZOp7pVlk13M/edit",
+    "./data/Infectious diseases - Virology.txt": "https://docs.google.com/document/d/1JX8XS1_hPGdT0rW_lNk9Pbd5qg62StUSCLyCrentj04/edit",
+    "./data/Infectious diseases - STDs.txt": "https://docs.google.com/document/d/1C7pMFF_e6nAEcDVxe8W38_vXGpglmEWT0Znc_B7_S-s/edit",
+    "./data/Infectious diseases - Antimicrobials.txt": "https://docs.google.com/document/d/1fLIiFY3VWuW0XRYaAtJojo7x9PaA8Nik2cUvrpdjzJY/edit",
+    "./data/Infectious diseases - Bacteriology.txt": "https://docs.google.com/document/d/1UHmlxDhbRAhmqNfK3talZtnnotKoUHp5SM3DPwPwwAQ/edit",
+    "./data/Infectious diseases - Parasitology.txt": "https://docs.google.com/document/d/1MN2rDqev_cjwdWmrj_f1o6NyvBgcWRj2xoEvCJ82DZI/edit",
+    "./data/Infectious diseases - Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
+    "./data/Infectious diseases - Mycology.txt": "https://docs.google.com/document/d/1Z0v9oYEO0INzP4lqHRwu_LiZ9OZoIf_r91nLDG3kyLw/edit",
+    "./data/Endocrinology - Endocrine Physiology.txt": "https://docs.google.com/document/d/1-DkispbAHJOzIM6Cxa_-OJSen7RjEbGmZOp7pVlk13M/edit",
 }
 
 
@@ -119,7 +119,7 @@ for file_name in FILE_NAMES:
             card_dict["tags"] = [i.lower().strip() for i in card_dict["tags"]]
             card_dict["tags"] = [i.replace(" ", "-") for i in card_dict["tags"]]
             main_tags = (
-                file_name.replace("./data/", "").replace(".txt", "").strip().split("|")
+                file_name.replace("./data/", "").replace(".txt", "").strip().split("-")
             )
             main_tags = [i.lower().strip().replace(" ", "-") for i in main_tags]
             card_dict["tags"] = main_tags + card_dict["tags"]
@@ -135,7 +135,7 @@ for file_name in FILE_NAMES:
             tags = re.sub(r"must be comma-separated based on hierarchy ->", " ", tags)
             card_dict["tags"] = tags.strip().split(",")
             main_tags = (
-                file_name.replace("./data/", "").replace(".txt", "").strip().split("|")
+                file_name.replace("./data/", "").replace(".txt", "").strip().split("-")
             )
             main_tags = [i.lower().strip().replace(" ", "-") for i in main_tags]
             card_dict["tags"] = main_tags + card_dict["tags"]
