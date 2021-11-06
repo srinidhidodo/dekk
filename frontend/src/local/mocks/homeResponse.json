@@ -1,0 +1,207 @@
+{
+    "user_details": {
+      "full_name": "admin",
+      "created_at": "2021-10-25T07:59:27.595568",
+      "last_active": "2021-10-25T07:59:27.595578"
+    },
+    "dekk_stats": [
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      },
+      {
+        "total_cards": 85,
+        "tag_name": "Endocrinology",
+        "tag_id": 7,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.706618",
+        "updated_at": "2021-10-25T07:22:01.706618"
+      },
+      {
+        "total_cards": 155,
+        "tag_name": "Infectious-Diseases",
+        "tag_id": 1,
+        "field": "Medical",
+        "is_master_topic": true,
+        "created_at": "2021-10-25T07:22:01.688583",
+        "updated_at": "2021-10-25T07:22:01.688583"
+      }
+    ] 
+}

@@ -2,14 +2,22 @@
 <div [ngClass]="{'dark-theme-mode': isDarkThemeEnabled}" class="mat-app-background background">
   <div color="primary" class="toolbar head-toolbar" role="banner">
     <div class=left-toolbar>
-      <mat-icon class="menu-icon" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
-      <span class="padded-toolbar-component">Dekk</span>
+      <mat-icon class="menu-icon" matTooltip="Menu" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
+      <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
     </div>
-    <span class="dark-light-toggle padded-toolbar-component">
-      <mat-slide-toggle [(ngModel)]="isDarkThemeEnabled">
-        <mat-icon>bedtime</mat-icon>
-      </mat-slide-toggle>
-    </span>
+    <div class="head-toolbar-right">
+      <mat-search-bar
+        (onEnter)="submitSearch($event)"
+        matTooltip="Search"
+        class="search-input"></mat-search-bar>
+      <mat-icon class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon>
+      <span class="dark-light-toggle padded-toolbar-component">
+        <mat-slide-toggle color="primary" matTooltip="Dark Mode Toggle" [(ngModel)]="isDarkThemeEnabled">
+          <mat-icon>bedtime</mat-icon>
+        </mat-slide-toggle>
+      </span>
+    </div>
+    
   </div>
   <mat-sidenav-container class="app-background">
     <mat-sidenav [(opened)]="sidebarOpened">
@@ -20,7 +28,5 @@
     <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
-
   </mat-sidenav-container>
-  <!-- <router-outlet></router-outlet> -->
 </div>

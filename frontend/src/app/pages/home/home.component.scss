@@ -1,0 +1,23 @@
+.home-banner-container {
+    display: flex;
+    align-content: space-between;
+    height: 50vh;
+    margin-bottom: 10px;
+}
+
+.home-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.each-dekk-title {
+    display: flex;
+    justify-content: center;
+    min-height: 20px;
+    height: 40px;
+}
+
+.each-dekk-content {
+    display: flex;
+    justify-content: center;
+}

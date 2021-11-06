@@ -33,9 +33,9 @@ input {
 }
 
 .app-background {
-  //blue-white
+  //blue-white-pink
   background-color: #effcf5;
-  background-image: linear-gradient(315deg, #f2e8f3 0%, #d4e0fa 74%);
+  background-image: linear-gradient(315deg, #dffce2 0%, #d4e0fa 74%);
 }
 
 cdk-virtual-scroll-viewport {
@@ -51,9 +51,31 @@ cdk-virtual-scroll-viewport {
   align-items: center;
   background: rgba(212, 224, 250, 0.3);
   // background-color: #1870c9;
-  color: black;
+  color: rgba(0, 0, 0, 0.87);
   font-weight: 600;
   // opacity: 0.5;
+}
+
+.home-banner-container-colour {
+  background: #37d4ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a1ffab, #37d2fd);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a1ffab, #37d2fd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.each-dekk {
+  margin-bottom: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px white,
+              2px 2px 2px white,
+              3px 3px 3px white,
+              3.5px 3.5px 3.5px black,
+              3.6px 3.6px 3.6px white,
+              4px 4px 4px white,
+              5px 5px 5px white,
+              6px 6px 6px white,
+              6.5px 6.5px 6.5px black,
+              6.6px 6.6px 6.6px white !important;
 }
 
 .dark-theme-mode {
@@ -87,5 +109,27 @@ cdk-virtual-scroll-viewport {
     color: white;
     font-weight: 600;
     // opacity: 0.5;
+  }
+
+  .home-banner-container-colour {
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .each-dekk {
+    margin-bottom: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black,
+                2px 2px 2px black,
+                3px 3px 3px black,
+                3.5px 3.5px 3.5px white,
+                3.6px 3.6px 3.6px black,
+                4px 4px 4px black,
+                5px 5px 5px black,
+                6px 6px 6px black,
+                6.5px 6.5px 6.5px gray,
+                6.6px 6.6px 6.6px black !important;
   }
 }

@@ -6,9 +6,18 @@ import { HttpClientService } from './http-client.service';
   providedIn: 'root',
 })
 export class SearchService {
+  currentSearch: string | undefined;
+
   constructor(private httpClientService: HttpClientService) { }
 
-  public loadSearchResults(searchTags: string[]): any {
-      return this.httpClientService.post(UrlConstants.SEARCH_URL, searchTags);
+  public loadSearchResults(searchString: string, offset: number, searchTags?: string[]): any {
+      return this.httpClientService.get(UrlConstants.SEARCH_URL, [
+        { key: 'q', value: searchString },
+        { key: 'offset', value: offset.toString() }
+      ]);
+    }
+
+    unsetCurrentSearch(): void {
+      this.currentSearch = undefined;
     }
 }

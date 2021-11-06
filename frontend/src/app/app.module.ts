@@ -15,7 +15,11 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { MatChipsModule } from "@angular/material/chips";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import { FormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { SearchResultComponent } from './common/components/search-result/search-result.component';
@@ -27,6 +31,9 @@ import { CardBackComponent } from './common/components/card/card-back/card-back.
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { HomeComponent } from './pages/home/home.component';
+import { TextEditComponent } from './pages/text-edit/text-edit.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 @NgModule({
@@ -39,7 +46,9 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     CardBackComponent,
     StudyCardComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    HomeComponent,
+    TextEditComponent
   ],
   imports: [
     AppRoutingModule,
@@ -48,6 +57,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     FormsModule,
     ScrollingModule,
     HttpClientModule,
+    NgMatSearchBarModule,
+    EditorModule,
     MatButtonModule,
     MatSlideToggleModule,
     MatToolbarModule,
@@ -57,7 +68,10 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     MatCardModule,
     MatFormFieldModule,
     MatListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatExpansionModule,
+    MatProgressBarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,7 +36,6 @@
 }
 
 .each-search-item {
-  // cursor: pointer;
   width: 90vw;
   height: fit-content;
 }
@@ -93,4 +92,14 @@ cdk-virtual-scroll-viewport {
 
 div {
   animation-delay: 250ms;
+}
+
+.loading-container {
+  @extend .search-result-list;
+  height: 70vh;
+  justify-content: center;
+}
+
+.loading-bar {
+  width: 60vw !important;
 }

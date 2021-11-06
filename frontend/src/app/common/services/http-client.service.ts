@@ -9,13 +9,14 @@ import { Observable } from 'rxjs';
   constructor(private http: HttpClient) { }
 
   public get(url: string, parameters?: {key: string, value: string}[]): Observable<any> {
-    const httpParams = new HttpParams();
+    let queryString = '';
     if (parameters) {
+      queryString = '?';
       parameters.forEach(parameter => {
-        httpParams.set(parameter.key, parameter.value);
+        queryString += parameter.key + '=' + parameter.value + '&';
       });
     }
-    return this.http.get<any>(url, { params: httpParams });
+    return this.http.get<any>(url + queryString);
   }
 
   public post(url: string, postBody: any): any {

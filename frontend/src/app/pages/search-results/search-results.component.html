@@ -1,7 +1,7 @@
 <div class="row search-results-container">
   <div>
     <div>
-      <form class="search-box-container" (ngSubmit)="search()">
+      <form class="search-box-container" (ngSubmit)="submitSearch()">
         <mat-form-field class="mdc-checkbox__background search-box" >
           <mat-label>Enter Search Keywords</mat-label>
           <input matInput [(ngModel)]="searchKeyword"
@@ -12,7 +12,10 @@
         </mat-form-field>
       </form>
     </div>
-    <cdk-virtual-scroll-viewport itemSize="250" (scrolledIndexChange)="getNextBatch()">
+    <div [hidden]="!searchInitialLoading" class="loading-container">
+      <mat-progress-bar class="loading-bar" mode="indeterminate"></mat-progress-bar>
+    </div>
+    <cdk-virtual-scroll-viewport [hidden]="searchInitialLoading" itemSize="250" (scrolledIndexChange)="getNextBatch()">
       <div class="search-result-list" id="searchSuggestionsList">
         <div class="each-search-item" *cdkVirtualFor="let searchResult of searchResultList">
           <app-search-result class="animated slideInRight" [card]="searchResult"></app-search-result>
