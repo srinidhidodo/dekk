@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
     if (parameters) {
       queryString = '?';
       parameters.forEach(parameter => {
-        queryString += parameter.key + '=' + parameter.value;
+        queryString += parameter.key + '=' + parameter.value + '&';
       });
     }
     return this.http.get<any>(url + queryString);

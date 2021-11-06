@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { StudyCardComponent } from './pages/study-card/study-card.component';
+import { TextEditComponent } from './pages/text-edit/text-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'study-card', component: StudyCardComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'sign-up', component: SignUpComponent, pathMatch: 'full' },
+  { path: 'edit', component: TextEditComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/pages/404' }
 ];
 

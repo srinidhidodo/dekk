@@ -32,6 +32,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HomeComponent } from './pages/home/home.component';
+import { TextEditComponent } from './pages/text-edit/text-edit.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 @NgModule({
@@ -45,7 +47,8 @@ import { HomeComponent } from './pages/home/home.component';
     StudyCardComponent,
     LoginComponent,
     SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    TextEditComponent
   ],
   imports: [
     AppRoutingModule,
@@ -55,6 +58,7 @@ import { HomeComponent } from './pages/home/home.component';
     ScrollingModule,
     HttpClientModule,
     NgMatSearchBarModule,
+    EditorModule,
     MatButtonModule,
     MatSlideToggleModule,
     MatToolbarModule,

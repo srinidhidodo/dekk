@@ -18,6 +18,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   searchResultList: any[] = [];
   searchKeyword: string = '';
   searchActive: boolean = false;
+  searchRunning: boolean = false;
   searchInitialLoading: boolean = false;
   offset = new BehaviorSubject(null);
 
@@ -27,6 +28,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.searchResultList = [];
     this.searchSubscription = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
     .observe(MessageConstants.SEARCH_TRIGGERED_ACTION)
     .subscribe((data: any) => {
@@ -54,9 +56,11 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
     this.searchActive = false;
     this.searchInitialLoading = true;
     if (this.searchService.currentSearch) {
+      this.searchRunning = true;
       this.searchKeyword = this.searchService.currentSearch;
-      this.searchService.loadSearchResults(this.searchService.currentSearch, []).subscribe((data: any) => {
-        this.searchResultList = data;
+      this.searchService.loadSearchResults(this.searchService.currentSearch, 0, []).subscribe((data: any) => {
+        this.searchRunning = false;
+        this.searchResultList = data.results;
         this.searchActive = true;
         this.searchInitialLoading = false;
       });
@@ -64,12 +68,17 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   }
 
   getNextBatch(): void {
-    if (this.searchActive) { // because this should only be allowed when there are already initial search results rendered
+    if (this.searchActive && !this.searchRunning) { // because this should only be allowed when there are already initial search results rendered
       const endData = this.viewport.getRenderedRange().end;
 
-      if (endData === this.searchResultList.length) {
-        this.searchService.loadSearchResults(this.searchKeyword, []).subscribe((data: any) => {
-          this.searchResultList = [...this.searchResultList, ...data.results.cards];
+      if (endData >= this.searchResultList.length * 2 / 3) {
+        this.searchRunning = true;
+        this.searchService.loadSearchResults(this.searchKeyword, this.searchResultList.length, []).subscribe((data: any) => {
+          this.searchRunning = false;
+          if (!(data?.results?.total_cards_found > 0)) {
+            this.searchActive = false;
+          }
+          this.searchResultList = [...this.searchResultList, ...data.results];
         });
       }
     }

@@ -3,14 +3,14 @@
   <div color="primary" class="toolbar head-toolbar" role="banner">
     <div class=left-toolbar>
       <mat-icon class="menu-icon" matTooltip="Menu" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
-      <span class="padded-toolbar-component">Dekk</span>
+      <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
     </div>
     <div class="head-toolbar-right">
       <mat-search-bar
         (onEnter)="submitSearch($event)"
         matTooltip="Search"
         class="search-input"></mat-search-bar>
-      <mat-icon class="search-icon" matTooltip="Create">add</mat-icon>
+      <mat-icon class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon>
       <span class="dark-light-toggle padded-toolbar-component">
         <mat-slide-toggle color="primary" matTooltip="Dark Mode Toggle" [(ngModel)]="isDarkThemeEnabled">
           <mat-icon>bedtime</mat-icon>

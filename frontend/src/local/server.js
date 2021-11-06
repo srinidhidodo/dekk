@@ -15,7 +15,7 @@ app.get('/dekk/tags', (req, res) => {
     res.json(response);
 });
 
-app.get('/api/v1/cards', (req, res) => {
+app.get('/api/v1/*', (req, res) => {
     // const response = require("./mocks/searchResponse.json");
     // res.json(response);
     console.log(devServer + req.url);

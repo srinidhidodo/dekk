@@ -10,9 +10,11 @@ export class SearchService {
 
   constructor(private httpClientService: HttpClientService) { }
 
-  public loadSearchResults(searchString: string, searchTags?: string[]): any {
-      // return this.httpClientService.post(UrlConstants.SEARCH_URL, searchTags);
-      return this.httpClientService.get(UrlConstants.SEARCH_URL, [{ key: 'q', value: searchString }]);
+  public loadSearchResults(searchString: string, offset: number, searchTags?: string[]): any {
+      return this.httpClientService.get(UrlConstants.SEARCH_URL, [
+        { key: 'q', value: searchString },
+        { key: 'offset', value: offset.toString() }
+      ]);
     }
 
     unsetCurrentSearch(): void {

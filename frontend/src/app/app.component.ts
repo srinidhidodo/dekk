@@ -22,6 +22,7 @@ export class AppComponent {
     { name: 'Study Card', link: '/study-card' },
     { name: 'Login', link: '/login' },
     { name: 'Sign Up', link: '/sign-up' },
+    { name: 'Editor', link: UrlConstants.EDIT }
   ];
 
   searchSender: Subject<any>;
@@ -37,5 +38,13 @@ export class AppComponent {
     if (this.router.url === UrlConstants.SEARCH_RESULTS) {
       this.searchSender.next({ searchString });
     }
+  }
+
+  goToHomePage(): void {
+    this.router.navigate([UrlConstants.HOME]);
+  }
+
+  goToCreateView(): void {
+    this.router.navigate([UrlConstants.EDIT]);
   }
 }
