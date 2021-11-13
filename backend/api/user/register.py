@@ -2,10 +2,10 @@
 Sample API calls:
     POST - http://127.0.0.1:8000/api/v1/register
     {
-            "user_name" : "to_hot",
-            "name" : "dr_flash",
-            "email" : "dr_flash@mail.com",
-            "password" : "testuser"
+            "user_name" : "darshan",
+            "name" : "draju",
+            "email" : "draju@gmail.com",
+            "password" : "darshan"
     }
 """
 import hashlib

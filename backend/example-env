@@ -12,3 +12,5 @@ PG_USERNAME=
 PG_PASSWORD=
 
 ENV=TEST
+
+SECRET=ryzenfastracklogitech

@@ -4,9 +4,12 @@ Sample API calls:
 
 """
 import hashlib
+import os
 from datetime import datetime
 
 import falcon
+import jwt
+from api.user import authorization
 from utils import http_response
 from utils import postgres
 
@@ -17,7 +20,10 @@ KEYS_TO_DROP_IN_MASTER_TOPICS = [
 ]
 
 
-def get_master_topics_stats(db_conn):
+def get_master_topics_stats(db_conn, req):
+    """
+        Todo
+    """
 
     query = f"""
         select count(*) as total_cards,t2.tag_name,t2.tag_id,t2.field,t2.is_master_topic,t2.created_at,t2.updated_at  from user_content.cards t1 inner join user_content.tags t2
@@ -33,11 +39,17 @@ def get_master_topics_stats(db_conn):
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"].title()
 
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
+
     response = {
         "user_details": {
-            "full_name": "admin",
-            "created_at": datetime.utcnow(),
-            "last_active": datetime.utcnow(),
+            "user_name": decode["user_name"],
+            "full_name": decode["full_name"],
+            # "created_at": datetime.utcnow(),
+            # "last_active": datetime.utcnow(),
         },
         "dekk_stats": query_result,
     }
@@ -53,9 +65,10 @@ class Home:
     def __init__(self) -> None:
         self.db_conn = postgres.QueryManager("user_content", "cards")
 
+    @falcon.before(authorization.request_valiation)
     def on_get(self, req, resp):
 
-        query_result = get_master_topics_stats(self.db_conn)
+        query_result = get_master_topics_stats(self.db_conn, req)
 
         if not query_result:
             error_message = "Something went wrong"

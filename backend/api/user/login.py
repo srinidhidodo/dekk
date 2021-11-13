@@ -7,8 +7,13 @@ Sample API calls:
     }
 """
 import hashlib
+import json
+import os
+from datetime import datetime
+from datetime import timedelta
 
 import falcon
+import jwt
 from utils import http_response
 from utils import postgres
 
@@ -56,7 +61,7 @@ def validate_user(req, db_conn):
     password = hashlib.md5(req_data["password"].encode()).hexdigest()
 
     query = f"""
-        SELECT count(*) FROM users.accounts WHERE
+        SELECT user_name,account_id,created_at,last_active,full_name FROM users.accounts WHERE
         email = '{user_email}' and password = '{password}'
     """
 
@@ -68,6 +73,8 @@ def validate_user(req, db_conn):
 class Login:
     """
         Request data has to be a json
+        todo -
+            Hard coded exp time
     """
 
     def __init__(self) -> None:
@@ -81,9 +88,24 @@ class Login:
             error_message = "Password and email combination did not match"
             message = {"message": error_message}
             http_response.err(resp, "401", message)
-        elif query_result and query_result[0]["count"] == 1:
+        elif query_result:
             status = "Login Successful"
-            message = {"message": status}
+            env = os.environ.get(f"ENV")
+            secret = os.environ.get(f"SECRET_{env}")
+            user_details = {
+                "user_name": query_result[0]["user_name"],
+                "full_name": query_result[0]["full_name"],
+                "is_admin": "False",
+                "account_id": query_result[0]["account_id"],
+                # 'created_at' : query_result[0]["created_at"],
+                # "last_active": query_result[0]["last_active"],
+                "exp": datetime.utcnow() + timedelta(seconds=10800),
+            }
+            # user_details = json.dumps(user_details,indent=4, sort_keys=True, default=str)
+            token = jwt.encode(user_details, secret, algorithm="HS256")
+
+            message = {"message": status, "auth_token": token}
+            # resp.set_header({'Authorization':f'Bearer {token}'})
             http_response.ok(resp, message)
         else:
             error_message = "Something went wrong"

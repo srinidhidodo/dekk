@@ -3,6 +3,7 @@ Sample API calls:
     GET - http://127.0.0.1:8000/api/v1/cards/search?q=Infectivity of Hepatitis&offset=0
 
 """
+import json
 import re
 
 import falcon
@@ -70,7 +71,9 @@ def construct_free_text_query(query_string):
 
 
 def get_cards_by_tags_and_tokens(db_conn, query_string, offset):
-
+    """
+        todo count
+    """
     query = f"""
         SELECT * FROM  user_content.cards
     """
@@ -89,8 +92,8 @@ def get_cards_by_tags_and_tokens(db_conn, query_string, offset):
     tags_query = construct_tags_query(query_string)
     free_text_query = construct_free_text_query(query_string)
 
-    # print(tags_query)
-    # print(free_text_query)
+    print(tags_query)
+    print(free_text_query)
 
     if tags_query and free_text_query:
         query += " WHERE " + tags_query + " AND " + "(" + free_text_query + ")"
@@ -113,6 +116,83 @@ def get_cards_by_tags_and_tokens(db_conn, query_string, offset):
     response = {"total_cards_found": cards_found, "results": query_result}
 
     return response
+
+
+def get_cards_by_tags(db_conn, tags, offset):
+    """
+        todo count
+    """
+    query = f"""
+        SELECT * FROM  user_content.cards
+    """
+
+    if not tags:
+        return {}
+
+    offset = offset.strip()
+    try:
+        offset = int(offset)
+    except:
+        msg = f"Invalid query parameters , can't convert offset to int"
+        raise falcon.HTTPBadRequest("Bad request", msg)
+
+    tags_where_clause = " "
+    for tag in tags:
+        tags_where_clause += f"tags ->>'{tag.lower()}' is not null or "
+
+    tags_where_clause = re.sub(" or$", " ", tags_where_clause.strip())
+    tags_where_clause = " WHERE " + tags_where_clause
+
+    print(tags_where_clause)
+
+    query = query + tags_where_clause + f" OFFSET {offset} LIMIT 10"
+    print(query)
+
+    query_result = db_conn.fetch_query_direct_query(query)
+    cards_found = len(query_result)
+
+    relevant_tags = []
+    for result in query_result:
+        for key in KEYS_TO_DROP:
+            result.pop(key, None)
+
+        if result["tags"]:
+            for tag in result["tags"]:
+                relevant_tags.append(tag)
+
+    relevant_tags = list(set(relevant_tags))
+
+    response = {
+        "total_cards_found": cards_found,
+        "tags": relevant_tags,
+        "results": query_result,
+    }
+
+    return response
+
+
+class SearchCardsByTags:
+    def __init__(self) -> None:
+        self.db_conn = postgres.QueryManager("user_content", "cards")
+
+    def on_get(self, req, resp):
+
+        if "q" in req.params and "offset" in req.params:
+            query_string = req.params["q"]
+            try:
+                tags = json.loads(query_string)
+            except:
+                msg = f"Invalid query parameters , can't convert query string to list"
+                raise falcon.HTTPBadRequest("Bad request", msg)
+
+            offset = req.params["offset"]
+            query_result = get_cards_by_tags(self.db_conn, tags, offset)
+
+            http_response.ok(resp, query_result)
+        else:
+            error_message = "Something went wrong"
+            message = {"message": error_message}
+            http_response.err(resp, falcon.HTTP_500, message)
 
 
 class SearchCards:
