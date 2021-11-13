@@ -1,9 +1,4 @@
-"""
-
-"""
 # init env variables
-from test import Test
-
 from dotenv import load_dotenv
 
 load_dotenv("./local.env")
@@ -42,7 +37,6 @@ def initialize_routes() -> falcon.API:
     # Routes
     api_version = "/api/v1"
 
-    api.add_route(f"{api_version}/", Test())
     api.add_route(f"{api_version}/register", Register())
     api.add_route(f"{api_version}/login", Login())
     api.add_route(f"{api_version}/users/home", Home())

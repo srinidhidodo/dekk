@@ -19,6 +19,7 @@ CREATE TABLE users.accounts (
 	full_name varchar NULL,
 	email varchar NULL,
 	"password" varchar NULL,
+	college varchar null,
 	CONSTRAINT accounts_pkey PRIMARY KEY (account_id),
 	CONSTRAINT email_unique_constraint UNIQUE (email),
 	CONSTRAINT user_name_unique_constraint UNIQUE (user_name)

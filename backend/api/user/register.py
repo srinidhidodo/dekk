@@ -2,10 +2,11 @@
 Sample API calls:
     POST - http://127.0.0.1:8000/api/v1/register
     {
-            "user_name" : "darshan",
-            "name" : "draju",
+            "user_name" : "draju",
+            "full_name" : "darshan",
             "email" : "draju@gmail.com",
-            "password" : "darshan"
+            "password" : "darshan",
+            "college" : "xyz"
     }
 """
 import hashlib
@@ -20,6 +21,7 @@ REQUEST_OBJECT_KEYS = [
     "full_name",
     "email",
     "password",
+    "college",
 ]
 
 
@@ -51,6 +53,8 @@ def request_valiation(req, resp, resource, params):
         raise falcon.HTTPBadRequest("Bad request", error_message)
 
     for key in req_data:
+        if req_data[key] == "college":
+            continue
         if not req_data[key]:
             error_message = (
                 f"Empty value in key - required key-value pairs {REQUEST_OBJECT_KEYS}"
@@ -73,6 +77,7 @@ def create_user(req):
     user_data["full_name"] = req_data["full_name"].strip()
     user_data["email"] = req_data["email"].lower().strip()
     user_data["password"] = hashlib.md5(req_data["password"].encode()).hexdigest()
+    user_data["college"] = req_data["college"]
 
     return user_data
 
