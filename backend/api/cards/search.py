@@ -8,6 +8,7 @@ import re
 
 import falcon
 import spacy
+from api.user import authorization
 from utils import http_response
 from utils import postgres
 
@@ -175,6 +176,7 @@ class SearchCardsByTags:
     def __init__(self) -> None:
         self.db_conn = postgres.QueryManager("user_content", "cards")
 
+    @falcon.before(authorization.request_valiation)
     def on_get(self, req, resp):
 
         if "q" in req.params and "offset" in req.params:
@@ -203,6 +205,7 @@ class SearchCards:
     def __init__(self) -> None:
         self.db_conn = postgres.QueryManager("user_content", "cards")
 
+    @falcon.before(authorization.request_valiation)
     def on_get(self, req, resp):
         if "q" in req.params and "offset" in req.params:
             query_string = req.params["q"]
