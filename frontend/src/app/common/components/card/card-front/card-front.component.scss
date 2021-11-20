@@ -1,5 +1,6 @@
 .card-container {
   width: 100%;
+  padding: 30px;
 }
 
 .content-item {
@@ -25,6 +26,21 @@
 .card-actions-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+.card-options-icon {
+  float: right;
+  cursor: pointer;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item-icon {
+  margin: 0px !important;
 }
 
 @media (max-width: 400px) {

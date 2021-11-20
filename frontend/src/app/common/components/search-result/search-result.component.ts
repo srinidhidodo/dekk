@@ -30,8 +30,8 @@ export class SearchResultComponent implements OnInit, OnChanges {
   }
 
   openCard(): void {
-    this.studyService.card = this.card;
-    this.router.navigate(['/card-view-details']);
+    // this.studyService.card = this.card;
+    // this.router.navigate(['/card-view-details']);
   }
 
 }

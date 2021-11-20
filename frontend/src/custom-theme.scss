@@ -1,6 +1,8 @@
 @use '~@angular/material' as mat;
 @include mat.core();
 
+@import '@angular/cdk/overlay-prebuilt.css';
+
 $dekk-new-primary: mat.define-palette(mat.$indigo-palette);
 $dekk-new-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 $dekk-new-warn: mat.define-palette(mat.$red-palette);
@@ -44,6 +46,10 @@ cdk-virtual-scroll-viewport {
   }
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: lightblue;
+}
+
 .toolbar {
   height: 50px;
   // width: 100vw;
@@ -64,18 +70,29 @@ cdk-virtual-scroll-viewport {
 
 .each-dekk {
   margin-bottom: 10px;
-  height: 100px;
+  height: 150px;
   cursor: pointer;
-  box-shadow: 1px 1px 1px white,
-              2px 2px 2px white,
-              3px 3px 3px white,
-              3.5px 3.5px 3.5px black,
-              3.6px 3.6px 3.6px white,
-              4px 4px 4px white,
-              5px 5px 5px white,
-              6px 6px 6px white,
-              6.5px 6.5px 6.5px black,
-              6.6px 6.6px 6.6px white !important;
+  box-shadow: 1px 1px white,
+              2px 2px white,
+              3px 3px black,
+              4px 4px white,
+              5px 5px white,
+              6px 6px black,
+              7px 7px white,
+              8px 8px white,
+              9px 9px black,
+              10px 10px white,
+              11px 11px white,
+              12px 12px black !important;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color: black;
+  height: 1px;
 }
 
 .dark-theme-mode {
@@ -99,6 +116,21 @@ cdk-virtual-scroll-viewport {
       background-color: gray;
     }
   }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+  }
+
+  // ::-webkit-scrollbar {
+  //   background-color: transparent;
+  //   width: 5px;
+  // }
+
+  // ::-webkit-scrollbar-track {
+  //   background-color: gray;
+  //   width: 5px;
+  //   border-radius: 2px;
+  // }
 
   .toolbar {
     height: 50px;
@@ -119,17 +151,32 @@ cdk-virtual-scroll-viewport {
   
   .each-dekk {
     margin-bottom: 10px;
-    height: 100px;
+    height: 150px;
     cursor: pointer;
-    box-shadow: 1px 1px 1px black,
-                2px 2px 2px black,
-                3px 3px 3px black,
-                3.5px 3.5px 3.5px white,
-                3.6px 3.6px 3.6px black,
-                4px 4px 4px black,
-                5px 5px 5px black,
-                6px 6px 6px black,
-                6.5px 6.5px 6.5px gray,
-                6.6px 6.6px 6.6px black !important;
+    box-shadow: 1px 1px black,
+                2px 2px black,
+                3px 3px lightgray,
+                4px 4px black,
+                5px 5px black,
+                6px 6px lightgray,
+                7px 7px black,
+                8px 8px black,
+                9px 9px lightgray,
+                10px 10px black,
+                11px 11px black,
+                12px 12px lightgray !important;
+  }
+
+  hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 96%;               
+    background-color:whitesmoke;
+    height: 1px;
+  }
+  
+  .lighter-mat-card {
+    background: #535353 !important;
   }
 }

@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardViewDetailsComponent } from './pages/card-view-details/card-view-details.component';
+import { CreateEditCardComponent } from './pages/create-edit-dekk/create-edit-card/create-edit-card.component';
+import { CreateEditDekkDetailComponent } from './pages/create-edit-dekk/create-edit-dekk-detail/create-edit-dekk-detail.component';
+import { DekkWithCardsEditViewComponent } from './pages/create-edit-dekk/dekk-with-cards-edit-view/dekk-with-cards-edit-view.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LandingHomeComponent } from './pages/landing-home/landing-home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
@@ -17,6 +21,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   { path: 'sign-up', component: SignUpComponent, pathMatch: 'full' },
   { path: 'edit', component: TextEditComponent, pathMatch: 'full' },
+  { path: 'create', component: CreateEditDekkDetailComponent, pathMatch: 'full' },
+  { path: 'dekk-edit-view', component: DekkWithCardsEditViewComponent, pathMatch: 'full' },
+  { path: 'card-edit-view', component: CreateEditCardComponent, pathMatch: 'full' },
+  { path: 'landing', component: LandingHomeComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/pages/404' }
 ];
 

@@ -1,8 +1,16 @@
 <div class="row page-container">
-  <div class="col-md-1"></div>
-  <div class="col-md-10" [@flipState]="flip">
+  <div class="col-1 previous-card-nav-container">
+    <mat-icon class="card-nav" (click)="getPreviousCard()"> arrow_back </mat-icon>
+  </div>
+  <div class="col-10 loading-text-container" [hidden]="!isLoading">
+    {{loadingText}}
+    <mat-progress-bar class="loading-progress-bar" mode="indeterminate"></mat-progress-bar>
+  </div>
+  <div class="col-10" [hidden]="isLoading" [@flipState]="flip">
     <app-card-front [card]="card" [ngClass]="{'hide-card': !isCardFrontVisible()}"></app-card-front>
     <app-card-back [card]="card" [ngClass]="{'hide-card': isCardFrontVisible()}"></app-card-back>
   </div>
-  <div class="col-md-1"></div>
+  <div class="col-1 next-card-nav-container">
+    <mat-icon class="card-nav" (click)="getNextCard()"> arrow_forward </mat-icon>
+  </div>
 </div>

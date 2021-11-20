@@ -4,6 +4,7 @@ import { BehaviorSubject, Subscription } from "rxjs";
 import { SearchService } from "src/app/common/services/search.service";
 import rxmq from 'rxmq';
 import { MessageConstants } from "src/app/common/constants/message.constants";
+import { PunsConstants } from "src/app/common/constants/puns.constants";
 
 @Component({
   selector: 'app-search-results',
@@ -21,6 +22,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   searchRunning: boolean = false;
   searchInitialLoading: boolean = false;
   offset = new BehaviorSubject(null);
+  loadingText = '';
 
   searchSubscription: Subscription;
 
@@ -28,6 +30,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.loadingText = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
     this.searchResultList = [];
     this.searchSubscription = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
     .observe(MessageConstants.SEARCH_TRIGGERED_ACTION)

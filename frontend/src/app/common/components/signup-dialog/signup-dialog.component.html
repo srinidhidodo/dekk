@@ -1,0 +1,54 @@
+<div mat-dialog-content class="dialog-center">
+    <h2>Register</h2>
+    <div [hidden]="!signUpError" class="sign-up-error">
+        Registration failed. Please check the fields you have entered.
+    </div>
+    <div [hidden]="!signUpSuccess" class="sign-up-success">
+        Your registration is successful. Please login to continue.
+    </div>
+    <div class="input-field">
+        <span class="input-label"> Name * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> Name * </p>
+            <input matInput class="search-input" [(ngModel)]="name" type="text" name="name" required>
+        </mat-form-field>
+    </div>
+    <div class="input-field">
+        <span class="input-label"> Email ID * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> Email ID * </p>
+            <input matInput class="search-input" [(ngModel)]="email" type="email" name="email" required>
+        </mat-form-field>
+    </div>
+    <div class="input-field">
+        <span class="input-label"> Username * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> Username * </p>
+            <input matInput class="search-input" [(ngModel)]="username" type="text" name="username" required>
+        </mat-form-field>
+    </div>
+    <div class="input-field">
+        <span class="input-label"> Password * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> Password * </p>
+            <input matInput class="search-input" [(ngModel)]="password" type="password" name="password" required>
+        </mat-form-field>
+    </div>
+    <div class="input-field">
+        <span class="input-label"> College * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> College * </p>
+            <mat-select [(value)]="selectedCollege">
+                <mat-option *ngFor="let college of collegeList">
+                    {{college}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <form class="login-form"></form>
+    <button mat-raised-button (click)="signUp()" color="primary">Sign Up</button>
+</div>
+<div mat-dialog-actions class="login-alternate-actions-container">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data">Forgot Password</button>
+</div>

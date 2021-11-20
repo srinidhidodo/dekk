@@ -1,21 +1,101 @@
-.login-page {
+$main-card-height: 60vh;
+
+.sign-up-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80vh;
+    margin: 0;
 }
 
-.login-container {
+.sign-up-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.login-card {
-    @extend .login-container;
+.sign-up-card {
+    @extend .sign-up-container;
     width: 60vw;
-    height: 50vh;
+    padding: 0px;
 }
 
 .search-input {
     border: 0px;
     background: transparent;
+    width: 10vw;
+}
+
+.sign-up-card-content {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: $main-card-height;
+    height: fit-content;
+    width: 70vw;
+}
+
+.input-label {
+    margin: 10px;
+    margin-right: 25px;
+}
+
+.input-label-when-small {
+    display: none;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-form-field {
+    width: 20vw;
+}
+
+.left-side-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: $main-card-height;
+    // height: ;
+    background: black;
+}
+
+.left-side-card-item {
+    margin: 5px;
+}
+
+.right-side-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35vw;
+    height: $main-card-height;
+    // height: fit-content;
+    // padding: 15px;
+    background: blue;
+}
+
+@media (max-width: 600px) {
+    .input-label {
+        display: none;
+    }
+    
+    .input-label-when-small {
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px) {
+    .left-side-card-content {
+        display: none;
+    }
 }

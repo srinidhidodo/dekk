@@ -27,3 +27,36 @@
 .hide-card {
   display: none;
 }
+
+.card-nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.previous-card-nav-container {
+  @extend .card-nav-container;
+  align-items: flex-end;
+}
+
+.next-card-nav-container {
+  @extend .card-nav-container;
+  align-items: flex-start;
+}
+
+.card-nav {
+  cursor: pointer;
+}
+
+.loading-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.loading-progress-bar {
+  margin-top: 10px;
+}

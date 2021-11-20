@@ -1,0 +1,36 @@
+.edit-card-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.input-label {
+    margin: 10px;
+}
+
+.input-label-when-small {
+    display: none;
+}
+
+.search-input {
+    border: 0px;
+    background: transparent;
+    width: 20vw;
+}
+
+@media (max-width: 600px) {
+    .input-label {
+        display: none;
+    }
+    
+    .input-label-when-small {
+        display: flex;
+    }
+}

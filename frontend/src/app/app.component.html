@@ -20,9 +20,9 @@
     
   </div>
   <mat-sidenav-container class="app-background">
-    <mat-sidenav [(opened)]="sidebarOpened">
+    <mat-sidenav [(opened)]="sidebarOpened" mode="side">
       <mat-nav-list>
-        <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItems" (click)="sidebarOpened=!sidebarOpened">{{listItem.name}}</a>
+        <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItems" (click)="handleSidenavClick()">{{listItem.name}}</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

@@ -1,0 +1,47 @@
+.dialog-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-label-when-small {
+    display: none;
+}
+
+.search-input {
+    border: 0px;
+    background: transparent;
+}
+
+.input-label {
+    margin: 10px;
+    margin-right: 25px;
+}
+
+.input-form-field {
+    width: 20vw;
+}
+
+.login-alternate-actions-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-error {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.login-success {
+    display: flex;
+    justify-content: center;
+    color: green;
+}

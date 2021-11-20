@@ -1,0 +1,29 @@
+<div mat-dialog-content class="dialog-center">
+    <h2>Login</h2>
+    <div [hidden]="!loginError" class="login-error">
+        Login failed. Please check the fields you have entered.
+    </div>
+    <div [hidden]="!loginSuccess" class="login-success">
+        Your login is successful.
+    </div>
+    <div class="input-field">
+        <span class="input-label"> Email * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> Email * </p>
+            <input matInput class="search-input" [(ngModel)]="email" type="email" name="email" required>
+        </mat-form-field>
+    </div>
+    <div class="input-field">
+        <span class="input-label"> Password * </span>
+        <mat-form-field class="input-form-field">
+            <p class="input-label-when-small"> Password * </p>
+            <input matInput class="search-input" [(ngModel)]="password" type="password" name="password" required>
+        </mat-form-field>
+    </div>
+    <form class="login-form"></form>
+    <button mat-raised-button (click)="login()" color="primary">Login</button>
+</div>
+<div mat-dialog-actions class="login-alternate-actions-container">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data">Forgot Password</button>
+</div>

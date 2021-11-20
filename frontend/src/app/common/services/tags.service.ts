@@ -13,7 +13,14 @@ export class TagsService {
     private _tagsList: string[] = [];
 
     public loadTags(): any {
-      return this.httpClientService.get(UrlConstants.GET_TAGS_URL);
+      const returnObservable = this.httpClientService.get(UrlConstants.GET_TAGS_URL);
+
+      // This is to ensure the tags list maintained in this service remains updated at any point of time
+      returnObservable.subscribe((tagsData: any) => {
+        this._tagsList = tagsData?.tags;
+      });
+      
+      return returnObservable;
     }
 
     public get tagsList(): string[] {

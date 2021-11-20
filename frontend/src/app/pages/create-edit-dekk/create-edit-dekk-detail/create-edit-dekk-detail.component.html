@@ -1,0 +1,38 @@
+<div class="row create-dekk-page">
+    <div class="create-dekk-container">
+        <mat-card class="create-dekk-card">
+            <mat-card-content class="create-dekk-card-content">
+                <h2>Dekk Details</h2>
+                <div class="input-field">
+                    <span class="input-label"> Dekk Name* </span>
+                    <mat-form-field class="input-form-field">
+                        <p class="input-label-when-small"> Dekk Name* </p>
+                        <input matInput type="text" class="search-input" required>
+                    </mat-form-field>
+                </div>
+                <div class="input-field">
+                    <span class="input-label"> Tags* </span>
+                    <mat-form-field class="input-form-field">
+                        <p class="input-label-when-small"> Tags* </p>
+                        <!-- <input matInput type="text" class="search-input" required> -->
+                        <mat-select [formControl]="tags" multiple>
+                            <mat-select-trigger>
+                                <mat-chip-list>
+                                    <mat-chip *ngFor="let tag of tags.value">
+                                        {{tag}}
+                                    </mat-chip>
+                                </mat-chip-list>
+                            </mat-select-trigger>
+                            <mat-option *ngFor="let tag of tagsList" [value]="tag">{{tag}}</mat-option>
+                        </mat-select>                          
+                    </mat-form-field>
+                </div>
+                <form class="create-dekk-form"></form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button (click)="createDekk()" color="primary">Continue</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+ 
