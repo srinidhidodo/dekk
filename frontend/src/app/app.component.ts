@@ -25,6 +25,7 @@ export class AppComponent {
   isDarkThemeEnabled: boolean = true;
   sidebarOpened: boolean = false;
   listItems = [
+    { name: 'Website', link: UrlConstants.LANDING },
     { name: 'Home', link: UrlConstants.HOME },
     { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
     { name: 'Card View Details', link: '/card-view-details' },

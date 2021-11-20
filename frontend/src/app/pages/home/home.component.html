@@ -1,13 +1,13 @@
-<mat-card class="row home-banner-container home-banner-container-colour">
+<div class="row home-banner-container home-banner-container-colour">
     <div></div>
     <div>
         <div class="home-banner"><h1> Welcome to Dekk </h1></div>
         <div class="home-banner"> Your One-Stop Study Shop </div>
     </div>
     <div class="home-banner"> Browse Featured Dekks Here </div>
-</mat-card>
+</div>
 <div class="row">
-    <div class="col-md-4 col-sm-6 col-12" *ngFor="let dekk of dekks">
+    <div class="col-md-3 col-sm-4 col-6" *ngFor="let dekk of dekks">
         <mat-card class="each-dekk dekk-effect" (click)="studyDekk(dekk.tag_name)">
             <mat-card-title class="each-dekk-title"> <h2> {{dekk.tag_name}} </h2></mat-card-title>
             <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
