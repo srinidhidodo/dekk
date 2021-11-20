@@ -18,9 +18,13 @@ import { MatChipsModule } from "@angular/material/chips";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { SearchResultComponent } from './common/components/search-result/search-result.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,6 +38,20 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TextEditComponent } from './pages/text-edit/text-edit.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { StudyMsgDialogComponent } from './common/components/study-msg-dialog/study-msg-dialog.component';
+import { CreateEditDekkDetailComponent } from './pages/create-edit-dekk/create-edit-dekk-detail/create-edit-dekk-detail.component';
+import { DekkWithCardsEditViewComponent } from './pages/create-edit-dekk/dekk-with-cards-edit-view/dekk-with-cards-edit-view.component';
+import { CreateEditCardComponent } from './pages/create-edit-dekk/create-edit-card/create-edit-card.component';
+import { SignupLoginComponent } from './pages/signup-login/signup-login.component';
+import { RatingDialogComponent } from './common/components/rating-dialog/rating-dialog.component';
+import { LandingHomeComponent } from './pages/landing-home/landing-home.component';
+import { LoginDialogComponent } from './common/components/login-dialog/login-dialog.component';
+import { SignupDialogComponent } from './common/components/signup-dialog/signup-dialog.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatOptionModule } from '@angular/material/core';
+import { CdkColumnDef } from '@angular/cdk/table';
+import { BarRatingModule } from 'ngx-bar-rating';
+
 
 
 @NgModule({
@@ -48,17 +66,30 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    TextEditComponent
+    TextEditComponent,
+    StudyMsgDialogComponent,
+    TextEditComponent,
+    CreateEditDekkDetailComponent,
+    DekkWithCardsEditViewComponent,
+    CreateEditCardComponent,
+    SignupLoginComponent,
+    RatingDialogComponent,
+    LandingHomeComponent,
+    LoginDialogComponent,
+    SignupDialogComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    LayoutModule,
+    ReactiveFormsModule,
     ScrollingModule,
     HttpClientModule,
     NgMatSearchBarModule,
     EditorModule,
+    BarRatingModule,
     MatButtonModule,
     MatSlideToggleModule,
     MatToolbarModule,
@@ -71,9 +102,15 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     MatChipsModule,
     MatExpansionModule,
     MatProgressBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatTableModule,
+    MatDialogModule,
+    MatMenuModule
+    
   ],
-  providers: [],
+  providers: [CdkColumnDef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

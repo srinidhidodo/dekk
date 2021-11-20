@@ -1,9 +1,24 @@
 @import 'custom-theme.scss';
 @import "~animate.css/animate.css";
+@import '~ngx-bar-rating/themes/br-default-theme';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 mark {
     background-color: #f3f57f;
+}
+
+.unselectable-content {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+mat-card {
+    border-radius: 20px !important;
 }

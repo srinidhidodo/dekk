@@ -8,7 +8,7 @@
 </mat-card>
 <div class="row">
     <div class="col-md-4 col-sm-6 col-12" *ngFor="let dekk of dekks">
-        <mat-card class="each-dekk dekk-effect">
+        <mat-card class="each-dekk dekk-effect" (click)="studyDekk(dekk.tag_name)">
             <mat-card-title class="each-dekk-title"> <h2> {{dekk.tag_name}} </h2></mat-card-title>
             <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
         </mat-card>

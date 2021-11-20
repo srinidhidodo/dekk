@@ -1,5 +1,5 @@
 export interface Card {
-    card_id: number;
+    card_id: string;
     account_id: number;
     created_at?: string;
     updated_at?: string;

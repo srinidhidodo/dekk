@@ -1,0 +1,9 @@
+<div mat-dialog-content class="dialog-center">
+    <p> Rate this {{dekkOrCard}} </p>
+    <bar-rating [(rate)]="data.current_rating" [max]="5"></bar-rating>
+    <textarea matInput placeholder="Enter your feedback..." [(ngModel)]="data.feedback"></textarea>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Done</button>
+</div>

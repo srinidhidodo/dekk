@@ -7,6 +7,7 @@ import { CardUtils } from "src/app/common/utils/card.utils";
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import rxmq from 'rxmq';
 import { MessageConstants } from "src/app/common/constants/message.constants";
+import { PunsConstants } from "src/app/common/constants/puns.constants";
 
 @Component({
   selector: 'app-study-card',
@@ -27,8 +28,11 @@ import { MessageConstants } from "src/app/common/constants/message.constants";
 })
 export class StudyCardComponent implements OnInit, OnDestroy {
   
+  // @Input()
+  card: Card = CardUtils.getWaitCard();
+
   @Input()
-  card: Card;
+  tag: string; // change to dekk id
 
   visibleFront = true;
   flip: string = 'inactive';
@@ -36,14 +40,36 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   flipToFrontSubscription: Subscription;
   flipToBackSubscription: Subscription;
 
+  // For loading screen
+  // for initial load - isNewDekkLoaded && isMinLoadTimeElapsed
+  isNewDekkLoaded = false; // for initial load
+  isMinLoadTimeElapsed = false; // for initial load
+  isLoading = false; // for general loads
+  loadingText = '';
+
   constructor(private router: Router, public studyService: StudyService) {}
 
   ngOnInit() {
+    this.loadingText = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
+    this.tag = this.studyService.selectedTag;
+    
+    this.isLoading = true;
+    this.isNewDekkLoaded = false;
+    this.isMinLoadTimeElapsed = false;
+    setTimeout(() => {
+      this.isMinLoadTimeElapsed = true;
+    }, 8000);
+    this.studyService.loadNewDekk([this.tag]).subscribe(response => {
+      this.isNewDekkLoaded = true;
+      this.isLoading = false;
+      this.card = this.studyService.getCurrentCard();
+    });
+
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.visibleFront = true;
         this.flip = 'inactive';
-        this.card = this.studyService.card;
+        this.card = this.studyService.getCurrentCard();
       }
     });
 
@@ -59,7 +85,8 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   ngOnDestroy() { }
 
   getCardCategory(): string {
-    return CardUtils.getCardCategoryText(this.card);
+    // return CardUtils.getCardCategoryText(this.card);
+    return this.card.title;
   }
 
   flipToFront() {
@@ -78,5 +105,27 @@ export class StudyCardComponent implements OnInit, OnDestroy {
 
   toggleFlip() {
     this.flip = (this.flip == 'inactive') ? 'active' : 'inactive';
+  }
+
+  getNextCard(): void {
+    this.animateToNextCard();
+    // this.studyService.goToNextCard();
+    this.studyService.getNextCard().subscribe((cardResponse: any) => {
+      if (cardResponse) {
+        this.card = cardResponse;
+      }
+    });
+  }
+
+  getPreviousCard(): void {
+    this.animateToNextCard();
+    this.card = this.studyService.getPreviousCard();
+  }
+
+  animateToNextCard(): void {
+    this.visibleFront = true;
+    if (this.flip === 'active') {
+      this.toggleFlip();
+    }
   }
 }

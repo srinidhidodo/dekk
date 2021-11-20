@@ -13,6 +13,7 @@
       </form>
     </div>
     <div [hidden]="!searchInitialLoading" class="loading-container">
+      {{loadingText}}
       <mat-progress-bar class="loading-bar" mode="indeterminate"></mat-progress-bar>
     </div>
     <cdk-virtual-scroll-viewport [hidden]="searchInitialLoading" itemSize="250" (scrolledIndexChange)="getNextBatch()">

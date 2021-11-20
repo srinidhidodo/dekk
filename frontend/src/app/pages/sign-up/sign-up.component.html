@@ -1,28 +1,77 @@
-<div class="row login-page">
-    <div class="login-container">
-        <mat-card class="login-card">
-            <mat-card-header>
-                <mat-card-title>Sign Up</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <form class="login-form">
-                    <mat-form-field class="search-input">
-                        <input matInput class="search-input" placeholder="Email" [(ngModel)]="email" name="email" required>
-                    </mat-form-field>
-                    <br>
-                    <mat-form-field class="search-input">
-                        <input matInput class="search-input" placeholder="Username" [(ngModel)]="username" name="username" required>
-                    </mat-form-field>
-                    <br>
-                    <mat-form-field class="search-input">
-                        <input matInput class="search-input" placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
-                    </mat-form-field>
-                </form>
+<!-- 
+<div class="row sign-up-page">
+    <div class="sign-up-container">
+        <mat-card class="sign-up-card">
+            <mat-card-content class="sign-up-card-content">
+                <div class="left-side-card-content">
+                    <h2> Welcome Back </h2>
+                    <p> We are happy to see you again!</p>
+                    <div class="left-side-card-item">
+                        <span>
+                            <mat-icon>vpn_key</mat-icon>
+                        </span>
+                        <span>
+                            <mat-icon>lock_open</mat-icon>
+                        </span>
+                    </div>
+                    <p class="left-side-card-item"> Sign up to continue studying optimally. </p>
+                </div>
+                <div class="right-side-card-content lighter-mat-card">
+                    <h2>Sign Up</h2>
+                    <div class="input-field">
+                        <span class="input-label"> Email ID * </span>
+                        <mat-form-field class="input-form-field">
+                            <p class="input-label-when-small"> Email ID * </p>
+                            <input matInput class="search-input" [(ngModel)]="email" name="email" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="input-field">
+                        <span class="input-label"> User Name * </span>
+                        <mat-form-field class="input-form-field">
+                            <p class="input-label-when-small"> User Name * </p>
+                            <input matInput class="search-input" [(ngModel)]="username" name="username" required>                        
+                        </mat-form-field>
+                    </div>
+                    <div class="input-field">
+                        <span class="input-label"> Password * </span>
+                        <mat-form-field class="input-form-field">
+                            <p class="input-label-when-small"> Password* </p>
+                            <input matInput class="search-input" [(ngModel)]="password"type="password" name="password" required>
+                        </mat-form-field>
+                    </div>
+                    <button mat-raised-button (click)="signUp()" color="primary">Sign Up</button>
+                </div>
             </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button (click)="signUp()" color="primary">Sign Up</button>
-            </mat-card-actions>
         </mat-card>
     </div>
 </div>
- 
+-->
+
+<div class="row sign-up-page">
+    <div class="left-side-card-content">
+        <h2> Welcome Back </h2>
+        <p> We are happy to see you again!</p>
+        <div class="left-side-card-item">
+            <span>
+                <mat-icon>vpn_key</mat-icon>
+            </span>
+            <span>
+                <mat-icon>lock_open</mat-icon>
+            </span>
+        </div>
+        <p class="left-side-card-item"> Sign up to continue studying optimally. </p>
+    </div>
+    <div class="right-side-card-content" style="background: blue;">
+        <h2> Welcome Back </h2>
+        <p> We are happy to see you again!</p>
+        <div class="left-side-card-item">
+            <span>
+                <mat-icon>vpn_key</mat-icon>
+            </span>
+            <span>
+                <mat-icon>lock_open</mat-icon>
+            </span>
+        </div>
+        <p class="left-side-card-item"> Sign up to continue studying optimally. </p>
+    </div>
+</div>

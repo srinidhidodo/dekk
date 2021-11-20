@@ -11,7 +11,7 @@ export class CardViewDetailsComponent implements OnInit, OnDestroy {
   
   @Input()
   card: Card = {
-    card_id: 109,
+    card_id: '109',
     account_id: 1,
     title: "Fever",
     category: "General",

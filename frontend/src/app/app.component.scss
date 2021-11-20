@@ -173,6 +173,7 @@
   .card.card.highlight-card span {
     margin-left: 60px;
   }
+  
 
   svg#rocket {
     width: 80px;
@@ -357,3 +358,23 @@ mat-sidenav {
 .dekk-header-name {
   cursor: pointer;
 }
+
+.head-toolbar-center-absolute {
+  position: absolute;
+  top: 0px;
+  left: 40%;
+  background: transparent;
+}
+
+.login-signup-container {
+  background: transparent !important;
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  width: 40vw !important;
+
+  .mat-input-element {
+      background: transparent;
+  }
+} 
+  

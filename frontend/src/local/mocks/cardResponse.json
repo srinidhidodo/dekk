@@ -1,0 +1,18 @@
+{
+    "card_id": 110,
+    "account_id": 1, 
+    "title": "Fever",
+    "category": "General",
+    "sub_category": "Also General",
+    "dekk_name": "General Dekk",
+    "highlighted_keywords": [ "fever", "about fever" ],
+    "tags": {
+        "amoeba": 4,
+        "protozoa": 5,
+        "free-living": 3,
+        "parasitology": 2,
+        "infectious-diseases": 1
+    },
+    "content_on_front": "AAAAAA something in the front fever something in the front about fever something in the front something in the front something in the front",
+    "content_on_back": "something in the back fever something in the back about fever something in the back something in the back something in the back"
+}
