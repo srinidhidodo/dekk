@@ -20,4 +20,5 @@ export class UrlConstants {
   public static CARD_EDIT_VIEW = '/card-edit-view';
   public static LANDING = '/landing';
   public static ABOUT_US = '/about';
+  public static WHY_DEKK = '/why-dekk';
 }

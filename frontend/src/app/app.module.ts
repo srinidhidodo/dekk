@@ -53,6 +53,7 @@ import { MatOptionModule } from '@angular/material/core';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { BarRatingModule } from 'ngx-bar-rating';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 
 
 
@@ -80,6 +81,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     LoginDialogComponent,
     SignupDialogComponent,
     AboutUsComponent,
+    WhyDekkComponent,
   ],
   imports: [
     AppRoutingModule,

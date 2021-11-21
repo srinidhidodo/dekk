@@ -41,7 +41,7 @@ export class AppComponent {
   ];
 
   listItemsBelowDivider = [
-    { name: 'Why Dekk?', link: UrlConstants.HOME },
+    { name: 'Why Dekk?', link: UrlConstants.WHY_DEKK },
     { name: 'Contact Us', link: UrlConstants.HOME }
   ];
 
@@ -112,5 +112,9 @@ export class AppComponent {
   
   goToAboutUs(): void {
     this.router.navigate([UrlConstants.ABOUT_US]);
+  }
+
+  goToWhyDekk(): void {
+    this.router.navigate([UrlConstants.WHY_DEKK]);
   }
 }

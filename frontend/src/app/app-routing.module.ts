@@ -12,6 +12,7 @@ import { SearchResultsComponent } from './pages/search-results/search-results.co
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { StudyCardComponent } from './pages/study-card/study-card.component';
 import { TextEditComponent } from './pages/text-edit/text-edit.component';
+import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'card-edit-view', component: CreateEditCardComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingHomeComponent, pathMatch: 'full' },
   { path: 'about', component: AboutUsComponent, pathMatch: 'full' },
+  { path: 'why-dekk', component: WhyDekkComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/pages/404' }
 ];
 
