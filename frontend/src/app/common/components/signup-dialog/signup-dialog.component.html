@@ -39,16 +39,15 @@
         <mat-form-field class="input-form-field">
             <p class="input-label-when-small"> College * </p>
             <mat-select [(value)]="selectedCollege">
-                <mat-option *ngFor="let college of collegeList">
+                <mat-option value="college" *ngFor="let college of collegeList">
                     {{college}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
     </div>
     <form class="login-form"></form>
-    <button mat-raised-button (click)="signUp()" color="primary">Sign Up</button>
 </div>
 <div mat-dialog-actions class="login-alternate-actions-container">
     <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button [mat-dialog-close]="data">Forgot Password</button>
+    <button mat-raised-button (click)="signUp()" color="primary">Sign Up</button>
 </div>

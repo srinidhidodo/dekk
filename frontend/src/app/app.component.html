@@ -5,13 +5,23 @@
       <mat-icon class="menu-icon" matTooltip="Menu" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
       <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
     </div>
+    <div class="head-toolbar-center" [hidden]="isLoggedIn()">
+      <button mat-button (click)="goToAboutUs()">About Us</button>
+      <button mat-button>Why Dekk?</button>
+      <button mat-button>Contact Us</button>
+    </div>
     <div class="head-toolbar-right">
+      <div [hidden]="isLoggedIn()">
+        <button mat-button (click)="loginClicked()">Sign In</button>
+        <!-- <button mat-button (click)="signupClicked()">Register</button> -->
+      </div>
       <mat-search-bar
         (onEnter)="submitSearch($event)"
         matTooltip="Search"
-        class="search-input"></mat-search-bar>
-      <mat-icon class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon>
-      <span class="dark-light-toggle padded-toolbar-component">
+        class="search-input"
+        [hidden]="!isLoggedIn()"></mat-search-bar>
+      <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon>
+      <span [hidden]="!isLoggedIn()" class="dark-light-toggle padded-toolbar-component">
         <mat-slide-toggle color="primary" matTooltip="Dark Mode Toggle" [(ngModel)]="isDarkThemeEnabled">
           <mat-icon>bedtime</mat-icon>
         </mat-slide-toggle>
@@ -23,6 +33,10 @@
     <mat-sidenav [(opened)]="sidebarOpened" mode="side">
       <mat-nav-list>
         <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItems" (click)="handleSidenavClick()">{{listItem.name}}</a>
+      </mat-nav-list>
+      <mat-divider></mat-divider>
+      <mat-nav-list>
+        <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItemsBelowDivider" (click)="handleSidenavClick()">{{listItem.name}}</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

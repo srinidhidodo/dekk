@@ -2,7 +2,7 @@
     height: 90vh;
 }
 
-.left-panel-container {
+.full-panel-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,19 +10,19 @@
 }
 
 .right-panel-container {
-    @extend .left-panel-container;
+    @extend .full-panel-container;
     margin: 0px;
 }
 
-.home-large-font-container {
+.font-container {
     // height: 15vh;
     // line-height: 15vh;
     text-align: center;
-    font-weight: bold;
+    // font-weight: bold;
     // overflow-wrap: normal;
 }
 
-.home-large-font {
+.large-font {
     font-size: 10vh;
     font-weight: bolder;
     margin: 0px;
@@ -37,11 +37,6 @@
     overflow-wrap: normal;
 }
 
-.home-large-font-blue {
-    @extend .home-large-font;
-    color: blue;
-}
-
 .landing-card {
     width: 30vw;
     height: fit-content;
@@ -50,7 +45,7 @@
 
 @media (max-width: 767px) {
     .right-panel-container {
-        @extend .left-panel-container;
+        @extend .full-panel-container;
         margin-top: 80px;
     }
 

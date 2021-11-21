@@ -5,14 +5,26 @@
   width: 100%;
 }
 
+.each-toolbar-part {
+  width: 30vw;
+}
+
 .head-toolbar {
   display: flex;
   justify-content: space-between;
 }
 
+.head-toolbar-center {
+  @extend .each-toolbar-part;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .head-toolbar-right {
+  @extend .each-toolbar-part;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .dark-light-toggle {
@@ -341,6 +353,7 @@ mat-sidenav {
 }
 
 .left-toolbar {
+  @extend .each-toolbar-part;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -371,7 +384,7 @@ mat-sidenav {
 }
 
 ::ng-deep .mat-form-field.mat-focused {
-  width: 40vw !important;
+  // width: 40vw !important;
 
   .mat-input-element {
       background: transparent;

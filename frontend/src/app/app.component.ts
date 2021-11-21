@@ -5,6 +5,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import rxmq from 'rxmq';
+import { LoginDialogComponent } from './common/components/login-dialog/login-dialog.component';
+import { SignupDialogComponent } from './common/components/signup-dialog/signup-dialog.component';
 import { MessageConstants } from './common/constants/message.constants';
 import { UrlConstants } from './common/constants/url.constants';
 import { SearchService } from './common/services/search.service';
@@ -25,14 +27,22 @@ export class AppComponent {
   isDarkThemeEnabled: boolean = true;
   sidebarOpened: boolean = false;
   listItems = [
-    { name: 'Website', link: UrlConstants.LANDING },
+    // { name: 'Website', link: UrlConstants.LANDING },
     { name: 'Home', link: UrlConstants.HOME },
-    { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
-    { name: 'Card View Details', link: '/card-view-details' },
-    { name: 'Study Card', link: UrlConstants.STUDY_CARD },
-    { name: 'Login', link: '/login' },
-    { name: 'Sign Up', link: '/sign-up' },
-    { name: 'Create', link: UrlConstants.CREATE }
+    { name: 'Profile', link: UrlConstants.HOME },
+    { name: 'About Us', link: UrlConstants.ABOUT_US },
+    { name: 'Bookmarks', link: UrlConstants.HOME },
+    // { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
+    // { name: 'Card View Details', link: '/card-view-details' },
+    // { name: 'Study Card', link: UrlConstants.STUDY_CARD },
+    // { name: 'Login', link: '/login' },
+    // { name: 'Sign Up', link: '/sign-up' },
+    // { name: 'Create', link: UrlConstants.CREATE }
+  ];
+
+  listItemsBelowDivider = [
+    { name: 'Why Dekk?', link: UrlConstants.HOME },
+    { name: 'Contact Us', link: UrlConstants.HOME }
   ];
 
   searchSender: Subject<any>;
@@ -80,5 +90,27 @@ export class AppComponent {
 
   goToCreateView(): void {
     this.router.navigate([UrlConstants.CREATE]);
+  }
+
+  isLoggedIn(): boolean {
+    return this.userService.loggedIn;
+  }
+    
+  loginClicked(): void {
+    const dialogRef = this.dialog.open(LoginDialogComponent, {
+      data: {},
+      panelClass: 'filter-popup'
+    });
+  }
+    
+  signupClicked(): void {
+    const dialogRef = this.dialog.open(SignupDialogComponent, {
+      data: {},
+      panelClass: 'filter-popup'
+    });
+  }
+  
+  goToAboutUs(): void {
+    this.router.navigate([UrlConstants.ABOUT_US]);
   }
 }

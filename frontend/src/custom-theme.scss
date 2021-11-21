@@ -100,6 +100,13 @@ hr {
   height: 1px;
 }
 
+.landing-card-effect {
+  box-shadow: -15px -15px rgb(161, 161, 161),
+        -17px -17px white,
+        -32px -32px rgb(161, 161, 161),
+        -34px -34px white !important;
+}
+
 .dark-theme-mode {
   @include mat.all-component-themes($dekk-new-dark-theme);
   @include mat.form-field-theme($dekk-new-dark-theme);
@@ -188,5 +195,13 @@ hr {
   
   .lighter-mat-card {
     background: #535353 !important;
+  }
+
+  .landing-card-effect {
+    box-shadow: -2px -2px lightgray,
+        -17px -17px #424242,
+        -19px -19px lightgray,
+        -34px -34px #424242,
+        -36px -36px lightgray !important;
   }
 }
