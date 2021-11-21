@@ -1,5 +1,5 @@
 .full-page-container {
-    height: 90vh;
+    height: 100vh;
 }
 
 .full-panel-container {
@@ -7,19 +7,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh;
 }
 
 .right-panel-container {
     @extend .full-panel-container;
-    margin: 0px;
 }
 
 .font-container {
-    // height: 15vh;
-    // line-height: 15vh;
     text-align: center;
-    // font-weight: bold;
-    // overflow-wrap: normal;
 }
 
 .large-font {
@@ -38,18 +34,24 @@
 }
 
 .landing-card {
-    width: 30vw;
-    height: fit-content;
-    padding: 50px;
+    width: 40vw;
+    min-height: 50vh;
+    padding: 30px;
 }
 
 @media (max-width: 767px) {
+    .full-page-container {
+        height: 150vh;
+    }
+
     .right-panel-container {
-        @extend .full-panel-container;
-        margin-top: 80px;
+        // @extend .full-panel-container;
+        margin-top: 5vh;
     }
 
     .landing-card {
+        min-height: 40vh;
         width: 60vw;
+        padding: 30px;
     }
 }

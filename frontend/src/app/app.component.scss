@@ -390,4 +390,9 @@ mat-sidenav {
       background: transparent;
   }
 } 
-  
+
+@media (max-width: 767px) {
+  .head-toolbar-center {
+    display: none;
+  }
+}
