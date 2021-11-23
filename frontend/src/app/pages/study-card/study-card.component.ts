@@ -31,7 +31,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   // @Input()
   card: Card = CardUtils.getWaitCard();
 
-  @Input()
+  // @Input()
   tag: string; // change to dekk id
 
   visibleFront = true;

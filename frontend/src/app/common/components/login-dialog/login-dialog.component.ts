@@ -38,8 +38,7 @@ export class LoginDialogComponent implements OnInit {
       .subscribe((response: any) => {
         this.loginError = true;
         this.loginSuccess = true; // in case of 200 OK
-        this.userService.loggedIn = true;
-        this.userService.accessToken = response?.auth_token;
+        this.userService.loginSuccessful(response?.auth_token);
     }, (error: any) => { // TODO: Differentiate between errors
       this.loginSuccess = false;
       this.loginError = true;
