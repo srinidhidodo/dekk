@@ -4,7 +4,11 @@ import { Injectable } from "@angular/core";
     providedIn: 'root',
 })
 export class UserService {
-    userName: string;
     accessToken: string = '';
-    loggedIn: boolean = false;
+    loggedIn: boolean = true;
+
+    loginSuccessful(accessToken: string): void {
+        this.accessToken = accessToken;
+        this.loggedIn = true;
+    }
 }

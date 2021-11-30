@@ -22,6 +22,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -51,6 +52,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatOptionModule } from '@angular/material/core';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { BarRatingModule } from 'ngx-bar-rating';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 
 
 
@@ -77,6 +80,8 @@ import { BarRatingModule } from 'ngx-bar-rating';
     LandingHomeComponent,
     LoginDialogComponent,
     SignupDialogComponent,
+    AboutUsComponent,
+    WhyDekkComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -107,10 +112,12 @@ import { BarRatingModule } from 'ngx-bar-rating';
     MatSelectModule,
     MatTableModule,
     MatDialogModule,
-    MatMenuModule
-    
+    MatMenuModule,
+    MatDividerModule
   ],
-  providers: [CdkColumnDef],
+  providers: [
+    CdkColumnDef
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

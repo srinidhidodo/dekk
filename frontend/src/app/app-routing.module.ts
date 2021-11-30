@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CardViewDetailsComponent } from './pages/card-view-details/card-view-details.component';
 import { CreateEditCardComponent } from './pages/create-edit-dekk/create-edit-card/create-edit-card.component';
 import { CreateEditDekkDetailComponent } from './pages/create-edit-dekk/create-edit-dekk-detail/create-edit-dekk-detail.component';
@@ -11,6 +12,7 @@ import { SearchResultsComponent } from './pages/search-results/search-results.co
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { StudyCardComponent } from './pages/study-card/study-card.component';
 import { TextEditComponent } from './pages/text-edit/text-edit.component';
+import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path: 'dekk-edit-view', component: DekkWithCardsEditViewComponent, pathMatch: 'full' },
   { path: 'card-edit-view', component: CreateEditCardComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingHomeComponent, pathMatch: 'full' },
+  { path: 'about', component: AboutUsComponent, pathMatch: 'full' },
+  { path: 'why-dekk', component: WhyDekkComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/pages/404' }
 ];
 

@@ -7,7 +7,7 @@
 .input-field {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 40vw;
 }
 
@@ -17,6 +17,10 @@
 
 .input-label-when-small {
     display: none;
+}
+
+.input-form-field {
+    width: clamp(15vw, 25vw, 30vw);
 }
 
 .search-input {

@@ -1,14 +1,18 @@
 <div class="row">
     <div class="col-1"></div>
-    <div class="col-10">
+    <div class="col-5">
         <div class="edit-card-page">
             <div class="input-field">
-                <span class="input-label"> Card Name* </span>
+                <span class="input-label"> Title* </span>
                 <mat-form-field class="input-form-field">
-                    <p class="input-label-when-small"> Card Name* </p>
-                    <input matInput type="text" class="search-input" required>
+                    <p class="input-label-when-small"> Title* </p>
+                    <input matInput type="text" class="search-input" required [(ngModel)]="card.title">
                 </mat-form-field>
             </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="edit-card-page">
             <div class="input-field">
                 <span class="input-label"> Tags* </span>
                 <mat-form-field class="input-form-field">
@@ -27,12 +31,16 @@
                 </mat-form-field>
             </div>
         </div>
-        <br>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-1"></div>
+    <div class="col-10">
         <h3>Front of Card</h3>
-        <app-text-edit></app-text-edit>
+        <app-text-edit #cardFront [content]="card.content_on_front"></app-text-edit>
         <br>
         <h3>Back of Card</h3>
-        <app-text-edit></app-text-edit>
+        <app-text-edit #cardBack [content]="card.content_on_back"></app-text-edit>
+        <button mat-raised-button (click)="saveCard()"> Save </button>
     </div>
     <div class="col-1"></div>
 </div>

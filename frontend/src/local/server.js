@@ -21,13 +21,16 @@ app.get('/dekk/cards/*', (req, res) => {
 });
 
 app.get('/api/v1/*', (req, res) => {
-    // const response = require("./mocks/searchResponse.json");
-    // res.json(response);
     console.log(devServer + req.url);
-    // req.pipe(request(devServer + req.url)).pipe(res);
-    setTimeout(() => {
-        req.pipe(request(devServer + req.url)).pipe(res);
-    }, 1000);
+    req.pipe(request(devServer + req.url)).pipe(res);
+    // setTimeout(() => {
+    //     req.pipe(request(devServer + req.url)).pipe(res);
+    // }, 1000);
+});
+
+app.post('/api/v1/*', (req, res) => {
+    console.log(devServer + req.url);
+    req.pipe(request(devServer + req.url)).pipe(res);
 });
 
 app.get('/dekk/home', (req, res) => {

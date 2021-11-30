@@ -1,5 +1,6 @@
 import { Card } from "../models/card";
 import * as _ from 'lodash';
+import { CardEditable } from "../models/card-editable";
 
 export class CardUtils {
     static OFFSET_LOAD_MAX_NUM_OF_CARDS = 10;
@@ -44,6 +45,20 @@ export class CardUtils {
             tags: {},
             content_on_front: "Please wait",
             content_on_back: "Please wait"
+        };
+    }
+
+    public static getEmptyEditableCard(): CardEditable {
+        return {
+            card_id: '-1',
+            account_id: -1,
+            title: "",
+            category: "",
+            dekk_name: "",
+            highlighted_keywords: [],
+            tags: ["NEET"],
+            content_on_front: "",
+            content_on_back: ""
         };
     }
 }

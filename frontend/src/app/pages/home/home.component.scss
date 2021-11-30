@@ -1,8 +1,10 @@
 .home-banner-container {
-    display: flex;
+    // display: flex;
+    display: none;
     align-content: space-between;
     height: 50vh;
     margin-bottom: 10px;
+    padding: 15px;
 }
 
 .home-banner {
@@ -25,5 +27,6 @@
 .dekk-effect {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 25vh;
 }

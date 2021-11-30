@@ -1,4 +1,4 @@
-import { Component, Directive, Input, OnInit } from '@angular/core';
+import { Component, Directive, Input, OnChanges, OnInit } from '@angular/core';
 import { Card } from '../../../models/card';
 import { StudyService } from '../../../services/study.service';
 import { CardUtils } from '../../../utils/card.utils';
@@ -13,11 +13,12 @@ import { RatingDialogComponent } from '../../rating-dialog/rating-dialog.compone
   templateUrl: './card-front.component.html',
   styleUrls: ['./card-front.component.scss']
 })
-export class CardFrontComponent implements OnInit {
+export class CardFrontComponent implements OnInit, OnChanges {
 
   @Input()
   card: Card;
 
+  content: string;
   dekkRating: number;
   dekkFeedback: string;
 
@@ -29,6 +30,11 @@ export class CardFrontComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(): void {
+    // this.content = this.studyService.getUnhighlightedCardBack();
+    this.content = this.studyService.getHighlightedCardFront();
   }
 
   getCardDekk(): string {

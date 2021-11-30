@@ -1,28 +1,24 @@
 .full-page-container {
-    height: 90vh;
+    height: 100vh;
 }
 
-.left-panel-container {
+.full-panel-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh;
 }
 
 .right-panel-container {
-    @extend .left-panel-container;
-    margin: 0px;
+    @extend .full-panel-container;
 }
 
-.home-large-font-container {
-    // height: 15vh;
-    // line-height: 15vh;
+.font-container {
     text-align: center;
-    font-weight: bold;
-    // overflow-wrap: normal;
 }
 
-.home-large-font {
+.large-font {
     font-size: 10vh;
     font-weight: bolder;
     margin: 0px;
@@ -37,24 +33,25 @@
     overflow-wrap: normal;
 }
 
-.home-large-font-blue {
-    @extend .home-large-font;
-    color: blue;
-}
-
 .landing-card {
-    width: 30vw;
-    height: fit-content;
-    padding: 50px;
+    width: 40vw;
+    min-height: 35vh;
+    padding: 30px;
 }
 
 @media (max-width: 767px) {
+    .full-page-container {
+        height: 150vh;
+    }
+
     .right-panel-container {
-        @extend .left-panel-container;
-        margin-top: 80px;
+        // @extend .full-panel-container;
+        margin-top: 5vh;
     }
 
     .landing-card {
+        min-height: 40vh;
         width: 60vw;
+        padding: 30px;
     }
 }
