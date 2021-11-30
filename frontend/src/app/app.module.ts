@@ -115,7 +115,9 @@ import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
     MatMenuModule,
     MatDividerModule
   ],
-  providers: [CdkColumnDef],
+  providers: [
+    CdkColumnDef
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

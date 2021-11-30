@@ -1,13 +1,16 @@
 .card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   padding: 30px;
+  height: 100%;
 }
 
 .content-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
 }
 
 .card-action-button {
@@ -20,7 +23,8 @@
 .card-content {
   display: inline-block;
   overflow: auto;
-  height: 60vh;
+  text-align: center;
+  height: max-content;
 }
 
 .card-actions-container {
@@ -43,6 +47,25 @@
   margin: 0px !important;
 }
 
+.card-header {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.card-subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dekk-name {
+  max-width: 90%;
+}
+
 @media (max-width: 400px) {
   .mobile-next-line {
     display: flex;
@@ -50,7 +73,9 @@
     justify-content: center;
     align-items: center;
   }
-  
+}
+
+@media (max-width: 500px) {
   .card-action-button {
     display: inline-block;
     overflow: auto;

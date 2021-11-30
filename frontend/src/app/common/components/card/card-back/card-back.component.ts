@@ -33,7 +33,8 @@ export class CardBackComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    this.content = this.studyService.getUnhighlightedCardBack();
+    // this.content = this.studyService.getUnhighlightedCardBack();
+    this.content = this.studyService.getHighlightedCardBack();
   }
 
   getCardDekk(): string {

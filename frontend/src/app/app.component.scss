@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  min-width: 160px;
 }
 
 .dark-light-toggle {
@@ -35,6 +36,10 @@
 .padded-toolbar-component {
   margin: 10px;
   width: auto;
+}
+
+.sidebar-item {
+  padding-left: 5px;
 }
 
 :host {

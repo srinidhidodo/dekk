@@ -28,10 +28,10 @@ export class AppComponent {
   sidebarOpened: boolean = false;
   listItems = [
     // { name: 'Website', link: UrlConstants.LANDING },
-    { name: 'Home', link: UrlConstants.HOME },
-    { name: 'Profile', link: UrlConstants.HOME },
-    { name: 'About Us', link: UrlConstants.ABOUT_US },
-    { name: 'Bookmarks', link: UrlConstants.HOME },
+    { icon: 'home', name: 'Home', link: UrlConstants.HOME },
+    { icon: 'person', name: 'Profile', link: UrlConstants.HOME },
+    { icon: 'pan_tool', name: 'About Us', link: UrlConstants.ABOUT_US },
+    { icon: 'bookmark', name: 'Bookmarks', link: UrlConstants.HOME },
     // { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
     // { name: 'Card View Details', link: '/card-view-details' },
     // { name: 'Study Card', link: UrlConstants.STUDY_CARD },
@@ -41,8 +41,8 @@ export class AppComponent {
   ];
 
   listItemsBelowDivider = [
-    { name: 'Why Dekk?', link: UrlConstants.WHY_DEKK },
-    { name: 'Contact Us', link: UrlConstants.HOME }
+    { icon: 'question_mark', name: 'Why Dekk?', link: UrlConstants.WHY_DEKK },
+    { icon: 'call', name: 'Contact Us', link: UrlConstants.HOME }
   ];
 
   searchSender: Subject<any>;
