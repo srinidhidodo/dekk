@@ -24,9 +24,16 @@ export class CardBackComponent implements OnInit, OnChanges {
 
   flipToFrontObservable: Subject<any>;
 
+  rightObervable: Subject<any>;
+  wrongObervable: Subject<any>;
+
   constructor(public studyService: StudyService, public dialog: MatDialog) {
     this.flipToFrontObservable = rxmq.channel(MessageConstants.STUDY_CHANNEL)
       .subject(MessageConstants.STUDY_FLIP_TO_FRONT_ACTION);
+    this.rightObervable = rxmq.channel(MessageConstants.RIGHT_WRONG_CHANNEL)
+      .subject(MessageConstants.RIGHT_ACTION);
+    this.wrongObervable = rxmq.channel(MessageConstants.RIGHT_WRONG_CHANNEL)
+      .subject(MessageConstants.WRONG_ACTION);
   }
 
   ngOnInit(): void {
@@ -68,5 +75,25 @@ export class CardBackComponent implements OnInit, OnChanges {
         console.log('The dialog was closed: ', this.dekkRating, this.dekkFeedback);
       }
     });
+  }
+
+  gotItRight(): void {
+    if (!this.card.rightWrongMarked) {
+      this.rightObervable.next({
+        title: 'Right',
+        text: 'Right',
+      });
+      this.card.rightWrongMarked = true;
+    }
+  }
+
+  gotItWrong(): void {
+    if (this.card.rightWrongMarked) {
+      this.wrongObervable.next({
+        title: 'Wrong',
+        text: 'Wrong',
+      });
+      this.card.rightWrongMarked = true;
+    }
   }
 }

@@ -1,5 +1,4 @@
-<div mat-dialog-content class="dialog-center">
-    {{data.msg}}
+<div mat-dialog-content class="dialog-center" [innerHtml]="data.msg">
 </div>
 <div mat-dialog-actions class="actions-container">
     <button mat-button (click)="onNoClick()">Close</button>

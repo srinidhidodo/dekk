@@ -5,18 +5,21 @@
         <mat-icon class="card-options-icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="rateDialog()">Feedback</button>
-          <button mat-menu-item>
+          <!-- <button mat-menu-item>
             <mat-icon class="menu-item-icon">star</mat-icon>
             Bookmark
-          </button>
+          </button> -->
         </mat-menu>
       </span>
     </mat-card-subtitle>
     <mat-card-content class="content-item card-content unselectable-content" [innerHtml]="content"></mat-card-content>
     <mat-card-actions class="card-actions-container mobile-next-line">
       <!-- <button mat-raised-button color="primary" class="card-action-button" (click)="highlight()"> Highlight </button> -->
-      <button mat-raised-button class="card-action-button-success"> Got it Right </button>
-      <button mat-raised-button class="card-action-button-warning"> Got it Wrong </button>
+      <button mat-raised-button class="card-action-button-success" (click)="gotItRight()"> 
+        Got it Right 
+        <mat-icon class="got-it-right-icon" [hidden]="!card.rightWrongMarked">download_done</mat-icon>
+      </button>
+      <!-- <button mat-raised-button class="card-action-button-warning" (click)="gotItWrong()"> Got it Wrong </button> -->
       <button mat-raised-button color="primary" class="card-action-button" (click)="flipToFront()"> Flip To Front </button>
     </mat-card-actions>
   </mat-card>
