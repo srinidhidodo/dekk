@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { StudyCardComponent } from './pages/study-card/study-card.component';
+import { StudySessionComponent } from './pages/study-session/study-session.component';
 import { TextEditComponent } from './pages/text-edit/text-edit.component';
 import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'landing', component: LandingHomeComponent, pathMatch: 'full' },
   { path: 'about', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'why-dekk', component: WhyDekkComponent, pathMatch: 'full' },
+  { path: 'study-session', component: StudySessionComponent, pathMatch: 'full' },
   { path: '**', redirectTo: '/pages/404' }
 ];
 

@@ -22,3 +22,9 @@ mark {
 mat-card {
     border-radius: 20px !important;
 }
+
+app-study-session {
+    .mat-expansion-panel-body {
+        padding-right: 0 !important;
+    }
+}

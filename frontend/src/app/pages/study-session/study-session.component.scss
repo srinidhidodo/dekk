@@ -1,0 +1,94 @@
+.full-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.large-font-container {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+
+.large-font {
+    font-size: 8vh;
+    font-weight: bolder;
+    margin: 0px;
+    line-height: 15vh;
+}
+
+.fitting-height {
+    height: fit-content;
+}
+
+.each-master-dekk {
+    margin-bottom: 2vh;
+}
+
+.disable-expand {
+    pointer-events: none;
+    padding-left: 24px;
+}
+
+.checkbox-class {
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 3vw;
+}
+
+mat-panel-description {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.count-class {
+    font-size: 2vh;
+}
+
+.count-and-checkbox-class {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.input-label {
+    margin: 10px;
+}
+
+.input-label-when-small {
+    display: none;
+}
+
+.input-form-field {
+    width: clamp(15vw, 25vw, 30vw);
+}
+
+.search-input {
+    border: 0px;
+    background: transparent;
+    width: 20vw;
+}
+
+.middle-align-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-form-container {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+@media (max-width: 350px) {
+    .input-label {
+        display: none;
+    }
+    
+    .input-label-when-small {
+        display: flex;
+    }
+}

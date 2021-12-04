@@ -30,8 +30,8 @@ export class AppComponent {
     // { name: 'Website', link: UrlConstants.LANDING },
     { icon: 'home', name: 'Home', link: UrlConstants.HOME },
     { icon: 'person', name: 'Profile', link: UrlConstants.HOME },
-    { icon: 'pan_tool', name: 'About Us', link: UrlConstants.ABOUT_US },
     { icon: 'bookmark', name: 'Bookmarks', link: UrlConstants.HOME },
+    { icon: 'auto_stories', name: 'Study Session', link: UrlConstants.STUDY_SESSION },
     // { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
     // { name: 'Card View Details', link: '/card-view-details' },
     // { name: 'Study Card', link: UrlConstants.STUDY_CARD },
@@ -42,6 +42,7 @@ export class AppComponent {
 
   listItemsBelowDivider = [
     { icon: 'question_mark', name: 'Why Dekk?', link: UrlConstants.WHY_DEKK },
+    { icon: 'emoji_people', name: 'About Us', link: UrlConstants.ABOUT_US },
     { icon: 'call', name: 'Contact Us', link: UrlConstants.HOME }
   ];
 

@@ -10,6 +10,7 @@ export class UrlConstants {
   public static CARDS_FROM_TAG_URL = UrlConstants.BASE_URL + '/cards/tags';
   public static REGISTER_URL = UrlConstants.BASE_URL + '/register';
   public static LOGIN_URL = UrlConstants.BASE_URL + '/login';
+  public static DEKK_DETAILS_URL = '/dekk/dekk-details';
 
   // Routing URLs
   public static SEARCH_RESULTS = '/search-results';
@@ -21,4 +22,5 @@ export class UrlConstants {
   public static LANDING = '/landing';
   public static ABOUT_US = '/about';
   public static WHY_DEKK = '/why-dekk';
+  public static STUDY_SESSION = '/study-session';
 }
