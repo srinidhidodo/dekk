@@ -12,7 +12,7 @@ HASH_KEYS_CARDS = [
     "title",
     "content_on_front",
     "content_on_back",
-    "creator_id",
+    "account_id",
 ]
 
 load_dotenv(".local.env")
@@ -116,12 +116,12 @@ for file in glob.glob("./data_verified/*"):
             # print(card_dict)
             TAGS = [i.strip() for i in TAGS if i.strip()]
             for tag in TAGS:
-                card_dict["creator_id"] = 1
+                card_dict["account_id"] = 1
                 card_hash = get_hash_for_cards(card_dict, HASH_KEYS_CARDS)
                 card_dict["card_id"] = card_hash
                 dict_ = {
                     "tag_name": tag.strip(),
-                    "creator_id": 1,
+                    "account_id": 1,
                 }
                 tag_hash = get_hash_for_tags(dict_)
                 for_search = (
@@ -155,3 +155,6 @@ for file in glob.glob("./data_verified/*"):
 
                 # print(tag_hash)
                 # print('----------------')
+
+DB_OBJ_CARDS.table = "cards"
+DB_OBJ_CARDS.pg_index_search_text()

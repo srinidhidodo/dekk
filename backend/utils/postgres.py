@@ -189,5 +189,25 @@ class QueryManager:
 
         return self.conn_obj.cursor.rowcount
 
+    def pg_index_search_text(self):
+        query = """
+            UPDATE user_content.cards d1
+            SET search_tokens = to_tsvector(d1.for_search)
+            FROM user_content.cards d2;
+        """
+        try:
+            self.conn_obj.cursor.execute(query)
+        except Exception as e:
+            traceback.print_exc()
+            self.conn_obj.conn.rollback()
+            """
+            This helper function will actually raise
+            an exception and let what's calling it take
+            care of what to do
+            """
+            raise e
+        else:
+            self.conn_obj.conn.commit()
+
     def __str__(self):
         return str(self.conn_obj)

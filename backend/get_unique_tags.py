@@ -39,6 +39,7 @@ for file in glob.glob("./data_verified/*"):
     file = file.replace("./data_verified/", "")
     main_tags = file.split(" - ")
     TAGS = TAGS + main_tags
+    title_tags = []
     for item in data:
         if "not adding" in item:
             continue
@@ -52,6 +53,8 @@ for file in glob.glob("./data_verified/*"):
             title = title.strip()
             if title not in TAGS:
                 TAGS.append(title)
+            if title not in title_tags:
+                title_tags.append(title)
         if re.search(r"(?<=Tags:)(.*)(?=Content on front)", item):
             tags = re.search(r"(?<=Tags:)(.*)(?=Content on front)", item).group()
             tags = tags.split(",")
@@ -66,14 +69,25 @@ for file in glob.glob("./data_verified/*"):
     for i, tag in enumerate(TAGS):
         dict_ = {
             "tag_name": tag.strip(),
-            "creator_id": 1,
+            "account_id": 1,
         }
         hash_ = get_hash_for_tags(dict_)
+        dict_["tag_type"] = None
         if tag in main_tags:
             if i == 0:
                 dict_["is_master_topic"] = True
                 parent_hash = hash_
+                dict_["tag_type"] = "master"
                 dict_["parent_topic_hash"] = parent_hash
+            if i == 1:
+                dict_["tag_type"] = "submaster"
+
+        if tag in title_tags:
+            dict_["tag_type"] = "subtopic"
+        else:
+            if not dict_["tag_type"]:
+                dict_["tag_type"] = "tag"
+
         # elif tag in main_tags and i != 0:
         #     dict_['is_master_topic'] = True
         dict_["field"] = "Medical"

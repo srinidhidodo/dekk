@@ -10,10 +10,11 @@ import falcon
 from falcon.http_status import HTTPStatus
 from api.user.register import Register
 from api.user.login import Login
-from api.cards.cards_actions import CrudOnCards
+from api.cards.cards_actions import CrudOnCards, GetCardsIdsForADekk, GetCardById
 from api.user.home import Home
 from api.cards.search import SearchCards, SearchCardsByTags
 from api.tags.list_master_topics import AutoSuggestTags
+from api.user.custom_study import GetCustomStudyMenu
 
 
 class HandleCORS(object):
@@ -37,15 +38,20 @@ def initialize_routes() -> falcon.API:
     # Routes
     api_version = "/api/v1"
 
-    api.add_route(f"{api_version}/register", Register())
-    api.add_route(f"{api_version}/login", Login())
-    api.add_route(f"{api_version}/users/home", Home())
-    api.add_route(f"{api_version}/cards/search", SearchCards())
-    api.add_route(f"{api_version}/cards/tags", SearchCardsByTags())
+    api.add_route(f"{api_version}/register", Register())  # ok
+    api.add_route(f"{api_version}/login", Login())  # ok
+    api.add_route(f"{api_version}/users/home", Home())  # ok
+    api.add_route(f"{api_version}/cards/search", SearchCards())  # ok
+    # api.add_route(f"{api_version}/cards/tags", SearchCardsByTags())
 
     api.add_route(f"{api_version}/tags/all", AutoSuggestTags())
 
-    api.add_route(f"{api_version}/cards", CrudOnCards())
+    api.add_route(f"{api_version}/crud/card", CrudOnCards())
+    api.add_route("/api/v1/card/{card_id}", GetCardById())
+
+    api.add_route("/api/v1/dekk/{dekk_id}", GetCardsIdsForADekk())
+
+    api.add_route("/api/v1/study/dekks", GetCustomStudyMenu())
 
     return api
 

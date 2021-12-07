@@ -19,25 +19,18 @@ KEYS_TO_DROP_IN_MASTER_TOPICS = [
 def get_all_unique_tags_on_cards(db_conn):
 
     query = f"""
-        SELECT
-        DISTINCT(tag)
-        FROM (
-        SELECT jsonb_object_keys(tags) AS tag
-        FROM user_content.cards
-        ) AS subquery
-        WHERE tag !='' AND tag IS NOT NULL
-        ORDER BY tag
-
+        select tag_id, tag_name , parent_topic_hash as dekk_id  from user_content.tags
+        order by tag_name
     """
 
     query_result = db_conn.fetch_query_direct_query(query)
 
     output = []
-    for result in query_result:
-        if "tag" in result:
-            output.append(result["tag"].lower())
+    # for result in query_result:
+    #     if "tag" in result:
+    #         output.append(result["tag"].lower())
 
-    return output
+    return query_result
 
 
 class AutoSuggestTags:
