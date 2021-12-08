@@ -12,7 +12,13 @@
       </mat-menu>
     </span>
   </mat-card-subtitle>
-  <mat-card-content class="content-item card-content unselectable-content" [innerHtml]="content"></mat-card-content>
+  <mat-card-content class="content-item card-content">
+    <div class="content-item card-content-text unselectable-content" [innerHtml]="content"></div>
+    <div class="content-item img-container">
+      <img class="img-class" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" />
+      <img class="img-class" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" />
+    </div>
+  </mat-card-content>
   <mat-card-actions class="card-actions-container mobile-next-line">
     <!-- <button mat-raised-button color="primary" class="card-action-button"> Highlight </button> -->
     <button mat-raised-button color="primary" class="card-action-button" (click)="flipToBack()"> Flip To Back </button>

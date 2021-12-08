@@ -17,7 +17,7 @@ export class StudySessionComponent implements OnInit {
   innerpanelOpenState = false;
   panelOpenStates: any = {};
   panelChecked: any = {};
-  numCardsToStudy: number;
+  numCardsToStudy: number = 100;
 
   constructor(private dekkService: DekkService, private location: Location) { }
 
