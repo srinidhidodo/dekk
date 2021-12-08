@@ -56,6 +56,7 @@ import { BarRatingModule } from 'ngx-bar-rating';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 import { StudySessionComponent } from './pages/study-session/study-session.component';
+import { ImgDialogComponent } from './common/components/img-dialog/img-dialog.component';
 
 
 
@@ -85,6 +86,7 @@ import { StudySessionComponent } from './pages/study-session/study-session.compo
     AboutUsComponent,
     WhyDekkComponent,
     StudySessionComponent,
+    ImgDialogComponent,
   ],
   imports: [
     AppRoutingModule,

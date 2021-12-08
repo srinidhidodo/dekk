@@ -113,6 +113,7 @@
   height: clamp(5vh, 25vh, 30vh);
   width: clamp(5vh, 25vh, 30vh);
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {
@@ -134,6 +135,7 @@
     height: clamp(5vh, 25vh, 30vh);
     width: clamp(5vh, 25vh, 30vh);
     margin-bottom: 1vh;
+    cursor: pointer;
   }
 }
 

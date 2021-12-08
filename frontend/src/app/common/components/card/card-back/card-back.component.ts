@@ -7,6 +7,7 @@ import { MessageConstants } from 'src/app/common/constants/message.constants';
 import { CardUtils } from 'src/app/common/utils/card.utils';
 import { MatDialog } from '@angular/material/dialog';
 import { RatingDialogComponent } from '../../rating-dialog/rating-dialog.component';
+import { ImgDialogComponent } from '../../img-dialog/img-dialog.component';
 
 @Component({
   selector: 'app-card-back',
@@ -95,5 +96,16 @@ export class CardBackComponent implements OnInit, OnChanges {
       });
       this.card.rightWrongMarked = true;
     }
+  }
+
+  openImg(): void {
+    const dialogRef = this.dialog.open(ImgDialogComponent, {
+      data: {
+          msg: 'https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3'
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed: ', result);
+    });
   }
 }
