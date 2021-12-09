@@ -104,7 +104,7 @@
 
 .img-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   // height: clamp(5vh, 25vh, 30vh);
   width: 100%;
 }
@@ -114,6 +114,10 @@
   width: clamp(5vh, 25vh, 30vh);
   margin-bottom: 0;
   cursor: pointer;
+}
+
+.img-first {
+  margin-right: 2vw;
 }
 
 @media (max-width: 640px) {
@@ -136,6 +140,10 @@
     width: clamp(5vh, 25vh, 30vh);
     margin-top: 1vh;
     cursor: pointer;
+  }
+
+  .img-first {
+    margin-right: 0;
   }
 }
 
