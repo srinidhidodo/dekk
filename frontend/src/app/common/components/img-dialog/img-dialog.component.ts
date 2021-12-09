@@ -13,8 +13,7 @@ export class ImgDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
-    // $('#enlargedPopupImg').height($('#enlargedPopupImg').width()!);
-    setTimeout(() => { $('#enlargedPopupImg').height($('#enlargedPopupImg').width()!); });
+    // setTimeout(() => { $('#enlargedPopupImg').height($('#enlargedPopupImg').width()!); });
   }
 
   onNoClick(): void {
