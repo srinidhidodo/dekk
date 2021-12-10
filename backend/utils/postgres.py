@@ -85,7 +85,7 @@ class QueryManager:
 
         return rows
 
-    def pg_handle_insert(self, data_dict, unique_constraint=""):
+    def pg_handle_session_insert(self, data_dict):
         """
         A function like this is being made with the goal
         to have one agreed upon function for all Postgres inserts.
@@ -102,18 +102,11 @@ class QueryManager:
         skel_columns = f"({', '.join(columns)})"
         skel_percentized_columns = [f"%({col})s" for col in columns]
         skel_values = f"({', '.join(skel_percentized_columns)})"
-        if unique_constraint:
-            skeleton = f"""
-                    INSERT INTO {self.collection}.{self.table} {skel_columns}
-                    VALUES {skel_values}
-                    ON CONFLICT ON CONSTRAINT {unique_constraint}
-                    DO NOTHING
-                        """
-        else:
-            skeleton = f"""
-                    INSERT INTO {self.collection}.{self.table} {skel_columns}
-                    VALUES {skel_values}
-                        """
+
+        skeleton = f"""
+                INSERT INTO users.sessions {skel_columns}
+                VALUES {skel_values} RETURNING session_id
+                """
 
         """
         The following is where the real utility should lie (hopefully).
@@ -122,7 +115,9 @@ class QueryManager:
         No tuples, nothing, just a plain old data_dict.
         """
         try:
-            self.conn_obj.cursor.execute(skeleton, data_dict)
+            op = self.conn_obj.cursor.execute(skeleton, data_dict)
+            print(op)
+            session_id = self.conn_obj.cursor.fetchone()[0]
         except Exception as e:
             traceback.print_exc()
             self.conn_obj.conn.rollback()
@@ -135,7 +130,7 @@ class QueryManager:
         else:
             self.conn_obj.conn.commit()
 
-        return self.conn_obj.cursor.rowcount
+        return session_id
 
     def pg_handle_insert(self, data_dict, unique_constraint=""):
         """

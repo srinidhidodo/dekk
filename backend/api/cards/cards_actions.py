@@ -1,9 +1,9 @@
 """
 Sample API calls:
-    GET - http://127.0.0.1:8000/api/v1/cards
+    GET - http://127.0.0.1:8000/api/v1/dekk/204af12a0bb2a5bbdf80e6b6b77bd64b
+    GET - http://127.0.0.1:8000/api/v1/dekk/204af12a0bb2a5bbdf80e6b6b77bd64b
 
-    GET - http://127.0.0.1:8000/api/v1/dekk/edit?dekk_id=9b2a7c6e870dfd09ac70b3fa726f28c3
-
+    GET - http://127.0.0.1:8000/api/v1/card/14894d5c75aef72bac20535917c339dd
 """
 import hashlib
 import json

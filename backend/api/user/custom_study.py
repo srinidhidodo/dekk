@@ -1,10 +1,11 @@
 """
 Sample API calls:
-    GET - http://127.0.0.1:8000/api/v1/cards
-
-    GET - http://127.0.0.1:8000/api/v1/dekk/edit?dekk_id=9b2a7c6e870dfd09ac70b3fa726f28c3
+    GET - http://127.0.0.1:8000/api/v1/select/dekk
+    GET - http://127.0.0.1:8000/api/v1/study/dekk?ids=['6861b260e42245a197029c5a5729b4f3','557934b5fbf7f080353ac0e3f9fb433e']
+    GET - http://127.0.0.1:8000/api/v1/study/dekk?cards_count=20&ids=['6861b260e42245a197029c5a5729b4f3','557934b5fbf7f080353ac0e3f9fb433e']
 
 """
+import ast
 import hashlib
 import json
 import os
@@ -18,46 +19,71 @@ from utils.add_cards import get_hash
 from utils.add_cards import HASH_KEYS
 
 
-def get_all_card_ids_for_a_dekk(db_conn, tag_id):
+def get_study_cards(db_conn, req):
 
-    card_ids_query = f"""
-        SELECT t1.title,t1.card_id FROM user_content.cards t1 inner join user_content.tags_cards t2
-        on t1.card_id = t2.card_id
-        where t2.tag_id = '{tag_id}'
-        order by t1.title
-    """
-    card_ids_result = db_conn.fetch_query_direct_query(card_ids_query)
+    cards_count = req.params["cards_count"]
+    ids = json.loads(json.dumps(req.params["ids"]))
+    ids = x = ast.literal_eval(ids)
+    session_id = req.params["session_id"]
 
-    dekk_name_query = f"""
-        SELECT tag_name as dekk_name FROM user_content.tags
-        where tag_id = '{tag_id}'
-        limit 1
-    """
+    # get account id
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
 
-    dekk_name_result = db_conn.fetch_query_direct_query(dekk_name_query)
+    account_id = decode["account_id"]
 
-    tags_query = f"""
-        SELECT tag_name,tag_id FROM user_content.tags
-        where parent_topic_hash = '{tag_id}' and tag_id != '{tag_id}'
-    """
+    if not session_id:
+        id_clause = [f"'{id}'" for id in ids]
+        id_clause = ",".join(id_clause)
 
-    tags_query_result = db_conn.fetch_query_direct_query(tags_query)
+        cards_query = f"""
+            select
+            t1.title,t1.content_on_front,t1.content_on_back,t1.highlighted_keywords,
+            t1.permission,t1.type,t1.image_links,t1.card_id
+            from user_content.cards t1 inner join
+            user_content.tags_cards t2 on t1.card_id = t2.card_id
+            where t2.tag_id in ( {id_clause} )
+            order by random()
+            limit {cards_count}
+        """
+        cards = db_conn.fetch_query_direct_query(cards_query)
 
-    if dekk_name_result and dekk_name_result[0]["dekk_name"]:
-        result = {
-            "dekk_name": dekk_name_result[0]["dekk_name"],
-            "tags": tags_query_result,
-            "cards": card_ids_result,
+        total_cards = f"""
+            select
+                count(*)
+            from user_content.cards t1 inner join
+            user_content.tags_cards t2 on t1.card_id = t2.card_id
+            where t2.tag_id in ( {id_clause} )
+        """
+        total_cards = db_conn.fetch_query_direct_query(total_cards)
+        session_dict = {
+            "account_id": account_id,
+            "selected_tags": json.dumps(ids),
+            "session_study_cards": json.dumps([card["card_id"] for card in cards]),
+            "no_of_cards": cards_count,
         }
-    else:
-        raise Exception("Opps ids did not match")
-    return result
+        session_id = db_conn.pg_handle_session_insert(session_dict)
+        response = {
+            "session_id": session_id,
+            "total_cards": total_cards[0]["count"],
+            "cards_count": cards_count,
+            "cards": cards,
+        }
+
+        return response
+    if session_id:
+        cards_query = ""
+        return {}
+
+    return {}
 
 
 def create_custom_study_menu(db_conn):
 
     master_topics_query = f"""
-        select count(*) as card_count,t1.tag_name as dekk_name ,t1.tag_id as dekk_id from user_content.tags t1 inner join
+        select count(*) as cards_count,t1.tag_name as dekk_name ,t1.tag_id as dekk_id from user_content.tags t1 inner join
         user_content.tags_cards t2 on t1.tag_id = t2.tag_id
         where  t1.is_master_topic = true
         and t1.tag_type = 'master'
@@ -71,12 +97,12 @@ def create_custom_study_menu(db_conn):
     for id in master_topics_ids:
         dekk_id = id["dekk_id"]
         dekk_tree = {
-            "card_count": id["card_count"],
+            "cards_count": id["cards_count"],
             "dekk_id": dekk_id,
             "dekk_name": id["dekk_name"],
         }
 
-        submaster_query = f"""select count(*) as card_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
+        submaster_query = f"""select count(*) as cards_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
         user_content.tags_cards t2 on t1.tag_id = t2.tag_id
         where t1.parent_topic_hash = '{dekk_id}' and t1.tag_id !='{dekk_id}'
         and t1.tag_type = 'submaster'
@@ -88,7 +114,7 @@ def create_custom_study_menu(db_conn):
         dekk_tree["sub_dekks"] = submaster_results
 
         for sub_dekk in dekk_tree["sub_dekks"]:
-            subtopics_query = f"""select count(*) as card_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
+            subtopics_query = f"""select count(*) as cards_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
             user_content.tags_cards t2 on t1.tag_id = t2.tag_id
             where t1.parent_topic_hash = '{dekk_id}' and t1.tag_id !='{dekk_id}'
             and t1.tag_type = 'subtopic'
@@ -132,5 +158,28 @@ class GetCustomStudyMenu:
         except Exception as e:
             print(e)
             error_message = "Something went wrong"
+            message = {"message": error_message}
+            http_response.err(resp, falcon.HTTP_500, message)
+
+
+class GetCustomStudyCards:
+    """
+        Request data has to be a json
+    """
+
+    def __init__(self) -> None:
+        self.db_conn = postgres.QueryManager("user_content", "cards")
+
+    @falcon.before(authorization.request_valiation)
+    def on_get(self, req, resp):
+
+        if "ids" in req.params:
+            req.params["ids"] = req.params.get("ids", 30)
+            req.params["session_id"] = req.params.get("session_id", None)
+            req.params["cards_count"] = req.params.get("cards_count", 30)
+            result = get_study_cards(self.db_conn, req)
+            http_response.ok(resp, result)
+        else:
+            error_message = "Something went wrong ,must pass ids"
             message = {"message": error_message}
             http_response.err(resp, falcon.HTTP_500, message)

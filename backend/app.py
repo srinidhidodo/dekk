@@ -14,7 +14,8 @@ from api.cards.cards_actions import CrudOnCards, GetCardsIdsForADekk, GetCardByI
 from api.user.home import Home
 from api.cards.search import SearchCards, SearchCardsByTags
 from api.tags.list_master_topics import AutoSuggestTags
-from api.user.custom_study import GetCustomStudyMenu
+from api.user.custom_study import GetCustomStudyMenu, GetCustomStudyCards
+from api.resources.get_colleges import Colleges
 
 
 class HandleCORS(object):
@@ -44,14 +45,18 @@ def initialize_routes() -> falcon.API:
     api.add_route(f"{api_version}/cards/search", SearchCards())  # ok
     # api.add_route(f"{api_version}/cards/tags", SearchCardsByTags())
 
-    api.add_route(f"{api_version}/tags/all", AutoSuggestTags())
+    api.add_route(f"{api_version}/tags/all", AutoSuggestTags())  # ok
 
-    api.add_route(f"{api_version}/crud/card", CrudOnCards())
-    api.add_route("/api/v1/card/{card_id}", GetCardById())
+    api.add_route(f"{api_version}/crud/card", CrudOnCards())  # todo
 
-    api.add_route("/api/v1/dekk/{dekk_id}", GetCardsIdsForADekk())
+    api.add_route("/api/v1/card/{card_id}", GetCardById())  # ok
 
-    api.add_route("/api/v1/study/dekks", GetCustomStudyMenu())
+    api.add_route("/api/v1/dekk/{dekk_id}", GetCardsIdsForADekk())  # ok
+
+    api.add_route("/api/v1/select/dekk", GetCustomStudyMenu())  # ok
+    api.add_route("/api/v1/study/dekk/", GetCustomStudyCards())  # ok
+
+    api.add_route(f"{api_version}/resources/colleges", Colleges())  # ok
 
     return api
 

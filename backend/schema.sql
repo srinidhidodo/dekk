@@ -72,6 +72,16 @@ CREATE TABLE user_content.tags_cards (
 	CONSTRAINT fk_tags_cards_tags FOREIGN KEY (tag_id) REFERENCES user_content.tags(tag_id)
 );
 
+CREATE TABLE users.sessions (
+	account_id int4 NOT NULL,
+	session_id SERIAL PRIMARY KEY not null,
+	selected_tags jsonb not null,
+	session_study_cards jsonb not null,
+	no_of_cards int,
+	created_at timestamp NULL DEFAULT timezone('utc'::text, now()),
+	updated_at timestamp NULL DEFAULT timezone('utc'::text, now()),
+	CONSTRAINT fk_us_accounts_ua_accounts FOREIGN KEY (account_id) REFERENCES users.accounts(account_id)
+);
 
 -- insert into user_content.tags (field,tag_name,is_master_topic,created_by_id,tag_hash) values
 -- ('Medical','infectious-diseases',true,1,md5('1medicalinfectious-diseases'));
