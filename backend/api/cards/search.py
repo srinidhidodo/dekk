@@ -13,12 +13,11 @@ from utils import http_response
 from utils import postgres
 
 KEYS_TO_DROP = [
-    "card_id",
     "account_id",
     "for_search",
     "source_link",
     "master_topic",
-    "card_hash",
+    "search_tokens",
 ]
 
 sp = spacy.load("en_core_web_sm")
@@ -114,9 +113,60 @@ def get_cards_by_tags_and_tokens(db_conn, query_string, offset):
         for key in KEYS_TO_DROP:
             result.pop(key, None)
 
-    response = {"total_cards_found": cards_found, "results": query_result}
+    if cards_found:
+        total_cards = get_total_count_cards_by_tags_and_tokens(db_conn, query_string)
+        response = {
+            "cards_count": cards_found,
+            "total_cards": total_cards,
+            "page": f"{int(offset // 10) + 1}/{total_cards//10 + 1}",
+            "results": query_result,
+        }
+    else:
+        response = {
+            "message": "No more cards for you",
+            "results": [],
+            "cards_count": 0,
+            "total_cards": 0,
+        }
 
     return response
+
+
+def get_total_count_cards_by_tags_and_tokens(db_conn, query_string):
+    """
+        todo count
+    """
+    query = f"""
+        SELECT count(*) FROM  user_content.cards
+    """
+
+    query_string = query_string.lower()
+    query_string = query_string.replace("'", " ")
+    query_string = query_string.replace('"', " ")
+
+    tags_query = construct_tags_query(query_string)
+    free_text_query = construct_free_text_query(query_string)
+
+    print(tags_query)
+    print(free_text_query)
+
+    if tags_query and free_text_query:
+        query += " WHERE " + tags_query + " AND " + "(" + free_text_query + ")"
+    elif tags_query and not free_text_query:
+        query += " WHERE " + tags_query
+    elif not tags_query and free_text_query:
+        query += " WHERE " + free_text_query
+    else:
+        return {}
+
+    query_result = db_conn.fetch_query_direct_query(query)
+
+    if query_result and query_result[0]["count"]:
+        count = query_result[0]["count"]
+    else:
+        count = 0
+
+    return count
 
 
 def get_cards_by_tags(db_conn, tags, offset):

@@ -85,7 +85,54 @@ class QueryManager:
 
         return rows
 
-    def pg_handle_insert(self, data_dict, unique_constraint="hsh_unique"):
+    def pg_handle_session_insert(self, data_dict):
+        """
+        A function like this is being made with the goal
+        to have one agreed upon function for all Postgres inserts.
+        Important pre-requisites:
+            - The input is always a python dictionary
+        Params:
+            - conn: Psycopg2 connection object
+            - cur: Psycopg2 cursor object
+            - collection: Name of the Postgres collection
+            - table: Name of the table
+            - data_dict: The updated raw in the form of a dictionary
+        """
+        columns = data_dict.keys()
+        skel_columns = f"({', '.join(columns)})"
+        skel_percentized_columns = [f"%({col})s" for col in columns]
+        skel_values = f"({', '.join(skel_percentized_columns)})"
+
+        skeleton = f"""
+                INSERT INTO users.sessions {skel_columns}
+                VALUES {skel_values} RETURNING session_id
+                """
+
+        """
+        The following is where the real utility should lie (hopefully).
+        We simply pass a dictionary here not worried about any
+        Postgres statement implementation and let Psycopg2 handle it.
+        No tuples, nothing, just a plain old data_dict.
+        """
+        try:
+            op = self.conn_obj.cursor.execute(skeleton, data_dict)
+            print(op)
+            session_id = self.conn_obj.cursor.fetchone()[0]
+        except Exception as e:
+            traceback.print_exc()
+            self.conn_obj.conn.rollback()
+            """
+            This helper function will actually raise
+            an exception and let what's calling it take
+            care of what to do
+            """
+            raise e
+        else:
+            self.conn_obj.conn.commit()
+
+        return session_id
+
+    def pg_handle_insert(self, data_dict, unique_constraint=""):
         """
         A function like this is being made with the goal
         to have one agreed upon function for all Postgres inserts.
@@ -136,6 +183,26 @@ class QueryManager:
             self.conn_obj.conn.commit()
 
         return self.conn_obj.cursor.rowcount
+
+    def pg_index_search_text(self):
+        query = """
+            UPDATE user_content.cards d1
+            SET search_tokens = to_tsvector(d1.for_search)
+            FROM user_content.cards d2;
+        """
+        try:
+            self.conn_obj.cursor.execute(query)
+        except Exception as e:
+            traceback.print_exc()
+            self.conn_obj.conn.rollback()
+            """
+            This helper function will actually raise
+            an exception and let what's calling it take
+            care of what to do
+            """
+            raise e
+        else:
+            self.conn_obj.conn.commit()
 
     def __str__(self):
         return str(self.conn_obj)

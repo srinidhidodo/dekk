@@ -48,8 +48,9 @@ To check data -
 2. select * from user_content.tags
 
 To load flash cards run this -
-1. python -m utils.add_cards
-2. select * from user_content.cards
+1. python get_unique_tags.py
+2. python get_and_add_cards.py
+3. select * from user_content.cards
 ```
 
 ##Quick reference for APIs:

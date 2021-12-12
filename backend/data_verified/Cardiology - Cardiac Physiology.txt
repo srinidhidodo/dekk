@@ -1,0 +1,1013 @@
+﻿
+
+
+
+=======================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential, Resting membrane potential
+Content on front: Resting membrane potential of SA node is **.
+Content on back: Resting membrane potential of SA node is *-60 to -40 mv*.
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential
+Content on front: Resting membrane potential of the ventricle is **.
+Content on back: Resting membrane potential of the ventricle is *-90mv*.
+
+
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential
+Content on front: Heart rate depends on the slope of ** of SAN potential.
+Content on back:  Heart rate depends on the slope of *Phase-4* of SAN potential.``
+
+
+Phase 4: Prepotential phase -4 is due to calcium and sodium influx through T type calcium channel and funny current sodium channels.
+
+
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential, Conduction system of the heart
+Content on front: Sympathetic nervous system ** the slope of phase -4 of SAN potential.
+Content on back:  Sympathetic nervous system *increases* the slope of phase -4 of SAN potential.``
+* SNS→ Increases the slope of phase 4 and thus increases the heart rate.`
+* PNS→Decreases the slope of phase 4 and thus decreases the heart rate
+
+
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential, Conduction system of the heart
+Content on front: Dominant pacemaker of the heart is **.
+Content on back:  Dominant pacemaker of the heart is *SA node*.``
+
+
+SAN potential phases:`
+1. Phase 0: depolarisation due to calcium influx through calcium L type channel.`
+2. Phase 3: repolarization due to potassium efflux.`
+3. Phase 4: due to calcium and sodium influx through T type calcium channel and funny current sodium channels.
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential, Conduction system of the heart
+Content on front: Funny current sodium channel (If) is present in ** and **
+Content on back: Funny current sodium channel (If) is present in *heart* and *eye*.``
+
+
+Note: Ivabradine: (If) channel blocker which decreases heart rate.
+
+
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Action potential, Conduction system of the heart
+Content on front: Ventricular action potential plateau phase is due to ** influx and ** efflux
+Content on back: Ventricular action potential plateau phase is due to *calcium* influx and *potassium* efflux.``
+
+
+Ventricular action potential phases:`
+1. Phase 0: Early depolarization due to sodium influx`
+2. Phase 1: Early repolarization due to potassium efflux`
+3. Phase 2: Plateau due to calcium influx and potassium efflux`
+4. Phase 3: Late repolarization due to potassium efflux`
+5. Phase 4: Resting membrane potential`
+
+
+
+========================================
+
+
+Title: Conduction system of the heart
+Tags: Conduction system of the heart
+Content on front: Gatekeeper of the heart is **.
+Content on back:  Gatekeeper of the heart is *AV node*.``
+
+
+There is a physiological delay of 0.1 sec in the AV node
+
+
+
+
+
+========================================
+Title: Conduction system of the heart
+Tags: Cardiac conduction
+Content on front:  Slowest conduction velocity is in the **.
+Content on back: Slowest conduction velocity is in the *AV node*.``
+
+
+Conduction velocity is the slowest(0.04m/sec) in the AV node due to the lowest number of gap junctions.
+
+
+
+========================================
+Title: Conduction system of the heart
+Tags: Conduction system of the heart
+Content on front: Fastest conduction velocity is in the **.
+Content on back:  Fastest conduction velocity is in the *Purkinje fibres*.``
+
+
+The fastest conduction(4m/sec) is due to the presence of the highest number of gap junctions in the Purkinje fibres.
+
+
+
+
+
+========================================
+
+
+Title:  Cardiac cycle
+Tags: Cardiac cycle
+Content on front: Normal duration of the cardiac cycle at a heart rate of 72/min is **
+Content on back:  Normal duration of the cardiac cycle at a heart rate of 72/min is *0.8sec*.``
+
+
+NOTE: As the heart rate increases, the duration of the cardiac cycle decreases.`
+Duration of diastole shortens more than systole, compromising ventricular filling.
+
+
+
+
+
+========================================
+
+
+Title:  Cardiac cycle
+
+
+Tags: Cardiac cycle
+Content on front: Ventricular systole duration is ** and diastole duration is **.
+Content on back: Ventricular systole duration is *0.3sec* and diastole duration is *0.5sec*.``
+
+
+NOTE: Atrial systole duration is 0.1 sec and diastole duration is 0.7 sec
+
+
+
+========================================
+
+
+Title:  Cardiac cycle
+
+
+Tags: Cardiac cycle, Heart sounds
+
+
+Content on front: First heart sound is due to the closure of **.
+Content on back:  First heart sound is due to the closure of *atrioventricular valves*.
+
+
+
+
+
+========================================
+
+
+Title:  Cardiac cycle
+
+
+Tags: Cardiac cycle, Heart sounds
+Content on front: Second heart sound is due to the closure of **
+Content on back: Second heart sound is due to the closure of *semilunar valves*.
+
+
+
+
+
+========================================
+
+
+Title:  Cardiac cycle
+
+
+Tags: Cardiac cycle, Heart sounds
+
+
+Content on front: First heart sound is seen in ** phase of ventricular systole.
+Content on back: First heart sound is seen in *isovolumetric contraction* phase of ventricular systole.``
+
+
+Phases of ventricular systole:`
+1. Isovolumetric contraction`
+2. Rapid ejection phase`
+3. Slow ejection phase
+
+
+
+
+
+
+
+========================================
+Title: Cardiac cycle
+
+
+Tags: Cardiac cycle
+Content on front: The first event of ventricular diastole is the closure of **
+Content on back: The first event of ventricular diastole is the closure of *aortic valve*.``
+
+
+Ventricular diastole phases:`
+1. Protodiastole`
+2. Isovolumetric relaxation`
+3. Rapid filling phase`
+4. Slow filling phase`
+5. Atrial kick
+
+
+
+========================================
+
+
+Title: Cardiac cycle
+Tags: Cardiac cycle, Heart sounds
+
+
+Content on front: S3 and S4 heart sounds are heard in the ** phase of the cardiac cycle.
+Content on back:  S3 and S4 heart sounds are heard in the *diastolic* phase of the cardiac cycle.``
+
+
+NOTE:`
+1. S3 is heard during the rapid filling phase of the ventricular diastole.`
+2. S4 (always pathological) is heard when there is a forceful atrial contraction, seen in long-standing hypertension and restrictive cardiomyopathy.
+
+
+
+========================================
+
+
+Title: Cardiac cycle
+Tags: Cardiac cycle, Ejection fraction
+Content on front: Normal ejection fraction is **
+Content on back:  Normal ejection fraction is *55% to 65%*.``
+
+
+Calculations:`
+1. Ejection fraction= Stroke volume/end diastolic volume*100`
+2. Stroke volume= End diastolic volume- end systolic volume`
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: QRScomplex of electrocardiogram represents **
+Content on back: QRS complex of electrocardiogram represents *ventricular depolarization*.``
+
+
+In ECG:`
+1. P wave→Atrial depolarization`
+2. T wave→Ventricular repolarization`
+3. U wave→Purkinje fibres and papillary muscles repolarization`
+
+
+
+
+
+========================================
+ not adding
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: According to Einthoven's law lead ** +lead ** = lead **.
+Content on back: According to Einthoven's law lead *3* +lead *1* = lead *2*.
+
+
+
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Lead 2, lead 3 and aVF represent ** surface of heart which is supplied by right coronary artery (RCA)
+
+
+Content on back:  Lead 2, lead 3 and aVF represent *inferior* surface of heart which is supplied by the right coronary artery (RCA).``
+
+
+ECG leads and Blood supply:`
+* V1 and V2: Septal→ supplied by left anterior descending artery (LAD).`
+* V3 and V4: Anterior surface supplied by the left anterior descending artery.`
+* V5, V6 lead 1 and aVF: Lateral surface supplied by left circumflex artery.
+
+
+
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: AV nodal delay of 0.1 sec is represented by ** segment in ECG.
+Content on back: AV nodal delay of 0.1 sec is represented by *PR* segment in ECG.``
+
+
+NOTE: AV nodal delay of 0.1 sec is always physiological for adequate ventricular relaxation
+ECG
+
+========================================
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Normal duration of the PR interval is **
+Content on back: Normal duration of the PR interval is *0.12 to 0.20 sec*.``
+
+
+NOTE: Increased duration of PR interval (> 0.20sec) is seen in heart blocks.
+
+========================================
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: ** interval can be  used to calculate the heart rate
+Content on back: *RR* interval can be  used to calculate the heart rate.``
+
+
+Heart rate= 1500/ number of small squares between two R waves.
+
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Normal duration of the qT interval is **
+Content on back:  Normal duration of the qT interval is *0.40 to 0.45 sec*.``
+
+
+NOTE:`
+1. qT interval represents ventricular depolarization and  ventricular repolarization.`
+2. Bazett's formula: qTc=qT/RR
+
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Depolarization of whole heart starts from ** side of the heart to ** side
+Content on back:  Depolarization of whole heart starts from *left* side of the heart to *right* side.``
+
+
+NOTE: Septum first get depolarized followed by endocardium and then followed by the epicardium.
+
+
+
+
+
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Repolarization of the whole heart starts from ** side of the heart to ** side.
+
+
+Content on back:  Repolarization of the whole heart starts from *right * side of the heart to *left* side.``
+
+
+NOTE: Epicardium gets repolarized first followed by endocardium and then followed by the septum.
+
+
+
+========================================
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Ventricular depolarization is represented by ** wave of his bundle ECG
+Content on back:  Ventricular depolarization is represented by *V* wave of his bundle ECG.``
+
+
+NOTE: There are 3 waves in his bundle ECG:``
+   1. A wave represents AV node.`
+   2. H wave represents his bundle.`
+   3. V wave represents ventricular depolarization`
+
+
+There are and 3 intervals in his bundle ECG:``
+   1. PA interval : SAN to AVN`
+   2. AH interval: AVN to his bundle`
+   3. HV interval: His bundle to ventricular`
+
+
+
+
+========================================
+ not adding
+
+
+Title: Electrocardiogram
+Tags: Electrocardiogram
+Content on front: Normal cardiac axis lies between ** to ** degree.
+Content on back: Normal cardiac axis lies between *-30* to *+110* degree.`
+
+
+
+
+
+========================================
+ not adding
+
+
+Title: Electrocardiogram
+Tags: JVP
+Content on front: ‘a’ wave in JVP represents **
+Content on back: ‘a’ wave in JVP represents *atrial contraction*.`
+
+
+
+
+
+========================================
+
+
+Title: JVP
+Tags: JVP
+Content on front: ** wave of JVP is due to Isovolumetric contraction
+Content on back: *C* wave of JVP is due to Isovolumetric contraction
+NOTE: C wave is due to bulging of the tricuspid valve into the right atrium during isovolumetric contraction.``
+
+
+JVP waves:`
+   1. X descent: Due to atrial relaxation (corresponds with ventricular systole).`
+   2. V wave: Due to atrial filling ( venous return).`
+   3. Y descent: Right atrial emptying.`
+
+
+
+
+
+========================================
+
+
+Title: Cardiac output
+Tags: Cardiac output
+Content on front: Cardiac output can be calculated by using ** and **
+Content on back: Cardiac output can be calculated by using *heart rate* and *stroke volume*.``
+
+
+NOTE:`
+   1. Cardiac output= Heart rate * Stroke volume.`
+   2. Normal cardiac output is 5l/min.`
+   3. Heart rate and stroke volume are directly proportional to cardiac output.
+
+
+
+========================================
+Title: Cardiac output
+Tags: Cardiac output
+Content on front:
+Increase in preload ** cardiac output.``
+Increase in afterload ** cardiac output.
+
+
+Content on back: Increase in preload *increases* cardiac output.``
+Decrease in afterload *decreases* cardiac output.``
+
+
+   1. FRANK-STARLING LAW`
+An increase in preload → increase in EDV of left ventricle→ increases the force of contractility of  ventricle→increases stroke volume and increases cardiac output.`
+   2. An increase in afterload leads to an increase in total peripheral resistance causes a decrease in cardiac output.
+
+
+
+========================================
+
+
+Title: Cardiac output
+Tags: Cardiac output
+Content on front: Normal cardiac index ratio is **
+Content on back:  Normal cardiac index ratio is *3.2 L/min/m2 BSA*.`
+NOTE: Cardiac index ratio=cardiac output/m2 body surface area.
+
+
+
+========================================
+
+
+Title: Cardiac output
+Tags: Cardiac output
+Content on front: ** principle utilizes the amount of oxygen consumed by heart for the calculation of cardiac output.
+
+
+Content on back:  *Ficks* principle utilizes the amount of oxygen consumed by the heart for the calculation of cardiac output.``
+
+
+NOTE:`
+   1. Fick’s formula: CO= Amount of oxygen consumption/(arterial-venous) oxygen difference.`
+   2. CO can be measured by using the Ficks formula, MRI, dye dilution method and doppler with echo.
+
+
+
+
+
+========================================
+Title: Cardiac output
+
+
+Tags: Cardiac output
+
+
+Content on front: ** has Maximum distribution of cardiac output (in ml/min)
+Content on back:  *Liver* has Maximum distribution of cardiac output (in ml/min).``
+
+
+NOTE: Kidney has maximum cardiac output distribution in terms of ml/100gm/min (kidney-420 ml/100gm/min.`
+   1. Liver - 1500ml/min(30%)`
+   2. Kidney- 1260ml/min(25%)`
+   3. Brain- 750ml/min`
+   4. Heart- 250ml/min`
+
+
+
+
+
+========================================
+Title: Cardiac output
+
+
+Tags: Cardiac output
+
+
+Content on front: ** has least distribution of cardiac output (in ml/100gm/min)
+
+
+Content on back: *Skeletal muscle* has least distribution of cardiac output (in ml/100gm/min).
+
+
+========================================
+Title: Cardiac cycle
+Tags: Coronary circulation
+Content on front: Coronary blood flow occurs during the ** phase of the cardiac cycle.
+Content on back:  Coronary blood flow occurs during *diastolic* phase of the cardiac cycle.``
+
+
+NOTE: Coronary artery gets compressed during systole, the subendocardial region gets more compressed hence more prone to ischemia.
+
+
+
+========================================
+Title: Cardiac output
+Tags: Coronary circulation
+Content on front: Coronary blood flow is ** ml/min
+
+
+Content on back: Coronary blood flow is *250* ml/min (5% od cardiac output).``
+
+
+Coronary circulation is mainly under the regulation of local factors than nervous control. Local factors like adenosine,k+ h+, NO increase coronary circulation.
+
+
+
+========================================
+Title: Cardiac output
+Tags: Cardiac output
+Content on front: Cardiac output ** on immediate standing or sitting
+Content on back: Cardiac output *decreases* on immediate standing or sitting.``
+
+
+ On immediate standing:`
+   1. Venous return decreases`
+   2. CO decreases`
+   3. Total peripheral resistance and heart rate increases`
+   4. Blood pressure transiently decreases ( BP=CO*TPR)
+
+
+
+
+
+========================================
+
+
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: From standing to supine there is an increase in venous return immediately which leads to ** in CO, ** in BP and ** in HR.
+
+
+Content on back:  From standing to supine there is an increase in venous return immediately which leads to an *increase* in CO, *increase* in BP and *decrease* in HR.``
+
+
+Due to an increase in blood pressure, baroreceptors get activated hence heart rate decreases.
+
+
+
+
+========================================
+Title: Cardiac output
+Tags: Cardiac output
+Content on front: Cardiac output is increased in ** shock
+Content on back: Cardiac output is increased in *septic* shock.``
+
+
+CO is decreased in hypovolemic shock, neurogenic, anaphylactic and cardiogenic shock.
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: SI unit of blood pressure is **.
+Content on back:  SI unit of blood pressure is *pascal*.``
+
+
+   1. The preferred unit is mmHg
+   2. 1mmhg=133Pa
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Lateral pressure applied by the blood flow to the vessel walls is ** principle.
+Content on back:  Lateral pressure applied by the blood flow to the vessel walls is *Bernoulli’s* principle.``
+
+
+Bernoulli's principle: Sum of potential energy (lateral pressure) and kinetic energy(blood flow) = constant.
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Systolic blood pressure- Diastolic blood pressure= **
+Content on back: SBP- DBP= *Pulse pressure*.``
+
+
+NOTE:`
+   1. Mean arterial pressure(MAP)=DBP + ⅓ PP`
+   2. Mean arterial pressure=⅓ SBP + ⅔ DBP`
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: In older patients with high pulse pressure, korotkoff sound between SBP and DBP disappears and reappears as the cuff is deflated. This is known as **.
+
+
+Content on back: In older patients with high pulse pressure korotkoff sound between SBP and DBP disappears and reappears as the cuff is deflated. This is known as *Auscultatory gap*``
+
+
+NOTE: Auscultatory gap leads to false low SBP and high DBP
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: ** phase of korotkoff sounds is considered for measuring DBP
+Content on back: *5th* phase of korotkoff sounds is considered for measuring DBP.``
+
+
+NOTE: KOROTKOFF sounds -Due to turbulence on arterial occlusion`
+   1. Tapping`
+   2. Murmurhash`
+   3. Cusp`
+   4. Muffled`
+   5. The disappearance of sound`
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Muffled sounBlood pressured is considered for measuring DBP in ** valvular disease
+Content on back:  Muffled sound is considered for measuring DBP in *Aortic regurgitation* valvular disease.`
+
+
+NOTE`:
+Muffled sound is considered for DBP in`
+   1. Children`
+   2. After exercise`
+   3. Aortic regurgitation`
+
+
+
+========================================
+Title: Blood pressure
+Tags: BLood pressure
+Content on front: Smaller size of riva-rocci cuff leads to false ** blood pressure
+Content on back: Smaller size of riva-rocci cuff leads to false *high* blood pressure.``
+
+
+NOTE:`
+   1. Riva-Rocci cuff length should cover 80% of the arm circumference.`
+   2. Riva-rocci cuff width should cover 40% of arm circumference.
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Baroreceptors are present in ** and **
+Content on back: Baroreceptors are present in *carotid sinus* and *aortic sinus*.``
+NOTE:`
+   1. The carotid sinus is present in the dilation of ICA.`
+   2. Herrings(9thCN) and cyans nerve(10thCN) are the afferents for baroreceptor reflex from carotid sinus and aortic sinus respectively.`
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Centre for baroreceptor reflex is present in **.
+Content on back: Centre for baroreceptor reflex is present in *Nucleus tractus solitarius*
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Baroreceptor activation leads to ** in blood pressure and ** in heart rate
+Content on back: Baroreceptor activation leads to *decrease* in blood pressure and *decrease* in heart rate.
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Increase in blood pressure results in a decrease in heart rate as a result of baroreceptor is ** law.
+Content on back:  Increase in blood pressure results in a decrease in heart rate as a result of baroreceptor is *Marey’s* law.
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Baroreceptors stimulates ** and inhibits ** of the autonomic nervous system
+Content on back: Baroreceptors stimulates *parasympathetic nervous system* and inhibits *sympathetic nervous system * of the autonomic nervous system.
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Atrial Stretch receptors stimulation causes ** in heart rate and ** in blood pressure.
+
+
+Content on back: Atrial Stretch receptors stimulation causes *increase* in heart rate and *decrease* in blood pressure.``
+NOTE:`
+   1. Atrial stretch receptors are low-pressure volume sensing receptors`
+   2. Present in LA, RA, pulmonary veins`
+   3. Type A is activated during atrial systole`
+   4. Type B is activated during atrial diastole`
+
+
+
+========================================
+
+
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Maximum arterial pressure baroreceptors respond to is **
+Content on back: Maximum arterial pressure baroreceptors respond to is *180 mmHg*.``
+
+
+   1. Baroreceptors are the first-line control of blood pressure ranging from 70mmhg to 150mmhg.`
+   2. They are more sensitive to mean arterial pressure.`
+   3. If blood pressure is less than 70 mmHg baroreceptors will not respond.`
+   4. Blood pressure ranging from 40 to 70mmhg, the second line of control which is CHEMORECEPTORS come into action.
+
+
+
+
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Chemoreceptors activation leads to ** in blood pressure
+Content on back: Chemoreceptors activation leads to *increase* in blood pressure.``
+
+
+NOTE:`
+   1. Carotid body is a chemoreceptor present at bifurcation of common carotid artery.`
+   2. Chemoreceptor has a variable effect on heart rate.`
+Direct activation of chemoreceptors leads to PNS stimulation in turn decrease in HR.`
+Indirect activation of chemoreceptor leads to SNS activation in turn increase in HR
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front:** is known as last-ditch stand mechanism regulation of blood pressure
+Content on back: *CNS ischemic response* is known as the last-ditch stand mechanism in the regulation of blood pressure.``
+
+
+NOTE: CNS ischemic response is the last line of control of blood pressure. It is activated when blood pressure is less than 40 mmHg.`
+It is the most powerful activator of the sympathetic nervous system.
+
+
+
+
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Fluctuation in blood pressure due to short term nervous control mechanism is recorded in the form of waves known as **.
+
+
+Content on back: Fluctuation in blood pressure due to short term nervous control mechanism is recorded in the form of waves known as *Mayer waves*.``
+
+
+NOTE: SHORT TERM REGULATION OF BLOOD PRESSURE`
+   1. Baroreceptors(first line control) : 70 to 150mmhg`
+   2. Chemoreceptors (second line control) : 40 to 70mmhg`
+   3. CNS ischemic response (last line of control) : less than 40 mmhg`
+
+
+
+
+
+========================================
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Recorded waves of fluctuation in blood pressure due to respiration is **
+Content on back: Recorded waves of fluctuation in blood pressure due to respiration is *Traube hering waves*`
+
+
+
+
+
+========================================
+Title: Miscellaneous
+Tags: PSVT
+Content on front: ** massage can be used as the initial treatment of PSVT in stable patients.
+
+
+Content on back:  *Carotid sinus* massage can be used as the initial treatment of PSVT in stable patients.``
+
+
+Carotid sinus massage →baroreceptor activation→stimulates PNS and inhibits SNS→ decrease in HR.
+
+
+
+
+========================================
+Title: Cardiac reflexes
+Tags: Cardiac reflex
+Content on front: During myocardial infarction, vagal C fibres activation leads to hypotension, bradycardia and apnea for a brief period followed by rapid shallow breathing known as ** reflex.
+
+
+Content on back:  During myocardial infarction, vagal C fibres activation leads to hypotension, bradycardia and apnea for a brief period followed by rapid shallow breathing known as *Bezold jarisch* reflex.
+
+
+
+========================================
+Title: Cardiac reflexes
+Tags: Cardiac reflex
+Content on front: Mediator for the Bezold-Jarisch reflex is **.
+Content on back:  Mediator for the Bezold-Jarisch reflex is *serotonin*.``
+
+
+Other mediators: Capsaicin, phenyl biguanide, veratridine.
+
+
+
+========================================
+
+
+Title: Cardiac reflexes
+Tags: Cardiac reflex
+Content on front: Hypertension, bradycardia and irregular respiration due to increase ICT in head injury patient is ** reflex.
+
+
+Content on back: Hypertension, bradycardia and irregular respiration due to increase ICT in head injury patient is *Cushing’s* reflex.
+
+
+
+
+
+========================================
+Title: Cardiac reflexes
+Tags: Cardiac reflex
+Content on front: Heart rate ** in congestive cardiac failure due to bain bridge reflex
+Content on back:  Heart rate *increases* in congestive cardiac failure due to bain bridge reflex.``
+
+
+CCF→fluid overload→ right atrial stretch→ SAN firing →increase in heart rate.
+
+
+
+========================================
+Title: Cardiac reflexes
+Tags: Cardiac reflex
+Content on front: During spinal, epidural anaesthesia there is decreased venous return that leads to decrease in heart rate and is known as ** reflex.
+
+Content on back:  During spinal, epidural anaesthesia there is decreased venous return that leads to a decrease in heart rate and is known as the *reverse bain bridge* reflex.
+
+
+
+========================================
+ not adding
+
+
+Title: Blood pressure
+Tags: Blood pressure
+Content on front: Potent vasoconstrictor which causes an increase in blood pressure is **.
+Content on back: Potent vasoconstrictor which causes an increase in blood pressure is *urotensin*.``
+
+
+Other vasoconstrictors:`                                             VASODILATORS :
+   1. Endothelin                                                                1. Nitric oxide
+   2. Angiotensin-2                                                           2.Natriuretic peptide
+   3. Vasopressin( on V1 receptor)                                  3. Histamine
+   4. norepinephrine[a]
+
+
+
+========================================
+not adding
+Title: Cardiac output
+Tags:
+Content on front: Surgical removal of organ(one side) or limb amputation results in ** in cardiac output.
+Content on back: Surgical removal of organ(one side) or limb amputation results in a *decrease* in cardiac output.``
+
+
+Removal of the organ (parallel circuit) results in increased total peripheral resistance (increased afterload), hence decreasing stroke volume and decreasing cardiac output.
+
+
+
+
+
+========================================
+not adding
+Title: Conduction system of the heart
+Tags:
+Content on front: SAN is supplied by ** sided autonomic nervous system and AVN is supplied by ** sided autonomic nervous system.
+Content on back: SAN is supplied by *right* sided autonomic nervous system and AVN is supplied by *left* sided autonomic nervous system.``
+
+
+   1. SAN: By right stellate ganglia and right vagus nerve.`
+   2. AVN: By left stellate ganglia and left vagus nerve`
+
+
+
+========================================
+not adding
+Title: Miscellaneous
+Tags:
+Content on front: Chronotropy means an increase in ** of heart
+Content on back: Chronotropy means an increase in *heart rate* of heart.`
+
+
+Inotropy- contractility`
+Dromotropy-conductivity`
+Bathmotropy-excitability`
+
+
+
+========================================
+Title: Conduction system of the heart
+Tags: Cardiac conduction
+Content on front: Current to reach the base of the left ventricle from SAN takes ** (in seconds).
+
+
+Content on back:  Current to reach the base of the left ventricle from SAN takes *0.22 sec*.`
+
+
+
+
+
+
+========================================

@@ -99,7 +99,7 @@ class Login:
                 "account_id": query_result[0]["account_id"],
                 # 'created_at' : query_result[0]["created_at"],
                 # "last_active": query_result[0]["last_active"],
-                "exp": datetime.utcnow() + timedelta(seconds=10800),
+                "exp": datetime.utcnow() + timedelta(seconds=100800),
             }
             # user_details = json.dumps(user_details,indent=4, sort_keys=True, default=str)
             token = jwt.encode(user_details, secret, algorithm="HS256")

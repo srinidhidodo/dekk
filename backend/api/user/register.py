@@ -4,8 +4,8 @@ Sample API calls:
     {
             "user_name" : "draju",
             "full_name" : "darshan",
-            "email" : "draju@gmail.com",
-            "password" : "darshan",
+            "email" : "darshan@gmail.com",
+            "password" : "darshanraju",
             "college" : "xyz"
     }
 """
