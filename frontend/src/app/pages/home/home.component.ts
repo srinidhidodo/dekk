@@ -35,4 +35,8 @@ export class HomeComponent implements OnInit {
     this.studyService.selectedTag = dekkName;
     this.router.navigate([UrlConstants.STUDY_CARD]);
   }
+
+  studySessionDekk(dekkId: string): void {
+    this.router.navigateByUrl(UrlConstants.STUDY_SESSION, {state: { selectedDekkId: dekkId}});
+  }
 }

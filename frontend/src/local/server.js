@@ -23,9 +23,6 @@ app.get('/dekk/cards/*', (req, res) => {
 app.get('/api/v1/*', (req, res) => {
     console.log(devServer + req.url);
     req.pipe(request(devServer + req.url)).pipe(res);
-    // setTimeout(() => {
-    //     req.pipe(request(devServer + req.url)).pipe(res);
-    // }, 1000);
 });
 
 app.post('/api/v1/*', (req, res) => {
@@ -34,7 +31,14 @@ app.post('/api/v1/*', (req, res) => {
 });
 
 app.get('/dekk/home', (req, res) => {
+    console.log(devServer + req.url);
     const response = require("./mocks/homeResponse.json");
+    res.json(response);
+});
+
+app.get('/dekk/dekk-details*', (req, res) => {
+    console.log(devServer + req.url);
+    const response = require("./mocks/dekkDetailsResponse.json");
     res.json(response);
 });
 

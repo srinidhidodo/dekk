@@ -12,4 +12,6 @@ export interface Card {
     category: string;
     sub_category?: string;
     dekk_name: string;
+    visited?: boolean;
+    rightWrongMarked?: boolean;
 }

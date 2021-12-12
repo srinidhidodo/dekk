@@ -2,7 +2,7 @@
 <div [ngClass]="{'dark-theme-mode': isDarkThemeEnabled}" class="mat-app-background background">
   <div color="primary" class="toolbar head-toolbar" role="banner">
     <div class=left-toolbar>
-      <mat-icon class="menu-icon" matTooltip="Menu" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
+      <mat-icon class="menu-icon" matTooltip="Menu" [hidden]="!isLoggedIn()" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
       <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
     </div>
     <div class="head-toolbar-center" [hidden]="isLoggedIn()">

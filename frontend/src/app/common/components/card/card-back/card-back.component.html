@@ -1,22 +1,31 @@
-<mat-card class="card-container">
+<mat-card class="card-container dekk-or-card-shadow">
     <mat-card-subtitle class="unselectable-content card-subtitle">
       <span class="card-header">{{getCardDekk()}}</span>
       <span>
         <mat-icon class="card-options-icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="rateDialog()">Feedback</button>
-          <button mat-menu-item>
+          <!-- <button mat-menu-item>
             <mat-icon class="menu-item-icon">star</mat-icon>
             Bookmark
-          </button>
+          </button> -->
         </mat-menu>
       </span>
     </mat-card-subtitle>
-    <mat-card-content class="content-item card-content unselectable-content" [innerHtml]="content"></mat-card-content>
+    <mat-card-content class="content-item card-content">
+      <div class="content-item card-content-text unselectable-content" [innerHtml]="content"></div>
+      <div class="content-item img-container">
+        <img class="img-class img-first" (click)="openImg()" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" />
+        <img class="img-class" (click)="openImg()" src="https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3" />
+      </div>
+    </mat-card-content>
     <mat-card-actions class="card-actions-container mobile-next-line">
       <!-- <button mat-raised-button color="primary" class="card-action-button" (click)="highlight()"> Highlight </button> -->
-      <button mat-raised-button class="card-action-button-success"> Got it Right </button>
-      <button mat-raised-button class="card-action-button-warning"> Got it Wrong </button>
+      <button mat-raised-button class="card-action-button-success" (click)="gotItRight()"> 
+        Got it Right 
+        <mat-icon class="got-it-right-icon" [hidden]="!card.rightWrongMarked">download_done</mat-icon>
+      </button>
+      <!-- <button mat-raised-button class="card-action-button-warning" (click)="gotItWrong()"> Got it Wrong </button> -->
       <button mat-raised-button color="primary" class="card-action-button" (click)="flipToFront()"> Flip To Front </button>
     </mat-card-actions>
   </mat-card>

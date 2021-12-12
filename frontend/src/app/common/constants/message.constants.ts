@@ -5,4 +5,8 @@ export class MessageConstants {
   
   static SEARCH_CHANNEL = 'search';
   static SEARCH_TRIGGERED_ACTION = 'searchTriggered';
+
+  static RIGHT_WRONG_CHANNEL = 'rightWrong';
+  static RIGHT_ACTION = 'gotItRight';
+  static WRONG_ACTION = 'gotItWrong';
 }

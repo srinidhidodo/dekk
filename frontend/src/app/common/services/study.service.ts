@@ -19,6 +19,8 @@ export class StudyService {
     isDekkComplete: boolean = false;
     dekkParams: any;
     selectedTag: string = 'invalid';
+    totalCardsStudied = 0;
+    rightCards = 0;
 
     constructor(private httpClientService: HttpClientService, public dialog: MatDialog) {}
 
@@ -26,6 +28,8 @@ export class StudyService {
         this.dekkCards = [];
         this.isDekkComplete = false;
         this.currentCardIndex = -1;
+        this.totalCardsStudied = 0;
+        this.rightCards = 0;
 
         // TODO: tags to be removed, dekkId to be mandatory
         // TODO: remove following segment related to tags processing
@@ -60,11 +64,28 @@ export class StudyService {
                 this.loadMoreCards()?.subscribe(() => {
                     if (this.currentCardIndex < this.dekkCards?.length - 1) {
                         ++ this.currentCardIndex;
+                        if (!this.dekkCards[this.currentCardIndex].visited) {
+                            ++ this.totalCardsStudied;
+                        }
+                        this.dekkCards[this.currentCardIndex].visited = true;
                         observer.next(this.dekkCards[this.currentCardIndex]);
                     } else {
-                        const dialogRef = this.dialog.open(StudyMsgDialogComponent, {
+                        let dialogRef;
+                        let dialogMsg = PopupConstants.DEKK_COMPLETE_MSG;
+                        let rightPercentage = 0;
+                        if (this.totalCardsStudied > 0 && this.rightCards > 0) {
+                            rightPercentage = (this.rightCards / this.totalCardsStudied) * 100;
+                        }
+                        rightPercentage = parseInt(rightPercentage.toString());
+                        dialogMsg += `.<br> You got ${rightPercentage}% of the cards right.`;
+                        if (rightPercentage > 50) {
+                            dialogMsg += '<br>Great job!';
+                        } else {
+                            dialogMsg += '<br>Keep working hard!';
+                        }
+                        dialogRef = this.dialog.open(StudyMsgDialogComponent, {
                             data: {
-                                msg: PopupConstants.DEKK_COMPLETE_MSG
+                                msg: dialogMsg
                             }
                         });
                         dialogRef.afterClosed().subscribe(result => {
@@ -78,22 +99,42 @@ export class StudyService {
             else if (!this.isDekkComplete && this.currentCardIndex === this.dekkCards?.length - 5) {
                 this.loadMoreCards();
                 ++ this.currentCardIndex;
+                if (!this.dekkCards[this.currentCardIndex].visited) {
+                    ++ this.totalCardsStudied;
+                }
+                this.dekkCards[this.currentCardIndex].visited = true;
                 observer.next(this.dekkCards[this.currentCardIndex]);
             } 
             // TODO? add a check here for currentCardIndex at the end but next card set not yet loaded
             else if (this.isDekkComplete && this.currentCardIndex === this.dekkCards.length - 1) {
-                const dialogRef = this.dialog.open(StudyMsgDialogComponent, {
+                let dialogRef;
+                let dialogMsg = PopupConstants.DEKK_COMPLETE_MSG;
+                let rightPercentage = 0;
+                if (this.totalCardsStudied > 0 && this.rightCards > 0) {
+                    rightPercentage = (this.rightCards / this.totalCardsStudied) * 100;
+                }
+                rightPercentage = parseInt(rightPercentage.toString());
+                dialogMsg += `.<br> You got ${rightPercentage}% of the cards right.`;
+                if (rightPercentage > 50) {
+                    dialogMsg += '<br>Great job!';
+                } else {
+                    dialogMsg += '<br>Keep working hard!';
+                }
+                dialogRef = this.dialog.open(StudyMsgDialogComponent, {
                     data: {
-                        msg: PopupConstants.DEKK_COMPLETE_MSG
+                        msg: dialogMsg
                     }
                 });
-            
                 dialogRef.afterClosed().subscribe(result => {
                     console.log('The dialog was closed: ', result);
                 });
                 observer.next(this.dekkCards[this.currentCardIndex]); // return same card when dekk is over
             } else {
                 this.currentCardIndex = this.currentCardIndex < 0 ? 0 : this.currentCardIndex + 1;
+                if (!this.dekkCards[this.currentCardIndex].visited) {
+                    ++ this.totalCardsStudied;
+                }
+                this.dekkCards[this.currentCardIndex].visited = true;
                 observer.next(this.dekkCards[this.currentCardIndex]);
             }
         });

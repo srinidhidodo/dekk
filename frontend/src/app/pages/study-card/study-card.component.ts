@@ -39,6 +39,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
 
   flipToFrontSubscription: Subscription;
   flipToBackSubscription: Subscription;
+  rightWrongSubscription: Subscription;
 
   // For loading screen
   // for initial load - isNewDekkLoaded && isMinLoadTimeElapsed
@@ -80,6 +81,14 @@ export class StudyCardComponent implements OnInit, OnDestroy {
     this.flipToBackSubscription = rxmq.channel(MessageConstants.STUDY_CHANNEL)
       .observe(MessageConstants.STUDY_FLIP_TO_BACK_ACTION)
       .subscribe(() => { this.flipToBack(); });
+
+    this.rightWrongSubscription = rxmq.channel(MessageConstants.RIGHT_WRONG_CHANNEL)
+      .observe(MessageConstants.RIGHT_ACTION)
+      .subscribe(() => { this.countRightWrongStats(MessageConstants.RIGHT_ACTION); });
+
+    this.rightWrongSubscription = rxmq.channel(MessageConstants.RIGHT_WRONG_CHANNEL)
+      .observe(MessageConstants.WRONG_ACTION)
+      .subscribe(() => { this.countRightWrongStats(MessageConstants.WRONG_ACTION); });
   }
 
   ngOnDestroy() { }
@@ -127,5 +136,12 @@ export class StudyCardComponent implements OnInit, OnDestroy {
     if (this.flip === 'active') {
       this.toggleFlip();
     }
+  }
+
+  countRightWrongStats(action: string): void {
+    if (action === MessageConstants.RIGHT_ACTION) {
+      ++ this.studyService.rightCards;
+    }
+    // ++ this.studyService.totalCardsStudied;
   }
 }

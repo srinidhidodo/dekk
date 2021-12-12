@@ -1,0 +1,55 @@
+{
+    "dekks": [
+        {
+            "id": 12,
+            "name": "Master 1",
+            "num_of_cards": 100
+        },
+        {
+            "id": 13,
+            "name": "Master 2",
+            "num_of_cards": 150,
+            "sub_dekks": [
+                {
+                    "id": 14,
+                    "name": "Master 2 - Sub 1",
+                    "num_of_cards": 90
+                },
+                {
+                    "id": 15,
+                    "name": "Master 2 - Sub 2",
+                    "num_of_cards": 60
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Master 3",
+            "num_of_cards": 300,
+            "sub_dekks": [
+                {
+                    "id": 17,
+                    "name": "Master 3 - Sub 1",
+                    "num_of_cards": 250,
+                    "sub_dekks": [
+                        {
+                            "id": 17,
+                            "name": "Master 3 - Sub 1 - SubSub 1",
+                            "num_of_cards": 100
+                        },
+                        {
+                            "id": 18,
+                            "name": "Master 3 - Sub 1 - SubSub 2",
+                            "num_of_cards": 150
+                        }
+                    ]
+                },
+                {
+                    "id": 19,
+                    "name": "Master 3 - Sub 2",
+                    "num_of_cards": 50
+                }
+            ]
+        }
+    ]
+}

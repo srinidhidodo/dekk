@@ -5,9 +5,17 @@
     justify-content: center;
     overflow-y: hidden;
     text-align: center;
+    padding: 10px;
 }
 
 .actions-container {
     display: flex;
     justify-content: center;
+}
+
+.img-class {
+    // height: clamp(50px, 300px, 400px) !important;
+    width: 80% !important; //clamp(50px, 300px, 400px);
+    overflow-x: auto;
+    overflow-y: auto;
 }
