@@ -36,7 +36,10 @@ for file in glob.glob("./data_verified/*"):
     data = open(file).read()
     data = re.split(r"===+", data)
     file = file.replace(".txt", "")
+    file = file.replace("./data_verified\\", "")
+    file = file.replace(".\data_verified\\", "")
     file = file.replace("./data_verified/", "")
+    file = file.replace("./data_verified", "")
     main_tags = file.split(" - ")
     TAGS = TAGS + main_tags
     title_tags = []
