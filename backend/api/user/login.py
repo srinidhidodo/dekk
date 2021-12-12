@@ -2,9 +2,10 @@
 Sample API calls:
     POST - http://127.0.0.1:8000/api/v1/login
     {
-            "email" : "admin@dekk.in",
-            "password" : "ilovedekk"
+            "email" : "darshan@gmail.com",
+            "password" : "darshanraju"
     }
+
 """
 import hashlib
 import json
