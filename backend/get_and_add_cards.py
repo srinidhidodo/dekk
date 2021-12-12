@@ -66,6 +66,10 @@ for file in glob.glob("./data_verified/*"):
     data = re.split(r"===+", data)
     file = file.replace(".txt", "")
     file = file.replace("./data_verified/", "")
+    file = file.replace("./data_verified\\", "")
+    file = file.replace(".\data_verified\\", "")
+    file = file.replace("./data_verified/", "")
+    file = file.replace("./data_verified", "")
     main_tags = file.split(" - ")
 
     for item in data:
