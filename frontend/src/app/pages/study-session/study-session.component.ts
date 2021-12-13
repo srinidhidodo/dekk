@@ -20,7 +20,7 @@ export class StudySessionComponent implements OnInit {
   innerpanelOpenState = false;
   panelOpenStates: any = {};
   panelChecked: any = {};
-  numCardsToStudy: number = 100;
+  numCardsToStudy: string = "100";
 
   constructor(private dekkService: DekkService, private location: Location, private router: Router, private studyService: StudyService) { }
 
@@ -169,7 +169,7 @@ export class StudySessionComponent implements OnInit {
 
   startStudySession(): void {
     this.studyService.selectedIds = this.collectSelectedDekks();
-    this.studyService.maxCards = this.numCardsToStudy;
+    this.studyService.maxCards = _.parseInt(this.numCardsToStudy);
     this.router.navigate([UrlConstants.STUDY_CARD]);
   }
 }

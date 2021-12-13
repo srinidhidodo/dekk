@@ -26,14 +26,13 @@ export class StudyService {
 
     constructor(private httpClientService: HttpClientService, public dialog: MatDialog) {}
 
-    loadNewDekk(studyIds?: string[], maxCards?: number): Observable<any> { 
+    loadNewDekk(studyIds?: string[]): Observable<any> { 
         this.dekkCards = [];
         this.isDekkComplete = false;
         this.currentCardIndex = -1;
         this.totalCardsStudied = 0;
         this.rightCards = 0;
         this.currentSessionCardIds = [];
-        this.maxCards = maxCards ? maxCards : -1;
         
 
         // TODO: tags to be removed, dekkId to be mandatory
