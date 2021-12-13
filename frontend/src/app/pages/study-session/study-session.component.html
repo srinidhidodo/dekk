@@ -22,7 +22,7 @@
                 <mat-panel-description>
                   <!-- Currently I am {{panelOpenStates[dekkDetail.id] ? 'open' : 'closed'}} -->
                   <div class="count-and-checkbox-class">
-                    {{dekkDetail.num_of_cards}}
+                    {{dekkDetail.cards_count}}
                     <mat-checkbox class="checkbox-class"
                       [color]="'primary'"
                       [checked]="dekkDetail.selected"
@@ -45,7 +45,7 @@
                     </mat-panel-title>
                     <mat-panel-description>
                       <div class="count-and-checkbox-class">
-                        {{subDekkDetail.num_of_cards}}
+                        {{subDekkDetail.cards_count}}
                         <mat-checkbox class="checkbox-class"
                           [color]="'primary'"
                           [checked]="subDekkDetail.selected"
@@ -64,7 +64,7 @@
                           </mat-panel-title>
                           <mat-panel-description>
                             <div class="count-and-checkbox-class">
-                              {{subSubDekkDetail.num_of_cards}}
+                              {{subSubDekkDetail.cards_count}}
                               <mat-checkbox class="checkbox-class"
                                 [color]="'primary'"
                                 [checked]="subSubDekkDetail.selected"
@@ -95,7 +95,7 @@
             </mat-panel-title>
             <mat-panel-description>
               <div class="count-and-checkbox-class">
-                {{subDekkDetail.num_of_cards}}
+                {{subDekkDetail.cards_count}}
                 <mat-checkbox class="checkbox-class"
                   [color]="'primary'"
                   [checked]="subDekkDetail.selected"
@@ -114,7 +114,7 @@
                   </mat-panel-title>
                   <mat-panel-description>
                     <div class="count-and-checkbox-class">
-                      {{subSubDekkDetail.num_of_cards}}
+                      {{subSubDekkDetail.cards_count}}
                       <mat-checkbox class="checkbox-class"
                         [color]="'primary'"
                         [checked]="subSubDekkDetail.selected"

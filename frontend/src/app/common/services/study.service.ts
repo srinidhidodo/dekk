@@ -33,7 +33,6 @@ export class StudyService {
         this.totalCardsStudied = 0;
         this.rightCards = 0;
         this.currentSessionCardIds = [];
-        
 
         // TODO: tags to be removed, dekkId to be mandatory
         // TODO: remove following segment related to tags processing
