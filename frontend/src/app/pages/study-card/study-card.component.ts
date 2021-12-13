@@ -32,7 +32,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   card: Card = CardUtils.getWaitCard();
 
   // @Input()
-  tag: string; // change to dekk id
+  ids: string[]; // change to dekk id
 
   visibleFront = true;
   flip: string = 'inactive';
@@ -52,7 +52,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.loadingText = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
-    this.tag = this.studyService.selectedTag;
+    this.ids = this.studyService.selectedIds;
     
     this.isLoading = true;
     this.isNewDekkLoaded = false;
@@ -60,7 +60,8 @@ export class StudyCardComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this.isMinLoadTimeElapsed = true;
     }, 8000);
-    this.studyService.loadNewDekk([this.tag]).subscribe(response => {
+    
+    this.studyService.loadNewDekk(this.ids).subscribe(response => {
       this.isNewDekkLoaded = true;
       this.isLoading = false;
       this.card = this.studyService.getCurrentCard();

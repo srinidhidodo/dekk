@@ -16,38 +16,41 @@ export class StudyService {
 
     dekkCards: Card[];
     currentCardIndex: number = -1; // Invalid card case
+    currentSessionCardIds: string[] = [];
     isDekkComplete: boolean = false;
     dekkParams: any;
-    selectedTag: string = 'invalid';
+    selectedIds: string[] = ['invalid'];
     totalCardsStudied = 0;
     rightCards = 0;
+    maxCards = -1;
 
     constructor(private httpClientService: HttpClientService, public dialog: MatDialog) {}
 
-    loadNewDekk(tags?: string[], dekkId?: string, cardId?: string): Observable<any> { 
+    loadNewDekk(studyIds?: string[]): Observable<any> { 
         this.dekkCards = [];
         this.isDekkComplete = false;
         this.currentCardIndex = -1;
         this.totalCardsStudied = 0;
         this.rightCards = 0;
+        this.currentSessionCardIds = [];
 
         // TODO: tags to be removed, dekkId to be mandatory
         // TODO: remove following segment related to tags processing
-        tags = tags?.map(tag => '"' + tag + '"');
-        const processedTags = '[' + tags?.join(',') + ']';
+        studyIds = studyIds?.map(studyId => '"' + studyId + '"');
+        const processedTags = '[' + studyIds?.join(',') + ']';
 
         this.dekkParams = {
             q: processedTags,
-            offset: 0
+            offset: CardUtils.OFFSET_LOAD_MAX_NUM_OF_CARDS
         };
 
-        const dekkLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_TAG_URL, [
+        const dekkLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [
             {
-                key: 'q',
+                key: 'ids',
                 value: this.dekkParams['q']
             },
             {
-                key: 'offset',
+                key: 'cards_count',
                 value: _.toString(this.dekkParams.offset)
             }
         ]);
@@ -160,13 +163,13 @@ export class StudyService {
 
     loadMoreCards(): Observable<any> {
         this.dekkParams.offset = this.dekkCards.length;
-        const nextLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_TAG_URL, [
+        const nextLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [
             {
-                key: 'q',
+                key: 'ids',
                 value: this.dekkParams['q']
             },
             {
-                key: 'offset',
+                key: 'cards_count',
                 value: _.toString(this.dekkParams.offset)
             }
         ]);
@@ -190,9 +193,25 @@ export class StudyService {
                 });
             } else if (response.total_cards_found < CardUtils.OFFSET_LOAD_MAX_NUM_OF_CARDS) { // this means the dekk is over at/after this point
                 this.isDekkComplete = true;
-                this.dekkCards = this.dekkCards.concat(response.results);
+                response.cards.forEach((card: Card) => {
+                    if (this.currentSessionCardIds.indexOf(card.card_id) === -1) {
+                        this.dekkCards.push(card);
+                        this.currentSessionCardIds.push(card.card_id);
+                    }
+                });
+                // this.dekkCards = this.dekkCards.concat(response.cards);
             } else {
-                this.dekkCards = this.dekkCards.concat(response.results);
+                // this.dekkCards = this.dekkCards.concat(response.cards);
+                response.cards.forEach((card: Card) => {
+                    if (this.currentSessionCardIds.indexOf(card.card_id) === -1) {
+                        this.dekkCards.push(card);
+                        this.currentSessionCardIds.push(card.card_id);
+                    }
+                });
+            }
+
+            if (this.maxCards >= 0 && this.dekkCards.length >= this.maxCards) {
+                this.isDekkComplete = true;
             }
 
             // increment card index if possible
