@@ -2,9 +2,8 @@
   <div class="col-1 previous-card-nav-container">
     <mat-icon class="card-nav" (click)="getPreviousCard()"> arrow_back </mat-icon>
   </div>
-  <div class="col-10 loading-text-container" [hidden]="!isLoading">
-    {{loadingText}}
-    <mat-progress-bar class="loading-progress-bar" mode="indeterminate"></mat-progress-bar>
+  <div class="col-10" [hidden]="!isLoading">
+    <app-loading></app-loading>
   </div>
   <div class="col-10 study-card-container" [hidden]="isLoading" [@flipState]="flip">
     <app-card-front [card]="card" [ngClass]="{'hide-card': !isCardFrontVisible()}"></app-card-front>

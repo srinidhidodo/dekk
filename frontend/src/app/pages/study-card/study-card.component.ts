@@ -46,12 +46,10 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   isNewDekkLoaded = false; // for initial load
   isMinLoadTimeElapsed = false; // for initial load
   isLoading = false; // for general loads
-  loadingText = '';
 
   constructor(private router: Router, public studyService: StudyService) {}
 
   ngOnInit() {
-    this.loadingText = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
     this.ids = this.studyService.selectedIds;
     
     this.isLoading = true;

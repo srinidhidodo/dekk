@@ -29,8 +29,8 @@ export class AppComponent {
   listItems = [
     // { name: 'Website', link: UrlConstants.LANDING },
     { icon: 'home', name: 'Home', link: UrlConstants.HOME },
-    { icon: 'person', name: 'Profile', link: UrlConstants.HOME },
-    { icon: 'bookmark', name: 'Bookmarks', link: UrlConstants.HOME },
+    // { icon: 'person', name: 'Profile', link: UrlConstants.HOME },
+    // { icon: 'bookmark', name: 'Bookmarks', link: UrlConstants.HOME },
     { icon: 'auto_stories', name: 'Study Session', link: UrlConstants.STUDY_SESSION },
     // { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
     // { name: 'Card View Details', link: '/card-view-details' },
@@ -43,7 +43,7 @@ export class AppComponent {
   listItemsBelowDivider = [
     { icon: 'question_mark', name: 'Why Dekk?', link: UrlConstants.WHY_DEKK },
     { icon: 'emoji_people', name: 'About Us', link: UrlConstants.ABOUT_US },
-    { icon: 'call', name: 'Contact Us', link: UrlConstants.HOME }
+    // { icon: 'call', name: 'Contact Us', link: UrlConstants.HOME }
   ];
 
   searchSender: Subject<any>;
@@ -88,8 +88,9 @@ export class AppComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigate([UrlConstants.HOME])
-    .then(() => { window.location.reload(); });
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+      this.router.navigate([UrlConstants.HOME]);
+    });
   }
 
   goToCreateView(): void {
