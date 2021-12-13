@@ -88,7 +88,8 @@ export class AppComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigate([UrlConstants.HOME]);
+    this.router.navigate([UrlConstants.HOME])
+    .then(() => { window.location.reload(); });
   }
 
   goToCreateView(): void {

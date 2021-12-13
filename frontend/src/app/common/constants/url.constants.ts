@@ -8,9 +8,10 @@ export class UrlConstants {
   public static NEXT_CARD_URL = '/dekk/cards/next';
   public static PREV_CARD_URL = '/dekk/cards/previous';
   public static CARDS_FROM_TAG_URL = UrlConstants.BASE_URL + '/cards/tags';
+  public static CARDS_FROM_DEKK_ID_URL = UrlConstants.BASE_URL + '/study/dekk';
   public static REGISTER_URL = UrlConstants.BASE_URL + '/register';
   public static LOGIN_URL = UrlConstants.BASE_URL + '/login';
-  public static DEKK_DETAILS_URL = '/dekk/dekk-details';
+  public static DEKK_DETAILS_URL = UrlConstants.BASE_URL + '/select/dekk';
 
   // Routing URLs
   public static SEARCH_RESULTS = '/search-results';

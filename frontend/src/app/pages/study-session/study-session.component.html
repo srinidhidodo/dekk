@@ -8,15 +8,16 @@
     <div class="col-1 fitting-height"></div>
 
     <div class="col-1 fitting-height"></div>
-    <div class="col-10 fitting-height">
+    <div class="col-10 fitting-height" [hidden]="selectedDekkId!=null">
         <mat-accordion class="each-master-dekk" [togglePosition]="'before'" *ngFor="let dekkDetail of dekkDetails">
-            <mat-expansion-panel (opened)="panelOpenStates[dekkDetail.id] = true"
-                                 (closed)="panelOpenStates[dekkDetail.id] = false"
+            <mat-expansion-panel (opened)="panelOpenStates[dekkDetail.dekk_id] = true"
+                                 (closed)="panelOpenStates[dekkDetail.dekk_id] = false"
                                  [hideToggle]="disableExpand(dekkDetail)"
-                                 [ngClass]="{'disable-expand': disableExpand(dekkDetail)}">
+                                 [ngClass]="{'disable-expand': disableExpand(dekkDetail)}"
+                                 [expanded]="panelOpenStates[dekkDetail.dekk_id]">
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  {{dekkDetail.name}}
+                  {{dekkDetail.dekk_name}}
                 </mat-panel-title>
                 <mat-panel-description>
                   <!-- Currently I am {{panelOpenStates[dekkDetail.id] ? 'open' : 'closed'}} -->
@@ -33,13 +34,14 @@
               </mat-expansion-panel-header>
               <mat-accordion class="each-master-dekk" [togglePosition]="'before'" 
                 *ngFor="let subDekkDetail of dekkDetail.sub_dekks">
-                <mat-expansion-panel (opened)="panelOpenStates[subDekkDetail.id] = true"
-                                     (closed)="panelOpenStates[subDekkDetail.id] = false"
+                <mat-expansion-panel (opened)="panelOpenStates[subDekkDetail.tag_id] = true"
+                                     (closed)="panelOpenStates[subDekkDetail.tag_id] = false"
                                      [hideToggle]="disableExpand(subDekkDetail)"
-                                     [ngClass]="{'disable-expand': disableExpand(subDekkDetail)}">
+                                     [ngClass]="{'disable-expand': disableExpand(subDekkDetail)}"
+                                     [expanded]="panelOpenStates[subDekkDetail.tag_id]">
                   <mat-expansion-panel-header>
                     <mat-panel-title>
-                      {{subDekkDetail.name}}
+                      {{subDekkDetail.tag_name}}
                     </mat-panel-title>
                     <mat-panel-description>
                       <div class="count-and-checkbox-class">
@@ -54,11 +56,11 @@
                     </mat-panel-description>
                   </mat-expansion-panel-header>
                   <mat-accordion class="each-master-dekk" [togglePosition]="'before'" 
-                      *ngFor="let subSubDekkDetail of subDekkDetail.sub_dekks">
+                      *ngFor="let subSubDekkDetail of subDekkDetail.sub_topics">
                       <mat-expansion-panel hideToggle class="disable-expand">
                         <mat-expansion-panel-header>
                           <mat-panel-title>
-                            {{subSubDekkDetail.name}}
+                            {{subSubDekkDetail.tag_name}}
                           </mat-panel-title>
                           <mat-panel-description>
                             <div class="count-and-checkbox-class">
@@ -79,6 +81,54 @@
             </mat-expansion-panel>
         </mat-accordion>
     </div>
+    <div class="col-10 fitting-height" [hidden]="selectedDekkId===null">
+      <mat-accordion class="each-master-dekk" [togglePosition]="'before'" 
+        *ngFor="let subDekkDetail of dekkDetails[0].sub_dekks">
+        <mat-expansion-panel (opened)="panelOpenStates[subDekkDetail.tag_id] = true"
+                              (closed)="panelOpenStates[subDekkDetail.tag_id] = false"
+                              [hideToggle]="disableExpand(subDekkDetail)"
+                              [ngClass]="{'disable-expand': disableExpand(subDekkDetail)}"
+                              [expanded]="panelOpenStates[subDekkDetail.tag_id]">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{subDekkDetail.tag_name}}
+            </mat-panel-title>
+            <mat-panel-description>
+              <div class="count-and-checkbox-class">
+                {{subDekkDetail.num_of_cards}}
+                <mat-checkbox class="checkbox-class"
+                  [color]="'primary'"
+                  [checked]="subDekkDetail.selected"
+                  (click)="stopEventProp($event)"
+                  (change)="checkboxAction($event, null, subDekkDetail)">
+                </mat-checkbox>
+              </div>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-accordion class="each-master-dekk" [togglePosition]="'before'" 
+              *ngFor="let subSubDekkDetail of subDekkDetail.sub_topics">
+              <mat-expansion-panel hideToggle class="disable-expand">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    {{subSubDekkDetail.tag_name}}
+                  </mat-panel-title>
+                  <mat-panel-description>
+                    <div class="count-and-checkbox-class">
+                      {{subSubDekkDetail.num_of_cards}}
+                      <mat-checkbox class="checkbox-class"
+                        [color]="'primary'"
+                        [checked]="subSubDekkDetail.selected"
+                        (click)="stopEventProp($event)"
+                        (change)="checkboxAction($event, null, subDekkDetail, subSubDekkDetail)">
+                      </mat-checkbox>
+                    </div>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+              </mat-expansion-panel>
+            </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
     <div class="col-1 fitting-height"></div>
 
     <div class="col-1 fitting-height"></div>
@@ -90,7 +140,7 @@
           <input matInput type="text" class="search-input" required [(ngModel)]="numCardsToStudy">
         </mat-form-field>
       </div>
-      <button mat-raised-button color="primary">Start Studying</button>
+      <button mat-raised-button color="primary" (click)="startStudySession()">Start Studying</button>
     </div>
     <div class="col-1 fitting-height"></div>
 </div>

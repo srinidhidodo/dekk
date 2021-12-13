@@ -8,6 +8,7 @@ export interface Card {
     tags: {[key: string]: number},
     content_on_front: string;
     content_on_back: string;
+    image_links?: string[];
 
     category: string;
     sub_category?: string;

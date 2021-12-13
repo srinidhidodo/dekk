@@ -12,11 +12,7 @@ import { HttpClientService } from "./http-client.service";
     constructor(private httpClientService: HttpClientService) { }
   
     public loadDekkDetails(dekk_id?: string): Observable<any> {
-        return dekk_id ? 
-            this.httpClientService.get(UrlConstants.DEKK_DETAILS_URL, [
-                { key: 'id', value: dekk_id }
-            ])
-            : this.httpClientService.get(UrlConstants.DEKK_DETAILS_URL, []);
+        return this.httpClientService.get(UrlConstants.DEKK_DETAILS_URL, []);
       }
   
       unsetCurrentSearch(): void {
