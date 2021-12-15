@@ -1,0 +1,782 @@
+﻿Title: Amino acids
+
+
+Tags: Metabolism, Amino acids
+
+
+Content on front :
+Acidic amino acids: A**, G**  `
+Basic amino acids: L**, A**, H** `
+Ketogenic amino acids: L**, L** `
+
+
+Content on back :
+Acidic amino acids: *Aspartic acid*, *Glutamic acid*.`
+Basic amino acids: *Lysine*, *Arginine*, *Histidine*.`
+Ketogenic amino acids: *Leucine*, *Lysine*.`
+
+
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Urea cycle disorders, Ornithine transcarbamylase deficiency
+
+
+
+
+Content on front :
+X-linked recessive disorder interfering in the elimination of ammonia. Increased ** in urine and blood and megaloblastic anaemia is **
+
+
+Content on back :
+X-linked recessive disorder interfering in the elimination of ammonia. Increased *orotic acid* in urine and blood and megaloblastic anaemia is not seen ( v/s megaloblastic anaemia seen in orotic aciduria)
+
+
+===============================================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Phenylketonuria
+
+
+Content on front :
+Phenylketonuria is seen due to deficiency of enzyme ** or ** cofactor.
+
+
+Content on back :
+Phenylketonuria is seen due to deficiency of enzyme *phenylalanine hydroxylase* or *tetrahydrobiopterin (BH4) cofactor*.
+
+
+==================================================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Phenylketonuria
+
+
+Content on front :
+In phenylketonuria, ** amino acid becomes essential.
+
+
+Content on back :
+In phenylketonuria, *Tyrosine*- amino acid becomes essential.
+
+
+===============================================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Maple syrup urine disease
+
+
+Content on front :
+In patients with phenylketonuria, artificial sweeteners should be avoided as they contain **.
+
+
+Content on back :
+In patients with phenylketonuria, artificial sweeteners should be avoided as they contain *phenylalanine*.
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Maple syrup urine disease
+
+
+Content on front :
+In maple syrup urine disease I**, L**, V** amino acids degradation is blocked.
+
+
+Content on back :
+In maple syrup urine disease *Isoleucine*, *Leucine*, *Valine* amino acids degradation is blocked.
+
+
+===============================================================
+
+
+
+
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders
+
+
+Content on front :
+In maple syrup urine disease there is elevated branched-chain amino acid due to decreased **
+
+
+Content on back :
+In maple syrup urine disease there is elevated branched-chain amino acid due to decreased *branched-chain alpha-ketoacid dehydrogenase enzyme*
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Alkaptonuria
+Content on front :
+Conversion of Tyrosin → Fumarate requires ** enzyme. Congenital deficiency of this leads to Alkaptonuria.
+
+
+Content on back :
+Conversion of Tyrosine → Fumarate requires *Homogentisate oxidase* enzyme. Congenital deficiency of this leads to Alkaptonuria.
+
+
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Alkaptonuria
+
+
+Content on front :
+Autosomal recessive disease due to deficiency of homogentisate oxidase results in ** discolouration of urine on prolonged exposure to air and ** discolouration of connective tissue and cartilages.
+
+
+Content on back :
+Autosomal recessive disease due to deficiency of homogentisate oxidase results in *black* discolouration of urine on prolonged exposure to air and *bluish-black* discolouration of connective tissue and cartilages.
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Autosomal recessive disorders
+
+
+Content on front :
+Homocystinuria clinical features: ``
+H - Homocysteine is ** in urine`
+O - O**`
+M - Marfanoid habitus`
+O - Ocular changes (Lens subluxation ** and **)`
+C - Cardiovascular effects ( stroke and MI)`
+Y - kyphosis`
+
+
+Content on back :
+Homocystinuria clinical features: `
+H - Homocysteine is *increased* in urine`
+O - *Osteoporosis*`
+M - Marfanoid habitus`
+O - Ocular changes (Lens subluxation downward and inward)`
+C - Cardiovascular effects ( stroke and MI)`
+Y - kyphosis`
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Autosomal recessive disorders
+
+
+Content on front :
+Homocystinuria- Lens subluxation is ** and **``
+v/s``
+Marfans - Lens subluxation is up and fans out
+
+
+Content on back :
+.Homocystinuria- Lens subluxation is *downward* and *inward*``
+v/s``
+Marfans - Lens subluxation is up and fans out
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Autosomal recessive disorders, Cystinuria
+
+
+Content on front :
+Hereditary defect of renal PCT and intestinal amino acid transporter that prevents reabsorption of ** amino acids.
+
+
+Content on back :
+Hereditary defect of renal PCT and intestinal amino acid transporter that prevents reabsorption of *Cystine, Ornithine, Lysine and Arginine* amino acids.
+
+
+===============================================================
+
+
+
+
+Title: Cystinuria
+
+
+Tags: Metabolic disorders, Autosomal recessive disorders, Cystinuria
+
+
+Content on front :
+Excess cystine in the urine can lead to recurrent precipitation of ** which is treated by urine ** and chelating agents like penicillamine.
+
+
+Content on back :
+Excess cystine in the urine can lead to recurrent precipitation of *hexagonal cysteine stones* which is treated by urine *alkalinization* and chelating agents like penicillamine.
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+** is the enzyme deficient in Von Gierke disease.
+
+
+Content on back :
+*Glucose-6-phosphatase* is the enzyme deficient in Von Gierke disease
+
+
+===============================================================
+
+
+Title: Metabolic disorders
+
+
+Tags: (Metabolic disorders, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+Clinical features of Von Gierke disease:`
+1. Severe fasting **`
+2. Blood lactate is **`
+3. Glycogen is increased in the ** and **`
+4. Triglycerides and Uric acid  are **`
+
+
+Content on back :
+Clinical features of Von Gierke disease:`
+1. Severe fasting *hypoglycemia*`
+2. Blood lactate is *increased*`
+3. Glycogen is increased in the *liver* and *kidney*`
+4. Triglycerides and Uric acid are *increased*`
+
+
+
+
+===============================================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Lysosomal storage diseases, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+** enzyme is deficient in Pompe disease.
+
+
+Content on back :
+*Alpha-1,4-glucosidase (acid maltase)* is deficient in Pompe disease.
+
+
+===============================================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Lysosomal storage diseases, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+** enzyme is deficient in Cori disease.
+
+
+Content on back :
+*Alpha-1,6-glucosidase enzyme (debranching enzyme)* is deficient in Pompe disease.
+
+
+
+
+=======================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Lysosomal storage diseases, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+Blood lactate levels are ** in Cori disease``
+v/s``
+Blood lactate levels are increased in Von Gierke disease
+
+
+Content on back :
+Blood lactate levels are *normal* in Cori disease``
+v/s``
+Blood lactate levels are increased in Von Gierke disease
+
+
+=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+** is the enzyme deficient in McArdle disease. ** glycogen in the muscle leads to painful muscle cramps and **uria
+
+
+Content on back :
+*Skeletal muscle Glycogen phosphorylase* is the enzyme deficient in McArdle disease. *Increased* glycogen in the muscle leads to painful muscle  cramps and myoglobinuria
+
+
+=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Metabolic disorders, Glycogen storage diseases, Autosomal recessive disorders
+
+
+Content on front :
+** is the enzyme deficient in McArdle disease. ** glycogen in the muscle leads to painful muscle cramps and **uria.
+
+
+Content on back :
+*Skeletal muscle Glycogen phosphorylase* is the enzyme deficient in McArdle disease. *Increased* glycogen in the muscle leads to painful muscle cramps and *myoglobin*uria.
+
+
+=======================================
+
+
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Tay-Sachs disease, Lysosomal storage disease, Sphingolipidoses
+
+
+Content on front: Tay-Sachs disease is seen in patients with ** deficiency.
+
+
+Content on back:  Tay-Sachs disease is seen in patients with *Hexosaminidase A* deficiency.``
+
+
+Clinical features of Tay-Sachs disease:`
+1. Cherry red spot on macula`
+2. Developmental delay`
+3. Progressive neurodegeneration`
+4. Hyperreflexia`
+
+
+
+=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Fabry disease, Sphingolipidoses, Lysosomal storage disease
+
+
+Content on front: Patients with Fabry disease are deficient with enzyme *alpha-galactosidase A* causing accumulation of *ceramide trihexoside*
+
+
+Content on back: Patients with Fabry disease are deficient with enzyme *alpha-galactosidase A* causing accumulation of *ceramide trihexoside*.``
+
+
+Patients with Fabry disease show a classical triad of :`
+1. Peripheral neuropathy`
+2. Angiokeratomas`
+3. Hyperhidrosis`
+
+
+=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Gaucher disease, Sphingolipidoses, Lysosomal storage disease
+
+
+Content on front:
+Gaucher disease is the ** lysosomal storage disease due to deficiency of ** enzyme.``
+
+
+On examination, patients have ** (Not seen in Tay-Sachs disease). The lipid-laden macrophages (Gaucher B cell) give a crumpled tissue paper appearance.
+
+
+Content on back: Gaucher disease is the *Most common* lysosomal storage disease due to deficiency of *Glucocerebrosidase* enzyme.``
+
+
+On examination, patients have *Hepatosplenomegaly +* (Also seen in Neimann-Pick disease). The lipid-laden macrophages (Gaucher B cell) give a crumpled tissue paper appearance.
+
+
+
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Niemann-Pick disease
+
+
+Content on front: Patients with Niemann-Pick disease have a ** enzyme deficiency.
+
+
+Content on back:  Patients with Niemann-Pick disease have a *Sphingomyelinase* enzyme deficiency.``
+
+
+Patients will progress to neurodegeneration and on examination, a characteristic red spot on the macula (Also seen in Tay-Sachs disease) and Hepatomegaly (Also seen in Gaucher disease) is noted.
+
+
+
+
+
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Mucopolysaccharidoses, Lysosomal storage disease, Hurler syndrome
+
+
+Content on front: There is an accumulation of Heparan sulphate and dermatan sulphate in patients with Hurler syndrome due to deficiency of **.
+
+
+Content on back:  There is an accumulation of Heparan sulphate and dermatan sulphate in patients with Hurler syndrome due to deficiency of *Alpha-L-Iduronidase (ALI)*.``
+
+
+Patients with Hurler syndrome show:`
+1. Corneal clouding `
+2. Hepatosplenomegaly`
+3. Developmental delay`
+
+
+
+
++=======================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Mucopolysaccharidoses, Lysosomal storage disorders, Hunter syndrome
+
+
+Content on front: Patients with Hunter syndrome show aggressive behaviour with no corneal clouding. They suffer from a deficiency of **.
+
+
+Content on back: Patients with Hunter syndrome show aggressive behaviour with no corneal clouding. They suffer from a deficiency of *Iduronate-2-Sulfatase*.
+
+
+
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Purine metabolism, Lesch-Nyhan syndrome
+
+
+Content on front: In the purine salvage pathway, Hypoxanthine and Guanine are converted to IMP and GMP respectively.``
+
+
+These reactions are metabolised by an enzyme ** which is deficient in Lesch-Nyhan syndrome.
+
+
+Content on back:  In the purine salvage pathway, Hypoxanthine and Guanine are converted to IMP and GMP respectively.``
+
+
+These reactions are metabolised by an enzyme *HGPRT (hypoxanthine-guanine phosphoribosyltransferase)* which is deficient in Lesch-Nyhan syndrome.
+
+
+
+
++=======================================
+
+
+Title:  Metabolic disorders
+
+
+Tags: Purine metabolism,  Lesch-Nyhan syndrome
+
+
+Content on front: Clinical features of patients with Lesch-Nyhan syndrome:`
+1. ** found (excess uric acid formation). `
+2. Gout`
+3. Self-mutilation and aggressive behaviour `
+4. Dystonia of the muscles`
+ (** converts xanthine and hypoxanthine to uric acid)
+
+
+
+
+
+
+Content on back:  Clinical features of patients with Lesch-Nyhan syndrome:`
+1. *Hyperuricemia- Sodium urate crystals* found (excess uric acid formation). `
+2. Gout`
+3. Self-mutilation and aggressive behaviour `
+4. Dystonia of the muscles`
+(*Xanthine oxidase* converts xanthine and hypoxanthine to uric acid)`
+
+
+
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Hartnup disease, Autosomal recessive disorders
+
+
+Content on front: Decrease absorption from the gut and increased loss in the urine of ** lead to Hartnup disease.
+
+
+Content on back: Decrease absorption from the gut and increased loss in the urine of *neutral amino acids in like tryptophan* lead to Hartnup disease.``
+
+
+Conversion of depleted tryptophan to niacin (Vit B3) will lead to Pellagra-like symptoms.
+
+
+
+
++=======================================
+Title: Metabolic disorders
+
+
+Tags: G-6-PD deficiency,
+
+
+Content on front: ** reduces glutathione which causes detoxification of free radicals and peroxides.
+
+
+Content on back: *NADPH* reduces glutathione which causes detoxification of free radicals and peroxides.
+
+
+
+
++=======================================
+Title: Metabolic disorders
+
+
+Tags: G-6-PD deficiency, Oxidative stress
+
+
+Content on front: Patients with ** have a poor RBC defence against oxidizing agents like fava beans, Nitrofurantoin, Primaquine, Sulfonamides. They cause a decrease in NADPH and hence causes RBC destruction (Hemolytic anaemia).
+
+
+Content on back: Patients with *Glucose-6-phosphate deficiency* have a poor RBC defence against oxidizing agents like fava beans, Nitrofurantoin, PQ, Sulfonamides. They cause a decrease in NADPH and hence causes RBC destruction (Hemolytic anaemia).
+
+
+
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: G-6-PD deficiency
+
+
+Content on front: Patients with G-6-PD deficiency show the following features:`
+1. ** -  denatured globin chains which are precipitated in RBCs`
+2. ** -Phagocytosis of Heinz bodies by splenic macrophages`
+
+
+Content on back: Patients with G-6-PD deficiency show the following features:`
+1. *Heinz bodies* -  denatured globin chains which are precipitated in RBCs`
+2. *Bite cells* -Phagocytosis of Heinz bodies by splenic macrophages``
+Patients with G-6-PD deficiency are usually resistant to Malaria.
+
+
++=======================================
+Title: Metabolic disorders
+
+
+Tags: Essential fructosuria
+
+
+Content on front: Fructose is converted to fructose-6-phosphate by the enzyme **.`
+
+
+Deficiency of this enzyme leads to a benign asymptomatic condition called Fructosuria where there is excess fructose in the urine and blood.
+
+
+Content on back: Fructose is converted to fructose-6-phosphate by the enzyme *Fructokinase*.
+
+
+Deficiency of this enzyme leads to a benign asymptomatic condition called Fructosuria where there is excess fructose in the urine and blood.
+
+
+
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Hereditary fructose intolerance
+
+
+Content on front: Deficiency of the enzyme ** causes accumulation of Fructose-6-phosphate which leads to a decrease in available phosphate in Hereditary fructose intolerance.
+
+
+Content on back: Deficiency of the enzyme *Aldolase B* causes accumulation of Fructose-6-phosphate which leads to a decrease in available phosphate in hereditary fructose intolerance.``
+
+
+This leads to inhibition in glycogenolysis and gluconeogenesis and the patient becomes hypoglycemic, jaundiced and starts vomiting.
+
++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Hereditary fructose intolerance, Fructose metabolism
+
+
+Content on front: Patients with hereditary fructose intolerance show ** Urine dipstick test and a ** Reducing sugars test in urine.
+
+
+Content on back:  Patients with hereditary fructose intolerance show a *Negative* Urine dipstick test and a *Positive* Reducing sugars test in urine.``
+
+
+Urine dipstick tests only for glucose and test for reducing sugars is a non-specific test for inborn errors of carbohydrate metabolism.
+
+
+
+
+=======================================
+
+
+Title:  Metabolic disorders
+
+
+Tags: Galactose metabolism, Galactosemia
+
+
+Content on front: Deficiency of enzyme ** leads to conversion of Galactose into Galactilol which accumulates in the body and can cause infantile cataracts.
+
+
+Content on back: Deficiency of enzyme *Galactokinase* leads to conversion of Galactose into Galactilol which accumulates in the body and can cause infantile cataracts.``
+
+
+It is a benign autosomal recessive condition. May present with galactose in blood and urine (Galactosemia and Galactosuria respectively).
+
+
++++=======================================
+
+
+Title: Metabolic disorders
+
+
+Tags: Galactose metabolism, Autosomal recessive disorders, Galactosemia
+
+
+Content on front: Deficiency of the enzyme ** can lead to accumulation of Galactitol and other toxic substances leading to Classic Galactosemia.
+
+
+Content on back: Deficiency of the enzyme *Galactose-1-phosphate uridyltransferase (GALT)* can lead to accumulation of Galactitol and other toxic substances leading to Classic Galactosemia.``
+
+
+Symptoms and signs seen after infant start feeding breast milk or normal formula feeds:`
+1. Cataract
+2. Failure to thrive
+3. Jaundice
+4. Hepatomegaly
+5. Intellectual disability
+
+
+=======================================
+
+
+
+
+Title: Metabolic disorders
+
+
+Tags: Classic Galactosemia
+
+
+Content on front: Classic Galactosemia predisposes neonates to infection with ** bacteria.
+
+
+Content on back: Classic Galactosemia predisposes neonates to infection with *E.coli* bacteria.
+
+
+=======================================

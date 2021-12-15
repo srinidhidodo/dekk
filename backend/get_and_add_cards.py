@@ -105,6 +105,7 @@ for file in glob.glob("./data_verified/*"):
             content_on_front = re.sub(r"\*\*", " _____ ", content_on_front)
             content_on_front = re.sub(r"\s{2,}", " ", content_on_front)
             content_on_front = re.sub(r" (NOTE|Note|) ", " NOTE:", content_on_front)
+            content_on_front = re.sub(r"``", "\n", content_on_front)
             content_on_front = re.sub(r"`", "\n", content_on_front)
             card_dict["content_on_front"] = content_on_front.strip()
 
@@ -112,21 +113,27 @@ for file in glob.glob("./data_verified/*"):
             content_on_back = re.search(r"(?<=Content on back)(.*)(?=)", item).group()
             content_on_back = re.sub(r"(:)", " ", content_on_back)
             content_on_back = re.sub(r"\s{2,}", " ", content_on_back)
-            content_on_front = re.sub(r" (NOTE|Note|) ", " NOTE:", content_on_front)
+            content_on_back = re.sub(r" (NOTE|Note|) ", " NOTE:", content_on_back)
+            content_on_back = re.sub(r"``", "\n", content_on_back)
             content_on_back = re.sub(r"`", "\n", content_on_back)
             card_dict["content_on_back"] = content_on_back.strip()
 
+        print(card_dict)
         if card_dict and card_dict["title"]:
             # print(card_dict)
             TAGS = [i.strip() for i in TAGS if i.strip()]
             for tag in TAGS:
                 card_dict["account_id"] = 1
+                print(card_dict)
                 card_hash = get_hash_for_cards(card_dict, HASH_KEYS_CARDS)
                 card_dict["card_id"] = card_hash
                 dict_ = {
                     "tag_name": tag.strip(),
                     "account_id": 1,
                 }
+                dict_["tag_name"] = re.sub(r"disease$", "diseases", dict_["tag_name"])
+                dict_["tag_name"] = re.sub(r"disorder$", "disorders", dict_["tag_name"])
+                dict_["tag_name"] = re.sub(r"^\W+", "", dict_["tag_name"]).strip()
                 tag_hash = get_hash_for_tags(dict_)
                 for_search = (
                     card_dict["title"]

@@ -1,0 +1,494 @@
+﻿Title: Genetics
+
+
+Tags:  McCune-Albright syndrome, Mosaicism
+
+
+Content on front:  McCune-Albright syndrome is caused by a sporadic, early postzygotic somatic mutation in the ** gene coding for the G protein subunit **.
+
+
+Content on back: McCune-Albright syndrome is caused by a sporadic, early postzygotic somatic mutation in the *GNAS1* gene coding for the G protein subunit *Gs alpha*.
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:
+
+
+Content on front:  Hardy-Weinberg law:``
+1. ** mutation`
+2. ** is not occurring`
+3. Completely ** mating`
+4. No **`
+
+
+Content on back:  Hardy-Weinberg law:``
+5. *No* mutation`
+6. *Natural selection* is not occurring`
+7. Completely *random* mating`
+8. No *net migration*`
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Prader-Willi syndrome, Disorders of  Imprinting
+
+
+Content on front:  In Prader-Willi syndrome, mutation or deletion of ** occurs and is of ** origin.
+
+
+Content on back:   In Prader-Willi syndrome, mutation or deletion of *chromosome 15* occurs and is of *paternal* origin.
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Angelman syndrome, disorders of Imprinting
+
+
+Content on front:  In Angelman syndrome, mutation or deletion of ** gene occurs on the maternal **.
+
+
+Content on back: In Angelman syndrome, Mutation or deletion of *UBE3A* gene occurs on the maternal *chromosome 15*.
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Cystic fibrosis, Autosomal recessive disorders, CFTR gene
+
+
+Content on front:  Defect in the ** on chromosome 7.
+
+
+Content on back:  Defect in the *CFTR gene* on chromosome 7.
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Cystic fibrosis, Autosomal recessive disorders, CFTR gene
+
+
+Content on front:  The CFTR encodes an ATP-gated ** that secretes ** into the  GIT and lungs and reabsorbs the same in sweat glands.
+
+
+Content on back:   The CFTR encodes an ATP-gated *Chloride channel* that secretes *Chloride* into the  GIT and lungs and reabsorbs the same in sweat glands.
+
+
+
+
+
+
+===========================================
+
+
+
+
+
+
+Title: Genetics
+
+
+Tags:  Cystic fibrosis, Autosomal recessive disorders, CFTR gene
+
+
+Content on front: Defective CFTR gene causes abnormally ** to be secreted into the GIT and lungs.``
+
+
+This occurs due to:`
+1. ** chloride and H20 secretion`
+2. ** intracellular chloride leading to compensatory sodium reabsorption and H20 reabsorption`
+
+
+Content on back:   Defective CFTR gene causes abnormally *thick mucus* to be secreted into the GIT and lungs.``
+
+
+This occurs due to:`
+1. *Decreased* chloride and H20 secretion`
+2. *Increased* intracellular chloride leading to compensatory sodium reabsorption and H20 reabsorption`
+
+
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Cystic fibrosis, CFTR gene
+
+
+Content on front:  Clinical features and complications of  cystic fibrosis:`
+
+
+1. Recurrent ** infections`
+2. Abnormally ** in females`
+3. Vitamin deficiencies (fat-soluble)`
+4. Pancreatic insufficiency`
+5. ** in newborn`
+6. Infertility`
+
+
+Content on back:  Clinical features and complications of cystic fibrosis:`
+
+
+1. Recurrent *Staph aureus and P. aeruginosa* infections`
+2. Abnormally *thick cervical mucus* in females`
+3. Vitamin deficiencies (fat-soluble)`
+4. Pancreatic insufficiency`
+5. *Meconium ileus* in newborn`
+6. Infertility`
+
+
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  CFTR gene, Cystic fibrosis
+
+
+Content on front: Treatment for cystic fibrosis:`
+1. Aerosolized **`
+2. Albuterol`
+3. Lumacaftor and Ivacaftor (for patients with **)`
+
+
+Content on back:  Treatment for cystic fibrosis-`
+1. Aerosolized *Dornase alfa*`
+2. Albuterol`
+3. Lumacaftor and Ivacaftor (for patients with *Phe508 deletion*)`
+
+
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Duchenne muscular dystrophy, Frameshift mutations, Dystrophin gene
+
+
+Content on front: X linked disorder with ** mutations leading to absent ** protein and progressive myofiber damage-causing weak muscles.
+
+
+Content on back:  X linked disorder with *frameshift or nonsense* mutations leading to absent *dystrophin* protein and progressive myofiber damage causing weak muscles.
+
+
+
+
+
+
+===========================================
+
+
+
+
+Title: Genetics
+
+
+Tags:  Duchenne muscular dystrophy, Frameshift mutations, Dystrophin gene
+
+
+
+
+Content on front: Clinical features of  Duchenne muscular dystrophy:`
+1. ** gait`
+2. ** of calf muscles`
+3. The patient uses upper extremities to  stand- **`
+4. Thigh atrophy with lumbar lordosis`
+
+
+Content on back:  Clinical features of  Duchenne muscular dystrophy:`
+1. *Waddling* gait`
+2. *Pseudo-hypertrophy* of calf muscles`
+3. The patient uses upper extremities to  stand- *Gowers sign*`
+4. Thigh atrophy with lumbar lordosis`
+
+
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags:  Fragile X syndrome, X linked dominant disorders
+
+
+Content on front:  Trinucleotide CGG repeats in ** causes Fragile X syndrome.
+
+
+Content on back: Trinucleotide CGG repeats in *FMR1 gene*causes Fragile X syndrome.`
+Fragile X syndrome is the most common cause of inherited intellectual disability.
+
+
+
+
+===========================================
+
+
+
+
+Title: Genetics
+
+
+Tags:  Fragile X syndrome, X linked dominant disorders
+
+
+Content on front:  Clinical features of Fragile X syndrome:`
+1. ** valve **`
+2. ** (enlarged testes)`
+3. Autism`
+4. Everted ears`
+
+
+ Content on back: Clinical features of Fragile X syndrome:`
+1. *Mitral* valve *prolapse*`
+2. *Macroorchidism* (enlarged testes)`
+3. Autism`
+4. Everted ears`
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags: Down syndrome, Autosomal trisomy, Trisomy 21
+
+
+Content on front: Down syndrome etiology:`
+1. 95% cases- meiotic **`
+2. 4% cases- ** translocation ( Chr 14 and 21)`
+3. 1%- Post fertilization mitotic error`
+
+
+Content on back: Down syndrome etiology:
+1. 95% cases- meiotic *nondisjunction*`
+2. 4% cases- *Robertsonian* translocation ( Chr 14 and 21)`
+3. 1%- Post fertilization mitotic error
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags: Down syndrome, Autosomal trisomy, Trisomy 21
+
+
+Content on front: Investigations in down syndrome:`
+1. Usg shows increased ** `
+2. Serum markers like ** and ** are increased`
+
+
+Content on back:  Investigations in down syndrome:`
+1. Usg shows increased *nuchal translucency*`
+2. Serum markers like *HCG* and *Inhibin* are increased`
+
+
+
+
+===========================================
+
+
+
+
+Title: Genetics
+
+
+Tags: Down syndrome, Autosomal trisomy, Trisomy 21
+
+
+Content on front: Clinical features of Down syndrome:``
+1. Face- ** fold prominent`
+2. Limbs- Palmar **, 5th finger incurved, gap b/w 1st and 2nd toe`
+3. Systemic- Hirschsprung disease, Atrioventricular septal defect, Duodenal atresia`
+4. Alzheimer's- Early-onset`
+5. Increased risk of cancers- **`
+
+
+Content on back: Clinical features of Down syndrome:``
+1. Face- *Epicanthal* fold prominent`
+2. Limbs- Palmar *crease (single)*, 5th finger incurved, gap b/w 1st and 2nd toe`
+3. Systemic- Hirschsprung disease, Atrioventricular septal defect, Duodenal atresia`
+4. Alzheimer's- Early-onset`
+5. Increased risk of cancers- *ALL and AML*`
+
+
+
+
+
+
+===========================================
+
+
+
+
+Title: Genetics
+
+
+Tags: Edward syndrome, Autosomal trisomy, Trisomy 18
+
+
+Content on front: Clinical features of Edward syndrome:``
+1. Head- Occiput is prominent, Micrognathia, low  set ears`
+2. Limbs- Rocker bottom feet, Clenched fists`
+3. Systemic- Congenital heart disease
+
+
+Content on back: Clinical features of Edward syndrome:``
+1. Head- Occiput is prominent, Micrognathia, low  set ears`
+2. Limbs- Rocker bottom feet, Clenched fists`
+3. Systemic- Congenital heart disease``
+
+
+Patients usually do not survive past the age of 1 year.
+
+
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags: Edward syndrome, Autosomal trisomy, Trisomy 18
+
+
+Content on front: Edward syndrome is an autosomal **``
+Clinical features:`
+1. Head- Occiput is **, Micrognathia, low  set ears`
+2. Limbs- ** feet, Clenched fists`
+3. Systemic- Congenital heart disease, Omphalocele`
+
+
+Content on back:  Edward syndrome is an autosomal *Trisomy 18*``
+Clinical features:`
+1. Head- Occiput is *prominent*, Micrognathia, low  set ears`
+2. Limbs- *Rocker bottom* feet, Clenched fists`
+3. Systemic- Congenital heart disease, Omphalocele`
+
+
+
+
+===========================================
+
+
+
+
+Title: Genetics
+
+
+Tags: Trinucleotide repeats
+
+
+Content on front: Diseases with trinucleotide repeat expansion:`
+1. Friedreich ataxia- **`
+2. Fragile X syndrome- **`
+3. Myotonic dystrophy- **`
+4. Huntington disease- CAG`
+
+
+Content on back: Diseases with trinucleotide repeat expansion:`
+1. Friedreich ataxia- *GAA*`
+2. Fragile X syndrome- *CGG*`
+3. Myotonic dystrophy- *CTG*`
+4. Huntington disease- CAG`
+
+
+
+
+==========================================
+
+
+
+
+Title: Genetics
+
+
+Tags: Pleiotropy
+
+
+Content on front: Pleiotropy is the phenomenon where *1 gene* can contribute to *multiple* phenotypic effects.
+
+
+Content on back: Pleiotropy is the phenomenon where *1 gene* can contribute to *multiple* phenotypic effects.``
+
+
+Example- PKU (Phenylketonuria) when left untreated leads to intellectual disability, musty body odour and light skin.
+
+
+
+
+===========================================
+
+
+Title: Genetics
+
+
+Tags: Heteroplasmy
+
+
+Content on front: The presence of both ** and **, resulting in variable expression in mitochondrially inherited disease is known as heteroplasmy.
+
+
+
+
+Content on back: The presence of both *mutated mtDNA (mitochondrial DNA)* and *normal DNA*, resulting in variable expression in mitochondrially inherited disease is known as heteroplasmy.
+
+
+
+
+=========================================

@@ -1,0 +1,374 @@
+﻿Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is a constituent of visual pigments and necessary for the differentiation of epithelial cells into tissues like pancreatic and mucus-secreting cells.``
+Uses:`
+1. **- used in Acne`
+2. **- used in Acute promyelocytic leukaemia`
+
+
+
+
+Content on back:  *Retinol (Vit A)* is a constituent of visual pigments and necessary for the differentiation of epithelial cells into tissues like pancreatic and mucus-secreting cells.``
+
+
+Uses:`
+1. *Oral Isotretinoin*- Acne`
+2. *All-trans retinoic acid*- Acute promyelocytic leukaemia`
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is teratogenic and contraindicated in pregnant women.
+Teratogenic effects like cardiac abnormalities and cleft palate are expected with its usage.
+
+
+Content on back: *Isotretinoin* is teratogenic and contraindicated in pregnant women.
+Teratogenic effects like cardiac abnormalities and cleft palate are expected with its usage.
+
+
+
+
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins, Vitamin B1
+
+
+Content on front: ** is a derivative of Vitamin B1 (thiamine). It is a co-factor for the following enzymes:`
+1. Branched Chain ketoacid dehydrogenase`
+2. ** (Linking glycolysis and TCA cycle)`
+3. ** (In TCA cycle)`
+4. ** (In HMP shunt)`
+
+
+Content on back:  *Thiamine pyrophosphate* is a derivative of Vitamin B1 (thiamine). It is a co-factor for the following enzymes:`
+1. Branched Chain ketoacid dehydrogenase`
+2. *Pyruvate dehydrogenase* (Linking glycolysis and TCA cycle)`
+3. *Alpha-ketoglutarate dehydrogenase* (In TCA cycle)`
+4. *Transketolase* (In HMP shunt)
+
+
+================================
+
+
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is a component of FAD and FMN (flavins) which are cofactors in redox reactions.
+
+
+Content on back: *Riboflavin (Vit B2)* is a component of FAD and FMN (flavins) which are cofactors in redox reactions.``
+
+
+The deficiency of Riboflavin (Vit B2) can cause Corneal vascularization and Cheilosis.
+
+
+
+
+================================
+ not adding
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is a derivative of tryptophan and a constituent of NAD+ and NADP+ which is used in redox reactions.
+
+
+Content on back:  *Niacin (Vit B3)* is a derivative of tryptophan and a constituent of NAD+ and NADP+ which is used in redox reactions.``
+
+
+Deficiency of Niacin (Vit B3) can cause the 3 Ds:`
+* Diarrhoea`
+* Dementia (and hallucinations)`
+* Dermatitis (C3/C4 dermatome- Casal necklace (image)`
+* Hyperpigmentation of sun-exposed limbs (image)`
+
+
+
+
+
+================================
+
+
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is a component of Coenzyme A and fatty acid synthase. ``
+
+
+Deficiency can lead to Dermatitis, enteritis, adrenal insufficiency, alopecia.
+
+
+Content on back: *Pantothenic acid (Vit B5)* is a component of Coenzyme A and fatty acid synthase. ``
+
+
+Deficiency can lead to Dermatitis, enteritis, adrenal insufficiency, alopecia.
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is converted to pyridoxal phosphate (PLP). It is used in transamination and decarboxylation reactions.``
+
+
+It is necessary for the synthesis of monoamines (like epinephrine, dopamine, serotonin) and GABA.
+
+
+Content on back: *Pyridoxine (Vit B6)* is converted to pyridoxal phosphate (PLP). It is used in transamination and decarboxylation reactions``
+
+
+It is necessary for the synthesis of monoamines (like epinephrine, dopamine, serotonin) and GABA.
+
+
+================================
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: ** is also known as Biotin. It is used as a cofactor for carboxylation enzymes.``
+Deficiency is caused due to:`
+1. Long term use of **`
+2. Ingestion of excess **`
+
+
+Content on back: *Vitamin B7* is also known as Biotin. It is used as a cofactor for carboxylation enzymes.``
+Deficiency is caused due to:`
+1. Long term use of *Antibiotics*`
+2. Ingestion of excess *raw egg whites* (Avidin of egg white binds to the biotin)`
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: Folate (Vit B9) is converted to **, which is a coenzyme for methylation/1-carbon transfer reactions.
+
+
+Content on back:  Folate (Vit B9) is converted to *Tetrahydrofolic acid*, which is a coenzyme for methylation/1-carbon transfer reactions.`
+
+
+Deficiency can cause megaloblastic anaemia, glossitis.
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: In Folic acid deficiency- There is ** of neurologic symptoms and ** of methylmalonic acid``
+v/s``
+In Vitamin B12 deficiency- There is ** of neurologic symptoms and ** of methylmalonic acid.
+
+
+Content on back:  Folic acid deficiency- There is *absence* of neurologic symptoms and *normal levels* of methylmalonic acid``
+v/s``
+Vitamin B12 deficiency- There is *presence* of neurologic symptoms and *elevated levels* of methylmalonic acid.
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: VItamins
+
+
+Content on front: ** helps in iron absorption by reducing it to Fe2+. It’s most importantly necessary for the Hydroxykation of Proline and Lysine in collagen synthesis.
+
+
+Content on back: *Vitamin C* helps in iron absorption by reducing it to Fe2+. It’s most importantly necessary for the Hydroxykation of Proline and Lysine in collagen synthesis.``
+
+
+It is aka Ascorbic acid and deficiency can cause Scurvy.
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: Clinical features of Scurvy (Vitamin C Deficiency):`
+1. Swollen *Gums*`
+2. Easy bruisability`
+3. Anaemia`
+4. Poor wound healing`
+5. *Subperiosteal* haemmorhage`
+6. *Corkscrew* hair`
+
+
+Content on back: Clinical features of Scurvy (Vitamin C Deficiency):`
+1. Swollen *Gums*`
+2. Easy bruisability`
+3. Anaemia`
+4. Poor wound healing`
+5. *Subperiosteal* haemmorhage`
+6. *Corkscrew* hair`
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamins
+
+
+Content on front: Vitamin D`
+1. D3- ** from sun exposure and eating fish and plants.`
+2. D2- ** from ingestion of plants, yeast, fungi`
+
+
+
+
+Content on back: Vitamin D`
+1. D3- *Cholecalciferol* from sun exposure and eating fish and plants.`
+2. D2- *Ergocalciferol* from ingestion of plants, yeast, fungi``
+
+
+D2 and D3 are converted to 25-(OH) D3 which is stored in the liver, and converted to active form 1,25-(0H)2 D3 in the kidney.
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamin D
+
+
+Content on front: Deficiency of Vitamin D causes ** in children and ** in adults.``
+Clinical features of Rickets:`
+1. ** or bowlegs `
+2. Craniotabes`
+3. ** of skull`
+4. ** of Fontanelles`
+5. ** rosary`
+6. ** chest``
+
+
+Clinical features of Osteomalacia`
+1. Bone pain and muscle weakness in osteomalacia`
+
+
+Content on back:  Deficiency of Vitamin D causes *Rickets* in children and *Osteomalacia* in adults.``
+Clinical features of Rickets:`
+1. *Genu varum* or bowlegs`
+2. Craniotabes`
+3. *Frontal bossing* of the skull`
+4. *Delayed closure* of Fontanelles`
+5. *Rachitic* rosary`
+6. *Pigeon* chest``
+
+
+Clinical features of Osteomalacia`
+1. Bone pain and muscle weakness in osteomalacia
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamin K
+
+
+Content on front: Vitamin K is activated by ** to its reduced form. This form is a cofactor for the ** of glutamic acid residues on proteins for clotting of blood.
+
+
+Content on back:  Vitamin K is activated by *Epoxide Reductase* to its reduced form. This form is a cofactor for the *gamma-carboxylation* of glutamic acid residues on proteins for clotting of blood.
+
+
+
+
+================================
+
+
+Title: Vitamins
+
+
+Tags: Vitamin K
+
+
+Content on front: Vitamin K is necessary for the maturation of the following coagulation factors:``
+1. Factors - *II, VII, XI, X*`
+2. Protein C and Protein S`
+
+
+Content on back: Vitamin K is necessary for the maturation of the following coagulation factors:``
+1. Factors - *II, VII, XI, X*`
+2. Protein C and Protein S``
+Warfarin inhibits Vit-K dependant synthesis of all these factors
+
+
+
+
+================================
