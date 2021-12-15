@@ -37,8 +37,6 @@ def get_master_topics_stats(db_conn, req):
             result.pop(key, None)
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"]
-        if result["total_cards"] == 1:
-            result["total_cards"] = 0
 
     env = os.environ.get(f"ENV")
     secret = os.environ.get(f"SECRET_{env}")
@@ -50,7 +48,7 @@ def get_master_topics_stats(db_conn, req):
         select count(*) as total_cards, t1.tag_name, t1.tag_id, t1.field
         from user_content.tags t1
         left join  user_content.tags_cards t2 on  t1.tag_id = t2.tag_id
-        where t1.account_id = {account_id}
+        where t1.account_id = {account_id} and t1.tag_type is null
         group by t1.tag_name ,t1.tag_id
         order by t1.tag_name
     """
@@ -62,8 +60,6 @@ def get_master_topics_stats(db_conn, req):
             result.pop(key, None)
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"]
-        if result["total_cards"] == 1:
-            result["total_cards"] = 0
 
     response = {
         "user_details": {
