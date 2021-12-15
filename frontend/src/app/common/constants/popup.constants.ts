@@ -5,4 +5,5 @@ export class PopupConstants {
 
     // Errors
     static CARD_LOAD_ERROR = 'Error loading cards';
+    static SESSION_LOAD_ERROR = 'Error loading session';
 }

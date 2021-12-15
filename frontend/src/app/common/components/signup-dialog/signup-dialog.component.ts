@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UrlConstants } from '../../constants/url.constants';
+import { CollegeService } from '../../services/college.service';
 import { HttpClientService } from '../../services/http-client.service';
 
 @Component({
@@ -17,18 +18,20 @@ export class SignupDialogComponent implements OnInit {
   signUpError = false;
   signUpSuccess = false;
 
-  collegeList: string[];
+  // collegeList: string[];
 
   constructor(public dialogRef: MatDialogRef<SignupDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private httpClientService: HttpClientService) { }
+    private httpClientService: HttpClientService,
+    public collegeService: CollegeService) { }
 
   ngOnInit(): void {
-    this.collegeList = [
-      'Andaman & Nicobar Islands Institute of Medical Sciences, Port Blair',
-      'ACSR Government Medical College Nellore',
-      'All India Institute of Medical Sciences, Mangalagiri, Vijayawada'
-    ];
+    // this.collegeList = [
+    //   'Andaman & Nicobar Islands Institute of Medical Sciences, Port Blair',
+    //   'ACSR Government Medical College Nellore',
+    //   'All India Institute of Medical Sciences, Mangalagiri, Vijayawada'
+    // ];
+    // this.selectedCollege = this.collegeService.collegeList[0];
   }
 
   onNoClick(): void {

@@ -9,6 +9,7 @@ import { LoginDialogComponent } from './common/components/login-dialog/login-dia
 import { SignupDialogComponent } from './common/components/signup-dialog/signup-dialog.component';
 import { MessageConstants } from './common/constants/message.constants';
 import { UrlConstants } from './common/constants/url.constants';
+import { CollegeService } from './common/services/college.service';
 import { SearchService } from './common/services/search.service';
 import { UserService } from './common/services/user.service';
 
@@ -52,10 +53,13 @@ export class AppComponent {
     private searchService: SearchService,
     private observer: BreakpointObserver,
     private userService: UserService,
-    private dialog: MatDialog) {
+    private dialog: MatDialog,
+    private collegeService: CollegeService) {
     
     this.searchSender = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
       .subject(MessageConstants.SEARCH_TRIGGERED_ACTION);
+
+    this.initialiseApp();
   }
 
   ngAfterViewInit() {
@@ -70,6 +74,10 @@ export class AppComponent {
         }
       });
     }
+  }
+
+  initialiseApp(): void {
+    this.collegeService.loadColleges();
   }
 
   handleSidenavClick(): void {

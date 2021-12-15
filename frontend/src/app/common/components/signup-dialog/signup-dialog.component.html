@@ -39,7 +39,7 @@
         <mat-form-field class="input-form-field">
             <p class="input-label-when-small"> College * </p>
             <mat-select [(value)]="selectedCollege">
-                <mat-option value="college" *ngFor="let college of collegeList">
+                <mat-option [value]="college" *ngFor="let college of collegeService.collegeList">
                     {{college}}
                 </mat-option>
             </mat-select>

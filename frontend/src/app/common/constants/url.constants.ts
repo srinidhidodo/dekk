@@ -12,6 +12,7 @@ export class UrlConstants {
   public static REGISTER_URL = UrlConstants.BASE_URL + '/register';
   public static LOGIN_URL = UrlConstants.BASE_URL + '/login';
   public static DEKK_DETAILS_URL = UrlConstants.BASE_URL + '/select/dekk';
+  public static GET_COLLEGES_URL = UrlConstants.BASE_URL + '/resources/colleges';
 
   // Routing URLs
   public static SEARCH_RESULTS = '/search-results';

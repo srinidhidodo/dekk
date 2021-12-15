@@ -31,6 +31,9 @@ export class HomeComponent implements OnInit {
         this.router.navigate([UrlConstants.LANDING]);
       }
       this.router.events.subscribe((event) => {
+        if (!this.userService.loggedIn) {
+          this.router.navigate([UrlConstants.LANDING]);
+        }
         this.isLoading = true;
         if (event instanceof NavigationEnd) {
           this.activatedRoute.queryParams.subscribe(params => {
@@ -75,14 +78,14 @@ export class HomeComponent implements OnInit {
 
         setTimeout(() => {
           this.isLoading = false; 
-        }, 2000);
+        }, 1000);
       });
     } else {
       this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
         this.dekks = response && response.dekk_stats ? response.dekk_stats : [];
         setTimeout(() => {
           this.isLoading = false; 
-        }, 2000);
+        }, 1000);
       });
     }
   }
