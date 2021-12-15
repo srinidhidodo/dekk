@@ -1,13 +1,16 @@
 export class UrlConstants {
-  private static BASE_URL = '/api/v1';
-  // REST calls
+  // Mock REST calls - dev only
   // public static GET_TAGS_URL = '/dekk/tags';
-  public static GET_TAGS_URL = UrlConstants.BASE_URL + '/tags/all';
   // public static HOME_URL = '/dekk/home';
+  // public static NEXT_CARD_URL = '/dekk/cards/next';
+  // public static PREV_CARD_URL = '/dekk/cards/previous';
+  public static SAVE_DEKK_DETAILS = '/dekk/save';
+
+  // Actual REST calls
+  private static BASE_URL = '/api/v1';
+  public static GET_TAGS_URL = UrlConstants.BASE_URL + '/tags/all';
   public static HOME_URL = UrlConstants.BASE_URL + '/users/home';
   public static SEARCH_URL = UrlConstants.BASE_URL + '/cards/search';
-  public static NEXT_CARD_URL = '/dekk/cards/next';
-  public static PREV_CARD_URL = '/dekk/cards/previous';
   public static CARDS_FROM_TAG_URL = UrlConstants.BASE_URL + '/cards/tags';
   public static CARDS_FROM_DEKK_ID_URL = UrlConstants.BASE_URL + '/study/dekk';
   public static REGISTER_URL = UrlConstants.BASE_URL + '/register';

@@ -47,6 +47,12 @@
     width: 30vw;
 }
 
+.form-error {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
 @media (max-width: 600px) {
     .input-label {
         display: none;

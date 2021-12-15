@@ -7,11 +7,14 @@
         <mat-card class="create-dekk-card">
             <mat-card-content class="create-dekk-card-content">
                 <h2>Dekk Details</h2>
+                <div [hidden]="isFormErrorHidden" class="form-error">
+                    Registration failed. Please check the fields you have entered.
+                </div>
                 <div class="input-field">
                     <span class="input-label"> Dekk Name* </span>
                     <mat-form-field class="input-form-field">
                         <p class="input-label-when-small"> Dekk Name* </p>
-                        <input matInput type="text" [value]="currentDekk.dekk_name" [(ngModel)]="currentDekk.dekk_name" class="search-input" required>
+                        <input matInput type="text" [value]="currentDekkName" [(ngModel)]="currentDekkName" class="search-input" required>
                     </mat-form-field>
                 </div>
                 <!-- <div class="input-field">
@@ -33,7 +36,10 @@
                 <form class="create-dekk-form"></form>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-raised-button (click)="createDekk()" color="primary">Continue</button>
+                <button mat-raised-button (click)="saveDekk()" color="primary">
+                    <span [hidden]="currentDekkName === currentDekk.dekk_name">Save and Continue</span>
+                    <span [hidden]="currentDekkName != currentDekk.dekk_name">Continue</span>
+                </button>
             </mat-card-actions>
         </mat-card>
     </div>
