@@ -206,7 +206,7 @@ def create_card(db_conn, req):
         }
         dict_["tag_id"] = get_hash_for_tags(dict_)
         dict_["tag_type"] = "tag"
-        dict_["parent_topic_hash"] = dict_["tag_id"]
+        dict_["parent_topic_hash"] = req_data["dekk_id"]
 
         new_tags.append(dict_)
 

@@ -117,8 +117,13 @@ for file in glob.glob("./data_verified/*"):
             content_on_back = re.sub(r"``", "\n", content_on_back)
             content_on_back = re.sub(r"`", "\n", content_on_back)
             card_dict["content_on_back"] = content_on_back.strip()
+        if "images:" in item:
+            images = (
+                re.search(r"images:(.*)", item).group().replace("images:", "").strip()
+            )
+            images = images.split(",")
+            card_dict["image_links"] = json.dumps(images)
 
-        print(card_dict)
         if card_dict and card_dict["title"]:
             # print(card_dict)
             TAGS = [i.strip() for i in TAGS if i.strip()]
