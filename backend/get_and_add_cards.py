@@ -82,6 +82,9 @@ for file in glob.glob("./data_verified/*"):
         item = re.sub(r"\r", " ", item)
         item = re.sub(r"Tags( )?:( )?", "Tags:", item)
         item = re.sub(r"Title( )?:( )?", "Title:", item)
+        item = re.sub(r"Content on front( )?:( )?", "Content on front:", item)
+        item = re.sub(r"Content on back( )?:( )?", "Content on back:", item)
+
         # print(item)
         if re.search(r"(?<=Title)(.*)(?=Tags:)", item):
             title = re.search(r"(?<=Title)(.*)(?=Tags)", item).group()

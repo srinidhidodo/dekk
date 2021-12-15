@@ -12,6 +12,7 @@ Sample API calls:
 import hashlib
 import json
 import os
+import re
 
 import falcon
 import jwt
@@ -194,6 +195,19 @@ def create_card(db_conn, req):
     card_dict["title"] = req_data["title"]
     card_dict["content_on_front"] = req_data["content_on_front"]
     card_dict["content_on_back"] = req_data["content_on_back"]
+
+    for_search = (
+        card_dict["title"]
+        + " "
+        + card_dict["content_on_front"]
+        + " "
+        + card_dict["content_on_back"]
+    )
+    for_search = re.sub(r"\s{2,}", " ", for_search).strip()
+    for_search = re.sub(r"_", " ", for_search).strip()
+    for_search = re.sub(r"\W", " ", for_search).strip()
+    for_search = re.sub(r"\r", " ", for_search).strip().lower()
+    card_dict["for_search"] = re.sub(r"\s{2,}", " ", for_search).strip().lower()
 
     card_dict["card_id"] = get_hash_for_cards(card_dict, HASH_KEYS_CARDS)
 
