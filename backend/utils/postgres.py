@@ -85,7 +85,7 @@ class QueryManager:
 
         return rows
 
-    def pg_handle_session_insert(self, data_dict):
+    def pg_handle_session_insert(self, data_dict, commit=True):
         """
         A function like this is being made with the goal
         to have one agreed upon function for all Postgres inserts.
@@ -132,7 +132,7 @@ class QueryManager:
 
         return session_id
 
-    def pg_handle_insert(self, data_dict, unique_constraint=""):
+    def pg_handle_insert(self, data_dict, unique_constraint="", commit=True):
         """
         A function like this is being made with the goal
         to have one agreed upon function for all Postgres inserts.
@@ -180,7 +180,8 @@ class QueryManager:
             """
             raise e
         else:
-            self.conn_obj.conn.commit()
+            if commit:
+                self.conn_obj.conn.commit()
 
         return self.conn_obj.cursor.rowcount
 

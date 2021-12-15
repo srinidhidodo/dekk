@@ -2,6 +2,10 @@
 Sample API calls:
     GET - http://127.0.0.1:8000/api/v1/dekk/204af12a0bb2a5bbdf80e6b6b77bd64b
     GET - http://127.0.0.1:8000/api/v1/dekk/204af12a0bb2a5bbdf80e6b6b77bd64b
+    POST - http://127.0.0.1:8000/api/v1/dekk
+            {
+                "dekk_name": "abc"
+            }
 
     GET - http://127.0.0.1:8000/api/v1/card/14894d5c75aef72bac20535917c339dd
 """
@@ -12,10 +16,59 @@ import os
 import falcon
 import jwt
 from api.user import authorization
+from psycopg2.errors import ForeignKeyViolation
+from psycopg2.errors import UniqueViolation
 from utils import http_response
 from utils import postgres
-from utils.add_cards import get_hash
-from utils.add_cards import HASH_KEYS
+
+HASH_KEYS_CARDS = [
+    "title",
+    "content_on_front",
+    "content_on_back",
+    "account_id",
+]
+
+
+def get_hash_for_cards(data_dict, hsh_keys):
+    """
+	Create hash of the string of (location_value, court_value)
+	"""
+
+    # Asserting hsh_keys is not empty
+    assert hsh_keys
+
+    # Asserting no duplicates
+    assert len(hsh_keys) == len(set(hsh_keys))
+
+    # Asserting that hash creation is clean to avoid mishaps
+    assert set(hsh_keys).issubset(data_dict.keys())
+
+    # Next, create hash in a generalized way
+    data_dict_to_hash = {
+        k: str(v).lower() for k, v in data_dict.items() if k in hsh_keys
+    }
+    string_to_hash = json.dumps(data_dict_to_hash, sort_keys=True, default=str)
+    hashed = hashlib.md5(string_to_hash.encode()).hexdigest()
+
+    return hashed
+
+
+def get_hash_for_tags(data_dict):
+    """
+	Create hash of the string of (location_value, court_value)
+	"""
+
+    # Next, create hash in a generalized way
+    data_dict_to_hash = {k: str(v).lower() for k, v in data_dict.items()}
+    string_to_hash = json.dumps(data_dict_to_hash, sort_keys=True, default=str)
+    data_dict_to_hash = json.loads(string_to_hash)
+    str_to_hash = ""
+    for key in data_dict_to_hash:
+        str_to_hash += data_dict_to_hash[key]
+
+    hashed = hashlib.md5(str_to_hash.encode()).hexdigest()
+
+    return hashed
 
 
 def get_all_card_ids_for_a_dekk(db_conn, tag_id):
@@ -46,6 +99,7 @@ def get_all_card_ids_for_a_dekk(db_conn, tag_id):
     if dekk_name_result and dekk_name_result[0]["dekk_name"]:
         result = {
             "dekk_name": dekk_name_result[0]["dekk_name"],
+            "dekk_id": tag_id,
             "tags": tags_query_result,
             "cards": card_ids_result,
         }
@@ -83,7 +137,9 @@ def request_valiation(req, resp, resource, params):
 
 
 def create_card(db_conn, req):
-
+    """
+        Has to create new tags and upload
+    """
     req_data = req.media
 
     req_data = req_data
@@ -98,33 +154,191 @@ def create_card(db_conn, req):
     token = req.headers.get("AUTHORIZATION")
     decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
 
-    if not req_data["title"]:
+    if not req_data.get("title", ""):
         error_message = "Something went wrong , seems like the tittle is empty"
         message = {"message": error_message}
-        http_response.err(resp, falcon.HTTP_500, message)
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if "new_tags" not in req_data:
+        error_message = "Something went wrong , seems new_tags is not in request body"
+        message = {"message": error_message}
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if "selected_tag_ids" not in req_data:
+        error_message = (
+            "Something went wrong , seems selected_tag_ids is not in request body"
+        )
+        message = {"message": error_message}
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if "dekk_id" not in req_data:
+        error_message = "Something went wrong , seems dekk_id is not in request body"
+        message = {"message": error_message}
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if "content_on_front" not in req_data:
+        error_message = (
+            "Something went wrong , seems content_on_front is not in request body"
+        )
+        message = {"message": error_message}
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if "content_on_back" not in req_data:
+        error_message = (
+            "Something went wrong , seems content_on_back is not in request body"
+        )
+        message = {"message": error_message}
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
 
     card_dict["account_id"] = decode["account_id"]
     card_dict["title"] = req_data["title"]
     card_dict["content_on_front"] = req_data["content_on_front"]
     card_dict["content_on_back"] = req_data["content_on_back"]
-    card_dict["master_topic"] = req_data["dekk_name"]
-    card_dict["permission"] = "user"
 
-    card_dict["tags"] = {card_dict["master_topic"]: 1, card_dict["title"]: 2}
+    card_dict["card_id"] = get_hash_for_cards(card_dict, HASH_KEYS_CARDS)
 
-    for i, tag in enumerate(req_data["tags"], 3):
-        if tag not in card_dict["tags"]:
-            card_dict["tags"][tag] = i
+    new_tags = []  # to be inserted to user_content.tags
 
-    card_dict["tags"] = json.dumps(card_dict["tags"])
-    card_dict["card_hash"] = get_hash(card_dict, HASH_KEYS)
+    for tag in req_data["new_tags"]:
+        dict_ = {
+            "tag_name": tag.strip(),
+            "account_id": card_dict["account_id"],
+        }
+        dict_["tag_id"] = get_hash_for_tags(dict_)
+        dict_["tag_type"] = "tag"
+        dict_["parent_topic_hash"] = dict_["tag_id"]
 
-    status = db_conn.pg_handle_insert(card_dict)
+        new_tags.append(dict_)
 
-    return status
+    tags_cards = []  # to be inserted to user_content.tags_cards
+    for tag in new_tags:
+        dict_ = {"card_id": card_dict["card_id"], "tag_id": tag["tag_id"]}
+        tags_cards.append(dict_)
+
+    dekk_dict = {"card_id": card_dict["card_id"], "tag_id": req_data["dekk_id"]}
+    tags_cards.append(dekk_dict)
+
+    for tag in req_data["selected_tag_ids"]:
+        dict_ = {"card_id": card_dict["card_id"], "tag_id": tag}
+        tags_cards.append(dict_)
+
+    # print(new_tags)
+    # print('=--------------------')
+    # print(tags_cards)
+    # print('=--------------------')
+    # print(card_dict)
+    # print('=--------------------')
+
+    for tag in new_tags:  # add new tags to tags
+        try:
+            db_conn.table = "tags"
+            status = db_conn.pg_handle_insert(tag)
+            if status == 0:
+                raise Exception("Oops something went wrong could not create new tag")
+        except UniqueViolation as e:
+            # print(e)
+            pass
+        except Exception as e:
+            raise e
+    try:
+        curosr = db_conn.conn_obj.cursor
+        curosr.execute("BEGIN")
+        try:  # add card
+            db_conn.table = "cards"
+            status = db_conn.pg_handle_insert(card_dict, commit=False)
+        except UniqueViolation as e:
+            raise Exception(
+                "Oops something went wrong could not create new card - looks like same card already exists"
+            )
+        except Exception as e:
+            raise e
+
+        for tags_card in tags_cards:  # add tags_cards
+            try:
+                db_conn.table = "tags_cards"
+                status = db_conn.pg_handle_insert(tags_card, commit=False)
+            except UniqueViolation as e:
+                print(e)
+                pass
+            except Exception as e:
+                raise e
+        curosr.execute("COMMIT")
+    except Exception as e:
+        curosr.execute("ROLLBACK")
+        print(e)
+        raise Exception(
+            "Oops something went wrong could not create new card - looks like same card already exists"
+        )
+
+    return True
 
 
-class CrudOnCards:
+def create_dekk(db_conn, req):
+
+    req_data = req.media
+
+    req_data = req_data
+
+    if not req_data:
+        return {}
+
+    dekk_dict = {}
+
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
+
+    if not req_data["dekk_name"]:
+        message = "Couldn't create dekk , empty name"
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    dekk_dict["account_id"] = decode["account_id"]
+    dekk_dict["tag_name"] = req_data["dekk_name"]
+
+    hash_ = get_hash_for_tags(dekk_dict)
+    dekk_dict["tag_id"] = hash_
+    dekk_dict["parent_topic_hash"] = hash_
+
+    try:
+        status = db_conn.pg_handle_insert(dekk_dict)
+        if status == 0:
+            message = "Couldn't create dekk"
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+        else:
+            return dekk_dict["tag_id"]
+    except Exception as e:
+        # print(e)
+        # print(dir(e))
+        if e.pgcode == "42P01":
+            message = "Couldn't create dekk"
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+        if str(e.pgcode) == "23505":
+            message = f'Dekk name `{req_data["dekk_name"]}` already exists'
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+        message = f'Dekk name `{req_data["dekk_name"]}` already exists'
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+
+class CreateDekk:
+    """
+        Request data has to be a json
+    """
+
+    def __init__(self) -> None:
+        self.db_conn = postgres.QueryManager("user_content", "tags")
+
+    @falcon.before(authorization.request_valiation)
+    def on_post(self, req, resp):
+        try:
+            dekk_id = create_dekk(self.db_conn, req)
+            http_response.ok(resp, {"message": "Created the dekk", "dekk_id": dekk_id})
+        except Exception as e:
+            raise e
+
+
+class CreateCard:
     """
         Request data has to be a json
     """
@@ -134,18 +348,12 @@ class CrudOnCards:
 
     @falcon.before(authorization.request_valiation)
     def on_post(self, req, resp):
-        print("HERE")
+        print(req)
         try:
-            result = create_card(self.db_conn, req)
-            if result >= 1:
-                http_response.ok(resp, {"message": "Created the card"})
-            else:
-                error_message = "Something went wrong , mostly this card already exists"
-                message = {"message": error_message}
-                http_response.err(resp, falcon.HTTP_500, message)
+            create_card(self.db_conn, req)
+            http_response.ok(resp, {"message": "Created the card"})
         except Exception as e:
-            print(e)
-            error_message = "Something went wrong"
+            error_message = str(e)
             message = {"message": error_message}
             http_response.err(resp, falcon.HTTP_500, message)
 

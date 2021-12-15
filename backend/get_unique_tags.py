@@ -33,6 +33,8 @@ TAGS = []
 
 for file in glob.glob("./data_verified/*"):
 
+    # if 'Vitamin' not in file:
+    #     continue
     data = open(file).read()
     data = re.split(r"===+", data)
     file = file.replace(".txt", "")
@@ -76,6 +78,11 @@ for file in glob.glob("./data_verified/*"):
         }
         hash_ = get_hash_for_tags(dict_)
         dict_["tag_type"] = None
+
+        dict_["tag_name"] = re.sub(r"disease$", "diseases", dict_["tag_name"])
+        dict_["tag_name"] = re.sub(r"disorder$", "disorders", dict_["tag_name"])
+        dict_["tag_name"] = re.sub(r"^\W+", "", dict_["tag_name"]).strip()
+
         if tag in main_tags:
             if i == 0:
                 dict_["is_master_topic"] = True

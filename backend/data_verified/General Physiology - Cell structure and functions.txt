@@ -1,0 +1,1334 @@
+﻿
+
+
+
+===========================================
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: The components of the cell membrane are **, ** and **.
+
+
+Content on back: The components of the cell membrane are *carbohydrates*, *proteins* and *lipids*.``
+
+
+NOTE: Major components are proteins (55%), the lipid is 40%.
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: The abundant form of lipid in the cell membrane is **.
+
+
+Content on back: The abundant form of lipid in the cell membrane is *phospholipid*.`
+Lipids in the cell membrane are Phospholipids and glycolipids.
+
+
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: If Lecithin and sphingomyelin ratio is **  then fetal lung is considered to be mature.
+
+
+Content on back: If Lecithin and sphingomyelin ratio is *greater than or equal to 2*  then fetal lung is considered to be mature.
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: Annexin -phosphatidylserine[a] complex is the marker for **
+
+
+Content on back: Annexin -phosphatidylserine complex is the marker for *Apoptosis*.``
+
+
+NOTE: Normally phosphatidylserine is present on the inner side of the cell membrane.
+
+
+
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: ** is a glycolipid present in GI epithelial cells which acts as a receptor for cholera toxin.
+
+
+Content on back: *GM1 ganglioside* glycolipid present in GI epithelial cells which acts as a receptor for cholera toxin.``
+
+
+NOTE: Glycolipids are present in the cell membrane of the brain and GI cells.`
+Glycolipids: Ganglioside and cerebroside.
+
+
+
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+Tags:
+
+
+Content on front:  ** is the fluidity buffer of a cell membrane.
+
+
+Content on back: *Cholesterol* is the fluidity buffer of a cell membrane.``
+
+
+NOTE:`
+1. Unsaturated fatty acids(PUFA)increase the fluidity of the cell membrane and are good for health`
+2. Saturated or trans fatty acids decrease the fluidity of the cell membrane and are bad for health`
+3. Cholesterol neither increase nor decrease the fluidity, they maintain the fluidity of the cell membrane`
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+Tags:
+
+
+Content on front: Precursor for vitamin-D synthesis present in the skin is **.
+
+
+Content on back:  Precursor for vitamin-D synthesis present in the skin is *7-Dehydrocholesterol*
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: Peripheral proteins present on the cell membrane of RBCs that gives structural support and help in maintaining the normal shape of RBC are ** and **.
+
+
+Content on back: Peripheral proteins present on the cell membrane of RBCs that gives structural support and help in maintaining the normal shape of RBC are *Spectrin* and *Ankyrin*.``
+
+
+NOTE: Mutation in the spectrum and ankyrin causes hereditary spherocytosis.
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: Peripheral protein present on the cell membrane of skeletal muscles which give structural support is **.
+
+
+Content on back:  Peripheral protein present on the cell membrane of skeletal muscles which give structural support is *Dystrophin*.``
+
+
+NOTE: Mutation in dystrophin causes Duchenne and Becker muscular dystrophy.
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+Tags:
+
+
+Content on front: GPCR (G protein-coupled receptors), sodium-potassium pumps are ** proteins of cell membranes.
+
+
+Content on back: GPCR (G protein-coupled receptors), sodium-potassium pumps are *transmembrane* proteins of cell membrane
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+Tags:
+
+
+Content on front: LIpid anchor proteins ** and ** prevent hemolysis of RBC.
+
+
+Content on back:  LIpid anchor proteins *CD-55* and *CD-59* prevent hemolysis of RBC.``
+
+
+NOTE: Absence of CD55 and CD59 results in PNH(Paroxysmal nocturnal hemoglobinuria)
+
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: ** contains lipids more than protein in the cell membrane
+
+
+Content on back:  *Nerve* contains lipids more than protein in the cell membrane.``
+
+
+NOTE: Proteins are a major component of cell membrane except in nerve cell membrane (myelin) where lipids are the major component.
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+Tags:
+
+
+Content on front: Highest protein composition is present in the **  membrane.
+
+
+Content on back:  Highest protein composition is present in the *inner mitochondrial* membrane.``
+
+
+NOTE: Highest protein compositions are seen in:`
+1. Inner mitochondrial membrane`
+2. Sarcoplasmic reticulum`
+3. Outer mitochondrial membrane
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Hormones
+Tags:
+
+
+Content on front: Thyroid hormones, epinephrine, norepinephrine and dopamine are derived from the amino acid **.
+
+
+Content on back:  Thyroid hormones, epinephrine, norepinephrine and dopamine are derived from the amino acid *Tyrosine*.
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Hormones
+
+Tags:
+
+Content on front: Serotonin and melatonin are derived from ** (amino acid).
+
+
+Content on back: Serotonin and melatonin are derived from *tryptophan* (amino acid).``
+
+
+NOTE: Nitric oxide is derived from arginine.
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Hormones
+Tags:
+
+
+Content on front: Cortisol, aldosterone and sex steroid hormones are ** derivatives
+
+
+Content on back:  Cortisol, aldosterone and sex steroid hormones are *Cholesterol* derivatives
+
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Receptors
+
+Tags:
+
+Content on front: ** subunit is the active part among 3 subunits of GPCR(G protein-coupled receptor).
+
+
+Content on back:  *Alpha* subunit is the active part among 3 subunits of GPCR(G protein-coupled receptor).``
+
+
+NOTE:`
+1. GPCR are transmembrane receptors`
+2. They are heterotrimeric receptors-alpha .beta and gamma`
+3. Alpha has GTPase activity. At rest, it is bound to GDP.
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Receptors
+
+Tags:
+
+Content on front: Insulin acts on the ** receptors.
+
+
+Content on back: Insulin acts on the *Tyrosine kinase* receptors.``
+
+
+NOTE: Growth factors like IGF, PDGF also act on the tyrosine kinase receptors.
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Receptors
+
+Tags:
+
+Content on front: Growth hormone and Prolactin act on the ** receptors.
+
+
+Content on back:  Growth hormone and Prolactin acts on *Janus kinase* receptors.``
+
+
+NOTE: Erythropoietin also acts on Janus kinase receptors.
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Receptors
+Tags:
+
+
+Content on front: Alpha-s stimulates the ** enzyme, which leads to an increase in cAMP.
+
+
+Content on back: Alpha-s stimulates *adenylyl cyclase* enzyme, which leads to an increase in cAMP.``
+NOTE:`
+1. Alpha -i inhibits adenylyl cyclase causes a decrease in cAMP`
+2. The hormone which uses cAMP as secondary messengers are vasopressin on V2 receptor and toxin like cholera toxin, pertussis toxin.[b]
+
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Receptors
+
+Tags:
+
+Content on front: Nitric oxide, natriuretic peptides use ** as secondary messengers.
+
+
+Content on back: Nitric oxide, natriuretic peptides use *cGMP* as secondary messengers.``
+NOTE:`
+1. cGMP causes relaxation and vasodilation`
+2.  cGMP is degraded by PDE-5. Hence, PDE-5 inhibitors like Sildenafil cause an increase in cGMP and cause vasodilation.
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Receptors
+Tags:
+
+
+Content on front: Oxytocin uses ** as secondary messengers.
+
+
+Content on back: Oxytocin uses *Calcium / Phospholipase-C* as secondary messengers.``
+
+
+NOTE:`
+1. Calcium causes smooth muscle contraction and vasoconstriction.`
+2. Endothelin and norepinephrine also uses calcium as a secondary messenger.`
+3. Vasopressin acting on the V1 Receptor uses calcium as a secondary messenger.
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Receptors
+Tags:
+
+
+Content on front: Thyroid hormones, Vitamin A and Vitamin D act on ** receptors.
+
+
+Content on back: Thyroid hormones, Vitamin A and Vitamin D act on *nuclear* receptors.``
+
+
+NOTE:`
+1. Intracellular receptors have[c] cytoplasmic and nuclear receptors.`
+2. Glucocorticoids and mineralocorticoids act on cytoplasmic receptors.`
+3. Thyroid hormones, Vitamin A and Vitamin D act on nuclear receptors.
+
+
+
+ ==========================================
+
+
+
+
+Title: Membrane transport
+
+Tags:
+
+Content on front: Simple diffusion, facilitated diffusion and osmosis are all types of ** across membranes.
+
+
+Content on back:  Simple diffusion, facilitated diffusion and osmosis are all types of *passive transport*  across membranes. ``
+
+Points to remember for passive transport:`
+1. No ATP needed`
+2. Transport is across membranes`
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Membrane transport
+
+Tags:
+
+Content on front: Simple diffusion of gases across the cell membrane can be explained by ** law.
+
+
+Content on back: Simple diffusion of gases across the cell membrane can be explained by *Fick’s* law.``
+
+
+Fick’s law states that diffusion of substances across the membrane is:`
+1. Directly proportional to the concentration gradient and area of the membrane`
+2. Inversely proportional to the thickness of the membrane`
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Membrane transport
+
+Tags:
+
+Content on front: Passive transport which requires carrier protein for the transport of substances across the membrane is called **.
+
+
+Content on back:  Passive transport which requires carrier protein for the transport of substances across the membrane is called *diffusion*.``
+
+
+NOTE: GLUT and aquaporins are examples of facilitated diffusion.
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Membrane transport
+Tags:
+
+
+Content on front: To prevent the movement of water molecules towards a solution of a higher concentration, pressure applied on the lower concentration solution is called **.
+
+
+Content on back: To prevent the movement of water molecules towards a solution of a higher concentration, pressure applied to the lower concentration solution is called *osmotic pressure*
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Miscellaneous
+
+Tags:
+
+Content on front: Normal plasma osmolarity is **.
+
+
+Content on back:  Normal plasma osmolarity is *280 to 300mosm/L*``
+
+
+The formula for calculation:`
+1. Osmolarity=2 x Na(meq/L) + glucose/18(mg/dl) + BUN/2.8(mg/dl)`
+OR`
+2. Osmolarity= 2 x Na  + glucose x 0.05 + BUN x 0.36
+
+
+
+ ==========================================
+
+
+
+
+Title: Membrane transport
+Tags:
+
+
+Content on front: The coupling ratio of the sodium-potassium pump is **.
+
+
+Content on back: The coupling ratio of the sodium-potassium pump is *3:2*.``
+
+
+Points to remember about Sodium potassium pump:
+1. Heterogenous Heterodimer(alpha and beta) active pump`
+2. Is a transmembrane protein`
+3. Has alpha and beta subunit
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Membrane transport
+
+Tags:
+
+Content on front: Binding site of sodium on the Na+- K+ pump is present on the ** side of alpha subunit.
+
+
+Content on back:  Binding site of sodium on the Na+- K+ pump is present on the *intracellular* side of alpha subunit.``
+
+
+NOTE:`
+1. Sodium binding site- Intracellular side of the alpha subunit`
+2. K+ binding site- Extracellular side of the alpha subunit`
+3. ATP binding site- Intracellular side of the alpha subunit`
+4. Digoxin binding site-Extracellular side of the alpha subunit`
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Membrane transport
+
+Tags:
+
+Content on front: Secondary active transport which allows two or more substances across the membrane in the same direction is known as **.
+
+
+Content on back:  Secondary active transport which allows two or more substances across the membrane in the same direction is known as *symporters/cotransporters*.``
+
+
+Examples of symporters:`
+1. Sodium glucose cotransport(SGLT): SGLT-1 in the intestine and SGLT-2 in the kidney(PCT)`
+2. Na-K-2Cl- cotransport in the loop of Henle`
+3. Na-Iodide transport in the thyroid gland`
+
+
+
+
+ ==========================================
+
+
+Title: General physiology
+
+Tags:
+
+Title: Membrane transport
+
+
+Content on front: Secondary active transport which allows two or more substances across the membrane  in the opposite  direction is known as **
+
+
+Content on back: Secondary active transport which allows two or more substances across the membrane  in the opposite  direction is known as *antiporters/exchangers*.``
+Examples of antiport:`
+1. Chloride -bicarbonate exchanger in RBC`
+2. Sodium -calcium exchanger in PCT`
+3. Na+-H+ exchanger in PCT`
+4. Iodide chloride exchanger in the thyroid gland
+
+
+
+ ==========================================
+
+
+
+
+Title: Membrane transport
+
+Tags:
+
+Content on front: Active transport where any substance stored in the form of vesicles and then released is known as **.
+
+
+Content on back:  Active transport where any substance stored in the form of vesicles and then released is known as *Exocytosis*.``
+
+
+NOTE:`
+1. Any substances which are not stored or processed and directly released is called constitutive exocytosis.`
+2. Any substances which are stored, processed in the form of vesicles is called non-constitutive or regulated exocytosis.`
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Membrane transport
+Tags:
+
+
+Content on front: Special proteins called ** are required for the exocytosis.
+
+
+Content on back: Special proteins called *SNARE proteins* are required for the exocytosis.``
+
+
+NOTE: Special proteins required for endocytosis are:`
+1. Clathrin`
+2. Cubilin`
+3. Megalin`
+
+
+
+
+ ==========================================
+
+
+
+
+     not adding
+Title: Membrane transport
+
+Tags:
+
+Content on front: **: The type of passive transport which follows saturation kinetics.
+
+
+Content on back:  *Facilitated diffusion*: The type of passive transport which follows saturation kinetics.``
+
+
+NOTE:`
+1. Simple diffusion does not follow saturation kinetics.`
+2. Facilitated diffusion and active transport follow saturation kinetics.`
+3.
+
+
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Synthesis and folding of proteins is the function of **.
+
+
+Content on back: Synthesis and folding of proteins is the function of *Rough endoplasmic reticulum*.``
+
+
+NOTE: Rough endoplasmic reticulum has ribosomes and they are granular.
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Endoplasmic reticulum assist degradation (ERAD) uses ** for the removal of toxic misfolded proteins.
+
+
+Content on back:  Endoplasmic reticulum assist degradation (ERAD) uses *ubiquitin-proteasome pathway* for the removal of toxic misfolded proteins.``
+
+
+NOTE:`
+   1. ERAD is seen in the rough endoplasmic reticulum.`
+   2. Absent ERAD system leads to certain diseases like prions disease and Alzheimer’s disease.`
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Smooth endoplasmic reticulum of skeletal muscles where calcium is stored is known as **.
+
+
+Content on back: Smooth endoplasmic reticulum of skeletal muscles where calcium is stored is known as *sarcoplasmic reticulum*.``
+
+
+NOTE: Smooth endoplasmic reticulum is agranular (no ribosomes).
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Detoxification of drugs in the liver occurs in ** which expresses CYP-450.
+
+
+Content on back: Detoxification of drugs in the liver occurs in *smooth endoplasmic reticulum* which expresses CYP-450.``
+
+
+NOTE: Synthesis of steroids also occurs in the smooth endoplasmic reticulum
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Post-translational modification and sorting of proteins occur in **.
+
+
+Content on back:  Post-translational modification and sorting of proteins occurs in *Golgi apparatus*.``
+
+
+NOTE:`
+   1. Post-translational modifications: Glycosylation of protein which gives stability to the protein.`
+   2. Sorting of proteins: Adding mannose-6-phosphate to the protein which gets destroyed in the lysosomes
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: ** are known as suicidal bags / residual bodies.
+
+
+Content on back: :*Lysosomes* are known as suicidal bags / residual bodies.``
+
+
+NOTE: Acid present inside destroys the lysosomes itself.
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Destruction of unwanted substances occurs in the **.
+
+
+Content on back: Destruction of unwanted substances occurs in *Lysosomes*.``
+
+
+NOTE: Lysosomes has H+ ATPase which causes an increase in H+ concentration inside the lysosomes and a decrease in the pH. This acidic nature of lysosomes helps in the destruction of unwanted substances.
+ ==========================================
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Autophagy occurs in the ** (cell organelle).
+
+
+Content on back: Autophagy occurs in the *Lysosomes* (cell organelle)``.
+
+
+NOTE:`
+   1. Autophagy means self-destruction.`
+   2. The self-destruction is helpful during starvation.`
+   3. Lysosomes destroy the mitochondria and releases protein which is utilized as the source of energy and survival of the cell.
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell organelle
+Tags:
+
+
+Content on front: Destruction of free radicals like H2O2 occurs in ** with the help of the enzyme  **.
+
+
+Content on back: Destruction of free radicals like H2O2 occurs in *peroxisomes* with the help of the enzyme *catalase*.
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+
+Tags:
+
+Content on front: Oxidation of very-long-chain fatty acids occurs in **.
+
+
+Content on back:  Oxidation of very-long-chain fatty acids occurs in *peroxisomes*.
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell organelle
+Tags:
+
+
+Content on front: ** is the most abundant form of cytoskeletal filament which gives strength to the cell.
+
+
+Content on back:  *Intermediate filaments* is the most abundant form of cytoskeletal filament which gives strength to the cell.``
+
+
+NOTE: Cytoskeletal filaments`
+   1. Microfilaments`
+   2. Microtubules`
+   3. Intermediate filaments
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filaments
+
+Tags:
+
+Content on front: Movement of cilia is the function of ** microtubule.
+
+
+Content on back: Movement of cilia is the function of *dynein* microtubule.``
+
+
+NOTE:``
+   1. Dynein also helps in sperm motility and fallopian tube motility.
+   2. Absent dynein leads to immotile cilia syndrome / Kartagener syndrome.
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filaments
+Tags:
+
+
+Content on front: Sinusitis, Bronchiectasis and Situs inversus is a triad of **.
+
+
+Content on back:  Sinusitis, Bronchiectasis and Situs inversus is a triad of *Immotile cilia syndrome / Kartagener syndrome*.``
+
+
+NOTE: They also have asthenospermia leads to infertility.
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filaments
+Tags:
+
+
+Content on front: Axonal transport is a function of ** and ** microtubules.
+
+
+Content on back: Axonal transport is a function of *kinesin* and *dynein* microtubules.``
+
+
+NOTE:`
+   1. Kinesin helps in forward or anterograde transport.`
+   2. Dynein helps in reverse or retrograde axonal transport
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filaments
+
+Tags:
+
+Content on front: Movement of chromosomes which is essential during cell division is the function of ** microtubule.
+
+
+Content on back:  Movement of chromosomes which is essential during cell division is the function of the microtubule *tubulin*.``
+
+
+NOTE: Microtubule inhibitors:`
+   1. Vinca alkaloids and taxanes used as anticancer drugs`
+   2. Colchicine is used in acute gout`
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filaments
+
+Tags:
+
+Content on front: ** is an epithelial cell marker.
+
+
+Content on back: *Keratin* is an epithelial cell marker.``
+
+NOTE: Carcinomas are epithelial cell tumours. Cytokeratin is a marker for carcinomas.
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filament
+
+Tags:
+
+Content on front: Tumor marker for sarcoma is **.
+
+
+Content on back: Tumor marker for sarcoma is *desmin*.``
+
+
+NOTE:`
+   1. Marker for tumours of mesenchymal origin- Vimentin`
+   2. Marker for astrocytoma- GFAP`
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cytoskeletal filaments
+
+Tags:
+
+Content on front: Mutation of ** intermediate filament causes progeria (premature ageing).
+
+
+Content on back:  Mutation of *lamin* intermediate filament causes progeria(premature ageing).
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+Tags:
+
+
+Content on front: ** enzyme is the marker of cytoplasm.
+
+
+Content on back:  *Lactate dehydrogenase* enzyme is the marker of cytoplasm.
+
+
+
+
+
+
+ ==========================================
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+Content on front: Acid phosphatase is a marker for **.
+
+
+Content on back: Acid phosphatase is a marker for *lysosomes*.
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cell membrane
+
+Tags:
+
+
+Content on front: Catalase and urate oxidase is a marker for **.
+
+
+Content on back: Catalase and urate oxidase is a marker for *peroxisomes*.``
+
+
+NOTE:`
+   1. Cell membrane marker: Na+ K+ ATPase`
+   2. Nucleus marker: Histone deacetylase, RNA polymerase`
+   3. Endoplasmic reticulum marker: Glucose-6-phosphatase`
+   4. Golgi apparatus marker: Galactosyltransferase
+
+
+
+
+ ==========================================
+
+
+
+
+
+Title: Cellular junctions
+
+Tags:
+
+Content on front: Zona occludens are tight connections between cells made of ** proteins.
+
+
+Content on back: Zona occludens are tight connections between cells made of *Claudin and Occludin* proteins.``
+
+
+NOTE:`
+   1. Zona occludens are tight junctions`
+   2. Present in intestine, kidney, blood brain barrier, choroid plexus.
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cellular junctions
+
+Tags:
+
+Content on front: Gap junctions are made of ** protein.
+
+
+Content on back:  Gap junctions are made of *connexon* protein.``
+
+
+NOTE:`
+   1. Connexon has 6 subunits, each known as connexin.`
+   2. Gap junctions are present in the heart, smooth muscles and neurons.
+
+
+
+
+ ==========================================
+
+
+
+
+
+
+Title: Cellular junctions
+
+Tags:
+
+Content on front: Gap junctions of cardiac muscles are present in **.
+
+
+Content on back:  Gap junctions of cardiac muscles are present in *intercalated discs*.``
+
+Cellular junctions:`
+   1. Cell to cell junctions`
+   1. Zona adherens`
+   2. Zona occludens`
+   3. Gap junction`
+ 2.  Cell to basement membrane junctions`
+   1. Hemidesmosome`
+   2. Cellular adhesion molecules-cadherins and integrins`
+
+
+
+
+ ==========================================
