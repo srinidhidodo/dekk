@@ -1,4 +1,8 @@
-<div class="row create-dekk-page">
+<div [hidden]="!isLoading">
+    <app-loading></app-loading>
+</div>
+
+<div class="row create-dekk-page" [hidden]="isLoading">
     <div class="create-dekk-container">
         <mat-card class="create-dekk-card">
             <mat-card-content class="create-dekk-card-content">
@@ -7,26 +11,25 @@
                     <span class="input-label"> Dekk Name* </span>
                     <mat-form-field class="input-form-field">
                         <p class="input-label-when-small"> Dekk Name* </p>
-                        <input matInput type="text" class="search-input" required>
+                        <input matInput type="text" [value]="currentDekk.dekk_name" [(ngModel)]="currentDekk.dekk_name" class="search-input" required>
                     </mat-form-field>
                 </div>
-                <div class="input-field">
+                <!-- <div class="input-field">
                     <span class="input-label"> Tags* </span>
                     <mat-form-field class="input-form-field">
                         <p class="input-label-when-small"> Tags* </p>
-                        <!-- <input matInput type="text" class="search-input" required> -->
                         <mat-select [formControl]="tags" multiple>
                             <mat-select-trigger>
                                 <mat-chip-list>
                                     <mat-chip *ngFor="let tag of tags.value">
-                                        {{tag}}
+                                        {{tag.tag_name}}
                                     </mat-chip>
                                 </mat-chip-list>
                             </mat-select-trigger>
-                            <mat-option *ngFor="let tag of tagsList" [value]="tag">{{tag}}</mat-option>
+                            <mat-option *ngFor="let tag of tagsService.tagsList" [value]="tag">{{tag.tag_name}}</mat-option>
                         </mat-select>                          
                     </mat-form-field>
-                </div>
+                </div> -->
                 <form class="create-dekk-form"></form>
             </mat-card-content>
             <mat-card-actions>

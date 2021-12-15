@@ -10,7 +10,7 @@ export class CollegeService {
   isLoading = true;
 
   constructor(private httpClientService: HttpClientService) {
-    this.loadColleges();
+    // this.loadColleges();
   }
 
   private _collegeList: string[] = [];

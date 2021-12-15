@@ -1,7 +1,8 @@
 export class UrlConstants {
   private static BASE_URL = '/api/v1';
   // REST calls
-  public static GET_TAGS_URL = '/dekk/tags';
+  // public static GET_TAGS_URL = '/dekk/tags';
+  public static GET_TAGS_URL = UrlConstants.BASE_URL + '/tags/all';
   // public static HOME_URL = '/dekk/home';
   public static HOME_URL = UrlConstants.BASE_URL + '/users/home';
   public static SEARCH_URL = UrlConstants.BASE_URL + '/cards/search';
@@ -12,6 +13,7 @@ export class UrlConstants {
   public static REGISTER_URL = UrlConstants.BASE_URL + '/register';
   public static LOGIN_URL = UrlConstants.BASE_URL + '/login';
   public static DEKK_DETAILS_URL = UrlConstants.BASE_URL + '/select/dekk';
+  public static DEKK_METADATA_URL = UrlConstants.BASE_URL + '/dekk';
   public static GET_COLLEGES_URL = UrlConstants.BASE_URL + '/resources/colleges';
 
   // Routing URLs

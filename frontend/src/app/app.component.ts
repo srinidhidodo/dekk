@@ -11,6 +11,7 @@ import { MessageConstants } from './common/constants/message.constants';
 import { UrlConstants } from './common/constants/url.constants';
 import { CollegeService } from './common/services/college.service';
 import { SearchService } from './common/services/search.service';
+import { TagsService } from './common/services/tags.service';
 import { UserService } from './common/services/user.service';
 
 @Component({
@@ -54,7 +55,8 @@ export class AppComponent {
     private observer: BreakpointObserver,
     private userService: UserService,
     private dialog: MatDialog,
-    private collegeService: CollegeService) {
+    private collegeService: CollegeService,
+    private tagsService: TagsService) {
     
     this.searchSender = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
       .subject(MessageConstants.SEARCH_TRIGGERED_ACTION);
@@ -78,6 +80,7 @@ export class AppComponent {
 
   initialiseApp(): void {
     this.collegeService.loadColleges();
+    this.tagsService.loadTags();
   }
 
   handleSidenavClick(): void {
