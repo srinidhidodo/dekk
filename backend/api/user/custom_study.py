@@ -86,7 +86,7 @@ def create_custom_study_menu(db_conn):
         select count(*) as cards_count,t1.tag_name as dekk_name ,t1.tag_id as dekk_id from user_content.tags t1 inner join
         user_content.tags_cards t2 on t1.tag_id = t2.tag_id
         where  t1.is_master_topic = true
-        and t1.tag_type = 'master'
+        and t1.tag_type = 'master' and t1.account_id = 1
         group by t1.tag_name,t1.tag_id
         order by count(*) desc
     """
