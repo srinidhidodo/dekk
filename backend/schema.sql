@@ -1,13 +1,14 @@
 
 
-drop table IF EXISTS user_content.cards;
-drop table IF EXISTS user_content.tags_cards;
-drop table IF EXISTS user_content.tags;
+drop table IF EXISTS user_content.cards cascade ;
+drop table IF EXISTS user_content.tags_cards cascade;
+drop table IF EXISTS user_content.tags cascade;
 
-drop table IF EXISTS users.accounts;
+drop table IF EXISTS users.sessions cascade;
+drop table IF EXISTS users.accounts cascade;
 
 drop schema IF EXISTS users;
-drop schema IF EXISTS user_content ;
+drop schema IF EXISTS user_content;
 
 create schema users;
 create schema user_content;
@@ -74,12 +75,14 @@ CREATE TABLE user_content.tags_cards (
 
 CREATE TABLE users.sessions (
 	account_id int4 NOT NULL,
-	session_id SERIAL PRIMARY KEY not null,
-	selected_tags jsonb not null,
-	session_study_cards jsonb not null,
-	no_of_cards int,
+	session_id varchar not null,
+	card_id varchar not null,
+	no_of_cards int not null,
+	viewed boolean null,
+	bookmarked boolean null,
 	created_at timestamp NULL DEFAULT timezone('utc'::text, now()),
 	updated_at timestamp NULL DEFAULT timezone('utc'::text, now()),
+	UNIQUE (account_id,card_id),
 	CONSTRAINT fk_us_accounts_ua_accounts FOREIGN KEY (account_id) REFERENCES users.accounts(account_id)
 );
 

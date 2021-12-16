@@ -9,6 +9,7 @@ import ast
 import hashlib
 import json
 import os
+import uuid
 
 import falcon
 import jwt
@@ -21,10 +22,12 @@ from utils.add_cards import HASH_KEYS
 
 def get_study_cards(db_conn, req):
 
-    cards_count = req.params["cards_count"]
-    ids = json.loads(json.dumps(req.params["ids"]))
-    ids = x = ast.literal_eval(ids)
-    session_id = req.params["session_id"]
+    req_data = req.media
+
+    req_data = req_data
+
+    if not req_data:
+        return {}
 
     # get account id
     env = os.environ.get(f"ENV")
@@ -33,51 +36,71 @@ def get_study_cards(db_conn, req):
     decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
 
     account_id = decode["account_id"]
+    offset = req_data["offset"]
+    cards_count = req_data["cards_count"]
+    ids = req_data["ids"]
+    session_id = req_data.get("session_id", None)
 
-    if not session_id:
-        id_clause = [f"'{id}'" for id in ids]
-        id_clause = ",".join(id_clause)
-
-        cards_query = f"""
-            select
-            t1.title,t1.content_on_front,t1.content_on_back,t1.highlighted_keywords,
-            t1.permission,t1.type,t1.image_links,t1.card_id
-            from user_content.cards t1 inner join
-            user_content.tags_cards t2 on t1.card_id = t2.card_id
-            where t2.tag_id in ( {id_clause} )
-            order by random()
-            limit {cards_count}
-        """
-        cards = db_conn.fetch_query_direct_query(cards_query)
-
-        total_cards = f"""
-            select
-                count(*)
-            from user_content.cards t1 inner join
-            user_content.tags_cards t2 on t1.card_id = t2.card_id
-            where t2.tag_id in ( {id_clause} )
-        """
-        total_cards = db_conn.fetch_query_direct_query(total_cards)
-        session_dict = {
-            "account_id": account_id,
-            "selected_tags": json.dumps(ids),
-            "session_study_cards": json.dumps([card["card_id"] for card in cards]),
-            "no_of_cards": cards_count,
-        }
-        session_id = db_conn.pg_handle_session_insert(session_dict)
+    if offset >= cards_count and session_id:
         response = {
             "session_id": session_id,
-            "total_cards": total_cards[0]["count"],
-            "cards_count": cards_count,
-            "cards": cards,
+            "total_cards_to_study": cards_count,
+            "total_cards_given": 0,
+            "cards": [],
         }
 
         return response
-    if session_id:
-        cards_query = ""
-        return {}
 
-    return {}
+    id_clause = [f"'{id}'" for id in ids]
+    id_clause = ",".join(id_clause)
+
+    cards_query = f"""
+        select
+        t1.title,t1.content_on_front,t1.content_on_back,t1.highlighted_keywords,
+        t1.permission,t1.type,t1.image_links,t1.card_id
+        from user_content.cards t1 inner join
+        user_content.tags_cards t2 on t1.card_id = t2.card_id
+        where t2.tag_id in ( {id_clause} ) and t1.card_id not in (select card_id from users.sessions where account_id = {account_id})
+        order by random()
+        offset {offset}
+        limit 10
+    """
+    session_cards = db_conn.fetch_query_direct_query(cards_query)
+
+    # total_cards = f"""
+    #     select
+    #         count(*)
+    #     from user_content.cards t1 inner join
+    #     user_content.tags_cards t2 on t1.card_id = t2.card_id
+    #     where t2.tag_id in ( {id_clause} )
+    # """
+    # total_cards = db_conn.fetch_query_direct_query(total_cards)
+    db_conn.table = "sessions"
+    db_conn.collection = "users"
+
+    if not session_id:
+        session_id = str(uuid.uuid4())
+
+    for card in session_cards:
+        session_dict = {
+            "account_id": account_id,
+            "card_id": card["card_id"],
+            "no_of_cards": cards_count,
+            "session_id": session_id,
+        }
+        status = db_conn.pg_handle_insert(session_dict)
+
+    response = {
+        "session_id": session_id,
+        "total_cards_to_study": cards_count,
+        "total_cards_given": len(session_cards) + offset,
+        "cards": session_cards,
+    }
+
+    db_conn.table = "sessions"
+    db_conn.collection = "users"
+
+    return response
 
 
 def create_custom_study_menu(db_conn):
@@ -171,15 +194,15 @@ class GetCustomStudyCards:
         self.db_conn = postgres.QueryManager("user_content", "cards")
 
     @falcon.before(authorization.request_valiation)
-    def on_get(self, req, resp):
-
-        if "ids" in req.params:
-            req.params["ids"] = req.params.get("ids", 30)
-            req.params["session_id"] = req.params.get("session_id", None)
-            req.params["cards_count"] = req.params.get("cards_count", 30)
+    def on_post(self, req, resp):
+        try:
+            # req.params["ids"] = req.params.get("ids", 30)
+            # req.params["session_id"] = req.params.get("session_id", None)
+            # req.params["cards_count"] = req.params.get("cards_count", 30)
             result = get_study_cards(self.db_conn, req)
             http_response.ok(resp, result)
-        else:
-            error_message = "Something went wrong ,must pass ids"
+        except Exception as e:
+            print(e)
+            error_message = str(e)
             message = {"message": error_message}
             http_response.err(resp, falcon.HTTP_500, message)
