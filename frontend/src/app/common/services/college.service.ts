@@ -1,33 +1,33 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 import { UrlConstants } from '../constants/url.constants';
 import { HttpClientService } from './http-client.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class TagsService {
+export class CollegeService {
 
-  isLoading: boolean = true;
-  tagsList: any[] = [];
+  isLoading = true;
 
   constructor(private httpClientService: HttpClientService) {
-    // this.loadTags();
+    // this.loadColleges();
   }
 
-  public loadTags(): any {
-    if (!this.isLoading) {
-      return of(this.tagsList);
-    }
+  private _collegeList: string[] = [];
 
-    const returnObservable = this.httpClientService.get(UrlConstants.GET_TAGS_URL);
+  public loadColleges(): any {
+    const returnObservable = this.httpClientService.getWithoutAuth(UrlConstants.GET_COLLEGES_URL);
 
     // This is to ensure the tags list maintained in this service remains updated at any point of time
-    returnObservable.subscribe((tagsData: any) => {
-      this.tagsList = tagsData;
+    returnObservable.subscribe((collegesData: string[]) => {
+      this._collegeList = collegesData;
       this.isLoading = false;
     });
     
     return returnObservable;
+  }
+
+  public get collegeList(): string[] {
+    return this._collegeList;
   }
 }

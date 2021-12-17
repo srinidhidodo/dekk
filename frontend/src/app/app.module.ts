@@ -57,6 +57,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 import { StudySessionComponent } from './pages/study-session/study-session.component';
 import { ImgDialogComponent } from './common/components/img-dialog/img-dialog.component';
+import { LoadingComponent } from './common/components/loading/loading.component';
+import { ErrorDialogComponent } from './common/components/error-dialog/error-dialog.component';
 
 
 
@@ -87,6 +89,8 @@ import { ImgDialogComponent } from './common/components/img-dialog/img-dialog.co
     WhyDekkComponent,
     StudySessionComponent,
     ImgDialogComponent,
+    LoadingComponent,
+    ErrorDialogComponent,
   ],
   imports: [
     AppRoutingModule,

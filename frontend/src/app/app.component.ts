@@ -9,7 +9,9 @@ import { LoginDialogComponent } from './common/components/login-dialog/login-dia
 import { SignupDialogComponent } from './common/components/signup-dialog/signup-dialog.component';
 import { MessageConstants } from './common/constants/message.constants';
 import { UrlConstants } from './common/constants/url.constants';
+import { CollegeService } from './common/services/college.service';
 import { SearchService } from './common/services/search.service';
+import { TagsService } from './common/services/tags.service';
 import { UserService } from './common/services/user.service';
 
 @Component({
@@ -29,8 +31,8 @@ export class AppComponent {
   listItems = [
     // { name: 'Website', link: UrlConstants.LANDING },
     { icon: 'home', name: 'Home', link: UrlConstants.HOME },
-    { icon: 'person', name: 'Profile', link: UrlConstants.HOME },
-    { icon: 'bookmark', name: 'Bookmarks', link: UrlConstants.HOME },
+    // { icon: 'person', name: 'Profile', link: UrlConstants.HOME },
+    // { icon: 'bookmark', name: 'Bookmarks', link: UrlConstants.HOME },
     { icon: 'auto_stories', name: 'Study Session', link: UrlConstants.STUDY_SESSION },
     // { name: 'Search Results', link: UrlConstants.SEARCH_RESULTS },
     // { name: 'Card View Details', link: '/card-view-details' },
@@ -43,7 +45,7 @@ export class AppComponent {
   listItemsBelowDivider = [
     { icon: 'question_mark', name: 'Why Dekk?', link: UrlConstants.WHY_DEKK },
     { icon: 'emoji_people', name: 'About Us', link: UrlConstants.ABOUT_US },
-    { icon: 'call', name: 'Contact Us', link: UrlConstants.HOME }
+    // { icon: 'call', name: 'Contact Us', link: UrlConstants.HOME }
   ];
 
   searchSender: Subject<any>;
@@ -52,10 +54,14 @@ export class AppComponent {
     private searchService: SearchService,
     private observer: BreakpointObserver,
     private userService: UserService,
-    private dialog: MatDialog) {
+    private dialog: MatDialog,
+    private collegeService: CollegeService,
+    private tagsService: TagsService) {
     
     this.searchSender = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
       .subject(MessageConstants.SEARCH_TRIGGERED_ACTION);
+
+    this.initialiseApp();
   }
 
   ngAfterViewInit() {
@@ -70,6 +76,11 @@ export class AppComponent {
         }
       });
     }
+  }
+
+  initialiseApp(): void {
+    this.collegeService.loadColleges();
+    this.tagsService.loadTags();
   }
 
   handleSidenavClick(): void {
@@ -88,8 +99,9 @@ export class AppComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigate([UrlConstants.HOME])
-    .then(() => { window.location.reload(); });
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+      this.router.navigate([UrlConstants.HOME]);
+    });
   }
 
   goToCreateView(): void {

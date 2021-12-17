@@ -42,6 +42,11 @@ app.get('/dekk/dekk-details*', (req, res) => {
     res.json(response);
 });
 
+app.post('/dekk/save', (req, res) => {
+    console.log(devServer + req.url);
+    res.json('test-dekk-id');
+});
+
 app.listen(port, () => {
     console.log('Local server listening at port ' + port);
 });

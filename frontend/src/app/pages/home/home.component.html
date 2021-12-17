@@ -7,8 +7,11 @@
     <div class="home-banner"> Browse Featured Dekks Here </div>
 </div>
 <div class="row">
-    <div class="selected-master-dekk" [hidden]="!selectedMasterDekkId"><h1> {{ selectedMasterDekk.dekk_name }} </h1></div>
-    <div class="col-md-3 col-sm-4 col-6" *ngFor="let dekk of dekks">
+    <div [hidden]="!isLoading">
+        <app-loading></app-loading>
+    </div>
+    <div class="selected-master-dekk" [hidden]="!selectedMasterDekkId || isLoading"><h1> {{ selectedMasterDekk.dekk_name }} </h1></div>
+    <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of dekks">
         <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
             <mat-card-title class="each-dekk-title"> <h2> {{dekk.tag_name}} </h2></mat-card-title>
             <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Dekk } from 'src/app/common/models/dekk';
 import { HomeResponse } from 'src/app/common/models/home-response';
@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   dekks: Dekk[] = [];
   selectedMasterDekkId: string|null = null;
   selectedMasterDekk: any = CardUtils.getWaitCard();
+  isLoading: boolean = true;
 
   constructor(private httpClientService: HttpClientService, 
     private studyService: StudyService, 
@@ -29,14 +30,30 @@ export class HomeComponent implements OnInit {
       if (!this.userService.loggedIn) {
         this.router.navigate([UrlConstants.LANDING]);
       }
-      this.activatedRoute.queryParams.subscribe(params => {
-        if (params.id) {
-          this.selectedMasterDekkId = params.id;
+      this.router.events.subscribe((event) => {
+        if (!this.userService.loggedIn) {
+          this.router.navigate([UrlConstants.LANDING]);
+        }
+        this.isLoading = true;
+        if (event instanceof NavigationEnd) {
+          this.activatedRoute.queryParams.subscribe(params => {
+            if (params.id) {
+              this.selectedMasterDekkId = params.id;
+              this.initialise();
+            } else {
+              this.selectedMasterDekkId = null;
+              this.initialise();
+            }
+          });
         }
       });
-    }
+  }
 
   ngOnInit(): void {
+    this.initialise();
+  }
+
+  initialise(): void {
     if (this.selectedMasterDekkId) {
       this.dekkService.loadDekkDetails(this.selectedMasterDekkId).subscribe((response: any) => {
         this.dekks = [];
@@ -58,18 +75,26 @@ export class HomeComponent implements OnInit {
         if (this.dekks.length === 0) {
           this.studySessionDekk(this.selectedMasterDekkId!);
         }
+
+        setTimeout(() => {
+          this.isLoading = false; 
+        }, 1000);
       });
     } else {
       this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
         this.dekks = response && response.dekk_stats ? response.dekk_stats : [];
+        setTimeout(() => {
+          this.isLoading = false; 
+        }, 1000);
       });
     }
   }
 
   selectDekk(dekkId: string): void {
     if (!this.selectedMasterDekkId) {
-      this.router.navigate([UrlConstants.HOME], {queryParams: { id: dekkId }})
-        .then(() => { window.location.reload(); });
+      this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+        this.router.navigate([UrlConstants.HOME], {queryParams: { id: dekkId }});
+      });
     } else {
       this.studySessionDekk(dekkId);
     }

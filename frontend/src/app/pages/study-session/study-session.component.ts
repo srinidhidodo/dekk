@@ -5,6 +5,9 @@ import * as _ from 'lodash';
 import { Router } from '@angular/router';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { StudyService } from 'src/app/common/services/study.service';
+import { MatDialog } from '@angular/material/dialog';
+import { StudyMsgDialogComponent } from 'src/app/common/components/study-msg-dialog/study-msg-dialog.component';
+import { PopupConstants } from 'src/app/common/constants/popup.constants';
 
 @Component({
   selector: 'app-study-session',
@@ -21,8 +24,9 @@ export class StudySessionComponent implements OnInit {
   panelOpenStates: any = {};
   panelChecked: any = {};
   numCardsToStudy: string = "100";
+  isLoading: boolean = true;
 
-  constructor(private dekkService: DekkService, private location: Location, private router: Router, private studyService: StudyService) { }
+  constructor(private dekkService: DekkService, private location: Location, private router: Router, private studyService: StudyService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     const inputState: any = this.location.getState();
@@ -35,6 +39,7 @@ export class StudySessionComponent implements OnInit {
   }
 
   loadDekkDetails(): void {
+    this.isLoading = true;
     let getDekkDetailsObservable = this.selectedDekkId === null ?
       this.dekkService.loadDekkDetails() : this.dekkService.loadDekkDetails(_.toString(this.selectedDekkId));
       
@@ -54,6 +59,19 @@ export class StudySessionComponent implements OnInit {
             }
           }
         }
+        setTimeout(() => {
+          this.isLoading = false; 
+        }, 1000);
+      }, (error: any) => {
+        const dialogRef = this.dialog.open(StudyMsgDialogComponent, {
+          data: {
+              msg: PopupConstants.SESSION_LOAD_ERROR
+          }
+        });
+    
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed: ', result);
+        });
       });
   }
 

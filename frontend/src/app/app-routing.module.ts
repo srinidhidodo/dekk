@@ -17,7 +17,7 @@ import { WhyDekkComponent } from './pages/why-dekk/why-dekk.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, pathMatch: 'full',  runGuardsAndResolvers: 'always' },
   { path: 'search-results', component: SearchResultsComponent, pathMatch: 'full' },
   { path: 'card-view-details', component: CardViewDetailsComponent, pathMatch: 'full' },
   { path: 'study-card', component: StudyCardComponent, pathMatch: 'full' },
@@ -35,7 +35,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

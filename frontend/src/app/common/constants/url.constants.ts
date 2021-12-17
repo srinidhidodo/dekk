@@ -1,17 +1,23 @@
 export class UrlConstants {
-  private static BASE_URL = '/api/v1';
-  // REST calls
-  public static GET_TAGS_URL = '/dekk/tags';
+  // Mock REST calls - dev only
+  // public static GET_TAGS_URL = '/dekk/tags';
   // public static HOME_URL = '/dekk/home';
+  // public static NEXT_CARD_URL = '/dekk/cards/next';
+  // public static PREV_CARD_URL = '/dekk/cards/previous';
+  public static SAVE_DEKK_DETAILS = '/dekk/save';
+
+  // Actual REST calls
+  private static BASE_URL = '/api/v1';
+  public static GET_TAGS_URL = UrlConstants.BASE_URL + '/tags/all';
   public static HOME_URL = UrlConstants.BASE_URL + '/users/home';
   public static SEARCH_URL = UrlConstants.BASE_URL + '/cards/search';
-  public static NEXT_CARD_URL = '/dekk/cards/next';
-  public static PREV_CARD_URL = '/dekk/cards/previous';
   public static CARDS_FROM_TAG_URL = UrlConstants.BASE_URL + '/cards/tags';
   public static CARDS_FROM_DEKK_ID_URL = UrlConstants.BASE_URL + '/study/dekk';
   public static REGISTER_URL = UrlConstants.BASE_URL + '/register';
   public static LOGIN_URL = UrlConstants.BASE_URL + '/login';
   public static DEKK_DETAILS_URL = UrlConstants.BASE_URL + '/select/dekk';
+  public static DEKK_METADATA_URL = UrlConstants.BASE_URL + '/dekk';
+  public static GET_COLLEGES_URL = UrlConstants.BASE_URL + '/resources/colleges';
 
   // Routing URLs
   public static SEARCH_RESULTS = '/search-results';

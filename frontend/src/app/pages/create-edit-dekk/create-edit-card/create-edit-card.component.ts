@@ -27,15 +27,12 @@ export class CreateEditCardComponent implements OnInit {
   card: CardEditable = CardUtils.getEmptyEditableCard();
 
   constructor(private tagsService: TagsService) {
-    this.tagsService.loadTags().subscribe((tagsData: any) => {
-      this.tagsList = tagsData?.tags;
-    });
-    this.tags = new FormControl
-    this.tags.setValue(this.card.tags);
-    console.log(this.tags.value);
   }
 
   ngOnInit(): void {
+    this.tagsList = this.tagsService.tagsList;
+    this.tags.setValue(this.card.tags);
+    console.log(this.tags.value);
     this.tags = new FormControl();
   }
 
