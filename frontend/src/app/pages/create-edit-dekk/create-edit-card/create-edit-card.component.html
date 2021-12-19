@@ -1,4 +1,8 @@
-<div class="row">
+<div [hidden]="!isLoading">
+    <app-loading></app-loading>
+</div>
+
+<div class="row" [hidden]="isLoading">
     <div class="col-1"></div>
     <div class="col-5">
         <div class="edit-card-page">
@@ -6,7 +10,7 @@
                 <span class="input-label"> Title* </span>
                 <mat-form-field class="input-form-field">
                     <p class="input-label-when-small"> Title* </p>
-                    <input matInput type="text" class="search-input" required [(ngModel)]="card.title">
+                    <input matInput type="text" [value]="currentCardTitle" [(ngModel)]="currentCardTitle" class="search-input" required>
                 </mat-form-field>
             </div>
         </div>
@@ -17,7 +21,6 @@
                 <span class="input-label"> Tags* </span>
                 <mat-form-field class="input-form-field">
                     <p class="input-label-when-small"> Tags </p>
-                    <!-- <input matInput type="text" class="search-input" required> -->
                     <mat-select [formControl]="tags" multiple>
                         <mat-select-trigger>
                             <mat-chip-list>
@@ -36,11 +39,13 @@
     <div class="col-1"></div>
     <div class="col-10">
         <h3>Front of Card</h3>
-        <app-text-edit #cardFront [content]="card.content_on_front"></app-text-edit>
+        <app-text-edit #cardFront [elementId]="cardFrontEditorId" [content]="currentCardFront"></app-text-edit>
         <br>
         <h3>Back of Card</h3>
-        <app-text-edit #cardBack [content]="card.content_on_back"></app-text-edit>
-        <button mat-raised-button (click)="saveCard()"> Save </button>
+        <app-text-edit #cardBack [elementId]="cardBackEditorId" [content]="currentCardBack"></app-text-edit>
+        <div class="save-button">
+            <button mat-raised-button (click)="saveCard()"> Save </button>
+        </div>
     </div>
     <div class="col-1"></div>
 </div>

@@ -29,6 +29,12 @@
     width: 20vw;
 }
 
+.save-button {
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+}
+
 @media (max-width: 600px) {
     .input-label {
         display: none;

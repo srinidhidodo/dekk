@@ -26,7 +26,7 @@ export class StudyService {
 
     constructor(private httpClientService: HttpClientService, public dialog: MatDialog) {}
 
-    loadNewDekk(studyIds?: string[]): Observable<any> { 
+    loadNewDekk(): Observable<any> { 
         this.dekkCards = [];
         this.isDekkComplete = false;
         this.currentCardIndex = -1;
@@ -34,26 +34,24 @@ export class StudyService {
         this.rightCards = 0;
         this.currentSessionCardIds = [];
 
-        // TODO: tags to be removed, dekkId to be mandatory
-        // TODO: remove following segment related to tags processing
-        studyIds = studyIds?.map(studyId => '"' + studyId + '"');
-        const processedTags = '[' + studyIds?.join(',') + ']';
-
         this.dekkParams = {
-            q: processedTags,
-            offset: CardUtils.OFFSET_LOAD_MAX_NUM_OF_CARDS
+            ids: this.selectedIds,
+            offset: 0,
+            cards_count: this.maxCards ? this.maxCards : CardUtils.STUDY_SESSION_DEFAULT_MAX_NUM_OF_CARDS
         };
 
-        const dekkLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [
-            {
-                key: 'ids',
-                value: this.dekkParams['q']
-            },
-            {
-                key: 'cards_count',
-                value: _.toString(this.dekkParams.offset)
-            }
-        ]);
+        // const dekkLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [
+        //     {
+        //         key: 'ids',
+        //         value: this.dekkParams['q']
+        //     },
+        //     {
+        //         key: 'cards_count',
+        //         value: _.toString(this.dekkParams.offset)
+        //     }
+        // ]);
+
+        const dekkLoadObservable = this.httpClientService.post(UrlConstants.CARDS_FROM_DEKK_ID_URL, this.dekkParams);
 
         this.handleCardsLoad(dekkLoadObservable);
 
@@ -162,17 +160,20 @@ export class StudyService {
     }
 
     loadMoreCards(): Observable<any> {
-        this.dekkParams.offset = this.dekkCards.length;
-        const nextLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [
-            {
-                key: 'ids',
-                value: this.dekkParams['q']
-            },
-            {
-                key: 'cards_count',
-                value: _.toString(this.dekkParams.offset)
-            }
-        ]);
+        // this.dekkParams.offset = this.dekkCards.length;
+        // const nextLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [
+        //     {
+        //         key: 'ids',
+        //         value: this.dekkParams['q']
+        //     },
+        //     {
+        //         key: 'cards_count',
+        //         value: _.toString(this.dekkParams.offset)
+        //     }
+        // ]);
+
+        this.dekkParams.offset += CardUtils.OFFSET_LOAD_NUM_OF_CARDS;
+        const nextLoadObservable = this.httpClientService.post(UrlConstants.CARDS_FROM_DEKK_ID_URL, this.dekkParams);
 
         this.handleCardsLoad(nextLoadObservable);
 
@@ -181,6 +182,7 @@ export class StudyService {
 
     private handleCardsLoad(cardLoadObservable: Observable<any>): void {
         cardLoadObservable.subscribe((response: any) => {
+            this.dekkParams.session_id = this.dekkParams.session_id ? this.dekkParams.session_id : response?.session_id;
             if (!response) {
                 const dialogRef = this.dialog.open(StudyMsgDialogComponent, {
                     data: {
@@ -191,7 +193,7 @@ export class StudyService {
                 dialogRef.afterClosed().subscribe(result => {
                     console.log('The dialog was closed: ', result);
                 });
-            } else if (response.total_cards_found < CardUtils.OFFSET_LOAD_MAX_NUM_OF_CARDS) { // this means the dekk is over at/after this point
+            } else if (response.total_cards_found < CardUtils.OFFSET_LOAD_NUM_OF_CARDS) { // this means the dekk is over at/after this point
                 this.isDekkComplete = true;
                 response.cards.forEach((card: Card) => {
                     if (this.currentSessionCardIds.indexOf(card.card_id) === -1) {

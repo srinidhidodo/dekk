@@ -109,4 +109,8 @@ export class HomeComponent implements OnInit {
   studySessionDekk(dekkId: string): void {
     this.router.navigateByUrl(UrlConstants.STUDY_SESSION, {state: { selectedDekkId: dekkId }});
   }
+
+  editDekk(dekk: any): void {
+    this.router.navigateByUrl(UrlConstants.CREATE, {state: { id: dekk.dekk_id ?? dekk.tag_id }});
+  }
 }

@@ -28,13 +28,20 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*", "input": "node_modules/tinymce/skins", "output": "/skins/" },
+              { "glob": "**/*", "input": "node_modules/tinymce/themes", "output": "/themes/" },
+              { "glob": "**/*", "input": "node_modules/tinymce/plugins", "output": "/plugins/" }
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/tinymce/tinymce.min.js",
+              "node_modules/tinymce/plugins/colorpicker/plugin.js",
+              "node_modules/tinymce/themes/modern/theme.js"
+            ]
           },
           "configurations": {
             "production": {
