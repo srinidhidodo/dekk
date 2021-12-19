@@ -32,6 +32,18 @@
   justify-content: center;
   align-items: center;
   height: 80%;
+  padding: 1vh;
+}
+
+.content-item-content {
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  word-break: break-word;
+  white-space: normal;
 }
 
 .card-action-button {
@@ -73,9 +85,9 @@
 }
 
 .right-table-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
   width: 100%;
   padding: 5px;
 }
@@ -89,7 +101,7 @@
 }
 
 .cards-table-container {
-  height: 50vh;
+  height: 65vh;
   overflow-y: scroll;
 }
 

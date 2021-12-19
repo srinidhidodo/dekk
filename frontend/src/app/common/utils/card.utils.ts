@@ -3,10 +3,13 @@ import * as _ from 'lodash';
 import { CardEditable } from "../models/card-editable";
 
 export class CardUtils {
-    static OFFSET_LOAD_MAX_NUM_OF_CARDS = 10;
+    static OFFSET_LOAD_NUM_OF_CARDS = 10;
+    static STUDY_SESSION_DEFAULT_MAX_NUM_OF_CARDS = 200;
+    static DEFAULT_TEXT_HIGHLIGHT_COLOR = '#f3f57f';
+    static HIGHLIGHTER_OPEN_TAG = '<span style="background-color: ' + CardUtils.DEFAULT_TEXT_HIGHLIGHT_COLOR +'">'
+    static HIGHLIGHTER_CLOSE_TAG = '</span>';
     
     public static getCardCategoryText(card: Card): string {
-        // return card?.category + (card?.sub_category ? ' / ' + card?.sub_category : '');
         let cardCategory = '';
         _.forEach(card.tags, (element: any) => {
             if (element.value === 1)

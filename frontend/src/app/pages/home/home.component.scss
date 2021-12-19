@@ -35,10 +35,15 @@
 .dekk-effect {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 25vh;
+    justify-content: space-between;
+    height: clamp(20vh, 25vh, 40vh);
 }
 
 .selected-master-dekk {
     margin-left: 2vw;
+}
+
+.home-card-icon {
+    display: flex;
+    justify-content: flex-end;
 }

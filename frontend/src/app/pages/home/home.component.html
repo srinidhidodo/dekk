@@ -13,8 +13,32 @@
     <div class="selected-master-dekk" [hidden]="!selectedMasterDekkId || isLoading"><h1> {{ selectedMasterDekk.dekk_name }} </h1></div>
     <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of dekks">
         <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
-            <mat-card-title class="each-dekk-title"> <h2> {{dekk.tag_name}} </h2></mat-card-title>
+            <span class="home-card-icon" (click)="editDekk(dekk)"><mat-icon>edit</mat-icon></span>
+            <mat-card-title class="each-dekk-title">
+                <!-- <span></span> -->
+                <!-- <span> -->
+                    <h2> {{dekk.tag_name}} </h2>
+                <!-- </span> -->
+                <!-- <span class="home-card-icon"><mat-icon>edit</mat-icon></span> -->
+            </mat-card-title>
             <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
+            <span></span>
+        </mat-card>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="selected-master-dekk"><h1> My Dekks </h1></div>
+    <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of dekks">
+        <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
+            <span class="home-card-icon" (click)="editDekk(dekk)"><mat-icon>edit</mat-icon></span>
+            <mat-card-title class="each-dekk-title">
+                <!-- <span></span> -->
+                <!-- <span> -->
+                    <h2> {{dekk.tag_name}} </h2>
+                <!-- </span> -->
+                <!-- <span class="home-card-icon"><mat-icon>edit</mat-icon></span> -->
+            </mat-card-title>
+            <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
+            <span></span>
         </mat-card>
     </div>
 </div>

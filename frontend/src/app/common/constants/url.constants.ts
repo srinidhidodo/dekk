@@ -5,6 +5,7 @@ export class UrlConstants {
   // public static NEXT_CARD_URL = '/dekk/cards/next';
   // public static PREV_CARD_URL = '/dekk/cards/previous';
   public static SAVE_DEKK_DETAILS = '/dekk/save';
+  public static SAVE_CARD_DATA_URL = '/dekk/save';
 
   // Actual REST calls
   private static BASE_URL = '/api/v1';
@@ -17,6 +18,9 @@ export class UrlConstants {
   public static LOGIN_URL = UrlConstants.BASE_URL + '/login';
   public static DEKK_DETAILS_URL = UrlConstants.BASE_URL + '/select/dekk';
   public static DEKK_METADATA_URL = UrlConstants.BASE_URL + '/dekk';
+  public static DEKK_DATA_URL = UrlConstants.BASE_URL + '/dekk';
+  public static CARD_DATA_URL = UrlConstants.BASE_URL + '/card';
+  // public static SAVE_CARD_DATA_URL = UrlConstants.BASE_URL + '/card';
   public static GET_COLLEGES_URL = UrlConstants.BASE_URL + '/resources/colleges';
 
   // Routing URLs

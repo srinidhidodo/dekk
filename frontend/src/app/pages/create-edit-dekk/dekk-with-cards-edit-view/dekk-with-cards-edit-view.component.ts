@@ -1,10 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ErrorDialogComponent } from 'src/app/common/components/error-dialog/error-dialog.component';
 import { RatingDialogComponent } from 'src/app/common/components/rating-dialog/rating-dialog.component';
+import { PopupConstants } from 'src/app/common/constants/popup.constants';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Card } from 'src/app/common/models/card';
+import { DekkMetadata } from 'src/app/common/models/dekk-metadata';
+import { DekkService } from 'src/app/common/services/dekk-service';
 import { CardUtils } from 'src/app/common/utils/card.utils';
+import { DekkUtils } from 'src/app/common/utils/dekk-utils';
 
 @Component({
   selector: 'app-dekk-with-cards-edit-view',
@@ -13,34 +19,57 @@ import { CardUtils } from 'src/app/common/utils/card.utils';
 })
 export class DekkWithCardsEditViewComponent implements OnInit {
 
-  @Input()
-  dekkName: string = "Test Dekk";
-
-  @Input()
-  dekkTagsList: string[] = ["something", "hogwarts"];
-
-  cardsList: any[] = [
-    {title: 'Card 1', card: 'Card somthing 1'},
-    {title: 'Card 2', card: 'somethign 2'},
-    {title: 'Card 1', card: 'Card somthing 1'},
-    {title: 'Card 2', card: 'somethign 2'},
-    {title: 'Card 1', card: 'Card somthing 1'},
-    {title: 'Card 2', card: 'somethign 2'},
-    {title: 'Card 1', card: 'Card somthing 1'},
-    {title: 'Card 2', card: 'somethign 2'},
-    {title: 'Card 1', card: 'Card somthing 1'},
-    {title: 'Card 2', card: 'somethign 2'},
-    {title: 'Card 1', card: 'Card somthing 1'},
-    {title: 'Card 2', card: 'somethign 2'},
-  ];
+  routeListener: Subscription;
 
   displayedColumns = ["card", "action"];
   dekkRating: number;
   dekkFeedback: string;
+  currentDekkId: string;
+  currentDekk: DekkMetadata = DekkUtils.getEmptyDekkMetadata();
+  isLoading: boolean = true;
 
-  constructor(private router: Router, public dialog: MatDialog) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public dialog: MatDialog, private dekkService: DekkService) {
+    this.routeListener = this.router.events.subscribe((event: any) => {
+      this.isLoading = true;
+      if (event instanceof NavigationEnd) {
+        const currentUrl = event.url.split('?')[0];
+        if (currentUrl === UrlConstants.DEKK_EDIT_VIEW) {
+          this.activatedRoute.queryParams.subscribe((params: any) => {
+            if (params.id) {
+              this.currentDekkId = params.id;
+              this.dekkService.loadDekkMetadataByDekkId(this.currentDekkId!).subscribe((dekkMetadata: DekkMetadata) => {
+                this.currentDekk = dekkMetadata;
+                setTimeout(() => {
+                  this.isLoading = false;
+                }, 1000);
+              }, (error: any) => {
+                this.handleDekkLoadError();
+              });
+            } else {
+              this.handleDekkLoadError();
+            }
+          });
+        }
+      }
+    });
+  }
+
+  handleDekkLoadError(): void {
+    const dialogRef = this.dialog.open(ErrorDialogComponent, {
+      data: {
+          msg: PopupConstants.DEKK_METADATA_LOAD_ERROR
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed: ', result);
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy(): void {
+    this.routeListener.unsubscribe();
   }
 
   getCardCategory(): string {
@@ -48,7 +77,7 @@ export class DekkWithCardsEditViewComponent implements OnInit {
   }
 
   addCard(): void {
-    this.router.navigate([UrlConstants.CARD_EDIT_VIEW]);
+    this.router.navigate([UrlConstants.CARD_EDIT_VIEW], {queryParams: { dekk_id: this.currentDekkId }});
   }
 
   rateDialog(): void {
@@ -64,5 +93,15 @@ export class DekkWithCardsEditViewComponent implements OnInit {
       this.dekkFeedback = result.feedback;
       console.log('The dialog was closed: ', result);
     });
+  }
+
+  editDekk(): void {
+    // this.isLoading = true;
+    this.router.navigate([UrlConstants.CREATE], {queryParams: { id: this.currentDekkId }});
+  }
+
+  editCard(cardId: string): void {
+    // this.isLoading = true;
+    this.router.navigate([UrlConstants.CARD_EDIT_VIEW], {queryParams: { id: cardId, dekk_id: this.currentDekkId }});
   }
 }

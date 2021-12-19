@@ -28,11 +28,7 @@ import { PunsConstants } from "src/app/common/constants/puns.constants";
 })
 export class StudyCardComponent implements OnInit, OnDestroy {
   
-  // @Input()
   card: Card = CardUtils.getWaitCard();
-
-  // @Input()
-  ids: string[]; // change to dekk id
 
   visibleFront = true;
   flip: string = 'inactive';
@@ -49,9 +45,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router, public studyService: StudyService) {}
 
-  ngOnInit() {
-    this.ids = this.studyService.selectedIds;
-    
+  ngOnInit() {    
     this.isLoading = true;
     this.isNewDekkLoaded = false;
     this.isMinLoadTimeElapsed = false;
@@ -59,7 +53,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
       this.isMinLoadTimeElapsed = true;
     }, 8000);
     
-    this.studyService.loadNewDekk(this.ids).subscribe(response => {
+    this.studyService.loadNewDekk().subscribe(response => {
       this.isNewDekkLoaded = true;
       this.isLoading = false;
       this.card = this.studyService.getCurrentCard();
