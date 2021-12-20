@@ -26,6 +26,5 @@ class Colleges:
         self.colleges = [re.sub(r"\s{2,}", " ", i) for i in colleges]
         self.colleges.sort()
 
-    @falcon.before(authorization.request_valiation)
     def on_get(self, req, resp):
         http_response.ok(resp, self.colleges)
