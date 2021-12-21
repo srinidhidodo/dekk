@@ -8,6 +8,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import rxmq from 'rxmq';
 import { MessageConstants } from "src/app/common/constants/message.constants";
 import { PunsConstants } from "src/app/common/constants/puns.constants";
+import { PopupConstants } from 'src/app/common/constants/popup.constants';
+import { MatDialog } from "@angular/material/dialog";
+import { ErrorDialogComponent } from 'src/app/common/components/error-dialog/error-dialog.component';
 
 @Component({
   selector: 'app-study-card',
@@ -43,9 +46,9 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   isMinLoadTimeElapsed = false; // for initial load
   isLoading = false; // for general loads
 
-  constructor(private router: Router, public studyService: StudyService) {}
+  constructor(private router: Router, public studyService: StudyService, private dialog: MatDialog) {}
 
-  ngOnInit() {    
+  ngOnInit() {
     this.isLoading = true;
     this.isNewDekkLoaded = false;
     this.isMinLoadTimeElapsed = false;
@@ -54,9 +57,24 @@ export class StudyCardComponent implements OnInit, OnDestroy {
     }, 8000);
     
     this.studyService.loadNewDekk().subscribe(response => {
-      this.isNewDekkLoaded = true;
-      this.isLoading = false;
       this.card = this.studyService.getCurrentCard();
+      if (this.studyService.isDekkComplete) {
+        setTimeout(() => {
+          const dialogRef = this.dialog.open(ErrorDialogComponent, {
+            data: {
+                msg: PopupConstants.NO_CARDS_ERROR
+            }
+          });
+          dialogRef.afterClosed().subscribe(result => {
+              console.log('The dialog was closed: ', result);
+          }); 
+        });
+      } else {
+        setTimeout(() => {
+          this.isNewDekkLoaded = true;
+          this.isLoading = false;
+        }, 2000);
+      }
     });
 
     this.router.events.subscribe((event: Event) => {

@@ -15,8 +15,8 @@
   <mat-card-content class="content-item card-content">
     <div class="content-item card-content-text unselectable-content" [innerHtml]="content"></div>
     <div class="content-item img-container">
-      <img class="img-class img-first" [hidden]="!getFirstImageSrc()" (click)="openImg(getFirstImageSrc())" src="{{getFirstImageSrc()}}" />
-      <img class="img-class" [hidden]="!getSecondImageSrc()" (click)="openImg(getSecondImageSrc())" src="{{getSecondImageSrc()}}" />
+      <img class="img-class img-first" alt="Could not load image" [hidden]="!getFirstImageSrc()" (click)="openImg(getFirstImageSrc())" src="{{getFirstImageSrc()}}" />
+      <img class="img-class" alt="Could not load image" [hidden]="!getSecondImageSrc()" (click)="openImg(getSecondImageSrc())" src="{{getSecondImageSrc()}}" />
     </div>
   </mat-card-content>
   <mat-card-actions class="card-actions-container mobile-next-line">

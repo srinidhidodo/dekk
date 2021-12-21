@@ -48,6 +48,7 @@ export class CreateEditCardComponent implements OnInit {
 
   constructor(public tagsService: TagsService, private dekkService: DekkService, private router: Router, private activatedRoute: ActivatedRoute, private dialog: MatDialog) {
     this.tags = new FormControl();
+    this.tagsService.loadTags().subscribe(()=>{});
     this.routeListener = this.router.events.subscribe((event) => {
       this.isLoading = true;
       if (event instanceof NavigationEnd) {

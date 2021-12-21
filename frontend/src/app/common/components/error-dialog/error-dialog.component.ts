@@ -12,7 +12,9 @@ export class ErrorDialogComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<ErrorDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private router: Router) { }
+    private router: Router) {
+      dialogRef.disableClose = true;
+    }
 
   ngOnInit(): void {
   }
