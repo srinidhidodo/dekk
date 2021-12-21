@@ -9,6 +9,7 @@ import { PopupConstants } from 'src/app/common/constants/popup.constants';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Card } from 'src/app/common/models/card';
 import { CardEditable } from 'src/app/common/models/card-editable';
+import { Tag } from 'src/app/common/models/tag';
 import { DekkService } from 'src/app/common/services/dekk-service';
 import { TagsService } from 'src/app/common/services/tags.service';
 import { CardUtils } from 'src/app/common/utils/card.utils';
@@ -32,7 +33,7 @@ export class CreateEditCardComponent implements OnInit {
   routeListener: Subscription;
 
   tags: FormControl = new FormControl();
-  tagsList: string[] = [];
+  tagsList: Tag[] = [];
   currentDekkId: string;
   currentCardId: string;
   currentCardTitle: string = '';
@@ -45,7 +46,7 @@ export class CreateEditCardComponent implements OnInit {
 
   isLoading: boolean = true;
 
-  constructor(private tagsService: TagsService, private dekkService: DekkService, private router: Router, private activatedRoute: ActivatedRoute, private dialog: MatDialog) {
+  constructor(public tagsService: TagsService, private dekkService: DekkService, private router: Router, private activatedRoute: ActivatedRoute, private dialog: MatDialog) {
     this.tags = new FormControl();
     this.routeListener = this.router.events.subscribe((event) => {
       this.isLoading = true;
@@ -139,7 +140,9 @@ export class CreateEditCardComponent implements OnInit {
       title: this.currentCardTitle,
       content_on_front: this.cardFrontEditComponent.convertCardContentToPayload(),
       content_on_back: this.cardBackEditComponent.convertCardContentToPayload(),
-      dekk_id: this.currentDekkId
+      dekk_id: this.currentDekkId,
+      new_tags: [],
+      selected_tag_ids: this.tags.value.map((tag: Tag) => tag.tag_id)
     }, this.currentCardId).subscribe((response: any) => {
       this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
     }, (error: any) => {

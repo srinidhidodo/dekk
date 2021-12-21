@@ -23,7 +23,7 @@ export class StudySessionComponent implements OnInit {
   innerpanelOpenState = false;
   panelOpenStates: any = {};
   panelChecked: any = {};
-  numCardsToStudy: string = "100";
+  numCardsToStudy: string = "10";
   isLoading: boolean = true;
 
   constructor(private dekkService: DekkService, private location: Location, private router: Router, private studyService: StudyService, private dialog: MatDialog) { }

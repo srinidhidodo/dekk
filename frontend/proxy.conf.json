@@ -1,6 +1,9 @@
 {
     "/dekk/*": {
         "target": "http://localhost:4300",
+        "headers": {
+            "Connection": "keep-alive"
+        },
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug",

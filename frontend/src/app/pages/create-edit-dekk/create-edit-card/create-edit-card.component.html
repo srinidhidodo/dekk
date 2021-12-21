@@ -25,11 +25,14 @@
                         <mat-select-trigger>
                             <mat-chip-list>
                                 <mat-chip *ngFor="let tag of tags.value">
-                                    {{tag}}
+                                    {{tag.tag_name}}
                                 </mat-chip>
                             </mat-chip-list>
+                            <!-- <mat-form-field class="example-full-width">
+                                <input matInput>
+                            </mat-form-field> -->
                         </mat-select-trigger>
-                        <mat-option *ngFor="let tag of tagsList" [value]="tag">{{tag}}</mat-option>
+                        <mat-option *ngFor="let tag of tagsService.tagsList" [value]="tag">{{tag.tag_name}}</mat-option>
                     </mat-select>                          
                 </mat-form-field>
             </div>

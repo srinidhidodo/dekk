@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
+import { share } from 'rxjs/operators';
 import { LoginDialogComponent } from '../components/login-dialog/login-dialog.component';
 import { UserService } from './user.service';
 
@@ -38,7 +39,7 @@ import { UserService } from './user.service';
       headers: new HttpHeaders({
         Authorization: this.userService.accessToken
       })
-    });
+    }).pipe(share());
   }
 
   public getWithoutAuth(url: string, parameters?: {key: string, value: string}[]): any {

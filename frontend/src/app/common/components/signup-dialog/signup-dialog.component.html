@@ -1,9 +1,9 @@
 <div mat-dialog-content class="dialog-center">
     <h2>Register</h2>
-    <div [hidden]="!signUpError" class="sign-up-error">
+    <div [hidden]="!signUpError || signUpSuccess" class="sign-up-error">
         Registration failed. Please check the fields you have entered.
     </div>
-    <div [hidden]="!signUpSuccess" class="sign-up-success">
+    <div [hidden]="!signUpSuccess || signUpError" class="sign-up-success">
         Your registration is successful. Please login to continue.
     </div>
     <div class="input-field">

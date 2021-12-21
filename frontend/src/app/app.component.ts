@@ -80,7 +80,7 @@ export class AppComponent {
 
   initialiseApp(): void {
     this.collegeService.loadColleges();
-    this.tagsService.loadTags();
+    // this.tagsService.loadTags();
   }
 
   handleSidenavClick(): void {

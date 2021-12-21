@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { UrlConstants } from '../constants/url.constants';
+import { Tag } from '../models/tag';
 import { HttpClientService } from './http-client.service';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { HttpClientService } from './http-client.service';
 export class TagsService {
 
   isLoading: boolean = true;
-  tagsList: any[] = [];
+  tagsList: Tag[] = [];
 
   constructor(private httpClientService: HttpClientService) {
     // this.loadTags();
