@@ -16,7 +16,7 @@
       {{loadingText}}
       <mat-progress-bar class="loading-bar" mode="indeterminate"></mat-progress-bar>
     </div>
-    <cdk-virtual-scroll-viewport [hidden]="searchInitialLoading" itemSize="250" (scrolledIndexChange)="getNextBatch()">
+    <cdk-virtual-scroll-viewport class="search-results-list-container" minBufferPx="540" maxBufferPx="540" [hidden]="searchInitialLoading" itemSize="250" (scrolledIndexChange)="getNextBatch()">
       <div class="search-result-list" id="searchSuggestionsList">
         <div class="each-search-item" *cdkVirtualFor="let searchResult of searchResultList">
           <app-search-result class="animated slideInRight" [card]="searchResult"></app-search-result>
