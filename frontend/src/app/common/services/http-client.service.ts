@@ -31,7 +31,7 @@ import { UserService } from './user.service';
       headers: new HttpHeaders({
         Authorization: this.userService.accessToken
       })
-    });
+    }).pipe(share());
   }
 
   public post(url: string, postBody: any): any {
@@ -50,10 +50,10 @@ import { UserService } from './user.service';
         queryString += parameter.key + '=' + parameter.value + '&';
       });
     }
-    return this.http.get<any>(url + queryString);
+    return this.http.get<any>(url + queryString).pipe(share());
   }
 
   public postWithoutAuth(url: string, postBody: any): any {
-    return this.http.post<any>(url, postBody);
+    return this.http.post<any>(url, postBody).pipe(share());
   }
 }
