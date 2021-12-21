@@ -37,7 +37,7 @@ export class StudyService {
         this.dekkParams = {
             ids: this.selectedIds,
             offset: 0,
-            cards_count: this.maxCards ? this.maxCards : CardUtils.STUDY_SESSION_DEFAULT_MAX_NUM_OF_CARDS
+            cards_count: this.maxCards > 0 ? this.maxCards : CardUtils.STUDY_SESSION_DEFAULT_MAX_NUM_OF_CARDS
         };
 
         // const dekkLoadObservable = this.httpClientService.get(UrlConstants.CARDS_FROM_DEKK_ID_URL, [

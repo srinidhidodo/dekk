@@ -9,6 +9,7 @@ import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Card } from 'src/app/common/models/card';
 import { DekkMetadata } from 'src/app/common/models/dekk-metadata';
 import { DekkService } from 'src/app/common/services/dekk-service';
+import { StudyService } from 'src/app/common/services/study.service';
 import { CardUtils } from 'src/app/common/utils/card.utils';
 import { DekkUtils } from 'src/app/common/utils/dekk-utils';
 
@@ -28,7 +29,7 @@ export class DekkWithCardsEditViewComponent implements OnInit {
   currentDekk: DekkMetadata = DekkUtils.getEmptyDekkMetadata();
   isLoading: boolean = true;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, public dialog: MatDialog, private dekkService: DekkService) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, public dialog: MatDialog, private dekkService: DekkService, private studyService: StudyService) {
     this.routeListener = this.router.events.subscribe((event: any) => {
       this.isLoading = true;
       if (event instanceof NavigationEnd) {
@@ -103,5 +104,10 @@ export class DekkWithCardsEditViewComponent implements OnInit {
   editCard(cardId: string): void {
     // this.isLoading = true;
     this.router.navigate([UrlConstants.CARD_EDIT_VIEW], {queryParams: { id: cardId, dekk_id: this.currentDekkId }});
+  }
+
+  studyDekk(): void {
+    this.studyService.selectedIds = [this.currentDekkId];
+    this.router.navigate([UrlConstants.STUDY_CARD]);
   }
 }
