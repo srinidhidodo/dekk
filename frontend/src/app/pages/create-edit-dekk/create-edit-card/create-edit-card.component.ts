@@ -141,7 +141,8 @@ export class CreateEditCardComponent implements OnInit {
       content_on_front: this.cardFrontEditComponent.convertCardContentToPayload(),
       content_on_back: this.cardBackEditComponent.convertCardContentToPayload(),
       dekk_id: this.currentDekkId,
-      new_tags: []
+      new_tags: [],
+      selected_tag_ids: this.tags.value.map((tag: Tag) => tag.tag_id)
     }, this.currentCardId).subscribe((response: any) => {
       this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
     }, (error: any) => {
