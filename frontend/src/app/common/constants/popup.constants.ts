@@ -5,6 +5,7 @@ export class PopupConstants {
 
     // Errors
     static CARD_LOAD_ERROR = 'Error loading cards';
+    static NO_CARDS_ERROR = 'No cards available';
     static SESSION_LOAD_ERROR = 'Error loading session';
     static DEKK_METADATA_LOAD_ERROR = 'Error loading dekk details';
     static DEKK_METADATA_SAVE_ERROR = 'Error saving dekk details';
