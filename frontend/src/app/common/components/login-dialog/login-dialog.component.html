@@ -1,9 +1,9 @@
 <div mat-dialog-content class="dialog-center">
     <h2>Login</h2>
-    <div [hidden]="!loginError" class="login-error">
+    <div [hidden]="!loginError || loginSuccess" class="login-error">
         Login failed. Please check the fields you have entered.
     </div>
-    <div [hidden]="!loginSuccess" class="login-success">
+    <div [hidden]="!loginSuccess || loginError" class="login-success">
         Your login is successful.
     </div>
     <div class="input-field">

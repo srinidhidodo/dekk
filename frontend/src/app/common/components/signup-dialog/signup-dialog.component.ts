@@ -48,7 +48,7 @@ export class SignupDialogComponent implements OnInit {
     };
     this.httpClientService.postWithoutAuth(UrlConstants.REGISTER_URL, signUpReq)
       .subscribe((response: any) => {
-        this.signUpError = true;
+        this.signUpError = false;
         this.signUpSuccess = true; // in case of 200 OK
     }, (error: any) => { // TODO: Differentiate between errors
       this.signUpSuccess = false;

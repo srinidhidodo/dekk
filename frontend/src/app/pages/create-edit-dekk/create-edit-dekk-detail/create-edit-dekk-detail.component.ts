@@ -60,7 +60,6 @@ export class CreateEditDekkDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.tags = new FormControl();
   }
 
   ngOnDestroy(): void {
@@ -74,9 +73,9 @@ export class CreateEditDekkDetailComponent implements OnInit {
     }
     if (this.currentDekkName != this.currentDekk.dekk_name) {
       this.isLoading = true;
-      this.dekkService.saveDekkMetadata(this.currentDekkName, this.currentDekkId).subscribe((responseDekkId: string) => {
+      this.dekkService.saveDekkMetadata(this.currentDekkName, this.currentDekkId).subscribe((responseDekk: any) => {
         this.isLoading = false;
-        this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: responseDekkId }});
+        this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: responseDekk?.dekk_id }});
       }, (error: any) => {
         const dialogRef = this.dialog.open(ErrorDialogComponent, {
           data: {

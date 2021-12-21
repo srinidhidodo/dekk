@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const url = require('url');
 const request = require('request');
 
@@ -8,7 +8,7 @@ const port = 4300;
 const devServer = 'http://localhost:5000';
 
 const app = express();
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 app.get('/dekk/tags', (req, res) => {
     const response = require("./mocks/tagsResponse.json");

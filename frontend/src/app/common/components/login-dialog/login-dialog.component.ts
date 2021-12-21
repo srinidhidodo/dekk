@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { UrlConstants } from '../../constants/url.constants';
 import { HttpClientService } from '../../services/http-client.service';
 import { UserService } from '../../services/user.service';
@@ -20,7 +21,8 @@ export class LoginDialogComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<LoginDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private httpClientService: HttpClientService,
-    private userService: UserService) { }
+    private userService: UserService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -36,9 +38,11 @@ export class LoginDialogComponent implements OnInit {
     };
     this.httpClientService.postWithoutAuth(UrlConstants.LOGIN_URL, loginReq)
       .subscribe((response: any) => {
-        this.loginError = true;
+        this.loginError = false;
         this.loginSuccess = true; // in case of 200 OK
         this.userService.loginSuccessful(response?.auth_token);
+        this.dialogRef.close();
+        this.router.navigate([UrlConstants.HOME]);
     }, (error: any) => { // TODO: Differentiate between errors
       this.loginSuccess = false;
       this.loginError = true;

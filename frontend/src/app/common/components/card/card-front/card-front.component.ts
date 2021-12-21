@@ -67,14 +67,22 @@ export class CardFrontComponent implements OnInit, OnChanges {
     });
   }
 
-  openImg(): void {
+  openImg(src: string|null): void {
     const dialogRef = this.dialog.open(ImgDialogComponent, {
       data: {
-          msg: 'https://play-lh.googleusercontent.com/IeNJWoKYx1waOhfWF6TiuSiWBLfqLb18lmZYXSgsH1fvb8v1IYiZr5aYWe0Gxu-pVZX3'
+          msg: src ?? ''
       }
     });
     dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed: ', result);
     });
+  }
+
+  getFirstImageSrc(): string|null {
+    return this.studyService.getCurrentCard().image_links[0];
+  }
+
+  getSecondImageSrc(): string|null {
+    return this.studyService.getCurrentCard().image_links[1];
   }
 }

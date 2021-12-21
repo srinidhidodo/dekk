@@ -252,6 +252,9 @@ export class StudyService {
             content = content.substring(0, index) + content.substring(index + 1);
             index = content.lastIndexOf('*');
         }
+        while (content.indexOf('\n') >= 0) {
+            content = content.replace('\n', '<br />');
+        }
         return content;
     }
 
@@ -275,12 +278,17 @@ export class StudyService {
             isEven = !isEven;
             index = content.lastIndexOf('*');
         }
+        while (content.indexOf('\n') >= 0) {
+            content = content.replace('\n', '<br />');
+        }
         return content;
     }
 
     getCurrentCard(): Card {
         if (this.dekkCards.length > 0 && this.currentCardIndex > -1) {
-            return this.dekkCards[this.currentCardIndex];
+            const card = this.dekkCards[this.currentCardIndex];
+            card.image_links = card.image_links ?? [];
+            return card;
         }
         return CardUtils.getDummyCard();
     }

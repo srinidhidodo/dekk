@@ -31,6 +31,7 @@ export class CardUtils {
             category: "Invalid",
             dekk_name: "Invalid",
             highlighted_keywords: [],
+            image_links: [],
             tags: {},
             content_on_front: "Invalid Card",
             content_on_back: "Invalid Card"
@@ -45,6 +46,7 @@ export class CardUtils {
             category: "",
             dekk_name: "",
             highlighted_keywords: [],
+            image_links: [],
             tags: {},
             content_on_front: "Please wait",
             content_on_back: "Please wait"
