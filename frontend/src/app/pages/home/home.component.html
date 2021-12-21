@@ -10,6 +10,7 @@
     <div [hidden]="!isLoading">
         <app-loading></app-loading>
     </div>
+    <div class="selected-master-dekk" [hidden]="isLoading || selectedMasterDekkId"><h1> Curated Dekks </h1></div>
     <div class="selected-master-dekk" [hidden]="!selectedMasterDekkId || isLoading"><h1> {{ selectedMasterDekk.dekk_name }} </h1></div>
     <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of dekks">
         <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
