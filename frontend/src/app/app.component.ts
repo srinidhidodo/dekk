@@ -79,6 +79,7 @@ export class AppComponent {
   }
 
   initialiseApp(): void {
+    this.userService.initializeWithPreviousLogin();
     this.collegeService.loadColleges();
     // this.tagsService.loadTags();
   }

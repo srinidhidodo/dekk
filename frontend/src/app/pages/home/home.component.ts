@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private dekkService: DekkService,
     private tagsService: TagsService) {
-      this.userService.initializeWithPreviousLogin();
       if (!this.userService.loggedIn) {
         this.router.navigate([UrlConstants.LANDING]);
       }
