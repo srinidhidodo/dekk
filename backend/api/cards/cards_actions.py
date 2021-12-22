@@ -313,6 +313,7 @@ def create_dekk(db_conn, req):
     hash_ = get_hash_for_tags(dekk_dict)
     dekk_dict["tag_id"] = hash_
     dekk_dict["parent_topic_hash"] = hash_
+    dekk_dict["is_master_topic"] = True
 
     try:
         status = db_conn.pg_handle_insert(dekk_dict)
