@@ -32,15 +32,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private dekkService: DekkService,
     private tagsService: TagsService) {
-      if (!this.userService.loggedIn) {
-        this.router.navigate([UrlConstants.LANDING]);
-      }
+      // if (!this.userService.loggedIn) {
+      //   this.router.navigate([UrlConstants.LANDING]);
+      // }
       this.routeListener = this.router.events.subscribe((event) => {
-        if (!this.userService.loggedIn) {
-          this.router.navigate([UrlConstants.LANDING]);
-        }
         this.isLoading = true;
         if (event instanceof NavigationEnd) {
+          if (!this.userService.loggedIn) {
+            this.router.navigate([UrlConstants.LANDING]);
+          }
           this.locationListener = this.activatedRoute.queryParams.subscribe(params => {
             if (params.id) {
               this.selectedMasterDekkId = params.id;

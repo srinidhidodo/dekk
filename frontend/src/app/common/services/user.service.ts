@@ -19,4 +19,10 @@ export class UserService {
         localStorage['accessToken'] = accessToken;
         this.loggedIn = true;
     }
+
+    logout(): void {
+        this.accessToken = '';
+        this.loggedIn = false;
+        localStorage.removeItem('accessToken');
+    }
 }

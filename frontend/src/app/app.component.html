@@ -21,6 +21,7 @@
         class="search-input"
         [hidden]="!isLoggedIn()"></mat-search-bar>
       <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon>
+      <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Log Out" (click)="logout()">power_settings_new</mat-icon>
       <span [hidden]="!isLoggedIn()" class="dark-light-toggle padded-toolbar-component">
         <mat-slide-toggle color="primary" matTooltip="Dark Mode Toggle" [(ngModel)]="isDarkThemeEnabled">
           <mat-icon>bedtime</mat-icon>

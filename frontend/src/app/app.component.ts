@@ -134,4 +134,9 @@ export class AppComponent {
   goToWhyDekk(): void {
     this.router.navigate([UrlConstants.WHY_DEKK]);
   }
+
+  logout(): void {
+    this.userService.logout();
+    this.router.navigate([UrlConstants.LANDING]);
+  }
 }
