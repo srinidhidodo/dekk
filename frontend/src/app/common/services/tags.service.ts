@@ -17,7 +17,7 @@ export class TagsService {
   }
 
   public loadTags(): any {
-    if (!this.isLoading) {
+    if (!this.isLoading || this.tagsList.length > 0) {
       return of(this.tagsList);
     }
 

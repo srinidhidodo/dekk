@@ -67,27 +67,28 @@ export class CreateEditDekkDetailComponent implements OnInit {
   }
 
   saveDekk(): void {
-    if (!this.currentDekkName || this.currentDekkName === '') {
-      this.isFormErrorHidden = false;
-      return;
-    }
-    if (this.currentDekkName != this.currentDekk.dekk_name) {
-      this.isLoading = true;
-      this.dekkService.saveDekkMetadata(this.currentDekkName, this.currentDekkId).subscribe((responseDekk: any) => {
-        this.isLoading = false;
-        this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: responseDekk?.dekk_id }});
-      }, (error: any) => {
-        const dialogRef = this.dialog.open(ErrorDialogComponent, {
-          data: {
-              msg: PopupConstants.DEKK_METADATA_SAVE_ERROR
-          }
-        });
-        dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed: ', result);
-        });
-      });
-    } else {
-      this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
-    }
+    this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
+    // if (!this.currentDekkName || this.currentDekkName === '') {
+    //   this.isFormErrorHidden = false;
+    //   return;
+    // }
+    // if (this.currentDekkName != this.currentDekk.dekk_name) {
+    //   this.isLoading = true;
+    //   this.dekkService.saveDekkMetadata(this.currentDekkName, this.currentDekkId).subscribe((responseDekk: any) => {
+    //     this.isLoading = false;
+    //     this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: responseDekk?.dekk_id }});
+    //   }, (error: any) => {
+    //     const dialogRef = this.dialog.open(ErrorDialogComponent, {
+    //       data: {
+    //           msg: PopupConstants.DEKK_METADATA_SAVE_ERROR
+    //       }
+    //     });
+    //     dialogRef.afterClosed().subscribe(result => {
+    //         console.log('The dialog was closed: ', result);
+    //     });
+    //   });
+    // } else {
+    //   this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
+    // }
   }
 }

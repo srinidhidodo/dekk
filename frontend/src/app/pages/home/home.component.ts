@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Dekk } from 'src/app/common/models/dekk';
@@ -15,13 +15,15 @@ import { CardUtils } from 'src/app/common/utils/card.utils';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   dekks: Dekk[] = [];
   personalDekks: Dekk[] = [];
   selectedMasterDekkId: string|null = null;
   selectedMasterDekk: any = CardUtils.getWaitCard();
   isLoading: boolean = true;
+  routeListener: any;
+  locationListener: any;
 
   constructor(private httpClientService: HttpClientService, 
     private studyService: StudyService, 
@@ -30,16 +32,16 @@ export class HomeComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private dekkService: DekkService,
     private tagsService: TagsService) {
-      if (!this.userService.loggedIn) {
-        this.router.navigate([UrlConstants.LANDING]);
-      }
-      this.router.events.subscribe((event) => {
-        if (!this.userService.loggedIn) {
-          this.router.navigate([UrlConstants.LANDING]);
-        }
+      // if (!this.userService.loggedIn) {
+      //   this.router.navigate([UrlConstants.LANDING]);
+      // }
+      this.routeListener = this.router.events.subscribe((event) => {
         this.isLoading = true;
         if (event instanceof NavigationEnd) {
-          this.activatedRoute.queryParams.subscribe(params => {
+          if (!this.userService.loggedIn) {
+            this.router.navigate([UrlConstants.LANDING]);
+          }
+          this.locationListener = this.activatedRoute.queryParams.subscribe(params => {
             if (params.id) {
               this.selectedMasterDekkId = params.id;
               this.initialise();
@@ -53,7 +55,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.initialise();
+    // this.initialise();
+  }
+
+  ngOnDestroy(): void {
+    this.routeListener.unsubscribe();
+    this.locationListener.unsubscribe();
   }
 
   initialise(): void {

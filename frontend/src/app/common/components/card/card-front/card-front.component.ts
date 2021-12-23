@@ -22,6 +22,8 @@ export class CardFrontComponent implements OnInit, OnChanges {
   content: string;
   dekkRating: number;
   dekkFeedback: string;
+  firstImageLoading: boolean;
+  secondImageLoading: boolean;
 
   flipToBackObservable: Subject<any>;
 
@@ -35,6 +37,8 @@ export class CardFrontComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     // this.content = this.studyService.getUnhighlightedCardBack();
+    this.firstImageLoading = true;
+    this.secondImageLoading = true;
     this.content = this.studyService.getHighlightedCardFront();
   }
 
@@ -79,10 +83,19 @@ export class CardFrontComponent implements OnInit, OnChanges {
   }
 
   getFirstImageSrc(): string|null {
+    // return "https://drive.google.com/uc?export=view&id=1LY4GtGy3CHvgm1QKYi1JhTvqQffLmn0w"
     return this.studyService.getCurrentCard().image_links[0];
   }
 
   getSecondImageSrc(): string|null {
     return this.studyService.getCurrentCard().image_links[1];
+  }
+
+  firstImageLoaded(): void {
+    this.firstImageLoading = false;
+  }
+
+  secondImageLoaded(): void {
+    this.secondImageLoading = false;
   }
 }

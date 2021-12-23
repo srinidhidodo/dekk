@@ -100,7 +100,7 @@ export class AppComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+    this.router.navigateByUrl('/landing', {skipLocationChange: true}).then(() => {
       this.router.navigate([UrlConstants.HOME]);
     });
   }
@@ -133,5 +133,10 @@ export class AppComponent {
 
   goToWhyDekk(): void {
     this.router.navigate([UrlConstants.WHY_DEKK]);
+  }
+
+  logout(): void {
+    this.userService.logout();
+    this.router.navigate([UrlConstants.LANDING]);
   }
 }

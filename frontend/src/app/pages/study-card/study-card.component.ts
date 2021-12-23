@@ -46,6 +46,8 @@ export class StudyCardComponent implements OnInit, OnDestroy {
   isMinLoadTimeElapsed = false; // for initial load
   isLoading = false; // for general loads
 
+  routeListener: any;
+
   constructor(private router: Router, public studyService: StudyService, private dialog: MatDialog) {}
 
   ngOnInit() {
@@ -58,7 +60,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
     
     this.studyService.loadNewDekk().subscribe(response => {
       this.card = this.studyService.getCurrentCard();
-      if (this.studyService.isDekkComplete) {
+      if (this.studyService.dekkCards.length === 0) {
         setTimeout(() => {
           const dialogRef = this.dialog.open(ErrorDialogComponent, {
             data: {
@@ -77,7 +79,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
       }
     });
 
-    this.router.events.subscribe((event: Event) => {
+    this.routeListener = this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.visibleFront = true;
         this.flip = 'inactive';
@@ -102,7 +104,9 @@ export class StudyCardComponent implements OnInit, OnDestroy {
       .subscribe(() => { this.countRightWrongStats(MessageConstants.WRONG_ACTION); });
   }
 
-  ngOnDestroy() { }
+  ngOnDestroy() {
+    this.routeListener.unsubscribe();
+  }
 
   getCardCategory(): string {
     // return CardUtils.getCardCategoryText(this.card);
