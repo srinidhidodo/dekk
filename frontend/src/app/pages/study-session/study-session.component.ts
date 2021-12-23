@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { DekkService } from 'src/app/common/services/dekk-service';
 import * as _ from 'lodash';
@@ -14,7 +14,7 @@ import { PopupConstants } from 'src/app/common/constants/popup.constants';
   templateUrl: './study-session.component.html',
   styleUrls: ['./study-session.component.scss']
 })
-export class StudySessionComponent implements OnInit {
+export class StudySessionComponent implements OnInit, OnDestroy {
 
   selectedDekkId: string|null = null; // null indicates default where all dekks are loaded
   dekkDetails: any[];
@@ -36,6 +36,9 @@ export class StudySessionComponent implements OnInit {
       this.selectedDekkId = null;
     }
     this.loadDekkDetails();
+  }
+
+  ngOnDestroy(): void {
   }
 
   loadDekkDetails(): void {

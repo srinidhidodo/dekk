@@ -225,6 +225,10 @@ export class StudyService {
     }
 
     private getUnhighlightedContent(content: string): string {
+        if (!content) {
+            return '';
+        }
+
         let index = content.indexOf('*');
         while (index >= 0) {
             content = content.substring(0, index) + content.substring(index + 1);
@@ -245,6 +249,10 @@ export class StudyService {
     }
 
     private getHighlightedContent(content: string): string {
+        if (!content) {
+            return '';
+        }
+        
         let isEven = true;
         let index = content.lastIndexOf('*');
         while (index >= 0) {

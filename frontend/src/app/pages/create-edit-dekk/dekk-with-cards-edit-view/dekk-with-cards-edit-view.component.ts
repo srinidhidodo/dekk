@@ -110,4 +110,8 @@ export class DekkWithCardsEditViewComponent implements OnInit {
     this.studyService.selectedIds = [this.currentDekkId];
     this.router.navigate([UrlConstants.STUDY_CARD]);
   }
+
+  getPreview(element: any) {
+    return element.content_on_front;
+  }
 }

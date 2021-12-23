@@ -100,7 +100,7 @@ export class AppComponent {
   }
 
   goToHomePage(): void {
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+    this.router.navigateByUrl('/landing', {skipLocationChange: true}).then(() => {
       this.router.navigate([UrlConstants.HOME]);
     });
   }

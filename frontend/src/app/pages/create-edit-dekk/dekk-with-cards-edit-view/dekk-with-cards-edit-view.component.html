@@ -46,7 +46,10 @@
             <ng-container matColumnDef="action">
               <th mat-header-cell *matHeaderCellDef>action</th>
               <td mat-cell *matCellDef="let element">
-                <div class="action-button-in-cards-table">
+                <div class="action-button-in-cards-table"> 
+                  <!-- <button mat-button [matTooltip]="getPreview(element)">
+                    <mat-icon>search</mat-icon>
+                  </button> -->
                   <!-- <button mat-raised-button color="primary" (click)="editCard(element.card_id)">Edit</button> -->
                 </div>
               </td>
