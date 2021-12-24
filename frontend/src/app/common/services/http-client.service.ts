@@ -1,16 +1,18 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { share } from 'rxjs/operators';
 import { LoginDialogComponent } from '../components/login-dialog/login-dialog.component';
+import { UrlConstants } from '../constants/url.constants';
 import { UserService } from './user.service';
 
 @Injectable({
   providedIn: 'root',
 })
   export class HttpClientService {
-  constructor(private http: HttpClient, private userService: UserService, private dialog: MatDialog) { }
+  constructor(private http: HttpClient, private userService: UserService, private dialog: MatDialog, private router: Router) { }
 
   public get(url: string, parameters?: {key: string, value: string}[]): Observable<any> {
     let queryString = '';
@@ -27,19 +29,34 @@ import { UserService } from './user.service';
         panelClass: 'filter-popup'
       });
     }
-    return this.http.get<any>(url + queryString, {
+
+    const observable = this.http.get<any>(url + queryString, {
       headers: new HttpHeaders({
         Authorization: this.userService.accessToken
       })
     }).pipe(share());
+    observable.subscribe(() => {}, (error: any) => {
+      if (error?.status === 401) {
+        this.userService.logout();
+        this.router.navigate([UrlConstants.LANDING]);
+      }
+    });
+    return observable;
   }
 
   public post(url: string, postBody: any): any {
-    return this.http.post<any>(url, postBody, {
+    const observable = this.http.post<any>(url, postBody, {
       headers: new HttpHeaders({
         Authorization: this.userService.accessToken
       })
     }).pipe(share());
+    observable.subscribe(() => {}, (error: any) => {
+      if (error?.status === 401) {
+        this.userService.logout();
+        this.router.navigate([UrlConstants.LANDING]);
+      }
+    });
+    return observable;
   }
 
   public getWithoutAuth(url: string, parameters?: {key: string, value: string}[]): any {
