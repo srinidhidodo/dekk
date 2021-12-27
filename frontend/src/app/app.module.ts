@@ -59,6 +59,7 @@ import { StudySessionComponent } from './pages/study-session/study-session.compo
 import { ImgDialogComponent } from './common/components/img-dialog/img-dialog.component';
 import { LoadingComponent } from './common/components/loading/loading.component';
 import { ErrorDialogComponent } from './common/components/error-dialog/error-dialog.component';
+import { MsgDialogComponent } from './common/components/msg-dialog/msg-dialog.component';
 
 
 
@@ -91,6 +92,7 @@ import { ErrorDialogComponent } from './common/components/error-dialog/error-dia
     ImgDialogComponent,
     LoadingComponent,
     ErrorDialogComponent,
+    MsgDialogComponent,
   ],
   imports: [
     AppRoutingModule,

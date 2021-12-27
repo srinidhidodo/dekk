@@ -11,4 +11,6 @@ export class PopupConstants {
     static DEKK_METADATA_SAVE_ERROR = 'Error saving dekk details';
     static CARD_METADATA_LOAD_ERROR = 'Error loading card details';
     static CARD_METADATA_SAVE_ERROR = 'Error saving card details';
+    static CARD_TITLE_ERROR = 'Please enter a valid card title';
+    static CARD_CONTENT_ERROR = 'Please enter valid card content';
 }

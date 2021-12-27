@@ -35,6 +35,10 @@
     margin: 2vh;
 }
 
+.card-editor-class {
+    height: fit-content;
+}
+
 @media (max-width: 600px) {
     .input-label {
         display: none;
