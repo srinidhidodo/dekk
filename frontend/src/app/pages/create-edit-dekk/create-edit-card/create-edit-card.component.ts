@@ -5,6 +5,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { toDoc } from 'ngx-editor';
 import { Subscription } from 'rxjs';
 import { ErrorDialogComponent } from 'src/app/common/components/error-dialog/error-dialog.component';
+import { MsgDialogComponent } from 'src/app/common/components/msg-dialog/msg-dialog.component';
 import { PopupConstants } from 'src/app/common/constants/popup.constants';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Card } from 'src/app/common/models/card';
@@ -136,6 +137,17 @@ export class CreateEditCardComponent implements OnInit {
   }
 
   saveCard(): void {
+    if (this.currentCardTitle?.length === 0) {
+      this.cardSaveMsgPopup(PopupConstants.CARD_TITLE_ERROR);
+      return;
+    }
+
+    if (!this.cardFrontEditComponent.convertCardContentToPayload()
+      || !this.cardBackEditComponent.convertCardContentToPayload()) {
+      this.cardSaveMsgPopup(PopupConstants.CARD_CONTENT_ERROR);
+      return;
+    }
+
     this.isLoading = true;
     this.dekkService.saveCard({
       title: this.currentCardTitle,
@@ -143,11 +155,22 @@ export class CreateEditCardComponent implements OnInit {
       content_on_back: this.cardBackEditComponent.convertCardContentToPayload(),
       dekk_id: this.currentDekkId,
       new_tags: [],
-      selected_tag_ids: this.tags.value.map((tag: Tag) => tag.tag_id)
+      selected_tag_ids: this.tags && Object.keys(this.tags.value).length > 0 ? this.tags.value.map((tag: any) => tag.tag_id) : []
     }, this.currentCardId).subscribe((response: any) => {
       this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
     }, (error: any) => {
       this.handleCardSaveError();
+    });
+  }
+
+  cardSaveMsgPopup(msg: string): void {
+    const dialogRef = this.dialog.open(MsgDialogComponent, {
+      data: {
+          msg: msg
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed: ', result);
     });
   }
 }

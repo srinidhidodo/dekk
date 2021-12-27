@@ -42,10 +42,10 @@
     <div class="col-1"></div>
     <div class="col-10">
         <h3>Front of Card</h3>
-        <app-text-edit #cardFront [elementId]="cardFrontEditorId" [content]="currentCardFront"></app-text-edit>
+        <app-text-edit class="card-editor-class" #cardFront [elementId]="cardFrontEditorId" [content]="currentCardFront"></app-text-edit>
         <br>
         <h3>Back of Card</h3>
-        <app-text-edit #cardBack [elementId]="cardBackEditorId" [content]="currentCardBack"></app-text-edit>
+        <app-text-edit class="card-editor-class" #cardBack [elementId]="cardBackEditorId" [content]="currentCardBack"></app-text-edit>
         <div class="save-button">
             <button mat-raised-button (click)="saveCard()"> Save </button>
         </div>

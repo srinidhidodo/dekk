@@ -25,6 +25,8 @@ export class TextEditComponent implements OnInit, OnDestroy, AfterViewInit {
 
   editor: any;
 
+  charError: boolean = false;
+
   constructor() {}
 
   ngAfterViewInit() {
@@ -63,13 +65,18 @@ export class TextEditComponent implements OnInit, OnDestroy, AfterViewInit {
     return '';
   }
 
-  convertCardContentToPayload(): string {
-    let processedText = '';
+  convertCardContentToPayload(): string|null {
+    let processedText: string|null = '';
     toDoc(tinymce.get(this.elementId).getContent())
       ?.content[0]
       ?.content
       ?.forEach((contentComponent: any) => {
         if (contentComponent?.type === 'text') {
+          if (contentComponent.text.indexOf('*') > -1) {
+            processedText = null;
+            return null;
+          }
+          
           if (contentComponent.marks) {
             processedText += '*' + contentComponent.text + '*';
           } else {
@@ -80,6 +87,11 @@ export class TextEditComponent implements OnInit, OnDestroy, AfterViewInit {
         }
       }
     );
+    if (!processedText) {
+      this.charError = true;
+    } else {
+      this.charError = false;
+    }
     return processedText;
   }
 }
