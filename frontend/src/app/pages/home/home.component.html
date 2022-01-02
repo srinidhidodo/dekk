@@ -15,7 +15,8 @@
     <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of dekks">
         <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
             <span class="home-card-icon">
-                <!-- <mat-icon (click)="editDekk(dekk)">edit</mat-icon> -->
+                <mat-icon [hidden]="!dekk.is_owner || selectedMasterDekkId">edit</mat-icon>
+                <mat-icon [hidden]="!dekk.is_owner || !selectedMasterDekkId" (click)="editDekk(dekk)">edit</mat-icon>
             </span>
             <mat-card-title class="each-dekk-title">
                 <!-- <span></span> -->
@@ -28,11 +29,18 @@
             <span></span>
         </mat-card>
     </div>
+    <div [hidden]="isLoading || !dekks[0].is_owner || !selectedMasterDekkId">
+        <button mat-raised-button (click)="createSubdekk()">
+            Create Subdekk
+        </button>
+    </div>
     <mat-divider class="divider-class" [hidden]="isLoading || personalDekks.length === 0"></mat-divider>
     <div class="selected-master-dekk" [hidden]="isLoading || personalDekks.length === 0 || selectedMasterDekkId"><h1> My Dekks </h1></div>
     <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading || personalDekks.length === 0 || selectedMasterDekkId" *ngFor="let dekk of personalDekks">
         <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
-            <span class="home-card-icon" (click)="editDekk(dekk)"><mat-icon>edit</mat-icon></span>
+            <span class="home-card-icon" (click)="editDekk(dekk)">
+                <mat-icon>edit</mat-icon>
+            </span>
             <mat-card-title class="each-dekk-title">
                 <!-- <span></span> -->
                 <!-- <span> -->

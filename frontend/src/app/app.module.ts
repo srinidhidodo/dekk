@@ -60,6 +60,7 @@ import { ImgDialogComponent } from './common/components/img-dialog/img-dialog.co
 import { LoadingComponent } from './common/components/loading/loading.component';
 import { ErrorDialogComponent } from './common/components/error-dialog/error-dialog.component';
 import { MsgDialogComponent } from './common/components/msg-dialog/msg-dialog.component';
+import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/create-edit-subdekk-detail/create-edit-subdekk-detail.component';
 
 
 
@@ -93,6 +94,7 @@ import { MsgDialogComponent } from './common/components/msg-dialog/msg-dialog.co
     LoadingComponent,
     ErrorDialogComponent,
     MsgDialogComponent,
+    CreateEditSubdekkDetailComponent,
   ],
   imports: [
     AppRoutingModule,

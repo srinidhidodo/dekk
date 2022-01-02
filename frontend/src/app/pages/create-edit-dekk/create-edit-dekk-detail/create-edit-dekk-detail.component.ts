@@ -44,7 +44,7 @@ export class CreateEditDekkDetailComponent implements OnInit {
                 this.currentDekkName = this.currentDekk.dekk_name;
                 setTimeout(() => {
                   this.isLoading = false;
-                }, 1000);
+                }, 500);
               });
             } else {
               this.currentDekk = DekkUtils.getEmptyDekkMetadata();
@@ -53,7 +53,7 @@ export class CreateEditDekkDetailComponent implements OnInit {
               this.isNewDekk = true;
               setTimeout(() => {
                 this.isLoading = false;
-              }, 1000);
+              }, 500);
             }
           });
         }

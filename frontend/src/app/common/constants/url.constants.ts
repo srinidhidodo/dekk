@@ -6,6 +6,7 @@ export class UrlConstants {
   // public static PREV_CARD_URL = '/dekk/cards/previous';
   // public static SAVE_DEKK_DETAILS = '/dekk/save';
   // public static SAVE_CARD_DATA_URL = '/dekk/save';
+  public static CREATE_SUBDEKK_URL = '/dekk/savesubdekk';
 
   // Actual REST calls
   private static BASE_URL = '/api/v1';
@@ -28,6 +29,7 @@ export class UrlConstants {
   public static SEARCH_RESULTS = '/search-results';
   public static HOME = '/home';
   public static CREATE = '/create';
+  public static CREATE_SUBDEKK = '/create-subdekk';
   public static STUDY_CARD = '/study-card';
   public static DEKK_EDIT_VIEW = '/dekk-edit-view';
   public static CARD_EDIT_VIEW = '/card-edit-view';

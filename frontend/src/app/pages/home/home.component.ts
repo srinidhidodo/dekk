@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         setTimeout(() => {
           this.isLoading = false; 
-        }, 1000);
+        }, 500);
       });
     } else {
       this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
@@ -97,7 +97,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.personalDekks = response && response.user_dekks ? response.user_dekks : [];
         setTimeout(() => {
           this.isLoading = false; 
-        }, 1000);
+        }, 500);
       });
     }
   }
@@ -124,5 +124,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   editDekk(dekk: any): void {
     this.router.navigate([UrlConstants.CREATE], {queryParams: { id: dekk.dekk_id ?? dekk.tag_id }});
+  }
+
+  createSubdekk(): void {
+    this.router.navigate([UrlConstants.CREATE_SUBDEKK], {queryParams: { id: this.selectedMasterDekkId }});
   }
 }
