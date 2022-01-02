@@ -56,7 +56,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
     this.isMinLoadTimeElapsed = false;
     setTimeout(() => {
       this.isMinLoadTimeElapsed = true;
-    }, 8000);
+    }, 500);
     
     this.studyService.loadNewDekk().subscribe(response => {
       this.card = this.studyService.getCurrentCard();
@@ -75,7 +75,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
         setTimeout(() => {
           this.isNewDekkLoaded = true;
           this.isLoading = false;
-        }, 2000);
+        }, 500);
       }
     });
 

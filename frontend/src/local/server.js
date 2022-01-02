@@ -10,16 +10,6 @@ const devServer = 'http://localhost:5000';
 const app = express();
 // app.use(bodyParser.json());
 
-app.get('/dekk/tags', (req, res) => {
-    const response = require("./mocks/tagsResponse.json");
-    res.json(response);
-});
-
-app.get('/dekk/cards/*', (req, res) => {
-    const response = require("./mocks/cardResponse.json");
-    res.json(response);
-});
-
 app.get('/api/v1/*', (req, res) => {
     console.log(devServer + req.url);
     req.pipe(request(devServer + req.url)).pipe(res);
@@ -28,6 +18,16 @@ app.get('/api/v1/*', (req, res) => {
 app.post('/api/v1/*', (req, res) => {
     console.log(devServer + req.url);
     req.pipe(request(devServer + req.url)).pipe(res);
+});
+
+app.get('/dekk/tags', (req, res) => {
+    const response = require("./mocks/tagsResponse.json");
+    res.json(response);
+});
+
+app.get('/dekk/cards/*', (req, res) => {
+    const response = require("./mocks/cardResponse.json");
+    res.json(response);
 });
 
 app.get('/dekk/home', (req, res) => {
@@ -45,6 +45,12 @@ app.get('/dekk/dekk-details*', (req, res) => {
 app.post('/dekk/save', (req, res) => {
     console.log(devServer + req.url);
     res.json('test-dekk-id');
+});
+
+app.post('/dekk/savesubdekk', (req, res) => {
+    console.log(devServer + req.url);
+    const response = require("./mocks/createSubDekkResponse.json");
+    res.json(response);
 });
 
 app.listen(port, () => {

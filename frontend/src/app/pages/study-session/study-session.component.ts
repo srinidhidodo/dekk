@@ -64,7 +64,7 @@ export class StudySessionComponent implements OnInit, OnDestroy {
         }
         setTimeout(() => {
           this.isLoading = false; 
-        }, 1000);
+        }, 500);
       }, (error: any) => {
         const dialogRef = this.dialog.open(StudyMsgDialogComponent, {
           data: {

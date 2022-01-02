@@ -1,0 +1,31 @@
+<div [hidden]="!isLoading">
+    <app-loading></app-loading>
+</div>
+
+<div class="row create-dekk-page" [hidden]="isLoading">
+    <div class="create-dekk-container">
+        <mat-card class="create-dekk-card">
+            <mat-card-content class="create-dekk-card-content">
+                <div class="selected-master-dekk"><h1> {{ masterDekkName }} </h1></div>
+                <div [hidden]="isFormErrorHidden" class="form-error">
+                    Please enter a valid subdekk name
+                </div>
+                <div class="input-field">
+                    <span class="input-label"> Subdekk Name* </span>
+                    <mat-form-field class="input-form-field">
+                        <p class="input-label-when-small"> Subdekk Name* </p>
+                        <input matInput type="text" [value]="currentDekkName" [(ngModel)]="currentDekkName" class="search-input" required>
+                    </mat-form-field>
+                </div>
+                <form class="create-dekk-form"></form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button (click)="saveSubdekk()" color="primary">
+                    <span>Continue</span>
+                    <!-- <span [hidden]="currentDekkName === currentDekk.dekk_name">Save and Continue</span>
+                    <span [hidden]="currentDekkName != currentDekk.dekk_name">Continue</span> -->
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

@@ -6,4 +6,5 @@ export interface Dekk {
     is_master_topic: boolean;
     created_at?: string;
     updated_at?: string;
+    is_owner?: boolean;
 }

@@ -1,0 +1,68 @@
+.selected-master-dekk {
+    margin-left: 2vw;
+}
+
+.create-dekk-page {
+    height: 80vh;
+}
+
+.create-dekk-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.create-dekk-card {
+    @extend .create-dekk-container;
+    width: 60vw;
+    padding: 30px;
+}
+
+.search-input {
+    border: 0px;
+    background: transparent;
+    width: 100%;
+}
+
+.create-dekk-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-label {
+    margin: 10px;
+}
+
+.input-label-when-small {
+    display: none;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.input-form-field {
+    width: 30vw;
+}
+
+.form-error {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .input-label {
+        display: none;
+    }
+    
+    .input-label-when-small {
+        display: flex;
+    }
+}
