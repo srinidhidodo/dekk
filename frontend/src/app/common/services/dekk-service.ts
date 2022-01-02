@@ -37,6 +37,13 @@ import { HttpClientService } from "./http-client.service";
         return this.httpClientService.post(UrlConstants.SAVE_CARD_DATA_URL, card);
       }
     }
+
+    public saveSubdekk(master_dekk_id: string, sub_master_name: string): Observable<any> {
+      return this.httpClientService.post(UrlConstants.CREATE_SUBDEKK_URL, {    
+        master_dekk_id,
+        sub_master_name
+      });
+    }
   
     unsetCurrentSearch(): void {
       this.currentSearch = undefined;

@@ -4,6 +4,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { CardViewDetailsComponent } from './pages/card-view-details/card-view-details.component';
 import { CreateEditCardComponent } from './pages/create-edit-dekk/create-edit-card/create-edit-card.component';
 import { CreateEditDekkDetailComponent } from './pages/create-edit-dekk/create-edit-dekk-detail/create-edit-dekk-detail.component';
+import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/create-edit-subdekk-detail/create-edit-subdekk-detail.component';
 import { DekkWithCardsEditViewComponent } from './pages/create-edit-dekk/dekk-with-cards-edit-view/dekk-with-cards-edit-view.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LandingHomeComponent } from './pages/landing-home/landing-home.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent, pathMatch: 'full' },
   { path: 'edit', component: TextEditComponent, pathMatch: 'full' },
   { path: 'create', component: CreateEditDekkDetailComponent, pathMatch: 'full' },
+  { path: 'create-subdekk', component: CreateEditSubdekkDetailComponent, pathMatch: 'full' },
   { path: 'dekk-edit-view', component: DekkWithCardsEditViewComponent, pathMatch: 'full' },
   { path: 'card-edit-view', component: CreateEditCardComponent, pathMatch: 'full' },
   { path: 'landing', component: LandingHomeComponent, pathMatch: 'full' },
