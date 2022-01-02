@@ -153,13 +153,23 @@ def get_card_by_id(db_conn, card_id):
     """
     result = db_conn.fetch_query_direct_query(card_ids_query)
 
+    if result:
+        tags = get_card_and_its_tags(db_conn, card_id)
+        result[0]["tags"] = []
+
+        for item in tags:
+            if item["is_master_topic"] == True:
+                result[0]["dekk_id"] = item["tag_id"]
+            else:
+                result[0]["tags"].append(item["tag_id"])
+
     return result
 
 
 def get_card_and_its_tags(db_conn, card_id):
 
     card_ids_query = f"""
-        select t1.tag_id,t2.is_master_topic,t2.tag_type from user_content.tags_cards t1 inner join user_content.tags t2 on
+        select t1.tag_id,t2.is_master_topic,t2.tag_type,t2.tag_name from user_content.tags_cards t1 inner join user_content.tags t2 on
         t1.tag_id = t2.tag_id and
         t1.card_id = '{card_id}'
     """
