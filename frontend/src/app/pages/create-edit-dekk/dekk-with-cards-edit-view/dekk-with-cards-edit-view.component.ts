@@ -42,7 +42,7 @@ export class DekkWithCardsEditViewComponent implements OnInit {
                 this.currentDekk = dekkMetadata;
                 setTimeout(() => {
                   this.isLoading = false;
-                }, 1000);
+                }, 500);
               }, (error: any) => {
                 this.handleDekkLoadError();
               });

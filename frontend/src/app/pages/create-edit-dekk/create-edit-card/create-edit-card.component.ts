@@ -67,7 +67,7 @@ export class CreateEditCardComponent implements OnInit {
                   this.currentCardBack = this.processEditorText(this.currentCard.content_on_back);
                   setTimeout(() => {
                     this.isLoading = false;
-                  }, 1000);
+                  }, 500);
                 }, (error: any) => {
                   this.handleCardLoadError();
                 });
@@ -75,7 +75,7 @@ export class CreateEditCardComponent implements OnInit {
                 this.currentCardId = '';
                 setTimeout(() => {
                   this.isLoading = false;
-                }, 1000);
+                }, 500);
               }
             } else {
               this.handleCardLoadError();
