@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { Md5 } from 'ts-md5';
 import { UrlConstants } from '../../constants/url.constants';
 import { HttpClientService } from '../../services/http-client.service';
 import { UserService } from '../../services/user.service';
@@ -34,7 +35,7 @@ export class LoginDialogComponent implements OnInit {
   login(): void {
     const loginReq = {
       email: this.email,
-      password: this.password
+      password: Md5.hashStr(this.password)
     };
     this.httpClientService.postWithoutAuth(UrlConstants.LOGIN_URL, loginReq)
       .subscribe((response: any) => {

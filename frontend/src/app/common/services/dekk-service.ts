@@ -32,7 +32,8 @@ import { HttpClientService } from "./http-client.service";
     public saveCard(card: any, card_id?: string): Observable<any> {
       if (card_id) {
         // replace this with put call
-        return this.httpClientService.post(UrlConstants.SAVE_CARD_DATA_URL, card);
+        card.card_id = card_id;
+        return this.httpClientService.put(UrlConstants.SAVE_CARD_DATA_URL, card);
       } else {
         return this.httpClientService.post(UrlConstants.SAVE_CARD_DATA_URL, card);
       }

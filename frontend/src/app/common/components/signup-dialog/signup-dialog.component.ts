@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Md5 } from 'ts-md5';
 import { UrlConstants } from '../../constants/url.constants';
 import { CollegeService } from '../../services/college.service';
 import { HttpClientService } from '../../services/http-client.service';
@@ -43,7 +44,7 @@ export class SignupDialogComponent implements OnInit {
       user_name: this.username,
       full_name: this.name,
       email: this.email,
-      password: this.password,
+      password: Md5.hashStr(this.password),
       college: this.selectedCollege
     };
     this.httpClientService.postWithoutAuth(UrlConstants.REGISTER_URL, signUpReq)

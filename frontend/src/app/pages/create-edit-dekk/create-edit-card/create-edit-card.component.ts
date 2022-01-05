@@ -65,6 +65,7 @@ export class CreateEditCardComponent implements OnInit {
                   this.currentCardTitle = this.currentCard.title;
                   this.currentCardFront = this.processEditorText(this.currentCard.content_on_front);
                   this.currentCardBack = this.processEditorText(this.currentCard.content_on_back);
+                  this.tags.setValue(this.tagsService.tagsList.filter((tag: Tag) => this.currentCard.tags?.includes(tag.tag_id!)));
                   setTimeout(() => {
                     this.isLoading = false;
                   }, 500);
