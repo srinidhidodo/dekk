@@ -13,7 +13,7 @@ import * as _ from 'lodash';
 export class SearchResultComponent implements OnInit, OnChanges {
 
   @Input()
-  card: Card;
+  card: any;
 
   constructor(public studyService: StudyService, private router: Router) { }
 
