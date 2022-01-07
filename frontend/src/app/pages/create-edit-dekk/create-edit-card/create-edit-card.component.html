@@ -21,18 +21,23 @@
                 <span class="input-label"> Tags* </span>
                 <mat-form-field class="input-form-field">
                     <p class="input-label-when-small"> Tags </p>
-                    <mat-select [formControl]="tags" multiple>
+                    <mat-select [formControl]="tags" multiple (selectionChange)="onTagSelected($event)">
                         <mat-select-trigger>
                             <mat-chip-list>
                                 <mat-chip *ngFor="let tag of tags.value">
                                     {{tag.tag_name}}
                                 </mat-chip>
                             </mat-chip-list>
-                            <!-- <mat-form-field class="example-full-width">
-                                <input matInput>
-                            </mat-form-field> -->
                         </mat-select-trigger>
-                        <mat-option *ngFor="let tag of tagsService.tagsList" [value]="tag">{{tag.tag_name}}</mat-option>
+                        <mat-option>
+                            <ngx-mat-select-search
+                                placeholderLabel="Search tags"
+                                noEntriesFoundLabel="No tags found"
+                                ngModel
+                                (ngModelChange)="filterTags($event)">
+                            </ngx-mat-select-search>
+                        </mat-option>
+                        <mat-option *ngFor="let tag of tagOptions" [value]="tag">{{tag.tag_name}}</mat-option>
                     </mat-select>                          
                 </mat-form-field>
             </div>
