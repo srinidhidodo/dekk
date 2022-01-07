@@ -21,6 +21,10 @@ export class TagsService {
       return of(this.tagsList);
     }
 
+    return this.refreshTags();
+  }
+
+  public refreshTags(): any {
     const returnObservable = this.httpClientService.get(UrlConstants.GET_TAGS_URL);
 
     // This is to ensure the tags list maintained in this service remains updated at any point of time
