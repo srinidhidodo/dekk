@@ -15,6 +15,8 @@ from api.cards.cards_actions import (
     GetCardsIdsForADekk,
     GetCardById,
     CreateDekk,
+    CreateSubDekk,
+    CreateTag,
 )
 from api.user.home import Home
 from api.tags.list_master_topics import AutoSuggestTags
@@ -58,6 +60,8 @@ def initialize_routes() -> falcon.API:
     api.add_route("/api/v1/card/{card_id}", GetCardById())  # ok
 
     api.add_route("/api/v1/dekk/", CreateDekk())  # ok
+    api.add_route("/api/v1/subdekk/", CreateSubDekk())  # ok
+    api.add_route("/api/v1/tag/", CreateTag())  # ok
 
     api.add_route("/api/v1/dekk/{dekk_id}", GetCardsIdsForADekk())  # ok
 

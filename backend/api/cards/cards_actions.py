@@ -392,6 +392,114 @@ def create_dekk(db_conn, req):
         raise falcon.HTTPBadRequest("Oops something when wrong", message)
 
 
+def create_subdekk(db_conn, req):
+
+    req_data = req.media
+
+    req_data = req_data
+
+    if not req_data:
+        return {}
+
+    dekk_dict = {}
+
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
+
+    if not req_data["sub_master_name"]:
+        message = "Couldn't create sub dekk , empty name"
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if not req_data["master_dekk_id"]:
+        message = "Couldn't create sub dekk , master_dekk_id"
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    dekk_dict["account_id"] = decode["account_id"]
+    dekk_dict["tag_name"] = req_data["sub_master_name"]
+
+    hash_ = get_hash_for_tags(dekk_dict)
+    dekk_dict["tag_id"] = hash_
+    dekk_dict["tag_type"] = "submaster"
+    dekk_dict["field"] = "Medical"
+    dekk_dict["parent_topic_hash"] = req_data["master_dekk_id"]
+
+    try:
+        status = db_conn.pg_handle_insert(dekk_dict)
+        if status == 0:
+            message = "Couldn't create subdekk"
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+        else:
+            return (dekk_dict["tag_id"], dekk_dict["parent_topic_hash"])
+    except Exception as e:
+        # print(e)
+        # print(dir(e))
+        if e.pgcode == "42P01":
+            message = "Couldn't create subdekk"
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+        if str(e.pgcode) == "23505":
+            message = f'Subdekk name `{req_data["dekk_name"]}` already exists'
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+        message = f'Subdekk name `{req_data["dekk_name"]}` already exists'
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+
+def create_tag(db_conn, req):
+
+    req_data = req.media
+
+    req_data = req_data
+
+    if not req_data:
+        return {}
+
+    dekk_dict = {}
+
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
+
+    if not req_data["tag_name"]:
+        message = "Couldn't create sub dekk , empty name"
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    if not req_data["master_dekk_id"]:
+        message = "Couldn't create sub dekk , master_dekk_id"
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+    dekk_dict["account_id"] = decode["account_id"]
+    dekk_dict["tag_name"] = req_data["tag_name"]
+
+    hash_ = get_hash_for_tags(dekk_dict)
+    dekk_dict["tag_id"] = hash_
+    dekk_dict["tag_type"] = "tag"
+    dekk_dict["field"] = "Medical"
+    dekk_dict["parent_topic_hash"] = req_data["master_dekk_id"]
+
+    try:
+        status = db_conn.pg_handle_insert(dekk_dict)
+        if status == 0:
+            message = "Couldn't create subdekk"
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+        else:
+            return (dekk_dict["tag_id"], dekk_dict["parent_topic_hash"])
+    except Exception as e:
+        # print(e)
+        # print(dir(e))
+        if e.pgcode == "42P01":
+            message = "Couldn't create subdekk"
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+        if str(e.pgcode) == "23505":
+            message = f'Subdekk name `{req_data["dekk_name"]}` already exists'
+            raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+        message = f'Subdekk name `{req_data["dekk_name"]}` already exists'
+        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+
+
 def edit_card(db_conn, req):
 
     req_data = req.media
@@ -566,6 +674,49 @@ def edit_card(db_conn, req):
         )
 
     return True
+
+
+class CreateSubDekk:
+    """
+        Request data has to be a json
+    """
+
+    def __init__(self) -> None:
+        self.db_conn = postgres.QueryManager("user_content", "tags")
+
+    @falcon.before(authorization.request_valiation)
+    def on_post(self, req, resp):
+        try:
+            dekk_id, subdekk_id = create_subdekk(self.db_conn, req)
+            http_response.ok(
+                resp,
+                {
+                    "message": "Created subdekk",
+                    "dekk_id": dekk_id,
+                    "subdekk_id": subdekk_id,
+                },
+            )
+        except Exception as e:
+            raise e
+
+
+class CreateTag:
+    """
+        Request data has to be a json
+    """
+
+    def __init__(self) -> None:
+        self.db_conn = postgres.QueryManager("user_content", "tags")
+
+    @falcon.before(authorization.request_valiation)
+    def on_post(self, req, resp):
+        try:
+            dekk_id, tag_id = create_tag(self.db_conn, req)
+            http_response.ok(
+                resp, {"message": "Created tag", "dekk_id": dekk_id, "tag_id": tag_id}
+            )
+        except Exception as e:
+            raise e
 
 
 class CreateDekk:
