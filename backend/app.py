@@ -11,7 +11,7 @@ from falcon.http_status import HTTPStatus
 from api.user.register import Register
 from api.user.login import Login
 from api.cards.cards_actions import (
-    CreateCard,
+    CrudCard,
     GetCardsIdsForADekk,
     GetCardById,
     CreateDekk,
@@ -55,7 +55,7 @@ def initialize_routes() -> falcon.API:
 
     api.add_route(f"{api_version}/tags/all", AutoSuggestTags())  # ok
 
-    api.add_route(f"{api_version}/card", CreateCard())  # todo
+    api.add_route(f"{api_version}/card", CrudCard())  # CRUD
 
     api.add_route("/api/v1/card/{card_id}", GetCardById())  # ok
 

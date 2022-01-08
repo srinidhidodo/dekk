@@ -311,8 +311,8 @@ def create_card(db_conn, req):
         except Exception as e:
             raise e
     try:
-        curosr = db_conn.conn_obj.cursor
-        curosr.execute("BEGIN")
+        cursor = db_conn.conn_obj.cursor
+        cursor.execute("BEGIN")
         try:  # add card
             db_conn.table = "cards"
             status = db_conn.pg_handle_insert(card_dict, commit=False)
@@ -332,9 +332,9 @@ def create_card(db_conn, req):
                 pass
             except Exception as e:
                 raise e
-        curosr.execute("COMMIT")
+        cursor.execute("COMMIT")
     except Exception as e:
-        curosr.execute("ROLLBACK")
+        cursor.execute("ROLLBACK")
         print(e)
         raise Exception(
             "Oops something went wrong could not create new card - looks like same card already exists"
@@ -502,8 +502,33 @@ def create_tag(db_conn, req):
         raise falcon.HTTPBadRequest("Oops something when wrong", message)
 
 
-def edit_card(db_conn, req):
+def delete_card(db_conn, req, card_id):
 
+    cursor = db_conn.conn_obj.cursor
+
+    try:
+        cursor = db_conn.conn_obj.cursor
+        cursor.execute("BEGIN")
+        cursor.execute(
+            "DELETE FROM user_content.tags_cards WHERE card_id = %s;", (card_id,)
+        )
+        cursor.execute("DELETE FROM user_content.cards WHERE card_id = %s;", (card_id,))
+        if int(cursor.rowcount) > 0:
+            cursor.execute("COMMIT")
+            return True
+        else:
+            cursor.execute("ROLLBACK")
+            return False
+    except:
+        raise Exception("Failed to delete card and its tags")
+
+
+def edit_card(db_conn, req):
+    """
+        todo:
+            must be able to edit only theirs
+
+    """
     req_data = req.media
 
     req_data = req_data
@@ -642,10 +667,10 @@ def edit_card(db_conn, req):
             raise e
 
     try:
-        curosr = db_conn.conn_obj.cursor
-        curosr.execute("BEGIN")
+        cursor = db_conn.conn_obj.cursor
+        cursor.execute("BEGIN")
         if new_tags or selected_tag_ids:
-            curosr.execute(
+            cursor.execute(
                 "DELETE FROM user_content.tags_cards WHERE card_id = %s;", (card_id,)
             )
         try:  # update card
@@ -669,9 +694,9 @@ def edit_card(db_conn, req):
                 pass
             except Exception as e:
                 raise e
-        curosr.execute("COMMIT")
+        cursor.execute("COMMIT")
     except Exception as e:
-        curosr.execute("ROLLBACK")
+        cursor.execute("ROLLBACK")
         print(e)
         raise Exception(
             "Oops something went wrong could not create new card - looks like same card already exists"
@@ -740,7 +765,7 @@ class CreateDekk:
             raise e
 
 
-class CreateCard:
+class CrudCard:
     """
         Request data has to be a json
     """
@@ -816,5 +841,19 @@ class GetCardById:
                 http_response.err(resp, falcon.HTTP_500, message)
         else:
             error_message = "Something went wrong , you have to pass card_id in url"
+            message = {"message": error_message}
+            http_response.err(resp, falcon.HTTP_500, message)
+
+    @falcon.before(authorization.request_valiation)
+    def on_delete(self, req, resp, card_id):
+        try:
+            result = delete_card(self.db_conn, req, card_id)
+            if result:
+                http_response.ok(resp, {"message": "Delete the card"})
+            else:
+                message = {"message": "Nothing with this card id"}
+                http_response.err(resp, falcon.HTTP_400, message)
+        except Exception as e:
+            error_message = str(e)
             message = {"message": error_message}
             http_response.err(resp, falcon.HTTP_500, message)
