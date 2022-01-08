@@ -368,6 +368,8 @@ def create_dekk(db_conn, req):
     dekk_dict["tag_id"] = hash_
     dekk_dict["parent_topic_hash"] = hash_
     dekk_dict["is_master_topic"] = True
+    dekk_dict["tag_type"] = "master"
+    dekk_dict["field"] = "Medical"
 
     try:
         status = db_conn.pg_handle_insert(dekk_dict)

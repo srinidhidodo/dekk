@@ -37,6 +37,7 @@ def get_master_topics_stats(db_conn, req):
             result.pop(key, None)
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"]
+            result["is_owner"] = False
 
     env = os.environ.get(f"ENV")
     secret = os.environ.get(f"SECRET_{env}")
@@ -60,6 +61,8 @@ def get_master_topics_stats(db_conn, req):
             result.pop(key, None)
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"]
+            result["is_owner"] = True
+
         # if result["total_cards"] == 1:
         #     result["total_cards"] = 0
 

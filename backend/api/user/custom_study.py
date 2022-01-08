@@ -123,6 +123,7 @@ def create_custom_study_menu(db_conn):
             "cards_count": id["cards_count"],
             "dekk_id": dekk_id,
             "dekk_name": id["dekk_name"],
+            "is_owner": False,
         }
 
         submaster_query = f"""select count(*) as cards_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
