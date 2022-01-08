@@ -5,7 +5,7 @@ export interface Card {
     updated_at?: string;
     title: string;
     highlighted_keywords?: string[];
-    tags: {[key: string]: number},
+    tags: string[],
     content_on_front: string;
     content_on_back: string;
     image_links: string[];

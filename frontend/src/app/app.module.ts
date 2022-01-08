@@ -24,6 +24,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -61,6 +62,7 @@ import { LoadingComponent } from './common/components/loading/loading.component'
 import { ErrorDialogComponent } from './common/components/error-dialog/error-dialog.component';
 import { MsgDialogComponent } from './common/components/msg-dialog/msg-dialog.component';
 import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/create-edit-subdekk-detail/create-edit-subdekk-detail.component';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 
 
@@ -108,6 +110,7 @@ import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/creat
     NgMatSearchBarModule,
     EditorModule,
     BarRatingModule,
+    NgxMatSelectSearchModule,
     MatButtonModule,
     MatSlideToggleModule,
     MatToolbarModule,
@@ -127,7 +130,8 @@ import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/creat
     MatDialogModule,
     MatMenuModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatAutocompleteModule
   ],
   providers: [
     CdkColumnDef

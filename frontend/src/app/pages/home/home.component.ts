@@ -9,6 +9,7 @@ import { StudyService } from 'src/app/common/services/study.service';
 import { TagsService } from 'src/app/common/services/tags.service';
 import { UserService } from 'src/app/common/services/user.service';
 import { CardUtils } from 'src/app/common/utils/card.utils';
+import { DekkUtils } from 'src/app/common/utils/dekk-utils';
 
 @Component({
   selector: 'app-home',
@@ -95,6 +96,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
         this.dekks = response && response.dekk_stats ? response.dekk_stats : [];
         this.personalDekks = response && response.user_dekks ? response.user_dekks : [];
+        this.selectedMasterDekk = DekkUtils.getEmptyDekkMetadata();
         setTimeout(() => {
           this.isLoading = false; 
         }, 500);

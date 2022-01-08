@@ -33,8 +33,9 @@ export class CreateEditCardComponent implements OnInit {
 
   routeListener: Subscription;
 
+  allTagOptions: Tag[];
+  tagOptions: Tag[];
   tags: FormControl = new FormControl();
-  tagsList: Tag[] = [];
   currentDekkId: string;
   currentCardId: string;
   currentCardTitle: string = '';
@@ -49,7 +50,10 @@ export class CreateEditCardComponent implements OnInit {
 
   constructor(public tagsService: TagsService, private dekkService: DekkService, private router: Router, private activatedRoute: ActivatedRoute, private dialog: MatDialog) {
     this.tags = new FormControl();
-    this.tagsService.loadTags().subscribe(()=>{});
+    this.tagsService.loadTags().subscribe(()=>{
+      this.allTagOptions = tagsService.tagsList;
+      this.tagOptions = this.allTagOptions;
+    });
     this.routeListener = this.router.events.subscribe((event) => {
       this.isLoading = true;
       if (event instanceof NavigationEnd) {
@@ -65,6 +69,8 @@ export class CreateEditCardComponent implements OnInit {
                   this.currentCardTitle = this.currentCard.title;
                   this.currentCardFront = this.processEditorText(this.currentCard.content_on_front);
                   this.currentCardBack = this.processEditorText(this.currentCard.content_on_back);
+                  this.tags.setValue(this.tagsService.tagsList.filter((tag: Tag) => this.currentCard.tags?.includes(tag.tag_id!)));
+                  // this.tagsList.setValue(this.tags.value.map((tag: Tag) => tag.tag_name));
                   setTimeout(() => {
                     this.isLoading = false;
                   }, 500);
@@ -103,7 +109,7 @@ export class CreateEditCardComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.tags.setValue(this.currentCard.tags);
+    // this.tags.setValue(this.currentCard.tags);
   }
 
   ngOnDestroy(): void {
@@ -137,6 +143,7 @@ export class CreateEditCardComponent implements OnInit {
   }
 
   saveCard(): void {
+    console.log(this.tags.value);
     if (this.currentCardTitle?.length === 0) {
       this.cardSaveMsgPopup(PopupConstants.CARD_TITLE_ERROR);
       return;
@@ -149,14 +156,19 @@ export class CreateEditCardComponent implements OnInit {
     }
 
     this.isLoading = true;
+    const new_tags = this.tags && Object.keys(this.tags.value).length > 0 ? this.tags.value.filter((tag: any) => !tag.tag_id).map((tag: any) => tag.tag_name) : [];
+    const selected_tag_ids = this.tags && Object.keys(this.tags.value).length > 0 ? this.tags.value.filter((tag: any) => !!tag.tag_id).map((tag: any) => tag.tag_id) : [];
     this.dekkService.saveCard({
       title: this.currentCardTitle,
       content_on_front: this.cardFrontEditComponent.convertCardContentToPayload(),
       content_on_back: this.cardBackEditComponent.convertCardContentToPayload(),
       dekk_id: this.currentDekkId,
-      new_tags: [],
-      selected_tag_ids: this.tags && Object.keys(this.tags.value).length > 0 ? this.tags.value.map((tag: any) => tag.tag_id) : []
+      new_tags,
+      selected_tag_ids
     }, this.currentCardId).subscribe((response: any) => {
+      if (new_tags.length > 0) {
+        this.tagsService.refreshTags();
+      }
       this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: this.currentDekkId }});
     }, (error: any) => {
       this.handleCardSaveError();
@@ -172,5 +184,24 @@ export class CreateEditCardComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed: ', result);
     });
+  }
+
+  filterTags($event: any) {
+    console.log($event);
+    if ($event === '') {
+      this.tagOptions = this.allTagOptions;
+    } else {
+      const shortlistedTagOptions = this.allTagOptions.filter((tag: Tag) => tag.tag_name.toLowerCase().startsWith($event.toLowerCase()));
+      this.tagOptions = shortlistedTagOptions.filter((tag: Tag) => tag.tag_name.toLowerCase().trim() === $event.toLowerCase().trim()).length === 0 ? [{
+        tag_name: $event
+      } as Tag].concat(shortlistedTagOptions) : shortlistedTagOptions;
+      // this.tagOptions = shortlistedTagOptions;
+    }
+  }
+
+  onTagSelected($event: any): void {
+    if (!this.tags.value[0].tag_id) { // ie new tag
+      this.allTagOptions.push(this.tags.value[0]);
+    }
   }
 }

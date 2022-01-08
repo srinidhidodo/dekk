@@ -12,6 +12,7 @@
 .head-toolbar {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .head-toolbar-center {
@@ -25,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-width: 160px;
+  min-width: 250px;
 }
 
 .dark-light-toggle {
