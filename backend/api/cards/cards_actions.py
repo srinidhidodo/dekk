@@ -36,14 +36,16 @@ def card_difference(og_card, current_card):
     og_card.pop("highlighted_keywords", None)
     og_card.pop("permission", None)
     og_card.pop("type", None)
-    og_card.pop("type", None)
+    og_card.pop("tags", None)
     og_card.pop("image_links", None)
     og_card.pop("card_id", None)
+    og_card.pop("dekk_id", None)
 
     difference = DeepDiff(og_card, current_card)
     updated_fields = []
-
+    # print(difference)
     for key in difference:
+        print(key)
         for col_key in difference[key].keys():
             updated_fields.append((col_key.split("['")[1].split("']")[0]))
 
@@ -521,17 +523,17 @@ def edit_card(db_conn, req):
         message = {"message": error_message}
         raise falcon.HTTPBadRequest("Oops something when wrong", message)
 
-    if "new_tags" not in req_data:
-        error_message = "Something went wrong , seems new_tags is not in request body"
-        message = {"message": error_message}
-        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+    # if "new_tags" not in req_data:
+    #     error_message = "Something went wrong , seems new_tags is not in request body"
+    #     message = {"message": error_message}
+    #     raise falcon.HTTPBadRequest("Oops something when wrong", message)
 
-    if "selected_tag_ids" not in req_data:
-        error_message = (
-            "Something went wrong , seems selected_tag_ids is not in request body"
-        )
-        message = {"message": error_message}
-        raise falcon.HTTPBadRequest("Oops something when wrong", message)
+    # if "selected_tag_ids" not in req_data:
+    #     error_message = (
+    #         "Something went wrong , seems selected_tag_ids is not in request body"
+    #     )
+    #     message = {"message": error_message}
+    #     raise falcon.HTTPBadRequest("Oops something when wrong", message)
 
     if "dekk_id" not in req_data:
         error_message = "Something went wrong , seems dekk_id is not in request body"
@@ -561,9 +563,9 @@ def edit_card(db_conn, req):
     card_dict["content_on_front"] = req_data["content_on_front"]
     card_dict["content_on_back"] = req_data["content_on_back"]
 
-    selected_tag_ids = req_data.pop("selected_tag_ids", [])
+    selected_tag_ids = req_data.pop("selected_tag_ids", None)
     dekk_id = req_data.pop("dekk_id", None)
-    new_tags = req_data.pop("new_tags", [])
+    new_tags = req_data.pop("new_tags", None)
     card_id = req_data.pop("card_id", None)
 
     for_search = (
@@ -580,8 +582,9 @@ def edit_card(db_conn, req):
 
     # compare cards
     og_card = get_card_by_id(db_conn, card_id)
-    updated_card_fields = card_difference(og_card[0], card_dict)
 
+    updated_card_fields = card_difference(og_card[0], card_dict)
+    # print(updated_card_fields)
     card_dict["account_id"] = decode["account_id"]
 
     card_dict["for_search"] = re.sub(r"\s{2,}", " ", for_search).strip().lower()
@@ -641,10 +644,11 @@ def edit_card(db_conn, req):
     try:
         curosr = db_conn.conn_obj.cursor
         curosr.execute("BEGIN")
-        curosr.execute(
-            "DELETE FROM user_content.tags_cards WHERE card_id = %s;", (card_id,)
-        )
-        try:  # add card
+        if new_tags or selected_tag_ids:
+            curosr.execute(
+                "DELETE FROM user_content.tags_cards WHERE card_id = %s;", (card_id,)
+            )
+        try:  # update card
             if updated_card:
                 db_conn.table = "cards"
                 status = status = db_conn.pg_handle_update(
@@ -758,7 +762,7 @@ class CreateCard:
     def on_put(self, req, resp):
         try:
             edit_card(self.db_conn, req)
-            http_response.ok(resp, {"message": "Created the card"})
+            http_response.ok(resp, {"message": "Edited the card"})
         except Exception as e:
             error_message = str(e)
             message = {"message": error_message}
