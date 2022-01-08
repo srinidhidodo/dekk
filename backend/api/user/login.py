@@ -59,7 +59,8 @@ def validate_user(req, db_conn):
     req_data = req.media
 
     user_email = req_data["email"].lower().strip()
-    password = hashlib.md5(req_data["password"].encode()).hexdigest()
+    # password = hashlib.md5(req_data["password"].encode()).hexdigest()
+    password = req_data["password"]
 
     query = f"""
         SELECT user_name,account_id,created_at,last_active,full_name FROM users.accounts WHERE
