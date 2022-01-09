@@ -8,6 +8,7 @@ import rxmq from 'rxmq';
 import { LoginDialogComponent } from './common/components/login-dialog/login-dialog.component';
 import { SignupDialogComponent } from './common/components/signup-dialog/signup-dialog.component';
 import { MessageConstants } from './common/constants/message.constants';
+import { PunsConstants } from './common/constants/puns.constants';
 import { UrlConstants } from './common/constants/url.constants';
 import { CollegeService } from './common/services/college.service';
 import { SearchService } from './common/services/search.service';
@@ -81,6 +82,7 @@ export class AppComponent {
   initialiseApp(): void {
     this.userService.initializeWithPreviousLogin();
     this.collegeService.loadColleges();
+    PunsConstants.sessionPun = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
     // this.tagsService.loadTags();
   }
 

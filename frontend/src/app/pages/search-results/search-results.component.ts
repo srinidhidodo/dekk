@@ -30,7 +30,7 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.loadingText = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
+    this.loadingText = PunsConstants.sessionPun;
     this.searchResultList = [];
     this.searchSubscription = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
     .observe(MessageConstants.SEARCH_TRIGGERED_ACTION)

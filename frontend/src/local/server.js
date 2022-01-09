@@ -25,6 +25,11 @@ app.put('/api/v1/*', (req, res) => {
     req.pipe(request(devServer + req.url)).pipe(res);
 });
 
+app.delete('/api/v1/*', (req, res) => {
+    console.log(devServer + req.url);
+    req.pipe(request(devServer + req.url)).pipe(res);
+});
+
 app.get('/dekk/tags', (req, res) => {
     const response = require("./mocks/tagsResponse.json");
     res.json(response);

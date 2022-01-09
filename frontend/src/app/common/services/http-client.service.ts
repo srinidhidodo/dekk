@@ -74,6 +74,21 @@ import { UserService } from './user.service';
     return observable;
   }
 
+  public delete(url: string): any {
+    const observable = this.http.delete<any>(url, {
+      headers: new HttpHeaders({
+        Authorization: this.userService.accessToken
+      })
+    }).pipe(share());
+    observable.subscribe(() => {}, (error: any) => {
+      if (error?.status === 401) {
+        this.userService.logout();
+        this.router.navigate([UrlConstants.LANDING]);
+      }
+    });
+    return observable;
+  }
+
   public getWithoutAuth(url: string, parameters?: {key: string, value: string}[]): any {
     let queryString = '';
     if (parameters) {

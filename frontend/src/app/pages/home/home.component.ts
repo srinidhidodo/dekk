@@ -95,7 +95,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else {
       this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
         this.dekks = response && response.dekk_stats ? response.dekk_stats : [];
-        this.personalDekks = response && response.user_dekks ? response.user_dekks : [];
+        const curatedDekkIds = this.dekks.map((dekk: Dekk) => dekk.tag_id);
+        this.personalDekks = response && response.user_dekks ? 
+          response.user_dekks.filter((dekk: Dekk) => !curatedDekkIds.includes(dekk.tag_id)) : [];
         this.selectedMasterDekk = DekkUtils.getEmptyDekkMetadata();
         setTimeout(() => {
           this.isLoading = false; 

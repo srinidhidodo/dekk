@@ -56,9 +56,13 @@ export class DekkWithCardsEditViewComponent implements OnInit {
   }
 
   handleDekkLoadError(): void {
+    this.handleDekkError(PopupConstants.DEKK_METADATA_LOAD_ERROR);
+  }
+
+  handleDekkError(msg: string): void {
     const dialogRef = this.dialog.open(ErrorDialogComponent, {
       data: {
-          msg: PopupConstants.DEKK_METADATA_LOAD_ERROR
+          msg
       }
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -104,6 +108,22 @@ export class DekkWithCardsEditViewComponent implements OnInit {
   editCard(cardId: string): void {
     // this.isLoading = true;
     this.router.navigate([UrlConstants.CARD_EDIT_VIEW], {queryParams: { id: cardId, dekk_id: this.currentDekkId }});
+  }
+
+  deleteCard(cardId: string): void {
+    this.isLoading = true;
+    this.dekkService.deleteCard(cardId).subscribe((response: any) => {
+      this.dekkService.loadDekkMetadataByDekkId(this.currentDekkId!).subscribe((dekkMetadata: DekkMetadata) => {
+        this.currentDekk = dekkMetadata;
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 500);
+      }, (error: any) => {
+        this.handleDekkLoadError();
+      });
+    }, (error: any) => {
+      this.handleDekkError(PopupConstants.DEKK_METADATA_DELETE_ERROR);
+    });
   }
 
   studyDekk(): void {
