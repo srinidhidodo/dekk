@@ -716,7 +716,7 @@ class CreateSubDekk:
     @falcon.before(authorization.request_valiation)
     def on_post(self, req, resp):
         try:
-            dekk_id, subdekk_id = create_subdekk(self.db_conn, req)
+            subdekk_id, dekk_id = create_subdekk(self.db_conn, req)
             http_response.ok(
                 resp,
                 {
@@ -740,7 +740,7 @@ class CreateTag:
     @falcon.before(authorization.request_valiation)
     def on_post(self, req, resp):
         try:
-            dekk_id, tag_id = create_tag(self.db_conn, req)
+            tag_id, dekk_id = create_tag(self.db_conn, req)
             http_response.ok(
                 resp, {"message": "Created tag", "dekk_id": dekk_id, "tag_id": tag_id}
             )

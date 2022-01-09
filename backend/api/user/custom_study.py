@@ -87,6 +87,8 @@ def get_study_cards(db_conn, req):
             "card_id": card["card_id"],
             "no_of_cards": cards_count,
             "session_id": session_id,
+            "viewed": True,
+            "views": 1,
         }
         status = db_conn.pg_handle_insert(session_dict)
 
@@ -103,7 +105,12 @@ def get_study_cards(db_conn, req):
     return response
 
 
-def create_custom_study_menu(db_conn):
+def create_custom_study_menu(db_conn, req):
+
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
 
     master_topics_query = f"""
         select count(*) as cards_count,t1.tag_name as dekk_name ,t1.tag_id as dekk_id from user_content.tags t1 inner join
@@ -123,8 +130,12 @@ def create_custom_study_menu(db_conn):
             "cards_count": id["cards_count"],
             "dekk_id": dekk_id,
             "dekk_name": id["dekk_name"],
-            "is_owner": False,
         }
+
+        if decode["account_id"] == 1:
+            dekk_tree["is_owner"] = True
+        else:
+            dekk_tree["is_owner"] = False
 
         submaster_query = f"""select count(*) as cards_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
         user_content.tags_cards t2 on t1.tag_id = t2.tag_id
@@ -135,6 +146,12 @@ def create_custom_study_menu(db_conn):
         """
 
         submaster_results = db_conn.fetch_query_direct_query(submaster_query)
+        for result in submaster_results:
+            if dekk_tree["is_owner"] == True:
+                result["is_owner"] = True
+            else:
+                result["is_owner"] = False
+
         dekk_tree["sub_dekks"] = submaster_results
 
         for sub_dekk in dekk_tree["sub_dekks"]:
@@ -146,6 +163,11 @@ def create_custom_study_menu(db_conn):
             order by count(*) desc
             """
             subtopics_results = db_conn.fetch_query_direct_query(subtopics_query)
+            for result in subtopics_results:
+                if dekk_tree["is_owner"] == True:
+                    result["is_owner"] = True
+                else:
+                    result["is_owner"] = False
             sub_dekk["sub_topics"] = subtopics_results
 
         custom_study_tree.append(dekk_tree)
@@ -177,7 +199,7 @@ class GetCustomStudyMenu:
     @falcon.before(authorization.request_valiation)
     def on_get(self, req, resp):
         try:
-            result = create_custom_study_menu(self.db_conn)
+            result = create_custom_study_menu(self.db_conn, req)
             http_response.ok(resp, result)
         except Exception as e:
             print(e)

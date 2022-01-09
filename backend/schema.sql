@@ -80,6 +80,7 @@ CREATE TABLE users.sessions (
 	no_of_cards int not null,
 	viewed boolean null,
 	bookmarked boolean null,
+	views int null,
 	created_at timestamp NULL DEFAULT timezone('utc'::text, now()),
 	updated_at timestamp NULL DEFAULT timezone('utc'::text, now()),
 	UNIQUE (account_id,card_id),

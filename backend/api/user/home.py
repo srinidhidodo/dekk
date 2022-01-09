@@ -21,6 +21,11 @@ def get_master_topics_stats(db_conn, req):
         Todo
     """
 
+    env = os.environ.get(f"ENV")
+    secret = os.environ.get(f"SECRET_{env}")
+    token = req.headers.get("AUTHORIZATION")
+    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
+
     query = f"""
         select count(*) as total_cards, t1.tag_name, t1.tag_id, t1.field
         from user_content.tags t1
@@ -37,12 +42,11 @@ def get_master_topics_stats(db_conn, req):
             result.pop(key, None)
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"]
-            result["is_owner"] = False
 
-    env = os.environ.get(f"ENV")
-    secret = os.environ.get(f"SECRET_{env}")
-    token = req.headers.get("AUTHORIZATION")
-    decode = jwt.decode(token, secret, verify="False", algorithms=["HS256"])
+        if decode["account_id"] == 1:
+            result["is_owner"] = True
+        else:
+            result["is_owner"] = False
 
     account_id = decode["account_id"]
     query = f"""
@@ -61,7 +65,8 @@ def get_master_topics_stats(db_conn, req):
             result.pop(key, None)
         if "tag_name" in result:
             result["tag_name"] = result["tag_name"]
-            result["is_owner"] = True
+
+        result["is_owner"] = True
 
         # if result["total_cards"] == 1:
         #     result["total_cards"] = 0
