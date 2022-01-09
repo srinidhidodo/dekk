@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { share } from 'rxjs/operators';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
 import { Dekk } from 'src/app/common/models/dekk';
 import { HomeResponse } from 'src/app/common/models/home-response';
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isLoading: boolean = true;
   routeListener: any;
   locationListener: any;
+  dekkLoadListener: any;
 
   constructor(private httpClientService: HttpClientService, 
     private studyService: StudyService, 
@@ -51,6 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
               this.initialise();
             }
           });
+          this.locationListener.pipe(share());
         }
       });
   }
@@ -60,14 +63,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.routeListener.unsubscribe();
-    this.locationListener.unsubscribe();
+    this.routeListener?.unsubscribe();
+    this.locationListener?.unsubscribe();
+    this.dekkLoadListener?.unsubscribe();
   }
 
   initialise(): void {
     this.tagsService.loadTags();
     if (this.selectedMasterDekkId) {
-      this.dekkService.loadDekkDetails(this.selectedMasterDekkId).subscribe((response: any) => {
+      this.dekkLoadListener = this.dekkService.loadDekkDetails(this.selectedMasterDekkId).subscribe((response: any) => {
         this.dekks = [];
         if (response) {
           this.selectedMasterDekk = response.filter((dekk: any) => dekk.dekk_id === this.selectedMasterDekkId)[0];
@@ -78,9 +82,12 @@ export class HomeComponent implements OnInit, OnDestroy {
                 tag_name: subDekk.tag_name,
                 tag_id: subDekk.tag_id,
                 field: subDekk.tag_name,
-                is_master_topic: false
+                is_owner: subDekk.is_owner
               });
             });
+
+            // temp - TODO remove
+            // this.dekks = this.dekks.map((dekk: Dekk) => { dekk.is_owner = true; return dekk; });
           }
         }
 
@@ -93,12 +100,17 @@ export class HomeComponent implements OnInit, OnDestroy {
         }, 500);
       });
     } else {
-      this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
+      this.dekkLoadListener = this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
         this.dekks = response && response.dekk_stats ? response.dekk_stats : [];
         const curatedDekkIds = this.dekks.map((dekk: Dekk) => dekk.tag_id);
         this.personalDekks = response && response.user_dekks ? 
           response.user_dekks.filter((dekk: Dekk) => !curatedDekkIds.includes(dekk.tag_id)) : [];
         this.selectedMasterDekk = DekkUtils.getEmptyDekkMetadata();
+
+        //temp - TODO remove
+        // this.dekks = this.dekks.map((dekk: Dekk) => { dekk.is_owner = true; return dekk; });
+        // this.personalDekks = this.personalDekks.map((dekk: Dekk) => { dekk.is_owner = true; return dekk; });
+
         setTimeout(() => {
           this.isLoading = false; 
         }, 500);
