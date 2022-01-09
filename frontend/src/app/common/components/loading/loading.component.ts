@@ -13,7 +13,7 @@ export class LoadingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.loadingText = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
+    this.loadingText = PunsConstants.sessionPun;
   }
 
 }

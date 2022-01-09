@@ -6,4 +6,6 @@ export class PunsConstants {
         "I once heard a joke about amnesia, but I forgot how it goes.",
         "Two surgeons were joking so much they had each other in stitches!"
     ];
+
+    static sessionPun = '';
 }

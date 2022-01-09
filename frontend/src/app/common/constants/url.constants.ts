@@ -23,6 +23,7 @@ export class UrlConstants {
   public static CARD_DATA_URL = UrlConstants.BASE_URL + '/card';
   public static SAVE_DEKK_DETAILS = UrlConstants.BASE_URL + '/dekk';
   public static SAVE_CARD_DATA_URL = UrlConstants.BASE_URL + '/card';
+  public static DELETE_CARD_URL = UrlConstants.BASE_URL + '/card';
   public static GET_COLLEGES_URL = UrlConstants.BASE_URL + '/resources/colleges';
 
   // Routing URLs

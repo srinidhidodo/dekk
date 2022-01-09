@@ -39,6 +39,10 @@ import { HttpClientService } from "./http-client.service";
       }
     }
 
+    public deleteCard(card_id?: string): Observable<any> {
+      return this.httpClientService.delete(UrlConstants.DELETE_CARD_URL + '/' + card_id);
+    }
+
     public saveSubdekk(master_dekk_id: string, sub_master_name: string): Observable<any> {
       return this.httpClientService.post(UrlConstants.CREATE_SUBDEKK_URL, {    
         master_dekk_id,
