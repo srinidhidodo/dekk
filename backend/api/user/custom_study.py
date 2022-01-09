@@ -137,7 +137,7 @@ def create_custom_study_menu(db_conn, req):
         else:
             dekk_tree["is_owner"] = False
 
-        submaster_query = f"""select count(*) as cards_count,t1.tag_name,t1.tag_id from user_content.tags t1 inner join
+        submaster_query = f"""select count(*) as cards_count,t1.tag_name,t1.tag_id from user_content.tags t1 full join
         user_content.tags_cards t2 on t1.tag_id = t2.tag_id
         where t1.parent_topic_hash = '{dekk_id}' and t1.tag_id !='{dekk_id}'
         and t1.tag_type = 'submaster'
