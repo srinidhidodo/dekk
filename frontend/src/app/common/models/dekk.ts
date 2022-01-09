@@ -3,7 +3,7 @@ export interface Dekk {
     tag_name: string;
     tag_id: string;
     field: string;
-    is_master_topic: boolean;
+    is_master_topic?: boolean;
     created_at?: string;
     updated_at?: string;
     is_owner?: boolean;
