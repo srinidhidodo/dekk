@@ -63,6 +63,7 @@ import { ErrorDialogComponent } from './common/components/error-dialog/error-dia
 import { MsgDialogComponent } from './common/components/msg-dialog/msg-dialog.component';
 import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/create-edit-subdekk-detail/create-edit-subdekk-detail.component';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 
@@ -97,6 +98,7 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
     ErrorDialogComponent,
     MsgDialogComponent,
     CreateEditSubdekkDetailComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     AppRoutingModule,

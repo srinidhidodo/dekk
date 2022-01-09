@@ -9,6 +9,7 @@ import { DekkWithCardsEditViewComponent } from './pages/create-edit-dekk/dekk-wi
 import { HomeComponent } from './pages/home/home.component';
 import { LandingHomeComponent } from './pages/landing-home/landing-home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { StudyCardComponent } from './pages/study-card/study-card.component';
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent, pathMatch: 'full' },
   { path: 'why-dekk', component: WhyDekkComponent, pathMatch: 'full' },
   { path: 'study-session', component: StudySessionComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '/pages/404' }
+  { path: 'page-not-found', component: PageNotFoundComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: '/page-not-found' }
 ];
 
 @NgModule({
