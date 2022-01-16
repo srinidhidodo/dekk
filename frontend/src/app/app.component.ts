@@ -83,7 +83,6 @@ export class AppComponent {
     this.userService.initializeWithPreviousLogin();
     this.collegeService.loadColleges();
     PunsConstants.sessionPun = PunsConstants.puns[Math.floor(Math.random() * PunsConstants.puns.length)];
-    // this.tagsService.loadTags();
   }
 
   handleSidenavClick(): void {
@@ -139,6 +138,7 @@ export class AppComponent {
 
   logout(): void {
     this.userService.logout();
+    this.sidenav.close();
     this.router.navigate([UrlConstants.LANDING]);
   }
 }
