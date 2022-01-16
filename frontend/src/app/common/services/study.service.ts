@@ -273,9 +273,20 @@ export class StudyService {
     getCurrentCard(): Card {
         if (this.dekkCards.length > 0 && this.currentCardIndex > -1) {
             const card = this.dekkCards[this.currentCardIndex];
+            if (!card.visited) {
+                ++ this.totalCardsStudied;
+            }
+            card.visited = true;
             card.image_links = card.image_links ?? [];
             return card;
         }
         return CardUtils.getDummyCard();
+    }
+
+    markGotCardRight(): void {
+        if (!this.dekkCards[this.currentCardIndex].rightWrongMarked) {
+            ++ this.rightCards;
+        }
+        this.dekkCards[this.currentCardIndex].rightWrongMarked = true;
     }
 }

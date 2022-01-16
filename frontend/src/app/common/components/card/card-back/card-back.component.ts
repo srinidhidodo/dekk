@@ -33,13 +33,13 @@ export class CardBackComponent implements OnInit, OnChanges {
   constructor(public studyService: StudyService, public dialog: MatDialog) {
     this.flipToFrontObservable = rxmq.channel(MessageConstants.STUDY_CHANNEL)
       .subject(MessageConstants.STUDY_FLIP_TO_FRONT_ACTION);
+  }
+
+  ngOnInit(): void {
     this.rightObervable = rxmq.channel(MessageConstants.RIGHT_WRONG_CHANNEL)
       .subject(MessageConstants.RIGHT_ACTION);
     this.wrongObervable = rxmq.channel(MessageConstants.RIGHT_WRONG_CHANNEL)
       .subject(MessageConstants.WRONG_ACTION);
-  }
-
-  ngOnInit(): void {
   }
 
   ngOnChanges(): void {
@@ -98,7 +98,6 @@ export class CardBackComponent implements OnInit, OnChanges {
         title: 'Wrong',
         text: 'Wrong',
       });
-      this.card.rightWrongMarked = true;
     }
   }
 

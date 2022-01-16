@@ -106,6 +106,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.routeListener.unsubscribe();
+    this.rightWrongSubscription.unsubscribe();
   }
 
   getCardCategory(): string {
@@ -155,8 +156,7 @@ export class StudyCardComponent implements OnInit, OnDestroy {
 
   countRightWrongStats(action: string): void {
     if (action === MessageConstants.RIGHT_ACTION) {
-      ++ this.studyService.rightCards;
+      this.studyService.markGotCardRight();
     }
-    // ++ this.studyService.totalCardsStudied;
   }
 }
