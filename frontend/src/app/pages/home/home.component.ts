@@ -43,6 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (event instanceof NavigationEnd) {
           if (!this.userService.loggedIn) {
             this.router.navigate([UrlConstants.LANDING]);
+            return;
           }
           this.locationListener = this.activatedRoute.queryParams.subscribe(params => {
             if (params.id) {
