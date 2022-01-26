@@ -34,7 +34,7 @@
         [hidden]="!isLoggedIn()"></mat-search-bar> -->
       <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon> -->
       <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Log Out" (click)="logout()">power_settings_new</mat-icon> -->
-      <button mat-stroked-button disabled class="toolbar-button quarter-opacity-outline-themed" color="accent" (click)="goToCreateView()">Create</button>
+      <button mat-stroked-button class="toolbar-button menu-icon quarter-opacity-outline-themed" color="accent" (click)="goToCreateView()">Create</button>
       <mat-icon [hidden]="!isLoggedIn()" class="search-icon menu-icon color-themed" color="accent" [matMenuTriggerFor]="menu">person</mat-icon>
       <mat-menu #menu="matMenu" class="menu-background">
         <button mat-menu-item class="menu-item">Account</button>
