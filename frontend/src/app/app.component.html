@@ -1,9 +1,21 @@
 <!-- Toolbar -->
 <div [ngClass]="{'dark-theme-mode': isDarkThemeEnabled}" class="mat-app-background background">
   <div color="primary" class="toolbar head-toolbar" role="banner">
-    <div class=left-toolbar>
-      <mat-icon class="menu-icon" matTooltip="Menu" [hidden]="!isLoggedIn()" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
-      <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
+    <div class="toolbar-overlay" [hidden]="!isDarkThemeEnabled"></div>
+    <div class="left-toolbar">
+      <img src="assets/dark-logo-full.png" class="logo-placement menu-icon" [hidden]="isDarkThemeEnabled" (click)="goToHomePage()" />
+      <img src="assets/light-logo-full.png" class="logo-placement menu-icon" [hidden]="!isDarkThemeEnabled" (click)="goToHomePage()" />
+      <!-- <span class="left-toolbar-block">
+        <mat-icon class="menu-icon" matTooltip="Menu" [hidden]="!isLoggedIn()" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
+        <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
+      </span> -->
+      <button mat-stroked-button class="toolbar-button quarter-opacity-outline-themed" color="accent" (click)="goToStudy()">Study</button>
+      <mat-search-bar
+        (onEnter)="submitSearch($event)"
+        matTooltip="Search"
+        class="search-input color-themed"
+        direction="right"
+        [hidden]="!isLoggedIn()"></mat-search-bar>
     </div>
     <div class="head-toolbar-center" [hidden]="isLoggedIn()">
       <button mat-button (click)="goToAboutUs()">About Us</button>
@@ -12,19 +24,30 @@
     </div>
     <div class="head-toolbar-right">
       <div [hidden]="isLoggedIn()">
-        <button mat-button (click)="loginClicked()">Sign In</button>
+        <button mat-button color="accent" (click)="loginClicked()">Sign In</button>
         <!-- <button mat-button (click)="signupClicked()">Register</button> -->
       </div>
-      <mat-search-bar
+      <!-- <mat-search-bar
         (onEnter)="submitSearch($event)"
         matTooltip="Search"
         class="search-input"
-        [hidden]="!isLoggedIn()"></mat-search-bar>
-      <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon>
-      <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Log Out" (click)="logout()">power_settings_new</mat-icon>
+        [hidden]="!isLoggedIn()"></mat-search-bar> -->
+      <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon> -->
+      <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Log Out" (click)="logout()">power_settings_new</mat-icon> -->
+      <button mat-stroked-button disabled class="toolbar-button quarter-opacity-outline-themed" color="accent" (click)="goToCreateView()">Create</button>
+      <mat-icon [hidden]="!isLoggedIn()" class="search-icon menu-icon color-themed" color="accent" [matMenuTriggerFor]="menu">person</mat-icon>
+      <mat-menu #menu="matMenu" class="menu-background">
+        <button mat-menu-item class="menu-item">Account</button>
+        <button mat-menu-item class="menu-item">Settings</button>
+        <button mat-menu-item class="menu-item">Bookmarks</button>
+        <mat-divider class="divider-class"></mat-divider>
+        <button mat-menu-item class="menu-item">About</button>
+        <button mat-menu-item class="menu-item">Why Dekk</button>
+        <mat-divider class="divider-class"></mat-divider>
+        <button mat-menu-item class="menu-item">Log Out</button>
+      </mat-menu>
       <span [hidden]="!isLoggedIn()" class="dark-light-toggle padded-toolbar-component">
-        <mat-slide-toggle color="primary" matTooltip="Dark Mode Toggle" [(ngModel)]="isDarkThemeEnabled">
-          <mat-icon>bedtime</mat-icon>
+        <mat-slide-toggle matTooltip="Dark Mode Toggle" (click)="toggle()" [(ngModel)]="isDarkThemeEnabled">
         </mat-slide-toggle>
       </span>
     </div>
