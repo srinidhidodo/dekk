@@ -1,4 +1,5 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -50,6 +51,7 @@ export class AppComponent {
   ];
 
   searchSender: Subject<any>;
+  overlay: any;
 
   constructor(private router: Router,
     private searchService: SearchService,
@@ -57,15 +59,19 @@ export class AppComponent {
     private userService: UserService,
     private dialog: MatDialog,
     private collegeService: CollegeService,
-    private tagsService: TagsService) {
+    private tagsService: TagsService,
+    private overlayContainer: OverlayContainer) {
     
     this.searchSender = rxmq.channel(MessageConstants.SEARCH_CHANNEL)
       .subject(MessageConstants.SEARCH_TRIGGERED_ACTION);
 
     this.initialiseApp();
+    this.overlay = overlayContainer.getContainerElement();
   }
 
   ngAfterViewInit() {
+    this.overlay.classList.add("dark-theme-mode");
+
     if (this.isLoggedIn()) {
       this.observer.observe(['(max-width: 1300px)']).subscribe((res: BreakpointState) => {
         if (res.matches) {
@@ -136,9 +142,26 @@ export class AppComponent {
     this.router.navigate([UrlConstants.WHY_DEKK]);
   }
 
+  goToStudy(): void {
+    this.router.navigate([UrlConstants.STUDY_SESSION]);
+  }
+
   logout(): void {
     this.userService.logout();
     this.sidenav.close();
     this.router.navigate([UrlConstants.LANDING]);
+  }
+
+  toggle(): void {
+    // this.isDarkThemeEnabled = !this.isDarkThemeEnabled;
+    setTimeout(() => {
+      if (this.isDarkThemeEnabled) {
+        // this.overlay.classList.remove("light-theme-mode");
+        this.overlay.classList.add("dark-theme-mode");
+      } else {
+        this.overlay.classList.remove("dark-theme-mode");
+        // this.overlay.classList.add("light-theme-mode");
+      }
+    });
   }
 }

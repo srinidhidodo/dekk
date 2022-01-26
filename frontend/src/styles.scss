@@ -28,3 +28,9 @@ app-study-session {
         padding-right: 0 !important;
     }
 }
+
+mat-search-bar {
+    input {
+        transform: rotateY(180deg);
+    }
+}

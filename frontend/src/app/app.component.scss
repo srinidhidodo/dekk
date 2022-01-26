@@ -43,6 +43,15 @@
   padding-left: 8px;
 }
 
+.toolbar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  border-radius: 10vh;
+  font-size: 11px;
+}
+
 :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
@@ -154,6 +163,7 @@
     margin-left: 5px;
     border: 0px !important;
     background: transparent !important;
+    transform: rotateY(180deg);
   }
 
   .card-container .card:not(:last-child) {
@@ -362,16 +372,31 @@ mat-sidenav {
   @extend .each-toolbar-part;
   display: flex;
   align-items: center;
+  width: fit-content;
   padding-left: 10px;
+  justify-content: space-between;
+}
+
+.left-toolbar-block {
+  display: flex;
+  align-items: center;
+  margin-right: 1vw;
+}
+
+.logo-placement {
+  height: 3.5vh;
+  // width: 5vw;
 }
 
 .menu-icon {
   cursor: pointer;
+  z-index: 9;
 }
 
 .search-input {
   border: 0px;
   background: transparent;
+  color: #fff3e0;
 }
 
 .dekk-header-name {
