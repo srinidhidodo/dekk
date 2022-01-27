@@ -26,12 +26,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  min-width: 250px;
+  width: fit-content;
 }
 
 .dark-light-toggle {
   display: flex !important;
   justify-content: space-evenly;
+  // margin-right: 10px;
 }
 
 .padded-toolbar-component {
@@ -47,9 +48,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  height: clamp(25px, 5vh, 30px);
   border-radius: 10vh;
   font-size: 11px;
+  margin-right: 1vw;
 }
 
 :host {
@@ -384,7 +386,8 @@ mat-sidenav {
 }
 
 .logo-placement {
-  height: 3.5vh;
+  margin-left: 10px !important;
+  height: clamp(18px, 3.5vh, 25px);
   // width: 5vw;
 }
 
@@ -425,6 +428,10 @@ mat-sidenav {
 
 @media (max-width: 767px) {
   .head-toolbar-center {
+    display: none;
+  }
+
+  .small-screen-hide {
     display: none;
   }
 }

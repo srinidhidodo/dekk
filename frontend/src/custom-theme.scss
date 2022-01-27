@@ -17,11 +17,19 @@ $dekk-new-light-theme: mat.define-light-theme((
 @include mat.form-field-theme($dekk-new-light-theme);
 @include mat.input-theme($dekk-new-light-theme);
 
-$beige-color: #fff3e0;
+$beige-color: #fff6e6;
 $blackish-color: #121212;
+$blackish-color-with-single-beige-overlay: #252423;
+$pink-color: #dc6278;
 
-$dekk-new-primary-dark: mat.define-palette(mat.$light-blue-palette);
-$dekk-new-accent-dark: mat.define-palette(mat.$orange-palette, 50);
+// Custom palettes
+$custom-pink-palette: mat.$pink-palette;
+$custom-pink-palette: map-merge($custom-pink-palette, (200: $pink-color));
+$custom-beige-palette: mat.$orange-palette;
+$custom-beige-palette: map-merge($custom-beige-palette, (50: $beige-color));
+
+$dekk-new-primary-dark: mat.define-palette($custom-pink-palette, 200);
+$dekk-new-accent-dark: mat.define-palette($custom-beige-palette, 50);
 $dekk-new-warn-dark: mat.define-palette(mat.$red-palette);
 $dekk-new-dark-theme: mat.define-dark-theme((
   color: (
@@ -30,6 +38,17 @@ $dekk-new-dark-theme: mat.define-dark-theme((
     warn: $dekk-new-warn-dark,
   )
 ));
+
+// Specific customizations to themes
+$dekk-dark-palette-color : map-get($dekk-new-dark-theme, color);
+$dekk-dark-bg: map-get($dekk-dark-palette-color, background);
+$dekk-dark-bg: map-merge($dekk-dark-bg, (background: $blackish-color));
+$dekk-dark-bg: map-merge($dekk-dark-bg, (card: $blackish-color-with-single-beige-overlay));
+$dekk-dark-palette-color: map-merge($dekk-dark-palette-color, (background: $dekk-dark-bg));
+$dekk-dark-fg: map-get($dekk-dark-palette-color, foreground);
+$dekk-dark-fg: map-merge($dekk-dark-fg, (text: $beige-color));
+$dekk-dark-palette-color: map-merge($dekk-dark-palette-color, (foreground: $dekk-dark-fg));
+$dekk-new-dark-theme: map-merge($dekk-new-dark-theme, (color: $dekk-dark-palette-color));
 
 .primary-text-color {
   color: mat-color($dekk-new-primary) !important;
@@ -112,12 +131,12 @@ cdk-virtual-scroll-viewport {
 }
 
 .dekk-or-card-shadow {
-  box-shadow: 3px 3px 3px gray !important;
+  // box-shadow: 3px 3px 3px gray !important;
 }
 
 .each-dekk {
   @extend .dekk-or-card-shadow;
-  margin-bottom: 10px;
+  margin-bottom: 3vh;
   height: 150px;
   cursor: pointer;
   // box-shadow: 3px 3px 3px gray !important;
@@ -160,6 +179,13 @@ hr {
     color: mat-color($dekk-new-primary-dark) !important;
   }
 
+  // div {
+  //   .mat-app-background {
+  //     background-color: $blackish-color !important;
+  //     color: $beige-color !important;
+  //   }
+  // }
+
   input {
     background: #303030;
     border: 0px;
@@ -167,7 +193,7 @@ hr {
   }
 
   .app-background {
-    background-color: $blackish-color;
+    background: $blackish-color;
     background-image: none;
     // background-color: #3e4349;
     // background-image: linear-gradient(315deg, #3e4349 0%, #181e24 70%);
@@ -253,12 +279,12 @@ hr {
   }
 
   .dekk-or-card-shadow {
-    box-shadow: 3px 3px 3px gray !important;
+    // box-shadow: 3px 3px 3px gray !important;
   }
   
   .each-dekk {
     @extend .dekk-or-card-shadow;
-    margin-bottom: 10px;
+    margin-bottom: 3vh;
     height: 150px;
     cursor: pointer;
     // box-shadow: 3px 3px 3px gray !important;

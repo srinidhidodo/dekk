@@ -5,11 +5,7 @@
     <div class="left-toolbar">
       <img src="assets/dark-logo-full.png" class="logo-placement menu-icon" [hidden]="isDarkThemeEnabled" (click)="goToHomePage()" />
       <img src="assets/light-logo-full.png" class="logo-placement menu-icon" [hidden]="!isDarkThemeEnabled" (click)="goToHomePage()" />
-      <!-- <span class="left-toolbar-block">
-        <mat-icon class="menu-icon" matTooltip="Menu" [hidden]="!isLoggedIn()" (click)="sidebarOpened=!sidebarOpened">menu</mat-icon>
-        <span class="padded-toolbar-component dekk-header-name" (click)="goToHomePage()">Dekk</span>
-      </span> -->
-      <button mat-stroked-button class="toolbar-button quarter-opacity-outline-themed" color="accent" (click)="goToStudy()">Study</button>
+      <button mat-stroked-button class="toolbar-button quarter-opacity-outline-themed small-screen-hide" color="accent" (click)="goToStudy()">Study</button>
       <mat-search-bar
         (onEnter)="submitSearch($event)"
         matTooltip="Search"
@@ -25,52 +21,24 @@
     <div class="head-toolbar-right">
       <div [hidden]="isLoggedIn()">
         <button mat-button color="accent" (click)="loginClicked()">Sign In</button>
-        <!-- <button mat-button (click)="signupClicked()">Register</button> -->
       </div>
-      <!-- <mat-search-bar
-        (onEnter)="submitSearch($event)"
-        matTooltip="Search"
-        class="search-input"
-        [hidden]="!isLoggedIn()"></mat-search-bar> -->
-      <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Create" (click)="goToCreateView()">add</mat-icon> -->
-      <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon" matTooltip="Log Out" (click)="logout()">power_settings_new</mat-icon> -->
-      <button mat-stroked-button class="toolbar-button menu-icon quarter-opacity-outline-themed" color="accent" (click)="goToCreateView()">Create</button>
+      <button mat-stroked-button class="toolbar-button menu-icon quarter-opacity-outline-themed small-screen-hide" color="accent" (click)="goToCreateView()">Create</button>
+      <span [hidden]="!isLoggedIn()" class="dark-light-toggle padded-toolbar-component">
+        <mat-slide-toggle class="small-screen-hide dark-light-toggle" matTooltip="Dark Mode Toggle" (click)="toggle()" [(ngModel)]="isDarkThemeEnabled">
+        </mat-slide-toggle>
+      </span>
       <mat-icon [hidden]="!isLoggedIn()" class="search-icon menu-icon color-themed" color="accent" [matMenuTriggerFor]="menu">person</mat-icon>
       <mat-menu #menu="matMenu" class="menu-background">
         <button mat-menu-item class="menu-item">Account</button>
         <button mat-menu-item class="menu-item">Settings</button>
         <button mat-menu-item class="menu-item">Bookmarks</button>
         <mat-divider class="divider-class"></mat-divider>
-        <button mat-menu-item class="menu-item">About</button>
-        <button mat-menu-item class="menu-item">Why Dekk</button>
+        <button mat-menu-item class="menu-item" (click)="goToAboutUs()">About</button>
+        <button mat-menu-item class="menu-item" (click)="goToWhyDekk()">Why Dekk</button>
         <mat-divider class="divider-class"></mat-divider>
-        <button mat-menu-item class="menu-item">Log Out</button>
+        <button mat-menu-item class="menu-item" (click)="logout()">Log Out</button>
       </mat-menu>
-      <span [hidden]="!isLoggedIn()" class="dark-light-toggle padded-toolbar-component">
-        <mat-slide-toggle matTooltip="Dark Mode Toggle" (click)="toggle()" [(ngModel)]="isDarkThemeEnabled">
-        </mat-slide-toggle>
-      </span>
     </div>
-    
   </div>
-  <mat-sidenav-container class="app-background">
-    <mat-sidenav [(opened)]="sidebarOpened" mode="side">
-      <mat-nav-list>
-        <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItems" (click)="handleSidenavClick()">
-          <mat-icon>{{listItem.icon}}</mat-icon>
-          <span class="sidebar-item">{{listItem.name}}</span>
-        </a>
-      </mat-nav-list>
-      <mat-divider></mat-divider>
-      <mat-nav-list>
-        <a mat-list-item routerLink="{{listItem.link}}" *ngFor="let listItem of listItemsBelowDivider" (click)="handleSidenavClick()">
-          <mat-icon>{{listItem.icon}}</mat-icon>
-          <span class="sidebar-item">{{listItem.name}}</span>
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <router-outlet></router-outlet>
 </div>

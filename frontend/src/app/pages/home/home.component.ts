@@ -1,4 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MatTabGroup } from '@angular/material/tabs';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { share } from 'rxjs/operators';
 import { UrlConstants } from 'src/app/common/constants/url.constants';
@@ -18,6 +20,7 @@ import { DekkUtils } from 'src/app/common/utils/dekk-utils';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild("dekkTabs", { static: false }) dekkTabs: MatTabGroup;
 
   dekks: Dekk[] = [];
   personalDekks: Dekk[] = [];
@@ -27,6 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   routeListener: any;
   locationListener: any;
   dekkLoadListener: any;
+  tabIndex = 0;
 
   constructor(private httpClientService: HttpClientService, 
     private studyService: StudyService, 
@@ -61,6 +65,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     // this.initialise();
+    // this.dekkTabs.focusTab(1);
+    // this.dekkTabs.selectedIndex = (this.dekkTabs.selectedIndex ?? 0 + 1) % this.dekkTabs._tabs.length;
   }
 
   ngOnDestroy(): void {
@@ -98,6 +104,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
         setTimeout(() => {
           this.isLoading = false; 
+          console.log(this.dekkTabs._tabs);
         }, 500);
       });
     } else {
@@ -113,6 +120,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         // this.personalDekks = this.personalDekks.map((dekk: Dekk) => { dekk.is_owner = true; return dekk; });
 
         setTimeout(() => {
+          console.log(this.dekkTabs._tabs);
+          
           this.isLoading = false; 
         }, 500);
       });

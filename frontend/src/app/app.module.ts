@@ -25,6 +25,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -133,7 +134,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     MatMenuModule,
     MatDividerModule,
     MatCheckboxModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTabsModule
   ],
   providers: [
     CdkColumnDef

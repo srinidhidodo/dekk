@@ -72,17 +72,17 @@ export class AppComponent {
   ngAfterViewInit() {
     this.overlay.classList.add("dark-theme-mode");
 
-    if (this.isLoggedIn()) {
-      this.observer.observe(['(max-width: 1300px)']).subscribe((res: BreakpointState) => {
-        if (res.matches) {
-          this.sidenav.mode = "over";
-          this.sidebarOpened = false;
-        } else {
-          this.sidenav.mode = "side";
-          this.sidebarOpened = true;
-        }
-      });
-    }
+    // if (this.isLoggedIn()) {
+    //   this.observer.observe(['(max-width: 1300px)']).subscribe((res: BreakpointState) => {
+    //     if (res.matches) {
+    //       this.sidenav.mode = "over";
+    //       this.sidebarOpened = false;
+    //     } else {
+    //       this.sidenav.mode = "side";
+    //       this.sidebarOpened = true;
+    //     }
+    //   });
+    // }
   }
 
   initialiseApp(): void {

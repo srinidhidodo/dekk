@@ -2,7 +2,7 @@
 @import "~animate.css/animate.css";
 @import '~ngx-bar-rating/themes/br-default-theme';
 
-html, body { height: 100%; }
+html, body { height: 100%; width: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 mark {
@@ -33,4 +33,19 @@ mat-search-bar {
     input {
         transform: rotateY(180deg);
     }
+
+    mat-form-field.span.mat-icon {
+        transform: rotateY(180deg);
+    }
+}
+
+// mat-tab-header {
+//     div.div.div.div.div[selected="true"] {
+//         color: $pink-color;
+//     }
+// }
+
+div[role="tab"][aria-selected="true"] {
+    color: $pink-color;
+    font-weight: bold;
 }
