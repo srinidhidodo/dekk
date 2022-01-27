@@ -1,11 +1,3 @@
-<!-- <div class="row home-banner-container home-banner-container-colour">
-    <div></div>
-    <div>
-        <div class="home-banner"><h1> Welcome to Dekk </h1></div>
-        <div class="home-banner"> Your One-Stop Study Shop </div>
-    </div>
-    <div class="home-banner"> Browse Featured Dekks Here </div>
-</div> -->
 <div>
     <div style="height: 100%; width: 100%;" [hidden]="!isLoading">
         <app-loading></app-loading>
@@ -22,11 +14,7 @@
                             <mat-icon [hidden]="!dekk.is_owner || !selectedMasterDekkId" (click)="editDekk(dekk)">edit</mat-icon>
                         </span>
                         <mat-card-title class="each-dekk-title">
-                            <!-- <span></span> -->
-                            <!-- <span> -->
-                                <h2> {{dekk.tag_name}} </h2>
-                            <!-- </span> -->
-                            <!-- <span class="home-card-icon"><mat-icon>edit</mat-icon></span> -->
+                            <h2> {{dekk.tag_name}} </h2>
                         </mat-card-title>
                         <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
                         <span></span>
@@ -42,11 +30,7 @@
                             <mat-icon>edit</mat-icon>
                         </span>
                         <mat-card-title class="each-dekk-title">
-                            <!-- <span></span> -->
-                            <!-- <span> -->
-                                <h2> {{dekk.tag_name}} </h2>
-                            <!-- </span> -->
-                            <!-- <span class="home-card-icon"><mat-icon>edit</mat-icon></span> -->
+                            <h2> {{dekk.tag_name}} </h2>
                         </mat-card-title>
                         <mat-card-content class="each-dekk-content"> {{dekk.total_cards}} Cards </mat-card-content> 
                         <span></span>
