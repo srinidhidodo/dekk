@@ -27,7 +27,9 @@
         <mat-slide-toggle class="small-screen-hide dark-light-toggle" matTooltip="Dark Mode Toggle" (click)="toggle()" [(ngModel)]="isDarkThemeEnabled">
         </mat-slide-toggle>
       </span>
-      <mat-icon [hidden]="!isLoggedIn()" class="search-icon menu-icon color-themed" color="accent" [matMenuTriggerFor]="menu">person</mat-icon>
+      <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon menu-icon color-themed" color="accent" [matMenuTriggerFor]="menu">person</mat-icon> -->
+      <img src="assets/user-icon-light.svg" class="img-icon menu-icon" [hidden]="!isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu" />
+      <img src="assets/user-icon-dark.svg" class="img-icon menu-icon" [hidden]="isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu" />
       <mat-menu #menu="matMenu" class="menu-background">
         <button mat-menu-item class="menu-item">Account</button>
         <button mat-menu-item class="menu-item">Settings</button>
@@ -41,4 +43,17 @@
     </div>
   </div>
   <router-outlet></router-outlet>
+  <mat-toolbar class="footer-class footer-themed row">
+    <div class="footer-left">
+      <div class="footer-entry menu-icon footer-left" (click)="goToAboutUs()">About</div>
+      <div class="footer-entry menu-icon" (click)="goToWhyDekk()">Why Dekk</div>
+    </div>
+    <div class="footer-right">
+      <i class="footer-icon fab fa-instagram menu-icon"></i>
+      <i class="footer-icon menu-icon fab fa-linkedin-in menu-icon"></i>
+    </div>
+  </mat-toolbar>
+  <!-- <footer>
+    <mat-toolbar></mat-toolbar>
+  </footer> -->
 </div>

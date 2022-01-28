@@ -34,8 +34,8 @@ mat-search-bar {
         transform: rotateY(180deg);
     }
 
-    mat-form-field.span.mat-icon {
-        transform: rotateY(180deg);
+    mat-icon {
+        transform: rotateY(180deg) !important;
     }
 }
 
@@ -48,4 +48,11 @@ mat-search-bar {
 div[role="tab"][aria-selected="true"] {
     color: $pink-color;
     font-weight: bold;
+    opacity: 1;
 }
+
+// app-home {
+//     div[class*=".mat-tab-label"] {
+//         opacity: 1;
+//     }
+// }

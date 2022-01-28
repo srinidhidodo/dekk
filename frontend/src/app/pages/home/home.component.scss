@@ -17,6 +17,7 @@
     margin-left: 0;
     margin-right: 0;
     width: 100%;
+    margin-bottom: 7vh;
 }
 
 .each-dekk-title {
@@ -43,7 +44,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: clamp(20vh, 25vh, 40vh);
+    // height: clamp(20vh, 25vh, 40vh);
 }
 
 .selected-master-dekk {
