@@ -48,6 +48,7 @@ $dekk-dark-bg: map-merge($dekk-dark-bg, (card: $blackish-color-with-single-beige
 $dekk-dark-palette-color: map-merge($dekk-dark-palette-color, (background: $dekk-dark-bg));
 $dekk-dark-fg: map-get($dekk-dark-palette-color, foreground);
 $dekk-dark-fg: map-merge($dekk-dark-fg, (text: $beige-color));
+// $dekk-dark-fg: map-merge($dekk-dark-fg, ("text:hover": $pink-color));
 $dekk-dark-palette-color: map-merge($dekk-dark-palette-color, (foreground: $dekk-dark-fg));
 $dekk-new-dark-theme: map-merge($dekk-new-dark-theme, (color: $dekk-dark-palette-color));
 
@@ -86,7 +87,7 @@ input {
   color: $blackish-color;
 }
 
-.divider-class {
+.divider-themed {
   background: $blackish-color;
 }
 
@@ -214,14 +215,14 @@ hr {
   }
 
   .menu-background {
-    background-color: #252423;
+    background-color: $blackish-color;
   }
 
   .menu-item {
     color: $beige-color !important;
   }
 
-  .divider-class {
+  .divider-themed {
     background: $beige-color !important;
   }
 

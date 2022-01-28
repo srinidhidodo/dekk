@@ -287,7 +287,6 @@ mat-sidenav {
   display: flex;
   align-items: center;
   width: fit-content;
-  padding-left: 10px;
   justify-content: space-between;
 }
 
@@ -310,6 +309,11 @@ mat-sidenav {
 .menu-icon {
   cursor: pointer;
   z-index: 9;
+}
+
+.divider-class {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .search-input {

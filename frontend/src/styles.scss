@@ -51,13 +51,21 @@ div[role="tab"][aria-selected="true"] {
     opacity: 1;
 }
 
-// app-home {
-//     div[class*=".mat-tab-label"] {
-//         opacity: 1;
-//     }
-// }
-
 .mat-menu-panel {
     min-width: 200px;
     width: 250px;
+}
+
+.mat-menu-item:hover {
+    color: $pink-color !important;
+}
+
+.mat-card:hover {
+    .each-dekk-title {
+        color: $pink-color !important;
+    }
+}
+
+.menu-style {
+    border-radius: 10px !important;
 }
