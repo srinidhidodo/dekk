@@ -179,7 +179,7 @@
 
   .footer-entry {
     // float: left;
-    font-size: 2.3vh;
+    font-size: clamp(15px, 2.3vh, 24px); //because 24px is icon height
     margin-right: 15px;
   }
 
@@ -203,6 +203,53 @@
 
   .footer-icon {
     margin-left: 15px;
+  }
+
+  .icon-img-base {
+    background-size: contain;
+    margin-right: 10px;
+  }
+
+  .img-icon-light-in-dark-mode {
+    @extend .icon-img-base;
+    background: url("./../assets/user-icon-light.svg") no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+
+  .img-icon-dark-in-light-mode {
+    @extend .icon-img-base;
+    background: url("./../assets/user-icon-dark.svg") no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+
+  .img-icon-light-in-dark-mode:hover {
+    @extend .icon-img-base;
+    background: url("./../assets/user-icon-light-hovered.svg") no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+
+  .img-icon-dark-in-light-mode:hover {
+    @extend .icon-img-base;
+    background: url("./../assets/user-icon-dark-hovered.svg") no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+
+  .mode-icon-dark-in-light-mode {
+    @extend .icon-img-base;
+    background: url("./../assets/toggle-dark.svg") no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+  }
+
+  .mode-icon-light-in-dark-mode {
+    @extend .icon-img-base;
+    background: url("./../assets/toggle-light.svg") no-repeat;
+    background-size: cover;
+    margin-right: 10px;
   }
 
   // .card-container .card:not(:last-child) {
@@ -304,6 +351,7 @@ mat-sidenav {
 
 .img-icon {
   height: 24px;
+  width: 24px;
 }
 
 .menu-icon {

@@ -26,10 +26,14 @@
       <span [hidden]="!isLoggedIn()" class="dark-light-toggle padded-toolbar-component">
         <mat-slide-toggle class="small-screen-hide dark-light-toggle" matTooltip="Dark Mode Toggle" (click)="toggle()" [(ngModel)]="isDarkThemeEnabled">
         </mat-slide-toggle>
+        <!-- <div class="img-icon mode-icon-light-in-dark-mode menu-icon" (click)="toggle()" [hidden]="!isDarkThemeEnabled"></div>
+        <div class="img-icon mode-icon-dark-in-light-mode menu-icon" (click)="toggle()" [hidden]="isDarkThemeEnabled"></div> -->
       </span>
       <!-- <mat-icon [hidden]="!isLoggedIn()" class="search-icon menu-icon color-themed" color="accent" [matMenuTriggerFor]="menu">person</mat-icon> -->
-      <img src="assets/user-icon-light.svg" class="img-icon menu-icon" [hidden]="!isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu" />
-      <img src="assets/user-icon-dark.svg" class="img-icon menu-icon" [hidden]="isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu" />
+      <!-- <img src="assets/user-icon-light.svg" class="img-icon img-icon-light-in-dark-mode menu-icon" [hidden]="!isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu" />
+      <img src="assets/user-icon-dark.svg" class="img-icon img-icon-dark-in-light-mode menu-icon" [hidden]="isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu" /> -->
+      <div class="img-icon img-icon-light-in-dark-mode menu-icon" [hidden]="!isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu"></div>
+      <div class="img-icon img-icon-dark-in-light-mode menu-icon" [hidden]="isDarkThemeEnabled || !isLoggedIn()" [matMenuTriggerFor]="menu"></div>
       <mat-menu #menu="matMenu" class="menu-background menu-style">
         <button mat-menu-item class="menu-item">Account</button>
         <button mat-menu-item class="menu-item">Settings</button>

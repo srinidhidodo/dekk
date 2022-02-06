@@ -16,7 +16,7 @@ $custom-beige-palette: mat.$orange-palette;
 $custom-beige-palette: map-merge($custom-beige-palette, (50: $beige-color));
 
 $dekk-new-primary: mat.define-palette($custom-pink-palette, 200); //mat.define-palette(mat.$indigo-palette);
-$dekk-new-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dekk-new-accent: mat.define-palette($custom-beige-palette, 50);
 $dekk-new-warn: mat.define-palette(mat.$red-palette);
 $dekk-new-light-theme: mat.define-light-theme((
   color: (
@@ -52,6 +52,17 @@ $dekk-dark-fg: map-merge($dekk-dark-fg, (text: $beige-color));
 $dekk-dark-palette-color: map-merge($dekk-dark-palette-color, (foreground: $dekk-dark-fg));
 $dekk-new-dark-theme: map-merge($dekk-new-dark-theme, (color: $dekk-dark-palette-color));
 
+$dekk-light-palette-color : map-get($dekk-new-light-theme, color);
+$dekk-light-bg: map-get($dekk-light-palette-color, background);
+$dekk-light-bg: map-merge($dekk-light-bg, (background: $beige-color));
+$dekk-light-bg: map-merge($dekk-light-bg, (card: $beige-color));
+$dekk-light-palette-color: map-merge($dekk-light-palette-color, (background: $dekk-light-bg));
+$dekk-light-fg: map-get($dekk-light-palette-color, foreground);
+$dekk-light-fg: map-merge($dekk-light-fg, (text: $blackish-color));
+// $dekk-light-fg: map-merge($dekk-light-fg, ("text:hover": $pink-color));
+$dekk-light-palette-color: map-merge($dekk-light-palette-color, (foreground: $dekk-light-fg));
+$dekk-new-light-theme: map-merge($dekk-new-light-theme, (color: $dekk-light-palette-color));
+
 .primary-text-color {
   color: mat-color($dekk-new-primary) !important;
 }
@@ -67,6 +78,10 @@ input {
   //blue-white-pink
   // background-color: #effcf5;
   // background-image: linear-gradient(315deg, #d1fdd6 0%, #d4e0fa 74%);
+}
+
+.mat-card {
+  background: $beige-color;
 }
 
 .color-themed {
@@ -101,6 +116,10 @@ input {
 .mat-slide-toggle-thumb {
   background-color: $blackish-color;
   border: 1.5px solid $beige-color;
+}
+
+div[role="tab"] {
+  background: $beige-color;
 }
 
 cdk-virtual-scroll-viewport {
@@ -236,6 +255,10 @@ hr {
   .mat-slide-toggle-thumb {
     background-color: #fff3e0;
     border: 1.5px solid #252423;
+  }
+
+  div[role="tab"] {
+    background: $blackish-color-with-double-beige-overlay;
   }
 
   cdk-virtual-scroll-viewport {
