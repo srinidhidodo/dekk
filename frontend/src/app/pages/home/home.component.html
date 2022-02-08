@@ -4,8 +4,12 @@
     </div>
     <div class="toolbar-overlay"></div>
     <div class="toolbar-overlay"></div>
-    <mat-tab-group #dekkTabs mat-stretch-tabs [hidden]="isLoading" class="color-themed">
+    <mat-tab-group #dekkTabs mat-stretch-tabs class="color-themed">
         <mat-tab label="Curated Dekks"> 
+            <div style="height: 100%; width: 100%;" [hidden]="!isLoading">
+                <app-loading></app-loading>
+            </div>
+            <div class="selected-master-dekk color-themed-solid" [hidden]="!selectedMasterDekkId || isLoading"> {{ selectedMasterDekk.dekk_name }} </div>
             <div class="row dekk-list-panel">
                 <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of dekks">
                     <mat-card class="each-dekk dekk-effect" (click)="selectDekk(dekk.tag_id)">
@@ -24,7 +28,7 @@
         </mat-tab>
         <mat-tab label="My Dekks">
             <div class="row dekk-list-panel">
-                <div class="col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of personalDekks">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6" [hidden]="isLoading" *ngFor="let dekk of personalDekks">
                     <mat-card class="each-dekk dekk-effect" (click)="editDekk(dekk.tag_id)">
                         <span class="home-card-icon" (click)="editDekk(dekk)">
                             <mat-icon>edit</mat-icon>

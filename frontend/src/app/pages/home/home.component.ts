@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   routeListener: any;
   locationListener: any;
   dekkLoadListener: any;
+  homeLoadListener: any;
   tabIndex = 0;
 
   constructor(private httpClientService: HttpClientService, 
@@ -73,11 +74,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.routeListener?.unsubscribe();
     this.locationListener?.unsubscribe();
     this.dekkLoadListener?.unsubscribe();
+    this.homeLoadListener?.unsubscribe();
   }
 
   initialise(): void {
+    this.isLoading = true;
     this.tagsService.loadTags();
     if (this.selectedMasterDekkId) {
+      this.homeLoadListener = this.httpClientService.get(UrlConstants.HOME_URL, []).subscribe((response: HomeResponse) => {
+        this.personalDekks = response && response.user_dekks ? response.user_dekks : [];
+      });
+
       this.dekkLoadListener = this.dekkService.loadDekkDetails(this.selectedMasterDekkId).subscribe((response: any) => {
         this.dekks = [];
         if (response) {

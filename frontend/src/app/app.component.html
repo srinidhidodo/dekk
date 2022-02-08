@@ -5,13 +5,20 @@
     <div class="left-toolbar">
       <img src="assets/dark-logo-full.png" class="logo-placement menu-icon" [hidden]="isDarkThemeEnabled" (click)="goToHomePage()" />
       <img src="assets/light-logo-full.png" class="logo-placement menu-icon" [hidden]="!isDarkThemeEnabled" (click)="goToHomePage()" />
-      <button mat-stroked-button class="toolbar-button quarter-opacity-outline-themed small-screen-hide" color="accent" (click)="goToStudy()">Study</button>
-      <mat-search-bar
+      <button mat-stroked-button class="toolbar-button icon-img-base menu-icon quarter-opacity-outline-themed small-screen-hide" color="accent" (click)="goToStudy()">Study</button>
+      <!-- <mat-search-bar
         (onEnter)="submitSearch($event)"
         matTooltip="Search"
         class="search-input color-themed"
         direction="right"
-        [hidden]="!isLoggedIn()"></mat-search-bar>
+        [hidden]="!isLoggedIn()"></mat-search-bar> -->
+      <span class="vertical-center menu-icon" [hidden]="!isLoggedIn()"> <!-- search-container-themed -->
+        <form class="vertical-center" (submit)="submitSearch($event)">
+          <mat-icon class="color-themed left-toolbar-block" (click)="toggleSearch()">search</mat-icon>
+          <input [@searchTrigger]="isSearchActive" class="search-click" placeholder="Enter your search term..." type="search" value="" name="search" id="searchInput" />
+		      <input hidden class="sb-search-submit" type="submit" value="" />
+        </form>
+      </span>
     </div>
     <div class="head-toolbar-center" [hidden]="isLoggedIn()">
       <button mat-button (click)="goToAboutUs()">About Us</button>

@@ -32,16 +32,11 @@
 .dark-light-toggle {
   display: flex !important;
   justify-content: space-evenly;
-  // margin-right: 10px;
 }
 
 .padded-toolbar-component {
   margin: 10px;
   width: auto;
-}
-
-.sidebar-item {
-  padding-left: 8px;
 }
 
 .toolbar-button {
@@ -334,7 +329,7 @@ mat-sidenav {
   display: flex;
   align-items: center;
   width: fit-content;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .left-toolbar-block {
@@ -349,9 +344,23 @@ mat-sidenav {
   // width: 5vw;
 }
 
-.img-icon {
+.icon-height {
   height: 24px;
+}
+
+.icon-width {
   width: 24px;
+}
+
+.img-icon {
+  @extend .icon-height, .icon-width;
+  // height: 24px;
+  // width: 24px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
 }
 
 .menu-icon {
@@ -383,6 +392,23 @@ mat-sidenav {
 }
 
 .login-signup-container {
+  background: transparent !important;
+}
+
+.sb-search {
+	width: 0%;
+	min-width: 24px;
+	overflow: hidden;
+
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+
+	-webkit-backface-visibility: hidden;
+}
+
+.search-click {
+  padding: 0;
   background: transparent !important;
 }
 

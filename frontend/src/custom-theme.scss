@@ -68,9 +68,10 @@ $dekk-new-light-theme: map-merge($dekk-new-light-theme, (color: $dekk-light-pale
 }
 
 input {
-  background: white;
+  // background: white;
   border: 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid $blackish-color-with-double-beige-overlay;
+  color: $blackish-color;
 }
 
 .app-background {
@@ -84,13 +85,27 @@ input {
   background: $beige-color;
 }
 
+.color-themed-solid {
+  color: $blackish-color !important;
+}
+
 .color-themed {
   color: $blackish-color !important;
+}
+
+.color-themed:hover {
+  color: $pink-color !important;
 }
 
 .quarter-opacity-outline-themed {
   border-color: rgba(18, 18, 18, 0.25) !important;
   color: $blackish-color !important;
+}
+
+.quarter-opacity-outline-themed:hover {
+  border-color: $pink-color;
+  background-color: $pink-color;
+  color: $beige-color !important;
 }
 
 .menu-background {
@@ -100,6 +115,12 @@ input {
 
 .menu-item {
   color: $blackish-color;
+}
+
+.search-container-themed {
+  border-radius: 20px;
+  background: white;
+  padding: 7px 15px 7px 7px;
 }
 
 .divider-themed {
@@ -212,9 +233,10 @@ hr {
   // }
 
   input {
-    background: #303030;
+    // background: #303030;
     border: 0px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $blackish-color-with-double-beige-overlay;
+    color: $beige-color;
   }
 
   .app-background {
@@ -224,12 +246,26 @@ hr {
     // background-image: linear-gradient(315deg, #3e4349 0%, #181e24 70%);
   }
 
+  .color-themed-solid {
+    color: $beige-color !important;
+  }
+
   .color-themed {
     color: $beige-color !important;
   }
 
+  .color-themed:hover {
+    color: $pink-color !important;
+  }
+
   .quarter-opacity-outline-themed {
     border-color: rgba(255, 243, 224, 0.25) !important;
+    color: $beige-color !important;
+  }
+
+  .quarter-opacity-outline-themed:hover {
+    border-color: $pink-color; //rgba(255, 243, 224, 0.25) !important;
+    background-color: $pink-color;
     color: $beige-color !important;
   }
 
@@ -239,6 +275,12 @@ hr {
 
   .menu-item {
     color: $beige-color !important;
+  }
+
+  .search-container-themed {
+    border-radius: 20px;
+    background: $blackish-color;
+    padding: 7px 15px 7px 7px;
   }
 
   .divider-themed {
