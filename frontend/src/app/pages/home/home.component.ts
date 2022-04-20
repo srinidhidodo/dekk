@@ -156,7 +156,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   editDekk(dekk: any): void {
-    this.router.navigate([UrlConstants.CREATE], {queryParams: { id: dekk.dekk_id ?? dekk.tag_id }});
+    this.router.navigate([UrlConstants.DEKK_EDIT_VIEW], {queryParams: { id: dekk.dekk_id ?? dekk.tag_id }});
   }
 
   createSubdekk(): void {

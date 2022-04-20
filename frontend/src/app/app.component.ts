@@ -129,7 +129,7 @@ export class AppComponent {
   }
 
   goToCreateView(): void {
-    this.router.navigate([UrlConstants.CREATE]);
+    this.router.navigate([UrlConstants.CREATE_DEKK_CARD]);
   }
 
   isLoggedIn(): boolean {
@@ -182,7 +182,6 @@ export class AppComponent {
   }
 
   toggleSearch(): void {
-    console.log('toggle search')
     this.isSearchActive = this.isSearchActive === 'active' ? 'inactive' : 'active';
   }
 }

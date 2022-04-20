@@ -65,8 +65,8 @@ import { MsgDialogComponent } from './common/components/msg-dialog/msg-dialog.co
 import { CreateEditSubdekkDetailComponent } from './pages/create-edit-dekk/create-edit-subdekk-detail/create-edit-subdekk-detail.component';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-
-
+import { CreateDekkCardComponent } from './pages/create-dekk-card/create-dekk-card.component';
+// import { TextInputHighlightModule } from 'angular-text-input-highlight';
 
 @NgModule({
   declarations: [
@@ -100,6 +100,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     MsgDialogComponent,
     CreateEditSubdekkDetailComponent,
     PageNotFoundComponent,
+    CreateDekkCardComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -114,6 +115,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     EditorModule,
     BarRatingModule,
     NgxMatSelectSearchModule,
+    // TextInputHighlightModule,
     MatButtonModule,
     MatSlideToggleModule,
     MatToolbarModule,

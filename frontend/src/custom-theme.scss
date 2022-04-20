@@ -7,13 +7,20 @@ $beige-color: #fff6e6;
 $blackish-color: #121212;
 $blackish-color-with-single-beige-overlay: #252423;
 $blackish-color-with-double-beige-overlay: #353432;
+$blackish-color-with-triple-beige-overlay: #716D67;
 $pink-color: #dc6278;
+$themed-black-or-beige: $beige-color;
 
 // Custom palettes
 $custom-pink-palette: mat.$pink-palette;
 $custom-pink-palette: map-merge($custom-pink-palette, (200: $pink-color));
 $custom-beige-palette: mat.$orange-palette;
 $custom-beige-palette: map-merge($custom-beige-palette, (50: $beige-color));
+
+$custom-typography: mat.define-typography-config(
+  $font-family: Poppins-Light,
+);
+@include mat.card-typography($custom-typography);
 
 $dekk-new-primary: mat.define-palette($custom-pink-palette, 200); //mat.define-palette(mat.$indigo-palette);
 $dekk-new-accent: mat.define-palette($custom-beige-palette, 50);
@@ -23,7 +30,8 @@ $dekk-new-light-theme: mat.define-light-theme((
     primary: $dekk-new-primary,
     accent: $dekk-new-accent,
     warn: $dekk-new-warn,
-  )
+  ),
+  typography: $custom-typography
 ));
 @include mat.all-component-themes($dekk-new-light-theme);
 @include mat.form-field-theme($dekk-new-light-theme);
@@ -37,7 +45,8 @@ $dekk-new-dark-theme: mat.define-dark-theme((
     primary: $dekk-new-primary-dark,
     accent: $dekk-new-accent-dark,
     warn: $dekk-new-warn-dark,
-  )
+  ),
+  typography: $custom-typography
 ));
 
 // Specific customizations to themes
@@ -85,6 +94,11 @@ input {
   background: $beige-color;
 }
 
+.mat-expansion-panel {
+  background: $beige-color !important;
+  box-shadow: none !important;
+}
+
 .color-themed-solid {
   color: $blackish-color !important;
 }
@@ -106,6 +120,10 @@ input {
   border-color: $pink-color;
   background-color: $pink-color;
   color: $beige-color !important;
+}
+
+.toolbar-themed {
+  border-bottom: 2px solid #ebe1cf;
 }
 
 .menu-background {
@@ -182,7 +200,7 @@ cdk-virtual-scroll-viewport {
 
 .each-dekk {
   @extend .dekk-or-card-shadow;
-  margin-bottom: clamp(25px, 2.5vh, 40px);
+  margin-bottom: clamp(15px, 2vh, 25px);
   height: 150px;
   cursor: pointer;
   // box-shadow: 3px 3px 3px gray !important;
@@ -216,10 +234,66 @@ hr {
         -34px -34px white !important;
 }
 
+app-create-dekk-card {
+  .mat-form-field-flex {
+    box-shadow: 1px 1px 2px $blackish-color-with-double-beige-overlay !important;
+  }
+
+  mat-form-field:not(.ng-dirty) {
+    .mat-form-field-flex {
+        background-color: $beige-color !important;
+        color: $blackish-color;
+    }
+  }
+
+  textarea {
+    color: $blackish-color;
+    background-color: $beige-color;
+
+    :focus {
+      box-shadow: none;
+      outline: 0;
+      border: 1px solid $pink-color;
+    }
+  }
+}
+
+.fas {
+  color: $blackish-color;
+}
+
+.toolbar-search-border {
+  border-radius: 20px;
+  padding: 5px;
+  background: $blackish-color-with-triple-beige-overlay;
+  color: $beige-color;
+
+  .mat-icon {
+    color: $beige-color !important;
+  }
+
+  .mat-icon:hover {
+    color: $pink-color !important;
+  }
+
+  form {
+    input {
+      color: $beige-color !important;
+    }
+  }
+}
+
+.general-text {
+  background: $beige-color;
+  color: $blackish-color;
+}
+
 .dark-theme-mode {
   @include mat.all-component-themes($dekk-new-dark-theme);
   @include mat.form-field-theme($dekk-new-dark-theme);
   @include mat.input-theme($dekk-new-dark-theme);
+
+  $themed-black-or-beige: $blackish-color-with-single-beige-overlay;
 
   .primary-text-color {
     color: mat-color($dekk-new-primary-dark) !important;
@@ -246,6 +320,10 @@ hr {
     // background-image: linear-gradient(315deg, #3e4349 0%, #181e24 70%);
   }
 
+  .mat-expansion-panel {
+    background: $blackish-color-with-single-beige-overlay !important;
+  }
+
   .color-themed-solid {
     color: $beige-color !important;
   }
@@ -267,6 +345,10 @@ hr {
     border-color: $pink-color; //rgba(255, 243, 224, 0.25) !important;
     background-color: $pink-color;
     color: $beige-color !important;
+  }
+
+  .toolbar-themed {
+    border-bottom: 0px solid $blackish-color-with-single-beige-overlay;
   }
 
   .menu-background {
@@ -359,7 +441,7 @@ hr {
   
   .each-dekk {
     @extend .dekk-or-card-shadow;
-    margin-bottom: clamp(25px, 2.5vh, 40px);
+    margin-bottom: clamp(15px, 2vh, 25px);
     height: 150px;
     cursor: pointer;
     // box-shadow: 3px 3px 3px gray !important;
@@ -396,5 +478,63 @@ hr {
         -19px -19px lightgray,
         -34px -34px #424242,
         -36px -36px lightgray !important;
+  }
+
+  app-create-dekk-card {
+    mat-form-field:not(.ng-dirty) {
+      .mat-form-field-flex {
+          background-color: $blackish-color-with-single-beige-overlay !important;
+          color: $beige-color;
+      }
+    }
+
+    textarea {
+      color: $beige-color;
+      background-color: $blackish-color-with-single-beige-overlay;
+    }
+  }
+
+  .fas {
+    color: $beige-color;
+  }
+
+  .toolbar-search-border {
+    border-radius: 20px;
+    padding: 5px;
+    background: $beige-color;
+    color: $blackish-color !important;
+
+    .mat-icon {
+      color: $blackish-color !important;
+    }
+
+    .mat-icon:hover {
+      color: $pink-color !important;
+    }
+
+    form {
+      input {
+        color: $blackish-color !important;
+      }
+    }
+  }
+
+  .general-text {
+    background: $blackish-color-with-single-beige-overlay;
+    color: $beige-color;
+  }
+
+  table {
+    tbody {
+      tr {
+        background: $blackish-color-with-single-beige-overlay !important;
+        color: $beige-color !important;
+      }
+
+      tr:hover, tr:hover > * {
+        background: $blackish-color !important;
+        color: $pink-color !important;
+      }
+    }
   }
 }

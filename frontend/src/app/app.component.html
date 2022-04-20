@@ -1,6 +1,6 @@
 <!-- Toolbar -->
 <div [ngClass]="{'dark-theme-mode': isDarkThemeEnabled}" class="mat-app-background background">
-  <div color="primary" class="toolbar head-toolbar" role="banner">
+  <div color="primary" class="toolbar head-toolbar toolbar-themed" role="banner">
     <div class="toolbar-overlay" [hidden]="!isDarkThemeEnabled"></div>
     <div class="left-toolbar">
       <img src="assets/dark-logo-full.png" class="logo-placement menu-icon" [hidden]="isDarkThemeEnabled" (click)="goToHomePage()" />
@@ -12,12 +12,12 @@
         class="search-input color-themed"
         direction="right"
         [hidden]="!isLoggedIn()"></mat-search-bar> -->
-      <span class="vertical-center menu-icon" [hidden]="!isLoggedIn()"> <!-- search-container-themed -->
+      <span class="vertical-center menu-icon" [hidden]="!isLoggedIn()" [ngClass]="{'toolbar-search-border': isSearchActive === 'active'}"> <!-- search-container-themed -->
         <form class="vertical-center" (submit)="submitSearch($event)">
           <mat-icon class="color-themed left-toolbar-block" (click)="toggleSearch()">search</mat-icon>
           <input [@searchTrigger]="isSearchActive" class="search-click" placeholder="Enter your search term..." type="search" value="" name="search" id="searchInput" />
 		      <input hidden class="sb-search-submit" type="submit" value="" />
-        </form>
+      </form>
       </span>
     </div>
     <div class="head-toolbar-center" [hidden]="isLoggedIn()">
