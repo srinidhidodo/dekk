@@ -31,6 +31,7 @@ export class UrlConstants {
   public static SEARCH_RESULTS = '/search-results';
   public static HOME = '/home';
   public static CREATE = '/create';
+  public static CREATE_DEKK_CARD = '/create-dekk-card';
   public static CREATE_SUBDEKK = '/create-subdekk';
   public static STUDY_CARD = '/study-card';
   public static DEKK_EDIT_VIEW = '/dekk-edit-view';

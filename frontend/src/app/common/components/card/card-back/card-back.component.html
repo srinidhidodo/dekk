@@ -1,14 +1,42 @@
 <mat-card class="card-container dekk-or-card-shadow">
+  <div class="card-content-container">
+    <div>
+      <div class="content-item img-container">
+        <img class="img-class img-first" alt="Could not load image" (load)="firstImageLoaded()" [hidden]="!getFirstImageSrc() || firstImageLoading" (click)="openImg(getFirstImageSrc())" src="{{getFirstImageSrc()}}" />
+        <img class="img-class" alt="Could not load image" (load)="secondImageLoaded()" [hidden]="!getSecondImageSrc() || secondImageLoading" (click)="openImg(getSecondImageSrc())" src="{{getSecondImageSrc()}}" />
+      </div>
+    </div>
+    <div class="content-container-right">
+      <mat-card-subtitle class="unselectable-content card-subtitle">
+        <span class="dekk-name card-header">{{getCardDekk()}}</span>
+        <span>
+          <mat-icon class="card-options-icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="rateDialog()">Feedback</button>
+          </mat-menu>
+        </span>
+      </mat-card-subtitle>
+      <mat-card-content class="content-item card-content">
+        <div class="content-item card-content-text unselectable-content" [innerHtml]="content"></div>
+      </mat-card-content>
+    </div>
+  </div>
+  <mat-card-actions class="card-actions-container mobile-next-line">
+    <button mat-stroked-button class="card-action-button-success" (click)="gotItRight()"> 
+      Got it Right? 
+      <mat-icon class="got-it-right-icon" [hidden]="!card.rightWrongMarked">download_done</mat-icon>
+    </button>
+    <button mat-stroked-button color="primary" class="card-action-button quarter-opacity-outline-themed" (click)="flipToFront()"> Flip To Front </button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- <mat-card class="card-container dekk-or-card-shadow">
     <mat-card-subtitle class="unselectable-content card-subtitle">
       <span class="card-header">{{getCardDekk()}}</span>
       <span>
         <mat-icon class="card-options-icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="rateDialog()">Feedback</button>
-          <!-- <button mat-menu-item>
-            <mat-icon class="menu-item-icon">star</mat-icon>
-            Bookmark
-          </button> -->
         </mat-menu>
       </span>
     </mat-card-subtitle>
@@ -20,12 +48,10 @@
       </div>
     </mat-card-content>
     <mat-card-actions class="card-actions-container mobile-next-line">
-      <!-- <button mat-raised-button color="primary" class="card-action-button" (click)="highlight()"> Highlight </button> -->
-      <button mat-raised-button class="card-action-button-success" (click)="gotItRight()"> 
-        Got it Right 
+      <button mat-stroked-button class="card-action-button-success" (click)="gotItRight()"> 
+        Got it Right? 
         <mat-icon class="got-it-right-icon" [hidden]="!card.rightWrongMarked">download_done</mat-icon>
       </button>
-      <!-- <button mat-raised-button class="card-action-button-warning" (click)="gotItWrong()"> Got it Wrong </button> -->
-      <button mat-raised-button color="primary" class="card-action-button" (click)="flipToFront()"> Flip To Front </button>
+      <button mat-stroked-button color="primary" class="card-action-button quarter-opacity-outline-themed" (click)="flipToFront()"> Flip To Front </button>
     </mat-card-actions>
-  </mat-card>
+  </mat-card> -->
