@@ -26,6 +26,9 @@ export class UrlConstants {
   public static DELETE_CARD_URL = UrlConstants.BASE_URL + '/card';
   public static GET_COLLEGES_URL = UrlConstants.BASE_URL + '/resources/colleges';
   public static CREATE_SUBDEKK_URL = UrlConstants.BASE_URL + '/subdekk';
+  public static VIEW_CARD = UrlConstants.BASE_URL + '/view/card';
+  public static BOOKMARK_CARD = UrlConstants.BASE_URL + '/bookmark/card';
+  public static UNBOOKMARK_CARD = UrlConstants.BASE_URL + '/unmark/card';
 
   // Routing URLs
   public static SEARCH_RESULTS = '/search-results';

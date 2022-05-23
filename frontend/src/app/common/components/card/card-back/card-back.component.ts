@@ -131,4 +131,12 @@ export class CardBackComponent implements OnInit, OnChanges {
   isNoImages(): boolean {
     return this.studyService.getCurrentCard().image_links?.length === 0;
   }
+
+  bookmarkToggle(): void {
+    if (this.card.is_bookmarked) {
+      this.studyService.unbookmark(this.card);
+    } else {
+      this.studyService.bookmark(this.card);
+    }
+  }
 }
