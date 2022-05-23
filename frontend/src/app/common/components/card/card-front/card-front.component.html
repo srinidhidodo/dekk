@@ -1,7 +1,7 @@
 <mat-card class="card-container dekk-or-card-shadow">
   <div class="card-content-container">
     <div>
-      <div class="content-item img-container">
+      <div class="content-item img-container" [hidden]="isNoImages()">
         <img class="img-class img-first" alt="Could not load image" (load)="firstImageLoaded()" [hidden]="!getFirstImageSrc() || firstImageLoading" (click)="openImg(getFirstImageSrc())" src="{{getFirstImageSrc()}}" />
         <img class="img-class" alt="Could not load image" (load)="secondImageLoaded()" [hidden]="!getSecondImageSrc() || secondImageLoading" (click)="openImg(getSecondImageSrc())" src="{{getSecondImageSrc()}}" />
       </div>

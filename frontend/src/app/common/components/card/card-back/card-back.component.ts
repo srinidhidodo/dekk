@@ -127,4 +127,8 @@ export class CardBackComponent implements OnInit, OnChanges {
   secondImageLoaded(): void {
     this.secondImageLoading = false;
   }
+
+  isNoImages(): boolean {
+    return this.studyService.getCurrentCard().image_links?.length === 0;
+  }
 }

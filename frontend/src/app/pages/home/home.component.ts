@@ -141,8 +141,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.router.navigate([UrlConstants.HOME], {queryParams: { id: dekkId }});
       });
     } else {
-      this.studySessionDekk(dekkId);
+      this.selectSubDekk(dekkId);
     }
+  }
+
+  selectSubDekk(dekkId: string): void {
+    this.studySessionDekk(dekkId);
   }
 
   studyDekk(dekkId: string): void {

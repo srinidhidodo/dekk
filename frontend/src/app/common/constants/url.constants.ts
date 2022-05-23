@@ -29,6 +29,8 @@ export class UrlConstants {
 
   // Routing URLs
   public static SEARCH_RESULTS = '/search-results';
+  public static SIGN_UP = '/sign-up';
+  public static LOGIN = '/login';
   public static HOME = '/home';
   public static CREATE = '/create';
   public static CREATE_DEKK_CARD = '/create-dekk-card';

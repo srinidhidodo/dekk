@@ -288,6 +288,12 @@ app-create-dekk-card {
   color: $blackish-color;
 }
 
+app-sign-up, app-login {
+  .mat-form-field-flex {
+      border: 1px solid $blackish-color-with-single-beige-overlay;
+  }
+}
+
 .dark-theme-mode {
   @include mat.all-component-themes($dekk-new-dark-theme);
   @include mat.form-field-theme($dekk-new-dark-theme);
@@ -535,6 +541,12 @@ app-create-dekk-card {
         background: $blackish-color !important;
         color: $pink-color !important;
       }
+    }
+  }
+
+  app-sign-up, app-login {
+    .mat-form-field-flex {
+        border: 1px solid $beige-color;
     }
   }
 }
