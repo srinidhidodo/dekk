@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload-img-modal',
@@ -10,11 +9,11 @@ import { Router } from '@angular/router';
 export class UploadImgModalComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<UploadImgModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private router: Router) { }
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   file: File;
   fileUploaded = false;
+  uploadComplete = false;
 
   ngOnInit(): void {
   }
@@ -24,16 +23,18 @@ export class UploadImgModalComponent implements OnInit {
   }
 
   onUpload(): void {
+    const imageFormData = new FormData();
+    imageFormData.append('image', this.file, this.file.name); // TODO to upload
+
+    // After upload: setting up final behavior
+    this.uploadComplete = true;
     this.data.callback(this.data.cardId);
-    this.dialogRef.close();
   }
 
   onFileSelected($event: any): void {
-    console.log($event);
     if ($event?.target?.files?.length > 0) {
       this.file = $event.target.files[0];
       this.fileUploaded = true;
-      console.log(this.file);
     }
   }
 
